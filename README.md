@@ -16,5 +16,5 @@
 [hashcat](https://hashcat.net/wiki/doku.php?id=hashcat): password recovery tool<br>
 [feroxbuster](https://github.com/epi052/feroxbuster): powerful forced browsing tool (gobuster、dirb)<br>
 [AutoRecon](https://github.com/Tib3rius/AutoRecon): multi-threaded network reconnaissance tool which performs automated enumeration of services<br>
-[explainshell](https://explainshell.com/): explain command-line
+[explainshell](https://explainshell.com/): explain command-line<
 [SecLists](https://github.com/danielmiessler/SecLists): It's a collection of multiple types of lists used during security assessments, collected in one place
