@@ -1,0 +1,19 @@
+## Useful Websites
+[offical exam guide](https://help.offensive-security.com/hc/en-us/articles/360040165632-OSCP-Exam-Guide) <br>
+[offical exam report](https://www.offensive-security.com/pwk-online/PWK-Example-Report-v1.pdf) <br>
+[pentest.ws](https://pentest.ws): note taking <br>
+[Burp Suite](https://portswigger.net/burp): tool for exploring web security. [Configure browser with Burp Suite](https://www.youtube.com/results?search_query=Configure+with+Burp+Suite) <br>
+[OWASP juice box](https://owasp.org/www-project-juice-shop/): OWASP security trainings<br>
+[hack this site]<br>
+[over the wire]<br>
+[pwnable.kr/xyz]<br>
+[hack the box]<br>
+[cybrary]<br>
+[google gruyeye]<br>
+[game of hacks]<br>
+[bWAPP]<br>
+[Webgoat]<br>
+[hashcat](https://hashcat.net/wiki/doku.php?id=hashcat): password recovery tool<br>
+[feroxbuster](https://github.com/epi052/feroxbuster): powerful forced browsing tool (gobuster、dirb)<br>
+[AutoRecon](https://github.com/Tib3rius/AutoRecon): multi-threaded network reconnaissance tool which performs automated enumeration of services<br>
+[explainshell](https://explainshell.com/): explain command-line

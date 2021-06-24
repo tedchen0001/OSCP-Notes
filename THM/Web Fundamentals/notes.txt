@@ -1,0 +1,8 @@
+curl http://10.10.113.136:8081/ctf/get
+
+curl http://10.10.113.136:8081/ctf/post -d flag_please
+
+curl http://10.10.113.136:8081/ctf/getcookie -c savecookie
+cat savecookie
+
+curl http://10.10.113.136:8081/ctf/sendcookie -b 'flagpls=flagpls'

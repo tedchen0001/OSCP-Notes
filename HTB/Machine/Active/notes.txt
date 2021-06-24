@@ -1,0 +1,17 @@
+ref from https://www.youtube.com/watch?v=jUc1J31DNdw&ab_channel=IppSec
+
+nslookup
+dnsrecon
+locate -r '\.nse$'
+find nmap script 
+locate -r '\.nse$' | xargs grep categories | grep 'default\|version\|safe' | grep smb
+
+nmap --script safe -p 445 <IP>
+
+smbclient -L //<IP> 
+then press enter try anonymous login
+
+smbmap -H <IP>
+smbmap -R Replication -H <IP>
+
+impacket (https://github.com/SecureAuthCorp/impacket)

@@ -1,0 +1,38 @@
+#website
+https://247ctf.com/dashboard
+
+247CTF{32-HEX}
+Downloadable challenges
+Web challenges
+Socket challenges
+
+#tool
+pwntools
+Requests(https://requests.readthedocs.io/en/master/)
+
+b'What is the answer to 403 + 286?\r'
+
+ERROR REPORTING PROTOCOL
+JFIF→JPEG
+REMOVE→first request packet→wireshark File→Expot Specified Packets→2-1712
+https://www.hackingarticles.in/understanding-guide-icmp-protocol-wireshark/
+
+tshark
+https://www.youtube.com/watch?v=TqNrWTAyVRo
+
+#MISCELLANEOUS
+##THE TEXT EDITOR JAIL
+:shell 
+./(binary_file)
+
+##AN IMPOSSIBLE NUMBER
+netcat [server-ip-address] [port]
+214748364
+
+##TRY AND CATCH
+/calculator?number_1=1&number_2=0&operation=/
+ANY CONSOLE
+>>> arr = os.listdir('.')
+>>> print(arr)
+['flag.txt', 'run.py']
+>>> exec(open("flag.txt").read());

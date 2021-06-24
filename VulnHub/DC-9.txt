@@ -1,0 +1,17 @@
+
+#video resource (good channel to subscribe)
+https://www.youtube.com/watch?v=_Aa8125CQ0g 
+
+#tool 
+Cherrytree 
+foxyproxy 
+
+#website 
+http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet 
+
+#command  
+Linux 
+netcat(nc) nc 192.168.1.100 22 
+Wireshark 
+tcp.port == 22
+Wireshark 產生RST的原因條件 Reason conditions for generating RST
