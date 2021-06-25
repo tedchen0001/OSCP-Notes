@@ -1,4 +1,4 @@
-## Ignore Permission denied message
+### Ignore Permission denied message
 
 ```
 find / -name repo -type f -prune 2>&1 | grep -v "Permission denied"
