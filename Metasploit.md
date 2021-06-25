@@ -8,7 +8,7 @@ Exploit completed, but no session was created.
 msf5> show options
 ```
 
-check LHOST it's your HTB Local IP
+check LHOST it's your Local IP
 
 ```
 msf5> set LHOST <IP>
