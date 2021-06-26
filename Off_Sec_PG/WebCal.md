@@ -115,10 +115,10 @@ After Googling, there is a possible suitable vulnerability "empodipper".
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_15h02m29s_014_.png)
 
-The first exploit way attempt failed.
+The first vulnerability attack method failed.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_13h05m22s_001_.png)
 
-The second exploit way attempts to successfully obtain root privileges.
+Use the second vulnerability attack method to obtain root permission successfully.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_15h07m50s_015_.png)
