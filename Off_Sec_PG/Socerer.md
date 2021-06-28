@@ -43,7 +43,7 @@ Try to use `scp` to upload and download website directories, but there is nothin
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sorcerer/Sorcerer_2021.06.27_00h01m13s_015_.png)
 
-Reexamine scp_wrapper.sh in max.zip. After searching, we know that scp_wrapper.sh is used to set a program that does not allow ssh login. We can change scp_wrapper.sh to get the reverse shell.
+Reexamine scp_wrapper.sh in max.zip. After searching, I know that scp_wrapper.sh is used to set a program that does not allow ssh login. We can change scp_wrapper.sh to get the reverse shell.
 
 scp_wrapper.sh: [setting reference](https://serverfault.com/questions/83856/allow-scp-but-not-actual-login-using-ssh) 
 
