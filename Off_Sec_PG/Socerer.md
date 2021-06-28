@@ -39,7 +39,7 @@ Find ssh folder in max.zip. When trying to login with private key, it is found t
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sorcerer/Sorcerer_2021.06.26_23h58m36s_014_.png)
 
-Try to use scp to upload and download website directories, but there is nothing special found, and PHP should not be able to use.
+Try to use `scp` to upload and download website directories, but there is nothing special found, and PHP should not be able to use.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sorcerer/Sorcerer_2021.06.27_00h01m13s_015_.png)
 
