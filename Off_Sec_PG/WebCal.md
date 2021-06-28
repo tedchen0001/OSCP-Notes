@@ -72,7 +72,7 @@ I use the Repeater function to make it easier to test. First, send exploit paylo
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_14h02m07s_002_.png)
 
-Second, use a simple command to test whether the exploit is successful. Convert "ls" command string into base64 format "bHM=". 
+Second, use a simple command to test whether the exploit is successful. Convert `ls` command string into base64 format `bHM=`. 
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/WebCal/WebCal_2021.06.26_14h37m37s_009_.png)
 
