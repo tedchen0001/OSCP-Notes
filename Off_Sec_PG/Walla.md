@@ -59,3 +59,6 @@ Notice the RaspAp that is a wireless router software. Login to the WebUI with th
 In the about page, we know that the version is `2.5`.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Walla/Walla_2021.07.10_01h06m13s_003_.png)
+
+There is a remote command execution vulnerability [CVE-2020-24572](https://github.com/gerbsec/CVE-2020-24572-POC) can use to obtain an interactive shell.
+
