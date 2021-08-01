@@ -64,3 +64,46 @@ Website has nothing.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.07.24_13h22m39s_001_.png)
 
+Using smtp-user-neum to identify the active user ```hr``` and ```sales``` exist.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.07.30_01h50m55s_001_.png)
+
+Guessing the password.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.07.24_14h06m50s_002_.png)
+
+Reading the message through pop service.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postman_2021.08.01_16h00m49s_007_.png)
+
+(I am stuck here. Refer to other walkthroughs below.)
+
+Because the sales department seems to use an unsafe password, check the employees of the sales department first.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_16h17m47s_008_.png)
+
+Using a ![script](https://raw.githubusercontent.com/jseidl/usernamer/master/usernamer.py) to generate test usernames.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_16h25m12s_009_.png)
+
+Using smtp-user-neum to identify again, then get a username ```Brian.Moore```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_16h34m35s_010_.png)
+
+The concept is to send a phishing email for user to click and send back messages. So set up a local listener on port 80.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_16h44m30s_012_.png)
+
+Sending Brain a letter with a phishing link.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_16h52m08s_013_.png)
+
+After waiting for a while, we get the return message with the password entered by Brain.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_16h55m48s_014_.png)
+
+Using that password to connect to SSH, we obtained user rights.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_17h15m15s_016_.png)
+
+
