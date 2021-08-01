@@ -106,4 +106,32 @@ Using that password to connect to SSH, we obtained user rights.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_17h15m15s_016_.png)
 
+#### Privilege Escalation
 
+An interesting file ```/etc/postfix/disclaimer``` appears during the linpeas.sh check.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_17h59m58s_018_.png)
+
+Referring to the website description. This setting will be triggered when sending mail, so we can modify and add the reverse shell command.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_21h05m59s_019_.png)
+
+Setting to listen on port 80.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_21h33m14s_023_.png)
+
+Sending mail to trigger the disclaimer setting.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_21h07m59s_020_.png)
+
+We now get the shell back, and then check through linpeas.sh that mail binary can be executed without a password.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_21h10m27s_021_.png)
+
+Referring to [gtfobins](https://gtfobins.github.io/gtfobins/mail/).
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_22h18m46s_024_.png)
+
+Gaining the root shell.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_21h11m42s_022_.png)
