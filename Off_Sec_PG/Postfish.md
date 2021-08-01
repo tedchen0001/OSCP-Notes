@@ -114,6 +114,8 @@ An interesting file ```/etc/postfix/disclaimer``` appears during the linpeas.sh 
 
 Referring to the website description. This setting will be triggered when sending mail, so we can modify and add the reverse shell command.
 
+(:warning:During the test, it was found that ```/etc/postfix/disclaimer``` would be reset for a period of time.)
+
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_21h05m59s_019_.png)
 
 Setting to listen on port 80.
