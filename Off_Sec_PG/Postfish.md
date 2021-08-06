@@ -90,15 +90,15 @@ Using smtp-user-neum to identify again, then get a username ```Brian.Moore```
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_16h34m35s_010_.png)
 
-The concept is to send a phishing email for user to click and send back messages. So set up a local listener on port 80.
+The concept is to send a phishing email for user to click and send a connect-back shell. Setting up a local listener on port 80.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_16h44m30s_012_.png)
 
-Sending Brain a letter with a phishing link.
+Now send a email with a phishing link to Brain.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_16h52m08s_013_.png)
 
-After waiting for a while, we get the return message with the password entered by Brain.
+After waiting for a while, get the message contains the password entered by Brain.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_16h55m48s_014_.png)
 
