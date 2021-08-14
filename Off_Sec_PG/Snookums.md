@@ -104,7 +104,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 5795.91 seconds
 ```
 
-Let's get started with http service. Because the website doesn't show too much information. I scan the website to find any possible directories.
+Starting with with http service. Because the website doesn't give too much information. I scan the website to find any possible directories.
 ```
 feroxbuster -u http://192.168.91.58 -w /usr/share/dirb/wordlists/common.txt
 ```
