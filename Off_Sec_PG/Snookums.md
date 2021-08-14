@@ -103,3 +103,7 @@ Host script results:
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 5795.91 seconds
 ```
+
+```
+feroxbuster -u http://192.168.91.58 -w /usr/share/dirb/wordlists/common.txt
+```
