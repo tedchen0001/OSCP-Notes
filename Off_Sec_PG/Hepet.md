@@ -1,6 +1,6 @@
-#### Process
+#### Walkthrough
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Enumeration.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/walkthrough.png)
 
 #### Enumeration
 
