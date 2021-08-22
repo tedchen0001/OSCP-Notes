@@ -29,5 +29,10 @@
 
 #### IMAP
 ```
-hydra -L usernames.txt -P wordlists.txt -s 143 -f 192.168.247.140 imap
+hydra -L usernames.txt -P wordlists.txt -s 143 -f 192.168.0.1 imap
+```
+#### cewl
+
+```
+cewl -d 4 https://192.168.0.1 -w /tmp/wordlists.txt
 ```
