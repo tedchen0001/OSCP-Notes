@@ -22,3 +22,12 @@
 ## :warning: Exam Restrictions
 
 [linPEAS](https://www.offensive-security.com/offsec/understanding-pentest-tools-scripts/): Understanding the tools/scripts you use in a Pentest
+
+## :hammer_and_wrench: Commands
+
+### hydra
+
+#### IMAP
+```
+hydra -L usernames.txt -P wordlists.txt -s 143 -f 192.168.247.140 imap
+```
