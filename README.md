@@ -25,13 +25,13 @@
 
 ## :hammer_and_wrench: Commands
 
-### hydra
+### :open_file_folder: hydra
 
 #### IMAP
 ```
 hydra -L usernames.txt -P wordlists.txt -s 143 -f 192.168.0.1 imap
 ```
-#### cewl
+### :open_file_folder: cewl
 
 ```
 cewl -d 4 https://192.168.0.1 -w /tmp/wordlists.txt
