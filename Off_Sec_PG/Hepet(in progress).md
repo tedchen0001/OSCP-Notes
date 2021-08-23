@@ -43,3 +43,16 @@ Service Info: Host: localhost; OS: Windows; CPE: cpe:/o:microsoft:windows
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 294.07 seconds
 ```
+
+All the http services don't seem to have vulnerabilities. Trying to use brute-force attatcks to find the useful information. The rockyou.txt wordlist
+is not working so I generate wordlists from https website.
+
+```
+cewl -d 4 https://192.168.247.140 -w ~/Documents/OffSecPG/Hepet/wordlists.txt
+```
+
+Only the IMAP service found is suitable for enumeration. Other services will block brute-force attacks
+
+```
+hydra -l jonas -P ~/Documents/OffSecPG/Hepet/wordlists.txt 192.168.247.140 -s 143 imap
+```
