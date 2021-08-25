@@ -61,6 +61,6 @@ Getting a vaild passowd successfully.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.25_23h51m41s_001_.png)
 
-Logging in to pop3 service and read the email. The letter mentioned that their computers were installed with office software. The concept is sending an office file contain a malicious macro.
+Logging in to pop3 service and read the email. The letter mentioned that their computers were installed with office software. The concept is sending an office file contain a malicious macro. (I am stuck here. Referring to other walkthroughs below.)
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.26_00h27m32s_003_.png)
