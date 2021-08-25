@@ -76,7 +76,7 @@ Reading the message through pop service.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postman_2021.08.01_16h00m49s_007_.png)
 
-(I am stuck here. Refer to other walkthroughs below.)
+(I am stuck here. Referring to other walkthroughs below.)
 
 Because the sales department seems to use an unsafe password, check the employees of the sales department first.
 
