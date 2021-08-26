@@ -51,6 +51,17 @@ is not working so I generate wordlists from https website.
 cewl -d 4 https://192.168.247.140 -w ~/Documents/OffSecPG/Hepet/wordlists.txt
 ```
 
+Using ![finger-user-enum.pl](https://github.com/pentestmonkey/finger-user-enum) to enumerate users. Finding the exist users are 
+
+```
+perl finger-user-enum.pl -U /usr/share/wordlists/names.txt -t 192.168.220.140 > finger_enum_log.txt
+```
+
+Finding existing users: Agnes, admin, Jonas, Magnus, Martha, Charlotte. The website also shows employees' information.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.27_00h40m35s_002_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.27_00h41m04s_003_.png)
+
 Only the IMAP service found is suitable for enumeration. Other services will block brute-force attacks.
 
 ```
