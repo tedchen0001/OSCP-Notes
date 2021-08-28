@@ -51,7 +51,7 @@ is not working so I generate wordlists from https website.
 cewl -d 4 https://192.168.247.140 -w ~/Documents/OffSecPG/Hepet/wordlists.txt
 ```
 
-Using ![finger-user-enum.pl](https://github.com/pentestmonkey/finger-user-enum) to enumerate users.
+Using [finger-user-enum.pl](https://github.com/pentestmonkey/finger-user-enum) to enumerate users.
 
 ```
 perl finger-user-enum.pl -U /usr/share/wordlists/names.txt -t 192.168.220.140 > finger_enum_log.txt
