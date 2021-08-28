@@ -5,7 +5,7 @@
 #### Enumeration
 
 ```
-sudo nmap -Pn -p- -sV 192.168.239.140 -T4 -oN Hepet.nmap
+nmap -Pn -p- -sV 192.168.239.140 -T4 -oN Hepet.nmap
 ```
 
 ```
