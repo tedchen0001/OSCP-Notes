@@ -120,7 +120,7 @@ def b64encode(s, altchars=None):
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_23h41m18s.png)
 
-Waiting for schedule to start.
+Waiting for the schedule to start.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_23h47m57s.png)
 
