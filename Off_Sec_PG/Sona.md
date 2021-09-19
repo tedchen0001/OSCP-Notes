@@ -38,7 +38,7 @@ We find the NEXUS BACKUP MANAGER service on port 23.
 
 We can use the password recover function to try to guess the correct answers. The first answer is ```leo``` and the second answer is ```black```. We Combine these two answers to guess password. 
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Of. Sof_Sehave/Pic/Sona/Sona_2021.09.12_18h17m07s_002_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona_2021.09.12_18h17m07s_002_.png)
 
 After search we know the [exploit](https://www.exploit-db.com/exploits/49385) needs an authenticated account. So we have to login into website and getting the cookie data.
 
