@@ -85,3 +85,14 @@ except:
         print 'ERROR...' 
 sys.exit(0) 
 ```
+### :open_file_folder: Cron jobs
+
+```
+crontab -l
+```
+```
+ls -alh /etc/cron.* /etc/at*
+```
+```
+cat /etc/cron* /etc/at* /etc/anacrontab /var/spool/cron/crontabs/root 2>/dev/null | grep -v "^#"
+```
