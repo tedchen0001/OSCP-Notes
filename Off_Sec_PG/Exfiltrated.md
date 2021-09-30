@@ -24,3 +24,18 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Sat Sep 25 11:50:58 2021 -- 1 IP address (1 host up) scanned in 1297.06 seconds
 ```
+
+Because we can't open the website through IP, we must modify DNS file.
+
+```
+sudo vim /etc/hosts
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.09.30_22h48m42s_001_.png)
+
+The website is running Subrion CMS 4.2 and we found a RCE exploit to try.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.09.30_23h08m58s_002_.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.09.30_23h18m36s_003_.png)
+
