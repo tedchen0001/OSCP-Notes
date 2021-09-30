@@ -25,7 +25,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 # Nmap done at Sat Sep 25 11:50:58 2021 -- 1 IP address (1 host up) scanned in 1297.06 seconds
 ```
 
-Because we can't open the website through IP, we must modify DNS file.
+Because we can't open the website via IP, we must modify DNS file.
 
 ```
 sudo vim /etc/hosts
