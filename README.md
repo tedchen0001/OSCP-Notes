@@ -97,4 +97,4 @@ ls -alh /etc/cron.* /etc/at*
 cat /etc/cron* /etc/at* /etc/anacrontab /var/spool/cron/crontabs/root 2>/dev/null | grep -v "^#"
 ```
 
-> :open_file_folder: unprivileged Linux process snooping: ![pspy](https://github.com/DominicBreuker/pspy)
+#### unprivileged Linux process snooping: ![pspy](https://github.com/DominicBreuker/pspy)
