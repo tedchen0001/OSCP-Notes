@@ -85,7 +85,6 @@ Upload the image.jpg to the target host.
 
 Start a new terminal to listen on port 1337 and then copying the image.jpg file that we have uploaded to the path ```/var/www/html/subrion/uploads```.
 
-path info
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h23m27s_012_.png)
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h27m56s_013_.png)
