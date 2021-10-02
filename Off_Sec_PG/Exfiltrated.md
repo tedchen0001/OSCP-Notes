@@ -57,6 +57,6 @@ Executing ```linpeas``` script to search for possible paths to escalate privileg
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.01_01h35m57s_006_.png)
 
-We find a cron job that was executed with root permissions.
+We find a cron job that is executed with root permissions.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.01_01h38m18s_007_.png)
