@@ -60,3 +60,9 @@ Executing ```linpeas``` script to search for possible paths to escalate privileg
 We find a cron job that is executed with root permissions.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.01_01h38m18s_007_.png)
+
+After a lot of searching, I found that exiftool may have a vulnerability that we can use.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_22h15m57s_008_.png)
+
+This ![tool](https://github.com/convisoappsec/CVE-2021-22204-exiftool) can help us exploit the CVE-2021-22204 vulnerability.
