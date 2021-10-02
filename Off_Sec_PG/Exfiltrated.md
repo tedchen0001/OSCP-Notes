@@ -33,7 +33,7 @@ sudo vim /etc/hosts
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.09.30_22h48m42s_001_.png)
 
-The website is running Subrion CMS 4.2 and we found a RCE exploit to try.
+The website is running Subrion CMS 4.2 and we find a RCE exploit to try.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.09.30_23h08m58s_002_.png)
 
@@ -57,6 +57,6 @@ Executing ```linpeas``` script to search for possible paths to escalate privileg
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.01_01h35m57s_006_.png)
 
-We found a cron job that was executed with root permissions.
+We find a cron job that was executed with root permissions.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.01_01h38m18s_007_.png)
