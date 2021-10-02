@@ -61,8 +61,35 @@ We find a cron job that is executed with root permissions.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.01_01h38m18s_007_.png)
 
-After a lot of searching, I found that exiftool may have a vulnerability that we can use.
+After a lot of searching, I found that exiftool may have a ![vulnerability](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22204) that we can use.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_22h15m57s_008_.png)
 
-This ![tool](https://github.com/convisoappsec/CVE-2021-22204-exiftool) can help us exploit the CVE-2021-22204 vulnerability.
+This ![tool](https://github.com/convisoappsec/CVE-2021-22204-exiftool) can help us exploit the CVE-2021-22204 vulnerability. Installed pre-requisites tools on our client pc.
+
+```
+sudo apt install djvulibre-bin exiftool
+```
+
+Modify IP and port in exploit.py file.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_22h41m52s_009_.png)
+
+We have to download configfile and image.jpg file too and then executing exploit.py. It combines a reverse shell command string into the image.jpg.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h06m06s_010_.png)
+
+Upload the image.jpg to the target host.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h15m51s_011_.png)
+
+Start a new terminal to listen on port 1337 and then copying the image.jpg file that we have uploaded to the path ```/var/www/html/subrion/uploads```.
+
+path info
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h23m27s_012_.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h27m56s_013_.png)
+
+Waiting for the schedule job to be excuted.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h28m23s_014_.png)
