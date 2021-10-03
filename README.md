@@ -98,3 +98,23 @@ cat /etc/cron* /etc/at* /etc/anacrontab /var/spool/cron/crontabs/root 2>/dev/nul
 ```
 
 #### unprivileged Linux process snooping: ![pspy](https://github.com/DominicBreuker/pspy)
+
+### :open_file_folder: WordPress
+
+Find exploit
+
+```
+wpscan --url http://192.168.0.1/
+```
+
+Enumerate valid usernames
+
+```
+wpscan --url http://192.168.0.1/ --enumerate u1-1000
+```
+
+Brute-force attack
+
+```
+wpscan --url http://192.168.0.1/ --passwords /usr/share/wordlists/rockyou.txt --max-threads 50 --usernames admin
+```
