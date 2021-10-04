@@ -78,7 +78,7 @@ Cookie: NX-ANTI-CSRF-TOKEN=0.8796302472416133; NXSESSIONID=57be5cd0-1f1f-4ead-b7
 ```
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_15h55m25s.png)
 
-#### Escalation 
+#### Privilege Escalation 
 
 We find the users.xml contains the user sona's password.
 
