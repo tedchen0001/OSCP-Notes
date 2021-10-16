@@ -120,3 +120,7 @@ Brute-force attack
 ```
 wpscan --url http://192.168.0.1/ --passwords /usr/share/wordlists/rockyou.txt --max-threads 50 --usernames admin
 ```
+
+### :open_file_folder: LFI
+
+#### [LFI Suite](https://github.com/D35m0nd142/LFISuite)
