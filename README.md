@@ -124,3 +124,12 @@ wpscan --url http://192.168.0.1/ --passwords /usr/share/wordlists/rockyou.txt --
 ### :open_file_folder: LFI
 
 #### [LFI Suite](https://github.com/D35m0nd142/LFISuite)
+
+## 🖥️ Linux
+
+### Typical site folders
+
+```
+/srv/http/
+/var/www/html/
+```
