@@ -127,7 +127,7 @@ wpscan --url http://192.168.0.1/ --passwords /usr/share/wordlists/rockyou.txt --
 
 ## 🖥️ Linux
 
-### Typical site folders
+### :open_file_folder: Typical site folders
 
 ```
 /srv/http/
