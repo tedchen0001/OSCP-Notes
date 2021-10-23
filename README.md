@@ -125,6 +125,12 @@ wpscan --url http://192.168.0.1/ --passwords /usr/share/wordlists/rockyou.txt --
 
 #### [LFI Suite](https://github.com/D35m0nd142/LFISuite)
 
+### :open_file_folder: find (avoid permission denied messages)
+
+```
+find / -name *kali* 2>&-
+```
+
 ## 🖥️ Linux
 
 ### :open_file_folder: Typical site folders
@@ -132,11 +138,5 @@ wpscan --url http://192.168.0.1/ --passwords /usr/share/wordlists/rockyou.txt --
 ```
 /srv/http/
 /var/www/html/
-```
-
-### :open_file_folder: find command avoid permission denied messages
-
-```
-find / -name *kali* 2>&-
 ```
 
