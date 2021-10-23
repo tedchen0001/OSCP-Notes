@@ -133,3 +133,10 @@ wpscan --url http://192.168.0.1/ --passwords /usr/share/wordlists/rockyou.txt --
 /srv/http/
 /var/www/html/
 ```
+
+### :open_file_folder: find command avoid permission denied messages
+
+```
+find / -name *kali* 2>&-
+```
+
