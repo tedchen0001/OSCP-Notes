@@ -165,3 +165,35 @@ We can know that the application being performed on port 30330 is [Gatsby](https
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_16h33m59s_002_.png)
 
 In Gatsby development mode it can use ```GraphQL Playground``` to interact with the data by setting. You can refer to the official manual [here](https://www.gatsbyjs.com/docs/using-graphql-playground/#gatsby-skip-here).
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_17h10m16s_003_.png)
+
+We connect to the interface ```http://192.168.121.139:30330/__graphql```. The navigation menu has a option ```allSitePage```. We can use it to find the all the nodes in the database includes the hidden sites.
+
+```
+query MyQuery {
+  allSitePage {
+    edges {
+      node {
+        id
+      }
+    }
+  }
+}
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_17h33m13s_004_.png)
+
+We found a hidden sitepage ```/new-server-config-mc```. Navigate to the page ```http://192.168.121.139:30330/new-server-config-mc``` it shows a new password.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_17h48m11s_005_.png)
+
+We log in to server via SSH using the account and password obtained earlier.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_17h58m01s_006_.png)
+
+(further explain how to get usernames)
+
+offical walkthrough collects the possible usernames from ```Minecraft - The Island``` page and then uses hydra to guess the correct username. (hydra -L usernames.txt)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_18h03m34s_007_.png)
