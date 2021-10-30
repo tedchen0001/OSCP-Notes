@@ -194,6 +194,6 @@ We use previously obtained username and password to log in to server via SSH Con
 
 (further explain how to get usernames)
 
-offical walkthrough collects the possible usernames from ```Minecraft - The Island``` page and then uses hydra to guess the correct username. (e.g. hydra -L usernames.txt -p WallAskCharacter305 .....)
+Offical walkthrough collects the possible usernames from ```Minecraft - The Island``` page and then uses hydra to guess the correct username. (e.g. hydra -L usernames.txt -p WallAskCharacter305 .....)
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_18h03m34s_007_.png)
