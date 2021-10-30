@@ -152,7 +152,7 @@ PORT      STATE SERVICE REASON         VERSION
 |_  	http://192.168.206.139:35747/trackError
 ```
 
-I accidentally send the request with wrong json format and then server responses exception error message. In the error message we found the user name ```marcus```.
+I accidentally send the request with wrong json format and then server responses exception error message. In the error message we found the username ```marcus```.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_16h07m03s_001_.png)
 
