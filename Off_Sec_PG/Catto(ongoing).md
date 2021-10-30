@@ -168,7 +168,7 @@ In Gatsby development mode it can use ```GraphQL Playground``` to interact with 
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_17h10m16s_003_.png)
 
-We connect to the interface ```http://192.168.121.139:30330/__graphql```. The navigation menu has a option ```allSitePage```. We can use it to find the all the nodes in the database includes the hidden sites.
+We connect to the interface ```http://192.168.121.139:30330/__graphql```. The navigation menu has a option ```allSitePage```. We can use it to find the all the nodes in the database includes the hidden pages.
 
 ```
 query MyQuery {
