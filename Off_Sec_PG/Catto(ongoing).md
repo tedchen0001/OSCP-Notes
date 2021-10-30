@@ -126,7 +126,7 @@ OS and Service detection performed. Please report any incorrect results at https
 
 ```
 
-Based on the nmap scan results, We discover the port 35747 has two APIs: trackEvent and trackError.
+Based on the nmap scanning results, We discover the port 35747 has two APIs: trackEvent and trackError.
 
 /home/kali/Documents/OffSecPG/Catto/AutoRecon/results/192.168.206.139/report/report.md/192.168.206.139/Services/Service - tcp-35747-http/Nmap HTTP.md
 
