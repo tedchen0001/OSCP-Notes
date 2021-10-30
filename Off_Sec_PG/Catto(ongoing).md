@@ -188,7 +188,7 @@ We found a hidden sitepage ```/new-server-config-mc```. Navigate to the page ```
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_17h48m11s_005_.png)
 
-We log in to server via SSH with the account and password obtained earlier.
+We use previously obtained username and password to log in to server via SSH Connection.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_17h58m01s_006_.png)
 
