@@ -125,3 +125,29 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Wed Oct 27 12:06:36 2021 -- 1 IP address (1 host up) scanned in 1207.12 seconds
 
 ```
+
+Based on the nmap scanning results, We discover the port 35747 has two APIs: trackEvent and trackError.
+
+/home/kali/Documents/OffSecPG/Catto/AutoRecon/results/192.168.206.139/report/report.md/192.168.206.139/Services/Service - tcp-35747-http/Nmap HTTP.md
+
+```
+PORT      STATE SERVICE REASON         VERSION
+35747/tcp open  http    syn-ack ttl 63 Node.js Express framework
+|_http-chrono: Request times for /; avg: 585.62ms; min: 536.04ms; max: 649.36ms
+|_http-comments-displayer: Couldn't find any comments.
+|_http-cors: HEAD GET POST PUT DELETE PATCH
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Wed, 27 Oct 2021 16:07:03 GMT; 0s from local time.
+|_http-devframework: Express detected. Found Express in X-Powered-By Header
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=192.168.206.139
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|   	http://192.168.206.139:35747/trackEvent
+|   
+|   Error Code: 404
+|_  	http://192.168.206.139:35747/trackError
+```
