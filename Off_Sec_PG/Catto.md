@@ -1,3 +1,7 @@
+#### Walkthrough
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/rooted202110302303.png)
+
 #### Enumeration
 
 Nmap
