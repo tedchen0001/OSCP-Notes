@@ -163,3 +163,5 @@ I use the username to perform SSH login brute-force attacks. But it didn't find 
 We can know that the application being performed on port 30330 is [Gatsby](https://github.com/gatsbyjs/gatsby).
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_16h33m59s_002_.png)
+
+In Gatsby development mode it can use ```GraphQL Playground``` to interact with the data by setting. You can refer to the official manual [here](https://www.gatsbyjs.com/docs/using-graphql-playground/#gatsby-skip-here).
