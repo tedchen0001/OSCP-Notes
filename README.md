@@ -39,6 +39,11 @@ hydra -L usernames.txt -P wordlists.txt -s 143 -f 192.168.0.1 imap
 ```
 hydra -l <username> -P /usr/share/wordlists/rockyou.txt 192.168.121.60 postgres
 ```
+for normal connection
+
+```
+psql -U <username> -p 5432 -h <hostname or ip>
+```
 
 ### :open_file_folder: cewl
 
