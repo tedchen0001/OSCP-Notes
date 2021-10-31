@@ -27,10 +27,19 @@
 
 ### :open_file_folder: hydra
 
+Make sure there are no maximum number of login attempts. To perform a manual check.
+
 #### IMAP
 ```
 hydra -L usernames.txt -P wordlists.txt -s 143 -f 192.168.0.1 imap
 ```
+
+#### PostgreSQL
+
+```
+hydra -l <username> -P /usr/share/wordlists/rockyou.txt 192.168.121.60 postgres
+```
+
 ### :open_file_folder: cewl
 
 ```
