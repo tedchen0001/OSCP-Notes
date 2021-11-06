@@ -201,7 +201,7 @@ After testing, I find that the link must be executed on the server side and serv
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_22h52m10s_014_.png)
 
-So we can execute a reverse shell command through this service. Get the ```nc64.exe``` program from our pc. (You can find nc64.exe on the internet)
+So we can execute a reverse shell command through this service. Get the ```nc64.exe``` program from our pc. You can find ```nc64.exe``` on the internet.
 
 (avoid blocked port)
 
