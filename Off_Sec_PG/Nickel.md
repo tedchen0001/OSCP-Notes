@@ -139,7 +139,7 @@ curl -X POST http://192.168.114.99:33333/list-running-procs -d ""
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_19h09m27s_003_.png)
 
- In the response message has a content about execution of ssh. We can try to use this credential to log in to server via ssh.
+ In the response message has a content about execution of ssh. We can try to use this credential to log in to server via SSH.
  
  ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_19h24m55s_004_.png)
  
@@ -155,4 +155,41 @@ curl -X POST http://192.168.114.99:33333/list-running-procs -d ""
  
  ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_19h51m43s_006_.png)
  
+ #### Privilege Escalation
  
+ I find the ftp folder at the root of C drive. There has a file ```Infrastructure.pdf``` in the folder. We have to download it to our pc. 
+ 
+ ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_21h47m46s_007_.png)
+
+I try different way to download the file but fail, because the firewall setting, many ports are not open.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_21h50m26s_008_.png)
+
+After searching I find that we can download the file using SSH.
+
+```
+scp ariah@192.168.114.99:/ftp/Infrastructure.pdf /tmp/Infrastructure.pdf
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_21h58m58s_009_.png)
+
+The pdf is protected by password. We can try to break it. First dump the password hash code by using [pdf2john.py](https://github.com/truongkma/ctf-tools/blob/master/John/run/pdf2john.py).
+
+```
+python3 pdf2john.py /tmp/Infrastructure.pdf > hash
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_22h06m40s_010_.png)
+
+Modify the hash file to correct the code.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_22h10m32s_011_.png)
+
+Now, we use hashcat to recover the password and password is ```ariah4168```.
+
+```
+hashcat -m 10500 hash -a 0 /usr/share/wordlists/rockyou.txt --force
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_22h15m50s_012_.png)
+
