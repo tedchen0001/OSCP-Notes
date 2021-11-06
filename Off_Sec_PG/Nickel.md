@@ -185,7 +185,7 @@ Modify the hash file to correct the code.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_22h10m32s_011_.png)
 
-Now, we use hashcat to recover the password and password is ```ariah4168```.
+Now, we use hashcat to recover the password ```ariah4168```.
 
 ```
 hashcat -m 10500 hash -a 0 /usr/share/wordlists/rockyou.txt --force
