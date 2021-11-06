@@ -130,3 +130,29 @@ Connect to website on port 8089. There are three hyperlinks that look like api r
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_18h10m40s_001_.png)
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_18h11m21s_002_.png)
+
+Try to send requests to test apis and one of them gives us response message. 
+
+```
+curl -X POST http://192.168.114.99:33333/list-running-procs -d ""
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_19h09m27s_003_.png)
+
+ In the response message has a content about execution of ssh. We can try to use this credential to log in to server via ssh.
+ 
+ ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_19h24m55s_004_.png)
+ 
+ Decode the base64 string.
+ 
+ ```
+ echo "Tm93aXNlU2xvb3BUaGVvcnkxMzkK" | base64 --decode
+ ```
+ 
+ ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_19h37m38s_005_.png)
+ 
+ Use the credential to log in.
+ 
+ ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_19h51m43s_006_.png)
+ 
+ 
