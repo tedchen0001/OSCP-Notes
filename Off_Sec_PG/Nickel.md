@@ -127,3 +127,6 @@ OS and Service detection performed. Please report any incorrect results at https
 
 Connect to website on port 8089. There are three hyperlinks that look like api route.
 
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_18h10m40s_001_.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Nickel/Nickel_2021.11.06_18h11m21s_002_.png)
