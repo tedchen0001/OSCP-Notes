@@ -155,4 +155,28 @@ find / -name *kali* 2>&-
 /srv/http/
 /var/www/html/
 ```
+## 🖥️ Windows
 
+### :open_file_folder: [icacls](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/icacls)
+
+Performs the operation on all specified files in the current directory and its subdirectories.
+
+```
+icacls <directory> /t
+```
+
+Remarks
+
+```
+A sequence of simple rights:
+
+F - Full access
+
+M- Modify access
+
+RX - Read and execute access
+
+R - Read-only access
+
+W - Write-only access
+```
