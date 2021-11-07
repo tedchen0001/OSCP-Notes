@@ -161,6 +161,7 @@ Content-Length: 41
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Slort/Slort_2021.11.07_20h55m37s_004_.png)
 
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Slort/Slort_2021.11.07_20h58m29s_005_.png)
 
 #### Privilege Escalation
 
