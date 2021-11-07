@@ -140,6 +140,12 @@ wpscan --url http://192.168.0.1/ --passwords /usr/share/wordlists/rockyou.txt --
 
 #### [LFI Suite](https://github.com/D35m0nd142/LFISuite)
 
+file in Windows
+
+```
+C:\Windows\System32\drivers\etc\hosts
+```
+
 ### :open_file_folder: find 
 
 avoid permission denied messages
