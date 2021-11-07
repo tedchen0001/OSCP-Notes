@@ -18,7 +18,7 @@
 [AutoRecon](https://github.com/Tib3rius/AutoRecon): multi-threaded network reconnaissance tool which performs automated enumeration of services<br>
 [explainshell](https://explainshell.com/): explain command-line<br>
 [SecLists](https://github.com/danielmiessler/SecLists): It's a collection of multiple types of lists used during security assessments, collected in one place<br>
-[Reverse Shell Generator](https://www.revshells.com/): Online Reverse Shell Generator
+[Reverse Shell Generator](https://www.revshells.com/): online reverse shell generator
 
 ## :warning: Exam Restrictions
 
