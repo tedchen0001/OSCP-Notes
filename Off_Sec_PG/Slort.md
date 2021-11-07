@@ -132,3 +132,8 @@ The autorecon directory buster scan report for HTTP service on port 4443.
 We browse the ```http://192.168.124.53:4443/site```, the page is automatically redirected to ```http://192.168.124.53:4443/site/index.php?page=main.php```.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Slort/Slort_2021.11.07_17h56m01s_001_.png)
+
+Scan the site directory using feroxbuster, but no special results were found. Then I notice this re-directed URL. Could it have LFI or RFI vulnerability? 
+Let's run a test. We Browse the url ```http://192.168.124.53:4443/site/index.php?page=/Windows/System32/drivers/etc/hosts``` and see the responses.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Slort/Slort_2021.11.07_18h23m47s_002_.png)
