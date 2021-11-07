@@ -173,7 +173,7 @@ A sequence of simple rights:
 
 F - Full access
 
-M- Modify access
+M - Modify access
 
 RX - Read and execute access
 
