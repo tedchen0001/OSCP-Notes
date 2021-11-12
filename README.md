@@ -50,7 +50,7 @@ psql -U <username> -p 5432 -h <hostname or ip>
 #### HTTP Basic Authentication 
 
 ```
-hydra -l admin -P /usr/share/wordlists/rockyou.txt -s 80 -f 192.168.0.1 http-get
+hydra -l admin -P /usr/share/wordlists/rockyou.txt -s 80 -f 192.168.0.1 http-get /      # (/):default 
 ```
 
 ### :open_file_folder: cewl
