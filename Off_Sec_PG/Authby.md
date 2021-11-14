@@ -131,7 +131,7 @@ We log in to with admin account and download all the three files. The .htpasswd 
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_15h05m44s_005_.png)
 
-Use hashcat to crack the apache md5 hash code and we get the recovery password ```elite```
+Use hashcat to crack the apache md5 hash code and we get the recovery password ```elite```. ([hashcat -m {Hash-Mode}](https://hashcat.net/wiki/doku.php?id=example_hashes))
 
 ```
 echo "$apr1$oRfRsc/K$UpYpplHDlaemqseM39Ugg0" > hash
@@ -139,7 +139,7 @@ hashcat -m 1600 hash -a 0 /usr/share/wordlists/rockyou.txt --force
 ```
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_15h10m18s_006_.png)
 
-We use credential to pass HTTP authentication
+We use credential to pass HTTP authentication.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_15h21m10s_007_.png)
 
