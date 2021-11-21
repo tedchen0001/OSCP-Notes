@@ -70,10 +70,10 @@ I use Burp Sutie for further analysis. There is an interesting setting in login 
 
 ##3
 
-We decode auth_status base64 string.
+We decode auth_status base64 string and get a string ```{'success':'false'}```. 
 
 ##4
 
-WE get a string ```{'success':'false'}```. We can try to modify it to bypass the login verification.
+We can try to modify it to bypass the login verification.
 
 ##5
