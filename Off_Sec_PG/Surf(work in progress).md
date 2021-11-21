@@ -62,7 +62,7 @@ After browsing a while, the website looks nothing interesting. We use feroxbuste
 
 ##1
 
-We find a administration directory that is a login page. I Used hydra with username ```admin``` to try to brute force a valid credential but failed.
+We find a administration directory that is a login page. I used hydra with username ```admin``` to try to brute force a valid credential but failed.
 
 ##2
 
