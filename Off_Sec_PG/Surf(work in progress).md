@@ -74,6 +74,6 @@ We decode auth_status base64 string and get a string ```{'success':'false'}```.
 
 ##4
 
-We can try to modify it to bypass the login verification.
+T to modify it to bypass the login verification.
 
 ##5
