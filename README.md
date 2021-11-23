@@ -206,6 +206,12 @@ R - Read-only access
 W - Write-only access
 ```
 
+### :open_file_folder: PowerShell
+
+```
+C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe -ep bypass C:\Windows\Temp\xxx.ps1
+```
+
 ### :open_file_folder: others
 
 xxx is not recognized as an internal or external command, operable program or batch file.
@@ -214,3 +220,5 @@ xxx is not recognized as an internal or external command, operable program or ba
 C:\Windows\SysWOW64
 C:\Windows\System32
 ```
+
+
