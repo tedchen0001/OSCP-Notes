@@ -208,6 +208,8 @@ W - Write-only access
 
 ### :open_file_folder: PowerShell
 
+bypass
+
 ```
 C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe -ep bypass C:\Windows\Temp\xxx.ps1
 ```
