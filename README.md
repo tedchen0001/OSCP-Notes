@@ -205,3 +205,12 @@ R - Read-only access
 
 W - Write-only access
 ```
+
+### :open_file_folder: others
+
+xxx is not recognized as an internal or external command, operable program or batch file.
+
+```
+C:\Windows\SysWOW64
+C:\Windows\System32
+```
