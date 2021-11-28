@@ -214,6 +214,18 @@ bypass
 C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe -ep bypass C:\Windows\Temp\xxx.ps1
 ```
 
+zip
+
+```
+Compress-Archive -Path C:\Users\guest\Desktop\dist -DestinationPath C:\Users\guest\Desktop\dist
+```
+
+unzip
+
+```
+Expand-Archive -LiteralPath C:\Users\guest\Desktop\dist.zip -DestinationPath C:\Users\guest\Desktop
+```
+
 ### :open_file_folder: others
 
 xxx is not recognized as an internal or external command, operable program or batch file.
