@@ -138,7 +138,7 @@ We log in to with admin account and download all the three files. The .htpasswd 
 Use hashcat to crack the apache md5 hash code and we get the recovery password ```elite```. ([hashcat -m {Hash-Mode}](https://hashcat.net/wiki/doku.php?id=example_hashes))
 
 ```
-echo "$apr1$oRfRsc/K$UpYpplHDlaemqseM39Ugg0" > hash
+echo '$apr1$oRfRsc/K$UpYpplHDlaemqseM39Ugg0' > hash
 hashcat -m 1600 hash -a 0 /usr/share/wordlists/rockyou.txt --force
 ```
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_15h10m18s_006_.png)
