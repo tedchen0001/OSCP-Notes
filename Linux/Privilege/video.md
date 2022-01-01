@@ -29,7 +29,7 @@ Target server
 ```
 ls -lah /dev/fb0
 
-cat /dev/fb0 > .ayamkambing
+cat /dev/fb0 > .tmp
 ```
 
 Host server
