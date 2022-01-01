@@ -1,27 +1,35 @@
-Pre-install
+iraw2png.pl
 
 ```
-sudo apt-get install libpng-dev
+#!/usr/bin/perl -w
 
-sudo apt-get install -y pkg-config
+ 
 
-git clone --depth=50 https://github.com/AndrewFromMelbourne/fb2png.git AndrewFromMelbourne/fb2png
+$w = shift || 240;
+$h = shift || 320;
+$pixels = $w * $h;
 
-cd AndrewFromMelbourne/fb2png
+ 
 
-git fetch origin +refs/pull/5/merge:
+open OUT, "|pnmtopng" or die "Can't pipe pnmtopng: $!\n";
 
-git checkout -qf FETCH_HEAD
+ 
 
-export TRAVIS_COMPILER=gcc
+printf OUT "P6%d %d\n255\n", $w, $h;
 
-export CC=${CC:-gcc}
+ 
 
-export CC_FOR_BUILD=${CC_FOR_BUILD:-gcc}
+while ((read STDIN, $raw, 2) and $pixels--) {
+$short = unpack('S', $raw);
+print OUT pack("C3",
+($short & 0xf800) >> 8,
+($short & 0x7e0) >> 3,
+($short & 0x1f) << 3);
+}
 
-gcc --version
+ 
 
-make
+close OUT;
 ```
 
 Target server
@@ -29,15 +37,15 @@ Target server
 ```
 ls -lah /dev/fb0
 
-cat /dev/fb0 > .tmp
+cat /dev/fb0 > /tmp/temp.raw #upload to Host
+
+cat /sys/class/graphics/fb0/virtual_size #1176,885
 ```
 
 Host server
 
 ```
-cat .tmp > /dev/fb0
+chmod +x iraw2png.pl
 
-./fb2png
-
-ls -la fb.png
+./iraw2png.pl 1176 885 < temp.raw > screen.png
 ```
