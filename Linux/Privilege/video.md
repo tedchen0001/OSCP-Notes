@@ -35,8 +35,6 @@ close OUT;
 Target server
 
 ```
-id
-
 ls -lah /dev/fb0
 
 cat /dev/fb0 > /tmp/temp.raw #upload to Host
