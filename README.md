@@ -24,6 +24,10 @@
 
 [linPEAS](https://www.offensive-security.com/offsec/understanding-pentest-tools-scripts/): Understanding the tools/scripts you use in a Pentest
 
+## :warning: Exam Change
+
+[2022/1/11](https://www.offensive-security.com/offsec/oscp-exam-structure/)
+
 ## :hammer_and_wrench: Commands
 
 ### :open_file_folder: hydra
