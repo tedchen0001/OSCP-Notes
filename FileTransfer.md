@@ -1,4 +1,4 @@
-Download a file from the server with SSH
+:arrow_forward: Download a file from the server with SSH
 
 command 
 ```
@@ -10,7 +10,7 @@ e.g.
 scp tester@192.168.10.99:/Users/tester/Desktop/123.txt /tmp/123.txt
 ```
 
-Uploading a file from target server to our local HTTP server
+:arrow_forward: Uploading a file from target server to our local HTTP server
 
 HTTPutServer.py
 
