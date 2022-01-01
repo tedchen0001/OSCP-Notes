@@ -1,4 +1,4 @@
 ### Proving Grounds Walkthrough
 
-AD:Heist, Hutch, Vault
-BOF:Malbec
+- AD:Heist, Hutch, Vault
+- BOF:Malbec
