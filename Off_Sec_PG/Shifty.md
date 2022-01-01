@@ -118,7 +118,7 @@ Successfully obtained shell.
 
 (Reference official walkthrough)
 
-There /opt/backups/backup.py file contains hardcoded key.
+The ```/opt/backups/backup.py``` file contains hardcoded key.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_22h58m08s_007_.png)
 
