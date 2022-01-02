@@ -176,6 +176,16 @@ avoid permission denied messages
 find / -name *kali* 2>&-
 ```
 
+### :open_file_folder: AutoRecon
+
+```
+git clone https://github.com/Tib3rius/AutoRecon.git
+
+cd AutoRecon
+
+sudo python3 autorecon.py 192.168.188.174 --dirbuster.wordlist "" #kip directory busting to speed up results
+```
+
 ## 🖥️ Linux
 
 ### :open_file_folder: Typical site folders
