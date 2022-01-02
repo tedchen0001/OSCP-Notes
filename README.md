@@ -183,7 +183,7 @@ git clone https://github.com/Tib3rius/AutoRecon.git
 
 cd AutoRecon
 
-sudo python3 autorecon.py 192.168.188.174 --dirbuster.wordlist "" #kip directory busting to speed up results
+sudo python3 autorecon.py <target IP> --dirbuster.wordlist "" #skip directory busting to speed up results
 ```
 
 ## 🖥️ Linux
