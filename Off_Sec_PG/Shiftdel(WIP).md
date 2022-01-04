@@ -60,7 +60,7 @@ OS and Service detection performed. Please report any incorrect results at https
 
 ```
 
-Acroding to the Nmap scan results, we can confirm that wordpress is running at 80 port. Using WPSCAN to find vulnerabilities. 
+Acroding to the Nmap scan results, we can confirm that wordpress is running on 80 port. Using WPSCAN to find vulnerabilities. 
 We find two users: ```admin``` and ```intern```.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.04_21h38m17s_001_.png)
