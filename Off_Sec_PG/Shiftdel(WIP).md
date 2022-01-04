@@ -59,3 +59,8 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Sat Jan  1 23:17:12 2022 -- 1 IP address (1 host up) scanned in 928.53 seconds
 
 ```
+
+Acroding to the Nmap scan results, we can confirm that wordpress is running at 80 port. Using WPSCAN to find vulnerabilities. 
+We find two users: ```admin``` and ```intern```.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.04_21h38m17s_001_.png)
