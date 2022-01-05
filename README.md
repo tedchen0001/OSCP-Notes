@@ -140,16 +140,28 @@ unprivileged Linux process snooping: [pspy](https://github.com/DominicBreuker/ps
 
 [WPScan](https://github.com/wpscanteam/wpscan)
 
-Find exploit
+Finding application
 
 ```
 wpscan --url http://192.168.0.1/
 ```
 
-Enumerate valid usernames
+Enumerating valid usernames
 
 ```
 wpscan --url http://192.168.0.1/ --enumerate u1-1000
+```
+
+Enumerating themes
+
+```
+wpscan --url http://192.168.0.1/ -e at
+```
+
+Enumerating plugins
+
+```
+wpscan --url http://192.168.0.1/ -e ap
 ```
 
 Brute-force attack
