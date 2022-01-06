@@ -60,7 +60,7 @@ OS and Service detection performed. Please report any incorrect results at https
 
 ```
 
-Acroding to the nmap scan results, we can confirm that wordpress is running on 80 port. Using wpscan to check vulnerabilities and 
+Acroding to the nmap scan results, we can confirm that wordpress is running on 80 port. Using wpscan tool to check vulnerabilities and 
 we find two users: ```admin``` and ```intern```.
 
 ```
