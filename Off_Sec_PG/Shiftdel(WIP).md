@@ -60,11 +60,17 @@ OS and Service detection performed. Please report any incorrect results at https
 
 ```
 
-Acroding to the nmap scan results, we can confirm that wordpress is running on 80 port. Using wpscan tool to check vulnerabilities and 
-we find two users: ```admin``` and ```intern```.
+Acroding to the nmap scan results, we can confirm that wordpress is running on 80 port and version is ```4.9.6```. Using wpscan tool to check vulnerabilities and 
+we find two users: ```admin``` and ```intern```. However, no vulnerabilities related to plugins and themes were found.
 
 ```
 wpscan --url http://192.168.242.174 --enumerate u1-10
 ```
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.04_21h38m17s_001_.png)
+
+After a lot of searching, I found a vulnerability in [wordpress core](https://www.exploit-db.com/exploits/47690). We can find hidden articles by browsing the vulnerability URL. One of the articles provides the password for the ```intern``` account.
+
+```http://192.168.169.174/?static=1&order=asc```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.11_01h09m45s_002_.png)
