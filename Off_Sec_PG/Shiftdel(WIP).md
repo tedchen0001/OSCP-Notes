@@ -60,11 +60,11 @@ OS and Service detection performed. Please report any incorrect results at https
 
 ```
 
-Acroding to the nmap scan results, we can confirm that wordpress is running on 80 port and version is ```4.9.6```. Using wpscan tool to check vulnerabilities and 
-we find two users: ```admin``` and ```intern```. However, no vulnerabilities related to plugins and themes were found.
+Acroding to the nmap scan results, we can confirm that wordpress is running on 80 port and version is ```4.9.6```. Using wpscan tool to check vulnerabilities. 
+We found two accounts admin and intern but did not find plugins and themes vulnerability.
 
 ```
-wpscan --url http://192.168.242.174 --enumerate u1-10
+wpscan --url http://192.168.242.174 -e vt,vp,u1-10
 ```
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.04_21h38m17s_001_.png)
