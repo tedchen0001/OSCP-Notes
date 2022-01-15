@@ -47,7 +47,7 @@ python3 49876.py -u http://exfiltrated.offsec/panel/ -l admin -p admin
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.09.30_23h43m00s_004_.png)
 
-In order to get the full shell function I started a terminal listening on port 4444 and reconnected.
+In order to upgrade the terminal I started a terminal listening on port 4444 and reconnected.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.01_01h18m32s_005_.png)
 
