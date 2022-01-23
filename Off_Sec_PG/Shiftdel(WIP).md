@@ -74,3 +74,5 @@ After a lot of searching, I found a vulnerability in [wordpress core](https://ww
 ```http://192.168.169.174/?static=1&order=asc```
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.11_01h09m45s_002_.png)
+
+When I was looking for wordpress vulnerability, I also found another [wordpress 4.9.6 vulnerability](https://www.exploit-db.com/exploits/50456), but it requires a verified account, so the credential We got early can be used here.
