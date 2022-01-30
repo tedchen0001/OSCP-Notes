@@ -45,3 +45,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 # Nmap done at Fri Jan 28 09:01:24 2022 -- 1 IP address (1 host up) scanned in 2035.44 seconds
 
 ```
+
+Site at 80 port doesn't look like anything special, so we execute a directory traversal.
+
+```
+feroxbuster --url http://192.168.247.41 -w /usr/share/wordlists/dirb/common.txt
+```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/ZenPhoto/ZenPhoto_2022.01.31_0h43m18s_001.png)
