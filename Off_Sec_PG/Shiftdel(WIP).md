@@ -76,3 +76,8 @@ After a lot of searching, I found a vulnerability in [wordpress core](https://ww
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.11_01h09m45s_002_.png)
 
 When I was looking for wordpress vulnerability, I also found another [wordpress 4.9.6 vulnerability](https://www.exploit-db.com/exploits/50456), but it requires a verified account, so the credential We got early can be used here.
+
+On the other hand, the site running at port 8888 is phpMyAdmin 4.8.1. After searching, I found an available [RCE](https://www.exploit-db.com/exploits/50457) but it requires an authenticated account.
+
+
+
