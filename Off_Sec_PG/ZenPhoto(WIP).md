@@ -53,3 +53,9 @@ feroxbuster --url http://192.168.247.41 -w /usr/share/wordlists/dirb/common.txt
 ```
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/ZenPhoto/ZenPhoto_2022.01.31_0h43m18s_001.png)
+
+Browsing to the URL ```http://192.168.247.41/test/index.php``` we can know that the site is running ZenphotoCMS and version is 1.4.1.4.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/ZenPhoto/ZenPhoto_2022.01.31_1h19m29s_002.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/ZenPhoto/ZenPhoto_2022.01.31_1h20m29s_003.png)
