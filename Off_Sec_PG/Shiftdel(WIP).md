@@ -79,5 +79,21 @@ When I was looking for wordpress vulnerability, I also found another [wordpress 
 
 On the other hand, the site running at port 8888 is phpMyAdmin 4.8.1. After searching, I found an available [RCE](https://www.exploit-db.com/exploits/50457) but it requires an authenticated account.
 
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_16h0m16s_003.png)
+
+So we now use the aforementioned exploit to try to reset the wordpress database settings.
+
+We follow the exploit steps. 
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_16h12m33s_004.png)
+
+Login in to wordpress admin.
+
+Navigates to Media > Add New > Select Files > Open/Upload
+
+Click Edit > Open Developer Console > Paste this exploit script (If you can't copy and paste the js function code in the console enter ```allow pasting``` first )
+
+
+
 
 
