@@ -103,7 +103,7 @@ We can't reset the settings because wp-config-sample.php is missing.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_18h32m38s_007.png)
 
-After referring to this article and doing some researching I tried to delete ```.htaccess``` to remove protection settings.
+After referring to this [article](https://blog.sonarsource.com/wordpress-file-delete-to-code-execution?redirect=rips) and doing some researching I tried to delete ```.htaccess``` to remove protection settings.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_18h47m43s_008.png)
 
