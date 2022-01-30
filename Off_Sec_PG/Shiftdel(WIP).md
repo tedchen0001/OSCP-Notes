@@ -103,7 +103,7 @@ We can't reset the settings because wp-config-sample.php is missing.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_18h32m38s_007.png)
 
-After referring to this [article](https://blog.sonarsource.com/wordpress-file-delete-to-code-execution?redirect=rips) and doing some researching I tried to delete ```.htaccess``` to remove protection settings.
+After referring to this [article](https://blog.sonarsource.com/wordpress-file-delete-to-code-execution?redirect=rips) and doing some researching I try to delete ```.htaccess``` to remove protection settings.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_18h47m43s_008.png)
 
@@ -138,7 +138,7 @@ After searching for a while I found a schedule has customizing $HOME path and ru
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_20h34m12s_016.png)
 
-We Create a ```rm``` flile under ```/bin``` path.
+We create a ```rm``` flile under ```/bin``` path.
 
 ```
 cd /var/www/html/wordpress/wp-content/uploads/
