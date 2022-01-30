@@ -136,7 +136,7 @@ After searching for a while I found a schedule has customizing $HOME path and ru
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_20h22m7s_015.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_20h34m12s_016.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_20h34m13s_016.png)
 
 We create a ```rm``` flile under ```/bin``` path.
 
