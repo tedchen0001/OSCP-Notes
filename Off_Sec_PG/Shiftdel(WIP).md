@@ -83,17 +83,25 @@ On the other hand, the site running at port 8888 is phpMyAdmin 4.8.1. After sear
 
 So we now use the aforementioned exploit to try to reset the wordpress database settings.
 
-We follow the exploit steps. 
+We follow the [exploit](https://www.exploit-db.com/exploits/50456) steps. 
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_16h12m33s_004.png)
 
-Login in to wordpress admin.
+1. Login in to wordpress admin.
 
-Navigates to Media > Add New > Select Files > Open/Upload
+2. Navigates to Media > Add New > Select Files > Open/Upload
 
-Click Edit > Open Developer Console > Paste this exploit script (If you can't copy and paste the js function code in the console enter ```allow pasting``` first )
+3. Click Edit > Open Developer Console > Paste this exploit script (If you can't copy and paste the js function code in the console enter ```allow pasting``` first )
 
+4. Execute the function, eg: unlink_thumb("../../../../wp-config.php")
 
+We can't reset the settings because wp-config-sample.php is missing.
 
+After referring to this article and doing some researching I tried to delete ```.htaccess``` to remove protection settings.
 
+We can see the source code directly.
 
+We know that wp-config.php contains the database connection settings, so we browse to wp-config.php page but it doesn't show any information, then I try to check the code
+and get the settings successfully.
+
+Right now we have the database connection information, we can use the previous RCE to get the shell.
