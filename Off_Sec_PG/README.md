@@ -6,3 +6,7 @@
 #### Exploits
 
 - [WordPress Core < 5.2.3](https://www.exploit-db.com/exploits/47690)
+
+#### Notes
+
+- Use netcat instead of telnet.
