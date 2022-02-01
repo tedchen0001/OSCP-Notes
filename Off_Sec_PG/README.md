@@ -9,4 +9,4 @@
 
 #### Notes
 
-- Use netcat instead of telnet.
+- Use ```netcat``` instead of ```telnet```.
