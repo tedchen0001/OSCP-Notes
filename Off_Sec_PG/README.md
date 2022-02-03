@@ -10,3 +10,4 @@
 #### Notes
 
 - Use ```netcat``` instead of ```telnet```.
+- Note the directory traversal status code ```401```.
