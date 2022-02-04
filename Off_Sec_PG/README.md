@@ -10,4 +10,4 @@
 #### Notes
 
 - Use ```netcat``` instead of ```telnet```.
-- Note the directory traversal status code ```401```.
+- Note the directory traversal status code ```401```. A page exists that just needs to be verified.
