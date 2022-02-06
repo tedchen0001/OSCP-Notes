@@ -123,7 +123,7 @@ OS and Service detection performed. Please report any incorrect results at https
 
 Downloading the secret.txt.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h41m11s_003.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h41m12s_003.png)
 
 Decoding the file, it's a SSH key file.
 
