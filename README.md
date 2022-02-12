@@ -158,6 +158,10 @@ Enumerating themes
 wpscan --url http://192.168.0.1/ -e at
 ```
 
+```
+curl -k -s http://192.168.0.1/wp-content/themes/ | html2text
+```
+
 Enumerating plugins
 
 ```
