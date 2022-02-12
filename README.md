@@ -173,7 +173,7 @@ wpscan --url http://192.168.0.1/ --passwords /usr/share/wordlists/rockyou.txt --
 SSL peer certificate or SSH remote key was not OK
 
 ```
-wpscan --url https://192.168.1.1 --disable-tls-checks
+wpscan --url https://192.168.0.1/ --disable-tls-checks
 ```
 
 ### :open_file_folder: LFI
