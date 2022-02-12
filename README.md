@@ -164,6 +164,10 @@ Enumerating plugins
 wpscan --url http://192.168.0.1/ -e ap
 ```
 
+```
+curl -k -s http://192.168.0.1/wp-content/plugins/ | html2text
+```
+
 Brute-force attack
 
 ```
