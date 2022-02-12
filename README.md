@@ -170,6 +170,12 @@ Brute-force attack
 wpscan --url http://192.168.0.1/ --passwords /usr/share/wordlists/rockyou.txt --max-threads 50 --usernames admin
 ```
 
+SSL peer certificate or SSH remote key was not OK
+
+```
+wpscan --url https://192.168.1.1 --disable-tls-checks
+```
+
 ### :open_file_folder: LFI
 
 #### [LFI Suite](https://github.com/D35m0nd142/LFISuite)
