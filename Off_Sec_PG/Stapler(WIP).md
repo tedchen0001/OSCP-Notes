@@ -245,11 +245,11 @@ Uploading shell.php file to server.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h33m26s_014.png)
 
-Starting a listener on port 80.
+Starting a listener on port 80 and then browse to to plugin url ```https://192.168.172.148:12380/blogblog/wp-content/uploads/shell.php```.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h33m55s_015.png)
 
-Browsing to plugin url ```https://192.168.172.148:12380/blogblog/wp-content/uploads/shell.php``` and then we get the shell.
+We get the shell.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h35m47s_016.png)
 
