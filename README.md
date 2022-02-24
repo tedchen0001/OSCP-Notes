@@ -19,7 +19,7 @@
 [explainshell](https://explainshell.com/): explain command-line<br>
 [SecLists](https://github.com/danielmiessler/SecLists): It's a collection of multiple types of lists used during security assessments, collected in one place<br>
 [Reverse Shell Generator](https://www.revshells.com/): online reverse shell generator<br>
-[https://book.hacktricks.xyz/](https://book.hacktricks.xyz/)
+[hacktricks](https://book.hacktricks.xyz/)
 
 ## :warning: Exam Restrictions
 
