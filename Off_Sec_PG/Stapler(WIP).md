@@ -192,3 +192,21 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Sun Feb  6 05:47:45 2022 -- 1 IP address (1 host up) scanned in 372.84 seconds
 
 ```
+
+After a lot of searching, I find that 12380 port is also running https service.
+
+![image]()
+
+We find the robots.txt file through ferooxbuster.
+
+![image]()
+
+Browsing to the ```https://192.168.172.148:12380/blogblog/``` we find in robots.txt. The website is built using WordPress.
+
+![image]()
+
+I notice that the name of the commenter is similar to the note file downloaded from ftp, so I try to use brute-force attack to get the WordPress login password.
+
+```
+wpscan --url https://192.168.172.148:12380/blogblog/ --passwords ~/Documents/rockyou.txt --max-threads 50 --usernames john --disable-tls-checks
+```
