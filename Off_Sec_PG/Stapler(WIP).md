@@ -256,3 +256,21 @@ We get the shell.
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h36m5s_017.png)
 
 #### Privilege Escalation
+
+We find a cron job with inappropriate permission settings in the execution of linpeas.sh results.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_23h42m16s_018.png)
+
+We have the permission to modify the job file.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_23h45m19s_019.png)
+
+Creating the file with reverse shell command and replcae the original job.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_23h46m49s_020.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_23h52m50s_021.png)
+
+Starting a listener on port 80 and wait for minutes.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_23h53m3s_022.png)
