@@ -163,6 +163,10 @@ wpscan --url http://192.168.0.1/ -e at
 curl -k -s http://192.168.0.1/wp-content/themes/ | html2text
 ```
 
+```
+curl -s -X GET http://192.168.0.1 | grep -E 'wp-content/themes' | sed -E 's,href=|src=,THIIIIS,g' | awk -F "THIIIIS" '{print $2}' | cut -d "'" -f2
+```
+
 Enumerating plugins
 
 ```
@@ -171,6 +175,10 @@ wpscan --url http://192.168.0.1/ -e ap
 
 ```
 curl -k -s http://192.168.0.1/wp-content/plugins/ | html2text
+```
+
+```
+curl -s -X GET http://192.168.0.1 | grep -E 'wp-content/plugins/' | sed -E 's,href=|src=,THIIIIS,g' | awk -F "THIIIIS" '{print $2}' | cut -d "'" -f2
 ```
 
 Brute-force attack
