@@ -86,3 +86,24 @@ http://sunset-midnight/wp-content/uploads/2022/02/php-reverse-shell.php
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/SunsetMidnight/SunsetMidnight_2022.02.27_16h34m54s_021.png)
 
+#### Priviledge Escalation
+
+Checking the ```wp-config.php``` first.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/SunsetMidnight/SunsetMidnight_2022.02.27_16h52m27s_022.png)
+
+Trying to use the credential to login through ssh.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/SunsetMidnight/SunsetMidnight_2022.02.27_16h56m00s_023.png)
+
+We find an unknown binary in the scan results of linpeas.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/SunsetMidnight/SunsetMidnight_2022.02.27_17h00m41s_024.png)
+
+Checking this unknown binary reveals that it executes a command with an unspecified path.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/SunsetMidnight/SunsetMidnight_2022.02.27_17h03m46s_025.png)
+
+We create our service to run the malicious code.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/SunsetMidnight/SunsetMidnight_2022.02.27_17h09m59s_026.png)
