@@ -68,7 +68,7 @@ According to the [exploit](https://www.exploit-db.com/exploits/36374) instructio
 ```
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/SunsetMidnight/SunsetMidnight_2022.02.27_16h24m19s_017.png)
 
-Now let's prepare a php file with the reverse shell command.
+Now let's prepare a [php file](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) with the reverse shell command.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/SunsetMidnight/SunsetMidnight_2022.02.27_16h29m08s_018.png)
 
