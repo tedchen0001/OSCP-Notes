@@ -33,7 +33,7 @@ use the waiting time to determine whether the conditional equation is valid
 '; IF (select LEN(password) from users) = 64 WAITFOR DELAY '00:00:05' --
 ```
 
-#### sqlmap (:no_entry::no_entry::no_entry: cannot be used in the exam)
+#### sqlmap (:radioactive::radioactive::radioactive: cannot be used in the exam)
 
 ```
 sqlmap -u "url" --dump -C "columns" -T "tables" -D "database" 
