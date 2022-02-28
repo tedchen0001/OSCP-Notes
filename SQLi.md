@@ -37,7 +37,7 @@ use the waiting time to determine whether the conditional equation is valid
 
 ```
 sqlmap -u "url" --dump -C "columns" -T "tables" -D "database" 
-sqlmap -r post.txt --dump -C "columns" -T "tables" -D "database"
+sqlmap -r post.txt -p "parameter_name" --dump -C "columns" -T "tables" -D "database"
 ```
 
 post.txt = request contents
