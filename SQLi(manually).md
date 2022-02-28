@@ -13,7 +13,7 @@ find columns names
 ' GROUP BY table.column1, column2, column3(n) HAVING 1=1 -- and so on
 ```
 
-use the waiting time to determine whether the conditional equation is valid.
+use the waiting time to determine whether the conditional equation is valid
 
 ```SQL
 -- e.g. guess username (ASCII)
