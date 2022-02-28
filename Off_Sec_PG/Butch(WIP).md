@@ -1,4 +1,4 @@
-#### Flow
+#### Mind map
 
 ![Butch](https://user-images.githubusercontent.com/8998412/155992115-a7ef50ef-653f-40fb-b331-6131c692eaa7.png)
 
