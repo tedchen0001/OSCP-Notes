@@ -1,5 +1,71 @@
 #### Enumeration
 
+```
+# Nmap 7.92 scan initiated Sun Feb 27 00:15:18 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN /home/kali/Documents/AutoRecon/results/192.168.128.88/scans/_full_tcp_nmap.txt -oX /home/kali/Documents/AutoRecon/results/192.168.128.88/scans/xml/_full_tcp_nmap.xml 192.168.128.88
+Warning: 192.168.128.88 giving up on port because retransmission cap hit (6).
+Nmap scan report for 192.168.128.88
+Host is up, received user-set (0.28s latency).
+Scanned at 2022-02-27 00:15:18 EST for 1752s
+Not shown: 65512 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE        REASON      VERSION
+22/tcp    open     ssh            syn-ack     OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 9c:fe:0b:8b:8d:15:e7:72:7e:3c:23:e5:86:55:51:2d (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCm5CuyxbQ0hflsMDQe6CKt3H41UNbqR/7dqfRp2OkKxsOZ8sM0gHgGPU41j+b6ByHnkBSYi+NEIV+VXcnpGraaGhn/3mjF5uvgVdei5n2O9ZgX6Vuefk4o6Q3DL2DsEtOCaepPimfSX1TetQUjWc8f9ciax4Za5FdCjZL/L1eV211Aidf93iROG7y6GUzRyMGBGQTPUnZK39dTmJEpo+qprHmv2LCG84azdXwTGR1YilTVtrgnkMUyrq6gnuins4fxLkm5OwnznuL8nQgIWfH9I0YGuFkqf3pR1VHFeaOJnFMh9XfH58/BzlzLVtcaKYP45ARztIouRVtgHseXmW7X
+|   256 fe:eb:ef:5d:40:e7:06:67:9b:63:67:f8:d9:7e:d3:e2 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOByIes6+atfEdAfAg4dy8LGa1TrPSa7sVSWSkEc5X+/932xaylSrtw/EvgKnGFW4zxSDNywRWtsJ6PN2iTRujQ=
+|   256 35:83:68:2c:33:8b:b4:6c:24:21:20:0d:52:ed:cd:16 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILUvvXW/tfdzAPwVMpeX7n7D3ObXCvVg2fpFsKc3htfy
+80/tcp    open     http           syn-ack     Apache httpd 2.4.38 ((Debian))
+|_http-server-header: Apache/2.4.38 (Debian)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Did not follow redirect to http://sunset-midnight/
+| http-robots.txt: 1 disallowed entry 
+|_/wp-admin/
+3306/tcp  open     mysql          syn-ack     MySQL 5.5.5-10.3.22-MariaDB-0+deb10u1
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.5-10.3.22-MariaDB-0+deb10u1
+|   Thread ID: 3084
+|   Capabilities flags: 63486
+|   Some Capabilities: Speaks41ProtocolNew, LongColumnFlag, Support41Auth, Speaks41ProtocolOld, ODBCClient, SupportsTransactions, ConnectWithDatabase, IgnoreSigpipes, IgnoreSpaceBeforeParenthesis, InteractiveClient, FoundRows, SupportsLoadDataLocal, SupportsCompression, DontAllowDatabaseTableColumn, SupportsAuthPlugins, SupportsMultipleStatments, SupportsMultipleResults
+|   Status: Autocommit
+|   Salt: D-S:h|X">Rd|c\&Ejf?G
+|_  Auth Plugin Name: mysql_native_password
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: ERROR: Script execution failed (use -d to debug)
+|_sslv2: ERROR: Script execution failed (use -d to debug)
+|_tls-alpn: ERROR: Script execution failed (use -d to debug)
+|_tls-nextprotoneg: ERROR: Script execution failed (use -d to debug)
+3886/tcp  filtered nei-management no-response
+3906/tcp  filtered topovista-data no-response
+5693/tcp  filtered rbsystem       no-response
+15603/tcp filtered unknown        no-response
+21709/tcp filtered unknown        no-response
+25388/tcp filtered unknown        no-response
+26534/tcp filtered unknown        no-response
+28728/tcp filtered unknown        no-response
+36844/tcp filtered unknown        no-response
+37564/tcp filtered unknown        no-response
+39569/tcp filtered unknown        no-response
+40948/tcp filtered unknown        no-response
+45677/tcp filtered unknown        no-response
+46313/tcp filtered unknown        no-response
+47401/tcp filtered unknown        no-response
+50113/tcp filtered unknown        no-response
+50225/tcp filtered unknown        no-response
+50364/tcp filtered unknown        no-response
+53270/tcp filtered unknown        no-response
+61622/tcp filtered unknown        no-response
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Feb 27 00:44:30 2022 -- 1 IP address (1 host up) scanned in 1752.38 seconds
+
+```
+
 Browsing to port 80 HTTP service through IP address fails and it returns a domain name ```sunset-midnight```. We need to modify DNS settings first.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/SunsetMidnight/SunsetMidnight_2022.02.27_13h44m48s_001.png)
