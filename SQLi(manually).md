@@ -42,4 +42,5 @@ sqlmap -r post.txt --dump -C "columns" -T "tables" -D "database"
 
 post.txt = request contents
 
-![image]()
+![image](![SQLi_2022 02 28_19h37m55s_001](https://user-images.githubusercontent.com/8998412/155977929-7e38d3bb-8d61-4afa-af6b-90ae1e13ec73.png)
+)
