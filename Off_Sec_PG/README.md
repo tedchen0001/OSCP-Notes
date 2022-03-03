@@ -4,7 +4,7 @@
 - BOF:Malbec
 - WordPress:SunsetMidnight
 - SQLi:Butch
-- LibreOffice:Hepet
+- LibreOffice:Hepet, Craft
 
 #### Exploits
 
