@@ -5,6 +5,7 @@
 - WordPress:SunsetMidnight
 - SQLi:Butch
 - LibreOffice:Hepet, Craft
+- SeImpersonatePrivilege:Craft
 
 #### Exploits
 
