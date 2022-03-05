@@ -14,4 +14,4 @@ SeIncreaseWorkingSetPrivilege Increase a process working set            Disabled
 
 privilege escalation
 
-Tool:PrintSpoofer(https://github.com/itm4n/PrintSpoofer)
+Tool:[PrintSpoofer](https://github.com/itm4n/PrintSpoofer)
