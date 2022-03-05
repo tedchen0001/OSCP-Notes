@@ -1,3 +1,5 @@
+### SeImpersonatePrivilege
+
 whoami /all (privileges information)
 
 SeImpersonatePrivilege = Enabled
@@ -12,6 +14,6 @@ SeCreateGlobalPrivilege       Create global objects                     Enabled
 SeIncreaseWorkingSetPrivilege Increase a process working set            Disabled
 ```
 
-privilege escalation
+### Privilege Escalation
 
 Tool:[PrintSpoofer](https://github.com/itm4n/PrintSpoofer)
