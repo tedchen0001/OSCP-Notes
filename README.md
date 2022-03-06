@@ -231,7 +231,7 @@ Typical site folders
 /var/www/html/
 ```
 
-Writable file
+[Writable file](https://www.hackingarticles.in/multiple-ways-to-get-root-through-writable-file/)
 
 ```Shell
 find / -writable -type  f 2>/dev/null | grep -v "/proc/"
