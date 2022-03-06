@@ -208,7 +208,7 @@ C:\Windows\System32\drivers\etc\hosts
 
 avoid permission denied messages
 
-```
+```Shell
 find / -name *kali* 2>&-
 ```
 
@@ -224,12 +224,19 @@ sudo python3 autorecon.py <target IP> --dirbuster.wordlist "" #skip directory bu
 
 ## 🖥️ Linux
 
-### :open_file_folder: Typical site folders
+Typical site folders
 
 ```
 /srv/http/
 /var/www/html/
 ```
+
+Writable file
+
+```Shell
+find / -writable -type  f 2>/dev/null | grep -v "/proc/"
+```
+
 ## 🖥️ Windows
 
 ### :open_file_folder: [icacls](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/icacls)
