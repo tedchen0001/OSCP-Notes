@@ -1,4 +1,4 @@
-### Mind Map
+### Mind map
 
 ![Splodge ](https://user-images.githubusercontent.com/8998412/157489782-a836c8cd-4407-428b-9d41-fb31950a09f6.png)
 
