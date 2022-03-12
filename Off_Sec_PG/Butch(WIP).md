@@ -153,3 +153,31 @@ Now we update the new password ```123456```.
 Login with username ```butch``` and password ```123456```.
 
 ![image](7)
+
+This page looks like an upload page written in aspx, we try to use the bypass technique here to see if we can upload the reverse shell page.
+
+![image](8)
+
+Prepare a reverse shell page. I add the output string to see if it can be executed properly.
+
+![image](9)
+
+![image](10)
+
+Uploading the page file and starting a listener at port 450.
+
+![image](11)
+
+Browsing to url ```http://192.168.202.63:450/shell.aspx```.
+
+![image](12)
+
+We get the shell.
+ 
+![image](13)
+ 
+#### Privilege escalation
+
+Because we already have ```nt authority\system``` privileges, we don't need to escalate.
+ 
+![image](13)
