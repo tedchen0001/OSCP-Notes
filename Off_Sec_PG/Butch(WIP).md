@@ -141,7 +141,7 @@ Finally, we know that the password length is 64, so it may have been hashed. Bec
 
 ![image](6)
 
-Now we update the password.
+Now we update the new password ```123456```.
 
 ```SQL
 -- 123456
