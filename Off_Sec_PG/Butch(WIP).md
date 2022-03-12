@@ -135,4 +135,4 @@ Guessing the length of the password by the command below.
 '; IF (SELECT LEN(password_hash) FROM users) > 10 WAITFOR DELAY '00:00:05' -- and so on
 ```
 
-Finally, we know that the password length is 64, so it may have been encrypted.
+Finally, we know that the password length is 64, so it may have been hashed.
