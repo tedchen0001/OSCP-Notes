@@ -267,19 +267,19 @@ W - Write-only access
 
 bypass
 
-```
+```powershell
 C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe -ep bypass C:\Windows\Temp\xxx.ps1
 ```
 
 zip
 
-```
+```powershell
 Compress-Archive -Path C:\Users\guest\Desktop\dist -DestinationPath C:\Users\guest\Desktop\dist
 ```
 
 unzip
 
-```
+```powershell
 Expand-Archive -LiteralPath C:\Users\guest\Desktop\dist.zip -DestinationPath C:\Users\guest\Desktop
 ```
 
