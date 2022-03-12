@@ -1,6 +1,6 @@
 #### Mind map
 
-![Butch](https://user-images.githubusercontent.com/8998412/155992115-a7ef50ef-653f-40fb-b331-6131c692eaa7.png)
+![Butch](https://user-images.githubusercontent.com/8998412/158007932-e61409eb-080e-48b8-b874-5d395cd7d659.png)
 
 #### Enumeration
 
