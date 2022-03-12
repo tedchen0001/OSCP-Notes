@@ -137,7 +137,7 @@ Guessing the length of the password by the command below.
 -- and so on
 ```
 
-Finally, we know that the password length is 64, so it may have been hashed. Because of the length of the password so I guessed that may use SHA-256 hash. (Because manually to guess all the passwords too slow and may not be able to restore the original password we try to update directly.)
+Finally, we know that the password length is 64, so it may have been hashed. Because of the length of the password so I guessed that may use SHA-256 hash. (Because manually guessing all the password is too slow and may not be able to restore the original password we try to update directly.)
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Butch/Butch_2022.03.12_16h05m30s_006.png)
 
