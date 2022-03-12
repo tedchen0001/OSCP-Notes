@@ -87,7 +87,7 @@ I find the website that runs on port 450 has SQL injection vulnerability by usin
 Attempts to log in using the usernames ```admin``` and ```administrator``` failed.
 
 ```SQL
-' or 1=1  ; -- #password column
+' or 1=1  ; --
 ```
 
 
