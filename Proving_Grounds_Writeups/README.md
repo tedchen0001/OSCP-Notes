@@ -10,6 +10,7 @@
 #### Exploits
 
 - [WordPress Core < 5.2.3](https://www.exploit-db.com/exploits/47690)
+- [XAMPP 7.4.3 - Local Privilege Escalation](https://www.exploit-db.com/exploits/50337)
 
 #### Notes
 
