@@ -1,4 +1,4 @@
-### Proving Grounds Walkthrough
+### Proving Grounds Writeups
 
 - AD:Heist, Hutch, Vault
 - BOF:Malbec
