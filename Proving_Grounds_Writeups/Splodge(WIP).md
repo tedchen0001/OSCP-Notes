@@ -1,6 +1,6 @@
 ### Mind map
 
-![Splodge ](https://user-images.githubusercontent.com/8998412/157489782-a836c8cd-4407-428b-9d41-fb31950a09f6.png)
+![Splodge ](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Splodge/Splodge.png)
 
 ### Enumeration
 
