@@ -1,4 +1,4 @@
-#### :open_file_folder: References
+### :open_file_folder: References
 
 - https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
 - https://pentestmonkey.net/cheat-sheet/sql-injection/mssql-sql-injection-cheat-sheet
@@ -6,7 +6,7 @@
 - https://notchxor.github.io/oscp-notes/2-web/sqli/
 - https://www.asciitable.com/
 
-#### :open_file_folder: Blind SQL Injections
+### :open_file_folder: Blind SQL Injections
 
 find columns names
 
@@ -33,7 +33,7 @@ use the waiting time to determine whether the conditional equation is valid
 '; IF (select LEN(password) from users) = 64 WAITFOR DELAY '00:00:05' --
 ```
 
-#### :no_entry: sqlmap (:radioactive::radioactive::radioactive: cannot be used in the exam)
+### :no_entry: sqlmap (:radioactive::radioactive::radioactive: cannot be used in the exam)
 
 ```
 sqlmap -u "url" --dump -C "columns" -T "tables" -D "database" 

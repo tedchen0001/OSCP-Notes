@@ -1,4 +1,4 @@
-### smbclient
+### Smbclient
 
 ```
 smbclient -L //192.168.135.39/ -U brett --option='client min protocol=NT1'
