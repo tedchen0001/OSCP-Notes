@@ -6,6 +6,7 @@
 - SQLi:Butch
 - LibreOffice:Hepet, Craft
 - SeImpersonatePrivilege:Craft
+- container:Sirol
 
 #### Exploits
 
