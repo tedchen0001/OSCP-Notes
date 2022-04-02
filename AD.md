@@ -1,10 +1,10 @@
-#### NetBIOS-Domain Name
+NetBIOS-Domain Name
 
 ```
 enum4linux <target ip> 
 ```
 
-#### Enumerating Users
+Enumerating Users
 
 add target domain /etc/hosts
 
