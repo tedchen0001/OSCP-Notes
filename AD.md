@@ -41,5 +41,8 @@ Get-NetUser -properties name, pwdlastset, logoncount, badpwdcount
 ### :open_file_folder: CrackMapExec
 
 ```
-crackmapexec smb <target ip> -u <users.txt> -p <passwords.txt>
+#brute forcing
+crackmapexec <protocol> <target ip> -u <users.txt> -p <passwords.txt>
+#check password policy
+crackmapexec <protocol> <target ip> --pass-pol
 ```
