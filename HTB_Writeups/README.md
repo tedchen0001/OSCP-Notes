@@ -1,8 +1,8 @@
-### Writeups
+### Machines
 
 | Machine | Enumeration | Privilege Escalation |
 | ------------- | ------------- | ------------- |
 | Forlic | playsms Ook! | BOF
-| Admirer | Adminer MySQL | Hijacking Python Library 
+| Admirer | Adminer MySQL(local) | Hijacking Python Library 
 
 
