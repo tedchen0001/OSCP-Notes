@@ -1,5 +1,8 @@
 ### Writeups
 
-- BOF:Forlic
+| Machine | Enumeration | Privilege Escalation |
+| ------------- | ------------- | ------------- |
+| Forlic | playsms Ook! | BOF
+| Admirer | Adminer MySQL | Hijacking Python Library 
 
 
