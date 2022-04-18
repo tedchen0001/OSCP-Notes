@@ -228,6 +228,12 @@ cd AutoRecon
 sudo python3 autorecon.py <target IP> --dirbuster.wordlist "" #skip directory busting to speed up results
 ```
 
+### :open_file_folder: Wfuzz
+
+```
+wfuzz -H 'Host: FUZZ.test.com' -u http://test.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --hw 407 #hw:hide responses
+```
+
 ## 🖥️ Linux
 
 Typical site folders
