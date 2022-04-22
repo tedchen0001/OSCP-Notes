@@ -8,5 +8,6 @@
 | Blocky | dirb javadecompilers wordpress | sudo list |
 | Blunder | feroxbuster Extensions [txt] bludit | sudo versions before 1.8.28 |
 | Brainfuck | wordpress plugin smtp pop3 | Cryptography |
+| Cronos | subdomain wfuzz| crontab |
 
 
