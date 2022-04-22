@@ -20,4 +20,4 @@
 - Check to see whether the site is enabled for both ```http``` and ```https``` services.
 - If database brute-force attack with Hydra triggers ```max_connect_errors``` error. (mysql> show variables like '%[max_connect_errors](https://dev.mysql.com/doc/refman/5.6/en/server-system-variables.html#sysvar_max_connect_errors)%';)[(*understanding max_connect_errors*)](https://www.virtual-dba.com/blog/mysql-max-connect-errors/)
 - [SQLi(manually)](https://github.com/tedchen0001/OSCP-Notes/blob/master/SQLi(manually).md)
-- If the site has encryption check the ```DNS name``` in the ```certificate```.
+- If the site is encrypted, check the ```DNS name``` in the ```certificate``` through browser
