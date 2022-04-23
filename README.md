@@ -242,11 +242,15 @@ sudo python3 autorecon.py <target IP> --dirbuster.wordlist "" #skip directory bu
 
 ### :open_file_folder: Wfuzz
 
+find subdomains
+
 ```
 wfuzz -H 'Host: FUZZ.test.com' -u http://test.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --hw 407 #hw:hide responses
 ```
 
 ### :open_file_folder: hashcat
+
+create new passwords
 
 ```
 echo "passwordstring" > /tmp/oldPass
