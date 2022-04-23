@@ -246,6 +246,14 @@ sudo python3 autorecon.py <target IP> --dirbuster.wordlist "" #skip directory bu
 wfuzz -H 'Host: FUZZ.test.com' -u http://test.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --hw 407 #hw:hide responses
 ```
 
+### :open_file_folder: hashcat
+
+```
+echo "passwordstring" > /tmp/oldPass
+
+hashcat -r /usr/share/hashcat/rules/best64.rule --stdout /tmp/oldPass > /tmp/newPassList.txt
+```
+
 ## 🖥️ Linux
 
 Typical site folders
