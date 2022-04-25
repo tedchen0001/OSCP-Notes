@@ -10,6 +10,6 @@
 | Blunder | feroxbuster Extensions [txt] bludit | sudo versions before 1.8.28 |
 | Brainfuck | wordpress plugin smtp pop3 | Cryptography |
 | Cronos | subdomain wfuzz| crontab |
-
-
+| Doctor | [ssti-payloads](https://github.com/payloadbox/ssti-payloads) | Splunk |
+| Forge | SSRF subdomain ftp | sudo list Python Debugger pdb |
 
