@@ -21,3 +21,10 @@ client max protocol = NT1
 ```
 client min protocol = NT1
 ```
+
+get permissions
+
+```
+smbmap -H <target ip>
+```
+

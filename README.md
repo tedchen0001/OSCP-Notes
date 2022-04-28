@@ -245,7 +245,8 @@ sudo python3 autorecon.py <target IP> --dirbuster.wordlist "" #skip directory bu
 find subdomains
 
 ```
-wfuzz -H 'Host: FUZZ.test.com' -u http://test.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --hw 407 #hw:hide responses
+# hw:hide responses
+wfuzz -H 'Host: FUZZ.test.com' -u http://test.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --hw 407
 ```
 
 ### :open_file_folder: hashcat
