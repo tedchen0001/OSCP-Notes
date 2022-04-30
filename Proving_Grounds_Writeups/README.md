@@ -21,3 +21,5 @@
 - If database brute-force attack with Hydra triggers ```max_connect_errors``` error. (mysql> show variables like '%[max_connect_errors](https://dev.mysql.com/doc/refman/5.6/en/server-system-variables.html#sysvar_max_connect_errors)%';)[(*understanding max_connect_errors*)](https://www.virtual-dba.com/blog/mysql-max-connect-errors/)
 - [SQLi(manually)](https://github.com/tedchen0001/OSCP-Notes/blob/master/SQLi(manually).md)
 - If the site is encrypted, check the ```DNS name``` in the ```certificate``` through browser.
+- linpeas: ```Unknown SUID binary```
+- Note that the site's upload folder may be writable.
