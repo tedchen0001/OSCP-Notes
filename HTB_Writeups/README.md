@@ -13,3 +13,4 @@
 | Doctor | [ssti-payloads](https://github.com/payloadbox/ssti-payloads) | Splunk |
 | Forge | SSRF subdomain ftp | sudo list Python Debugger pdb |
 | Haircut | dirb medium.txt writeable uploads folder | screen Unknown SUID binary |
+| Horizontall | wfuzz top1million-110000 strapi | Active Ports 8000 |
