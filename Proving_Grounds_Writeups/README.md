@@ -23,4 +23,4 @@
 - If the site is encrypted, check the ```DNS name``` in the ```certificate``` through browser.
 - linpeas: ```Unknown SUID binary```
 - Note that the site's upload folder may be writable.
-- Check the active ports and using curl to check the service.
+- Check the active ports and using curl to check the service. [frp](https://github.com/fatedier/frp):frpc for target, frps for attacker.
