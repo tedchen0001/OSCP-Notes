@@ -24,3 +24,4 @@
 - linpeas: ```Unknown SUID binary```
 - Note that the site's upload folder may be writable.
 - Check the active ports and using curl to check the service. [frp](https://github.com/fatedier/frp):frpc for target, frps for attacker.
+- Check the unknown SUID binaries execution result.
