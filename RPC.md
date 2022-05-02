@@ -3,7 +3,7 @@
 Nmap tcp
 
 ```
-sudo nmap -p 5353 --script=rpcinfo <target ip>
+nmap -p 5353 --script=rpcinfo <target ip>
 ```
 
 Nmap udp
