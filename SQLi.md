@@ -53,7 +53,7 @@ Get columns in table
 SELECT group_concat(column_name) FROM information_schema.columns WHERE table_name = '<table>';
 ```
 
-Find all ```user``` table in DBs
+Find all ```user``` tables in DBs
 
 ```MySQL
 SELECT group_concat(column_name) FROM information_schema.columns where table_name = 'user';
