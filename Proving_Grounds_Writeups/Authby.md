@@ -1,6 +1,6 @@
 #### Mind Map
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/rooted202111141710.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/rooted202111141710.png)
 
 #### Enumeration
 
