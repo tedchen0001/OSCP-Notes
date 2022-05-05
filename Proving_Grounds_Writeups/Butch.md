@@ -82,7 +82,7 @@ I find the website that runs on port 450 has SQL injection vulnerability by usin
 ```SQL
 '; WAITFOR DELAY '00:00:10'; --
 ```
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Butch/Butch_2022.03.12_15h14m52s_001.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Butch/Butch_2022.03.12_15h14m52s_001.png)
 
 Attempts to log in using the usernames ```admin``` and ```administrator``` failed.
 
@@ -90,7 +90,7 @@ Attempts to log in using the usernames ```admin``` and ```administrator``` faile
 ' or 1=1; --
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Butch/Butch_2022.03.12_15h21m20s_002.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Butch/Butch_2022.03.12_15h21m20s_002.png)
 
 Because we can't use automatic exploitation tools in the exam, I start doing it manually.
 
@@ -100,19 +100,19 @@ First, we must know the name of the field.
 ' HAVING 1=1; --
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Butch/Butch_2022.03.12_15h34m35s_003.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Butch/Butch_2022.03.12_15h34m35s_003.png)
 
 ```SQL
 ' GROUP BY users.username HAVING 1=1; --
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Butch/Butch_2022.03.12_15h37m46s_004.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Butch/Butch_2022.03.12_15h37m46s_004.png)
 
 ```SQL
 ' GROUP BY users.username, users.password_hash HAVING 1=1; --
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Butch/Butch_2022.03.12_15h38m52s_005.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Butch/Butch_2022.03.12_15h38m52s_005.png)
 
 Now we know that the data table users has two fields username and password_hash.
 
@@ -139,7 +139,7 @@ Guessing the length of the password by the command below.
 
 Finally, we know that the password length is 64, so it may have been hashed. Because of the length of the password so I guessed that may use SHA-256 hash. (Because manually guessing all the password is too slow and may not be able to restore the original password we try to update directly.)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Butch/Butch_2022.03.12_16h05m30s_006.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Butch/Butch_2022.03.12_16h05m30s_006.png)
 
 Now we update the new password ```123456```.
 
@@ -152,32 +152,32 @@ Now we update the new password ```123456```.
 
 Login with username ```butch``` and password ```123456```.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Butch/Butch_2022.03.12_16h18m08s_007.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Butch/Butch_2022.03.12_16h18m08s_007.png)
 
 This page looks like an upload page written in aspx, we try to use the bypass technique here to see if we can upload the reverse shell page.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Butch/Butch_2022.03.12_16h28m52s_008.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Butch/Butch_2022.03.12_16h28m52s_008.png)
 
 Prepare a reverse shell page. I add the output string to see if it can be executed properly.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Butch/Butch_2022.03.12_16h31m32s_009.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Butch/Butch_2022.03.12_16h31m32s_009.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Butch/Butch_2022.03.12_16h32m03s_010.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Butch/Butch_2022.03.12_16h32m03s_010.png)
 
 Uploading the page file and starting a listener at port 450.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Butch/Butch_2022.03.12_16h34m18s_011.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Butch/Butch_2022.03.12_16h34m18s_011.png)
 
 Browsing to url ```http://192.168.202.63:450/shell.aspx```.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Butch/Butch_2022.03.12_16h35m10s_012.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Butch/Butch_2022.03.12_16h35m10s_012.png)
 
 We get the shell.
  
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Butch/Butch_2022.03.12_16h37m10s_013.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Butch/Butch_2022.03.12_16h37m10s_013.png)
  
 #### Privilege escalation
 
 Because we already have ```nt authority\system``` privilege, we don't need to escalate.
  
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Butch/Butch_2022.03.12_16h37m10s_013.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Butch/Butch_2022.03.12_16h37m10s_013.png)

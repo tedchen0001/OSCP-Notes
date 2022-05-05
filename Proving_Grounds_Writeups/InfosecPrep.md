@@ -117,39 +117,39 @@ OS and Service detection performed. Please report any incorrect results at https
 
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h29m25s_001.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h29m25s_001.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h39m56s_002.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h39m56s_002.png)
 
 Downloading the secret.txt.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h41m12s_003.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h41m12s_003.png)
 
 Decoding the file, it's a SSH key file.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h41m26s_004.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h41m26s_004.png)
 
 Finding username or you can guess, We remove the first line and the last one.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h45m29s_005.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h45m29s_005.png)
 
 We get the username.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h47m51s_006.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h47m51s_006.png)
 
 Connecting to the target server.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h53m34s_007.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h53m34s_007.png)
 
-![imae](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h55m34s_008.png)
+![imae](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h55m34s_008.png)
 
 #### Privilege Escalation
 
 Running ```linpeas.sh``` script to exam.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h57m16s_009.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h57m16s_009.png)
 
 There is a SUID misconfiguration.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h58m25s_010.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/InfosecPrep/InfosecPrep_2022.02.04_10h58m25s_010.png)
 

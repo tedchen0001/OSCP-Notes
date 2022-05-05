@@ -1,6 +1,6 @@
 #### Walkthrough
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/rooted202110302303.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Catto/rooted202110302303.png)
 
 #### Enumeration
 
@@ -158,7 +158,7 @@ PORT      STATE SERVICE REASON         VERSION
 
 I accidentally send the request with wrong json format and then server responses exception error message. In the error message we found the username ```marcus```.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_16h07m03s_001_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Catto/Catto_2021.10.30_16h07m03s_001_.png)
 
 I use the username to perform SSH login brute-force attacks. But it didn't find the correct password.
 
@@ -166,11 +166,11 @@ I use the username to perform SSH login brute-force attacks. But it didn't find 
 
 We can know that the application being performed on port 30330 is [Gatsby](https://github.com/gatsbyjs/gatsby).
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_16h33m59s_002_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Catto/Catto_2021.10.30_16h33m59s_002_.png)
 
 In Gatsby development mode it can use ```GraphQL Playground``` to interact with the data by setting. You can refer to the official manual [here](https://www.gatsbyjs.com/docs/using-graphql-playground/#gatsby-skip-here).
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_17h10m16s_003_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Catto/Catto_2021.10.30_17h10m16s_003_.png)
 
 We connect to the interface ```http://192.168.121.139:30330/__graphql```. The navigation menu has a option ```allSitePage```. We can use it to find the all the nodes in the database includes the hidden pages.
 
@@ -186,25 +186,25 @@ query MyQuery {
 }
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_17h33m13s_004_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Catto/Catto_2021.10.30_17h33m13s_004_.png)
 
 We found a hidden sitepage ```/new-server-config-mc```. Navigate to the page ```http://192.168.121.139:30330/new-server-config-mc``` it shows a new password.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_17h48m11s_005_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Catto/Catto_2021.10.30_17h48m11s_005_.png)
 
 We use previously obtained username and password to log in to server via SSH Connection.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_17h58m01s_006_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Catto/Catto_2021.10.30_17h58m01s_006_.png)
 
 (further explain how to get usernames)
 
 Offical walkthrough collects the possible usernames from ```Minecraft - The Island``` page and then uses hydra to guess the correct username. (e.g. hydra -L usernames.txt -p WallAskCharacter305 .....)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_18h03m34s_007_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Catto/Catto_2021.10.30_18h03m34s_007_.png)
 
 #### Privilege Escalation
 
 Because this lab is difficult for me, if you want to know the concept behind privilege escalation, please refer to the office walkthrough.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Catto/Catto_2021.10.30_20h02m31s_008_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Catto/Catto_2021.10.30_20h02m31s_008_.png)
 

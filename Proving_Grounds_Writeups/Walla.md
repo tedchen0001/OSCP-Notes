@@ -50,33 +50,33 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 Connect to http service on 8091 port.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Walla/Walla_2021.07.10_00h38m46s_001_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Walla/Walla_2021.07.10_00h38m46s_001_.png)
 
 Notice the RaspAp that is a wireless router software. Login to the WebUI with the default credential username `admin` and password `secret` successfully.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Walla/Walla_2021.07.10_01h03m31s_002_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Walla/Walla_2021.07.10_01h03m31s_002_.png)
 
 In the about page, we know that the version is `2.5`.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Walla/Walla_2021.07.10_01h06m13s_003_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Walla/Walla_2021.07.10_01h06m13s_003_.png)
 
 There is a remote command execution vulnerability [CVE-2020-24572](https://github.com/gerbsec/CVE-2020-24572-POC) can use to obtain an interactive shell.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Walla/Walla_2021.07.10_19h04m45s_001_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Walla/Walla_2021.07.10_19h04m45s_001_.png)
 
 Get the local.txt.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Walla/Walla_2021.07.10_19h05m42s_002_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Walla/Walla_2021.07.10_19h05m42s_002_.png)
 
 #### Privilege Escalation
 
 Use command `sudo -l` to list available permissions.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Walla/Walla_2021.07.10_19h22m05s_003_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Walla/Walla_2021.07.10_19h22m05s_003_.png)
 
 Notice the `wifi_reset.py` import the `wificontroller.py`. 
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Walla/Walla_2021.07.10_19h22m39s_004_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Walla/Walla_2021.07.10_19h22m39s_004_.png)
 
 We can set up a `wificontroller.py` file, which contains the reverse shell content, to make `wifi_reset.py` call.
 
@@ -93,8 +93,8 @@ sys.exit(0)
 
 After create `wificontroller.py` file in the `/home/walter` folder. Execute the command `sudo /usr/bin/python /home/walter/wifi_reset.py`.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Walla/Walla_2021.07.10_20h03m18s_005_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Walla/Walla_2021.07.10_20h03m18s_005_.png)
 
 Get a shell back with root permisson.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Walla/Walla_2021.07.10_20h03m58s_006_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Walla/Walla_2021.07.10_20h03m58s_006_.png)

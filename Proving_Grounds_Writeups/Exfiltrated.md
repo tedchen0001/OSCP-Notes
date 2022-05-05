@@ -31,13 +31,13 @@ Because we can't open the website via IP, we must modify DNS file.
 sudo vim /etc/hosts
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.09.30_22h48m42s_001_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Exfiltrated/Exfiltrated_2021.09.30_22h48m42s_001_.png)
 
 The website is running Subrion CMS 4.2 and we find a RCE exploit to try.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.09.30_23h08m58s_002_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Exfiltrated/Exfiltrated_2021.09.30_23h08m58s_002_.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.09.30_23h18m36s_003_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Exfiltrated/Exfiltrated_2021.09.30_23h18m36s_003_.png)
 
 We successfully logged in with default credential. The username is ```admin``` and the password is ```admin``` too. Next we can try to use the [exploit](https://www.exploit-db.com/exploits/49876).
 
@@ -45,25 +45,25 @@ We successfully logged in with default credential. The username is ```admin``` a
 python3 49876.py -u http://exfiltrated.offsec/panel/ -l admin -p admin
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.09.30_23h43m00s_004_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Exfiltrated/Exfiltrated_2021.09.30_23h43m00s_004_.png)
 
 In order to upgrade the terminal I started a terminal listening on port 4444 and reconnected.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.01_01h18m32s_005_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Exfiltrated/Exfiltrated_2021.10.01_01h18m32s_005_.png)
 
 #### Privilege Escalation
 
 Executing ```linpeas``` script to search for possible paths to escalate privileges.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.01_01h35m57s_006_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Exfiltrated/Exfiltrated_2021.10.01_01h35m57s_006_.png)
 
 We find a cron job that is executed with root permissions.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.01_01h38m18s_007_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Exfiltrated/Exfiltrated_2021.10.01_01h38m18s_007_.png)
 
 After a lot of searching, I found that exiftool may have a [vulnerability](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22204) that we can use.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_22h15m57s_008_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Exfiltrated/Exfiltrated_2021.10.02_22h15m57s_008_.png)
 
 This [tool](https://github.com/convisoappsec/CVE-2021-22204-exiftool) can help us exploit the CVE-2021-22204 vulnerability. Installed pre-requisites tools on our client pc.
 
@@ -73,22 +73,22 @@ sudo apt install djvulibre-bin exiftool
 
 Modify IP and port in exploit.py file.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_22h41m52s_009_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Exfiltrated/Exfiltrated_2021.10.02_22h41m52s_009_.png)
 
 We have to download configfile and image.jpg file too and then executing exploit.py. It combines a reverse shell command string into the image.jpg.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h06m06s_010_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h06m06s_010_.png)
 
 Upload the image.jpg to the target host.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h15m51s_011_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h15m51s_011_.png)
 
 Start a new terminal to listen on port 1337 and then copying the image.jpg file that we have uploaded to the path ```/var/www/html/subrion/uploads```.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h23m27s_012_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h23m27s_012_.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h27m56s_013_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h27m56s_013_.png)
 
 Waiting for the schedule job to be excuted.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h28m23s_014_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Exfiltrated/Exfiltrated_2021.10.02_23h28m23s_014_.png)

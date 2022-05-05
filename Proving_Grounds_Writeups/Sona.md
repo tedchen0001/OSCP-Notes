@@ -34,15 +34,15 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 We find the NEXUS BACKUP MANAGER service on port 23.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Screenshot%202021-09-19%20133902.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Sona/Screenshot%202021-09-19%20133902.png)
 
 We can use the password recover function to try to guess the correct answers. The first answer is ```leo``` and the second answer is ```black```. We Combine these two answers to guess password. 
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona_2021.09.12_18h17m07s_002_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Sona/Sona_2021.09.12_18h17m07s_002_.png)
 
 After search we know the [exploit](https://www.exploit-db.com/exploits/49385) needs an authenticated account. So we have to login into website and getting the cookie data.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Screenshot%202021-09-19%20153154.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Sona/Screenshot%202021-09-19%20153154.png)
 
 Now, we use cookie information to change the value and add the shell back line setting in Burp Suite.
 
@@ -76,25 +76,25 @@ Cookie: NX-ANTI-CSRF-TOKEN=0.8796302472416133; NXSESSIONID=57be5cd0-1f1f-4ead-b7
         }
 }
 ```
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_15h55m25s.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Sona/Sona%2C%20September%2019%2C%202021_15h55m25s.png)
 
 #### Privilege Escalation 
 
 We find the users.xml contains the user sona's password.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_16h26m43s.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Sona/Sona%2C%20September%2019%2C%202021_16h26m43s.png)
 
 We use pspy64 to check any cronjon is running.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_16h35m34s.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Sona/Sona%2C%20September%2019%2C%202021_16h35m34s.png)
 
 The file can't be modified.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_16h42m43s.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Sona/Sona%2C%20September%2019%2C%202021_16h42m43s.png)
 
 Checking the code. It imports base64 libray and the libray file can be modified.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_16h47m39s.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Sona/Sona%2C%20September%2019%2C%202021_16h47m39s.png)
 
 We modify the b64encode function in the ```https://raw.githubusercontent.com/python/cpython/3.8/Lib/base64.py``` and then uploading and copying to ```/usr/lib/python3.8/base64.py```.
 
@@ -118,11 +118,11 @@ def b64encode(s, altchars=None):
     run(["/bin/bash","-i"])
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_23h41m18s.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Sona/Sona%2C%20September%2019%2C%202021_23h41m18s.png)
 
 Waiting for the schedule to start.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Sona/Sona%2C%20September%2019%2C%202021_23h47m57s.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Sona/Sona%2C%20September%2019%2C%202021_23h47m57s.png)
 
 
 

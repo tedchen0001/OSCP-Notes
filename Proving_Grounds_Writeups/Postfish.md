@@ -58,82 +58,82 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 Direct connection via IP address failed. Modify `/etc/hosts` file to set up DNS.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.07.17_01h54m50s_001_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.07.17_01h54m50s_001_.png)
 
 Website has nothing.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.07.24_13h22m39s_001_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.07.24_13h22m39s_001_.png)
 
 Using smtp-user-neum to identify the active user ```hr``` and ```sales``` exist.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.07.30_01h50m55s_001_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.07.30_01h50m55s_001_.png)
 
 Guessing the password.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.07.24_14h06m50s_002_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.07.24_14h06m50s_002_.png)
 
 Reading the message through pop service.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postman_2021.08.01_16h00m49s_007_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postman_2021.08.01_16h00m49s_007_.png)
 
 (I am stuck here. Referring to other walkthroughs below.)
 
 Because the sales department seems to use an unsafe password, check the employees of the sales department first.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_16h17m47s_008_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.08.01_16h17m47s_008_.png)
 
 Using a ![script](https://raw.githubusercontent.com/jseidl/usernamer/master/usernamer.py) to generate test usernames.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_16h25m12s_009_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.08.01_16h25m12s_009_.png)
 
 Using smtp-user-neum to identify again, then get a username ```Brian.Moore```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_16h34m35s_010_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.08.01_16h34m35s_010_.png)
 
 The concept is to send a phishing email for user to click and send a connect-back shell. Setting up a local listener on port 80.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_16h44m30s_012_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.08.01_16h44m30s_012_.png)
 
 Now send a email with a phishing link to Brain.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_16h52m08s_013_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.08.01_16h52m08s_013_.png)
 
 After waiting for a while, get the message contains the password entered by Brain.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_16h55m48s_014_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.08.01_16h55m48s_014_.png)
 
 Using that password to connect to SSH, we obtained user rights.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_17h15m15s_016_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.08.01_17h15m15s_016_.png)
 
 #### Privilege Escalation
 
 An interesting file ```/etc/postfix/disclaimer``` appears during the linpeas.sh check.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_17h59m58s_018_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.08.01_17h59m58s_018_.png)
 
 Referring to the website description. This setting will be triggered when sending mail, so we can modify and add the reverse shell command.
 
 (:warning:During the test, it was found that ```/etc/postfix/disclaimer``` would be reset for a period of time.)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_21h05m59s_019_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.08.01_21h05m59s_019_.png)
 
 Setting to listen on port 80.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_21h33m14s_023_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.08.01_21h33m14s_023_.png)
 
 Sending mail to trigger the disclaimer setting.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_21h07m59s_020_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.08.01_21h07m59s_020_.png)
 
 We now get the shell back, and then check through linpeas.sh that mail binary can be executed without a password.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_21h10m27s_021_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.08.01_21h10m27s_021_.png)
 
 Referring to [gtfobins](https://gtfobins.github.io/gtfobins/mail/).
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_22h18m46s_024_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.08.01_22h18m46s_024_.png)
 
 Gaining the root shell.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Postfish/Postfish_2021.08.01_21h11m42s_022_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.08.01_21h11m42s_022_.png)

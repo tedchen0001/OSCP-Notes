@@ -60,58 +60,58 @@ Service Info: Host: QUACKERJACK; OS: Unix
 
 On port 8081 website runs rConfig 3.9.4.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Quackerjack/Quackerjack_2021.07.01_23h30m56s_006_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Quackerjack/Quackerjack_2021.07.01_23h30m56s_006_.png)
 
 First use this [exploit](https://www.exploit-db.com/exploits/48878) to change admin's password to `Testing1@`. [Reference](https://gist.github.com/farid007/9f6ad063645d5b1550298c8b9ae953ff)
 
 Edit source code 48878.py at line 21 `url` variable.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Quackerjack/Quackerjack_2021.07.01_23h47m37s_008_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Quackerjack/Quackerjack_2021.07.01_23h47m37s_008_.png)
 
 Execute 48878.py to change password.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Quackerjack/Quackerjack_2021.07.01_23h46m34s_007_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Quackerjack/Quackerjack_2021.07.01_23h46m34s_007_.png)
 
 Now we can login admin account with password `Testing1@`.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Quackerjack/Quackerjack_2021.07.01_23h53m30s_009_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Quackerjack/Quackerjack_2021.07.01_23h53m30s_009_.png)
 
 Switch to vendors page directly.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Quackerjack/Quackerjack_2021.07.01_23h54m11s_010_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Quackerjack/Quackerjack_2021.07.01_23h54m11s_010_.png)
 
 Upload any php cmd shell. But before click the save button to launch burp suite first. We need to edit upload file's content-type to `image/gif`.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Quackerjack/Quackerjack_2021.07.01_23h56m48s_012_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Quackerjack/Quackerjack_2021.07.01_23h56m48s_012_.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Quackerjack/Quackerjack_2021.07.01_23h57m40s_013_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Quackerjack/Quackerjack_2021.07.01_23h57m40s_013_.png)
 
 Php cmd file has been successfully uploaded.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Quackerjack/Quackerjack_2021.07.01_23h59m34s_014_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Quackerjack/Quackerjack_2021.07.01_23h59m34s_014_.png)
 
 Connect to page `https://192.168.102.57:8081/images/vendor/cmd.php`. Execute reverse shell command.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Quackerjack/Quackerjack_2021.07.02_00h00m40s_015_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Quackerjack/Quackerjack_2021.07.02_00h00m40s_015_.png)
 
 Get a connect back shell.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Quackerjack/Quackerjack_2021.07.02_00h02m17s_016_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Quackerjack/Quackerjack_2021.07.02_00h02m17s_016_.png)
 
 
 #### Privilege Escalation
 
 execute linpeas.sh.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Quackerjack/Quackerjack_2021.07.01_23h17m45s_001_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Quackerjack/Quackerjack_2021.07.01_23h17m45s_001_.png)
 
 GTFOBins
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Quackerjack/Quackerjack_2021.07.01_23h26m43s_005_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Quackerjack/Quackerjack_2021.07.01_23h26m43s_005_.png)
 
 ```
 /usr/bin/find . -exec /bin/sh -p \; -quit
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Quackerjack/Quackerjack_2021.07.01_23h21m38s_003_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Quackerjack/Quackerjack_2021.07.01_23h21m38s_003_.png)
 

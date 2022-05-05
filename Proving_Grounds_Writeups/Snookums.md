@@ -1,6 +1,6 @@
 #### Walkthrough
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Snookums/walkthrough.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Snookums/walkthrough.png)
 
 #### Enumeration
 
@@ -114,4 +114,4 @@ feroxbuster -u http://192.168.91.58 -w /usr/share/dirb/wordlists/common.txt
 ```
 After checking the each directory can't find useful information.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Snookums/Snookums_2021.08.14_14h47m55s_001_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Snookums/Snookums_2021.08.14_14h47m55s_001_.png)

