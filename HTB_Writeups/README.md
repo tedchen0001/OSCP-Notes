@@ -15,3 +15,4 @@
 | Haircut | dirb medium.txt writeable uploads folder | screen Unknown SUID binary |
 | Horizontall | wfuzz top1million-110000 strapi | active port 8000 ```local CVE``` ssh tunnel |
 | Irked | irc-unrealircd-backdoor | Unknown SUID binary |
+| *Jarvis | SQLi phpmyadmin 4.8 RCE | python command injection & systemctl binary |
