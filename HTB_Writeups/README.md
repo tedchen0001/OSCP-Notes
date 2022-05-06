@@ -16,3 +16,4 @@
 | Horizontall | wfuzz top1million-110000 strapi | active port 8000 ```local CVE``` ssh tunnel |
 | Irked | irc-unrealircd-backdoor | Unknown SUID binary |
 | *Jarvis | SQLi phpmyadmin 4.8 RCE | python command injection & systemctl binary |
+| Knife | firefox wappalyzer PHP 8.1.0 ||
