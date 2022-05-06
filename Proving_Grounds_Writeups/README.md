@@ -12,6 +12,8 @@
 
 - [WordPress Core < 5.2.3](https://www.exploit-db.com/exploits/47690)
 - [XAMPP 7.4.3 - Local Privilege Escalation](https://www.exploit-db.com/exploits/50337)
+- [PHP 8.1.0](https://github.com/flast101/php-8.1.0-dev-backdoor-rce/blob/main/backdoor_php_8.1.0-dev.py)
+- [Apache HTTP Server 2.4.49 & 2.4.50](https://www.exploit-db.com/exploits/50383)
 
 #### Notes
 
