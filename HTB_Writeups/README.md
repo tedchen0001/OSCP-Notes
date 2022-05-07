@@ -17,6 +17,7 @@
 | Irked | irc-unrealircd-backdoor | LinPEAS Unknown SUID binary |
 | *Jarvis | SQLi phpmyadmin 4.8 RCE | python command injection & systemctl binary |
 | Knife | firefox wappalyzer [PHP 8.1.0](https://github.com/flast101/php-8.1.0-dev-backdoor-rce/blob/main/backdoor_php_8.1.0-dev.py)| upgrade shell & sudo list |
+| Lame | distccd | nmap |
 
 ### Additional Commands
 
