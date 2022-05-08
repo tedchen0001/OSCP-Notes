@@ -20,29 +20,29 @@ add target domain /etc/hosts
 ### :open_file_folder: PowerView
 
 ```
-#Groups
+# Groups
 Get-NetGroup
 ```
 
 ```
-#Computers
+# Computers
 Get-NetComputer -fulldata
 #select
 Get-NetComputer -fulldata | select operatingsystem
 ```
 
 ```
-#Users
+# Users
 Get-NetUser
-#password last set
+# password last set
 Get-NetUser -properties name, pwdlastset, logoncount, badpwdcount
 ```
 
 ### :open_file_folder: CrackMapExec
 
 ```
-#brute forcing
+# brute forcing
 crackmapexec <protocol> <target ip> -u <users.txt> -p <passwords.txt>
-#check password policy
+# check password policy
 crackmapexec <protocol> <target ip> --pass-pol
 ```
