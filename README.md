@@ -19,7 +19,7 @@
 [explainshell](https://explainshell.com/): explain command-line<br>
 [SecLists](https://github.com/danielmiessler/SecLists): It's a collection of multiple types of lists used during security assessments, collected in one place<br>
 [Reverse Shell Generator](https://www.revshells.com/): online reverse shell generator<br>
-[hacktricks](https://book.hacktricks.xyz/)
+[hacktricks](https://book.hacktricks.xyz/)<br>
 [CyberChef](https://gchq.github.io/CyberChef/): a web app for encryption, encoding, compression and data analysis.
 
 ## :warning: Exam Restrictions
