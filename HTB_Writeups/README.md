@@ -18,7 +18,7 @@
 | *Jarvis | SQLi phpmyadmin 4.8 RCE | python command injection & systemctl binary |
 | Knife | firefox wappalyzer [PHP 8.1.0](https://github.com/flast101/php-8.1.0-dev-backdoor-rce/blob/main/backdoor_php_8.1.0-dev.py)| upgrade shell & sudo list |
 | Lame | distccd | nmap |
-| *Luanne | nmap Supervisor & robots.txt weather | BSD doas netpgp |
+| *Luanne | nmap Supervisor &<br> robots.txt weather | BSD doas netpgp |
 | Magic | [SQLi](https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/) bypassing login & File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass) | mysqldump & Unknown SUID binary sysinfo |
 
 ### Additional command notes
