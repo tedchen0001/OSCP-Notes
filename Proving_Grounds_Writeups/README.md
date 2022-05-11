@@ -28,3 +28,4 @@
 - Check the active ports and using curl to check the service. [frp](https://github.com/fatedier/frp):frpc for target, frps for attacker.
 - Check the unknown SUID binaries execution result.
 - If the target server does not install mysql client tool try using mysqldump.
+- Note that the root folder is accessible through a vulnerability and can be placed SSH public key.
