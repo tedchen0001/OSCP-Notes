@@ -22,7 +22,7 @@
 | Magic | [SQLi](https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/) bypassing login & <br> File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass) | mysqldump & Unknown SUID binary sysinfo |
 | *Mango |  certificate subdomains & <br> [enumerate](https://github.com/an0nlk/Nosql-MongoDB-injection-username-password-enumeration) credentials of nosql-injection <br> (*Not sure if you can use this script in the exam), reuse | jjs, write root SSH public key | 
 | Mirai | nmap, pi.hole, ssh | sudo list, mount, strings |
-| Networked | File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass), php code injection | *sudo list |
+| Networked | File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass), <br> php code injection | *sudo list |
 
 ### Additional command notes
 
