@@ -2,7 +2,6 @@
 
 | Machine | Enumeration | Privilege Escalation |
 | ------------- | ------------- | ------------- |
-| Forlic | playsms Ook! | BOF |
 | Admirer | Adminer MySQL(local) | Hijacking Python Library | 
 | Armageddon | Drupal (2018-7600) | binary snap |
 | Backdoor | wordpress LFI proc gdbserver | screen |
@@ -12,6 +11,7 @@
 | Cronos | subdomain wfuzz| crontab |
 | Doctor | [ssti-payloads](https://github.com/payloadbox/ssti-payloads) | Splunk |
 | Forge | SSRF subdomain ftp | sudo list Python Debugger pdb |
+| Forlic | playsms Ook! | BOF |
 | Haircut | dirb medium.txt writeable uploads folder | Unknown SUID binary screen |
 | Horizontall | wfuzz top1million-110000 strapi | active port 8000 ```local CVE``` ssh tunnel |
 | Irked | irc-unrealircd-backdoor | LinPEAS Unknown SUID binary |
@@ -25,6 +25,8 @@
 | Networked | File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass), <br> php command injection | *sudo list |
 | Nibbles | page source, directory | sudo list |
 | *NineVeh | brute force attack http & https, phpLiteAdmin | crontab, chkrootkit |
+| OpenAdmin | OpenNetAdmin ||
+(*):review before the exam
 
 ### Additional command notes
 
