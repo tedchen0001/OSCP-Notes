@@ -26,6 +26,7 @@
 | Nibbles | page source, directory | sudo list |
 | *NineVeh | brute force attack http & https, phpLiteAdmin | crontab, chkrootkit |
 | OpenAdmin | OpenNetAdmin ||
+
 (*):review before the exam
 
 ### Additional command notes
