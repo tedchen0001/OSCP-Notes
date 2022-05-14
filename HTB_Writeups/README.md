@@ -24,7 +24,7 @@
 | Mirai | nmap, pi.hole, ssh | sudo list, mount, strings |
 | Networked | File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass), <br> php command injection | *sudo list |
 | Nibbles | page source, directory | sudo list |
-| *NineVeh | brute force attack http & https, phpLiteAdmin | chkrootkit |
+| *NineVeh | brute force attack http & https, phpLiteAdmin | crontab, chkrootkit |
 
 ### Additional command notes
 
