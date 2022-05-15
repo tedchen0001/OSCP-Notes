@@ -275,6 +275,12 @@ Typical site folders
 find / -writable -type  f 2>/dev/null | grep -v "/proc/"
 ```
 
+find files containing specific text
+
+```Shell
+grep -r --include=\*.{config,php,conf} -rnw '/var/www' -e 'password' 2>&-
+```
+
 ## 🖥️ Windows
 
 ### :open_file_folder: [icacls](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/icacls)
