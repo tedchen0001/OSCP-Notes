@@ -1,4 +1,4 @@
-### Machines
+### Linux Machines
 
 | Machine | Enumeration | Privilege Escalation |
 | ------------- | ------------- | ------------- |
