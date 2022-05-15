@@ -25,7 +25,7 @@
 | Networked | File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass), <br> php command injection | *sudo list |
 | Nibbles | page source, directory | sudo list |
 | *NineVeh | brute force attack http & https, phpLiteAdmin | crontab, chkrootkit |
-| OpenAdmin | OpenNetAdmin ||
+| OpenAdmin | OpenNetAdmin, pwd in conf file & <br> [frp](https://github.com/fatedier/frp), cracking passphrase | sudo list, GTFO |
 
 (*):review before the exam
 
@@ -118,4 +118,19 @@ strings -n 20 <image file>
 # extract known file types 
 binwalk <image file>
 binwalk -e <image file>
+```
+
+Used in ```OpenAdmin```
+
+find files containing specific text e.g. password
+
+```
+find / -type f \( -iname \*.php -o -iname \*.config -o -iname \*.conf -o -iname \*.ini -o -iname \*.txt \) -exec grep -i 'password\|passwd' {} \; -print 2>&-
+```
+
+crack SSH private key passphrase
+
+```
+ssh2john id_rsa > id_rsa.hash
+john id_rsa.hash -wordlist=rockyou.txt
 ```
