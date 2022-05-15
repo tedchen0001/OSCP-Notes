@@ -278,7 +278,7 @@ find / -writable -type  f 2>/dev/null | grep -v "/proc/"
 find files containing specific text
 
 ```Shell
-grep -r --include=\*.{config,php,conf} -rnw '/var/www' -e 'password' 2>&-
+find / -type f \( -iname \*.config.php -o -iname \*.config* -o -iname \*.conf* \) -exec grep -i 'password' {} \; -print 2>&-
 ```
 
 ## 🖥️ Windows
