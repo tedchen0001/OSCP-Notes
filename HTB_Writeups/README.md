@@ -26,7 +26,7 @@
 | Nibbles | page source, directory | sudo list |
 | *NineVeh | brute force attack http & https, phpLiteAdmin | crontab, chkrootkit |
 | OpenAdmin | OpenNetAdmin, pwd in conf file & <br> [frp](https://github.com/fatedier/frp), cracking passphrase | sudo list, GTFO |
-| *Ophiuchi | [Java-Deserialization](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet), SnakeYAML | sudo list, GO programming |
+| *Ophiuchi | [Java-Deserialization](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet), SnakeYAML | sudo list, Analysis of GO code |
 
 (*):review before the exam
 
