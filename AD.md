@@ -1,4 +1,4 @@
-### :open_file_folder: Useful Websites
+### :open_file_folder: Learning resources
 
 https://www.hackingarticles.in/active-directory-pentesting-lab-setup/
 
