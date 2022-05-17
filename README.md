@@ -290,6 +290,17 @@ find files containing specific text
 find / -type f \( -iname \*.php -o -iname \*.config -o -iname \*.conf -o -iname \*.ini -o -iname \*.txt \) -exec grep -i 'password\|passwd' {} \; -print 2>&-
 ```
 
+finding SUID executables
+
+```
+find / -perm -4000 -type f -exec ls -la {} 2>/dev/null \;
+find / -uid 0 -perm -4000 -type f 2>/dev/null
+find / -perm -u=s -type f 2>/dev/null
+find / -user root -perm -4000 -print 2>/dev/null
+find / -perm -u=s -type f 2>/dev/null
+find / -user root -perm -4000 -exec ls -ldb {} \;
+```
+
 ## 🖥️ Windows
 
 ### :open_file_folder: [icacls](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/icacls)
