@@ -28,6 +28,7 @@
 | OpenAdmin | OpenNetAdmin, pwd in conf file & <br> [frp](https://github.com/fatedier/frp), cracking passphrase | sudo list, GTFO |
 | *Ophiuchi | [Java-Deserialization](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet), SnakeYAML | sudo list, analysis of GO code |
 | Passage | CutePHP & password storage location & <br> base64 & cracking | *SUID dbus |
+| Pit | SNMP enum ||
 
 (*):review before the exam
 
