@@ -28,7 +28,7 @@
 | OpenAdmin | OpenNetAdmin, pwd in conf file & <br> [frp](https://github.com/fatedier/frp), cracking passphrase | sudo list, GTFO |
 | *Ophiuchi | [Java-Deserialization](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet), SnakeYAML | sudo list, analysis of GO code |
 | Passage | CutePHP & password storage location & <br> base64 & cracking | *SUID dbus |
-| Pit | SNMP enum ||
+| *Pit | SNMP enum, hide web folder, SeedDMS | NET-SNMP-EXTEND-MIB, monitoring |
 
 (*):review before the exam
 
@@ -159,4 +159,9 @@ snmpwalk -v1 -c public <target ip> .
 # -v 1|2c|3 SNMP version
 # -c community string, like a password
 # . [OID]
+```
+get file access control lists
+
+```
+getfacl /usr/local/monitoring
 ```
