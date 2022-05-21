@@ -29,6 +29,7 @@
 | *Ophiuchi | [Java-Deserialization](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet), SnakeYAML | sudo list, analysis of GO code |
 | Passage | CutePHP & password storage location & <br> base64 & cracking | *SUID dbus |
 | *Pit | SNMP enum, hide web folder, SeedDMS | NET-SNMP-EXTEND-MIB, monitoring |
+| *Poison | LFI, FreeBSD Apache log poisoning | password base64, vncviewer |
 
 (*):review before the exam
 

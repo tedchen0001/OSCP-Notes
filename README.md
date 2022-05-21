@@ -81,7 +81,16 @@ nmap -T5 192.168.10.0/24
 ```
 
 ```
-nmap -Pn -p- -sC -sV -T4 192.168.201.159 
+nmap -Pn -p- -sC -sV -T4 <target ip>
+```
+
+optimizing performance
+
+```
+nmap -p- --min-rate 1000 <target ip>
+# --min-rate <number>: Send packets no slower than <number> per second
+# and then specific port
+nmap -p <target port> -sC -sV <target ip>
 ```
 
 ### :open_file_folder: reverse shell
