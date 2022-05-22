@@ -30,6 +30,7 @@
 | Passage | CutePHP & password storage location & <br> base64 & cracking | *SUID dbus |
 | *Pit | SNMP enum, hide web folder, SeedDMS | NET-SNMP-EXTEND-MIB, monitoring |
 | *Poison | LFI, FreeBSD Apache log poisoning | password base64, vncviewer |
+| Popcorn | torrent, upload bypass | user cache, motd, Linux PAM | 
 
 (*):review before the exam
 
