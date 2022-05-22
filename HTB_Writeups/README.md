@@ -31,6 +31,7 @@
 | *Pit | SNMP enum, hide web folder, SeedDMS | NET-SNMP-EXTEND-MIB, monitoring |
 | *Poison | LFI, FreeBSD Apache log poisoning | password base64, vncviewer |
 | Popcorn | torrent, upload bypass | user cache, motd, Linux PAM | 
+| Postman | Redis, ssh, john | [Webmin](https://github.com/KrE80r/webmin_cve-2019-12840_poc) |
 
 (*):review before the exam
 

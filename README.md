@@ -303,6 +303,12 @@ find / -perm -u=s -type f 2>/dev/null
 find / -user root -perm -4000 -exec ls -ldb {} \;
 ```
 
+find ssh key
+
+```
+find / -type f -name id_rsa* 2>&-
+```
+
 ## 🖥️ Windows
 
 [icacls](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/icacls): Performs the operation on all specified files in the current directory and its subdirectories.
