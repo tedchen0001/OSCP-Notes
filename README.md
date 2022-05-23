@@ -263,10 +263,11 @@ wfuzz -H 'Host: FUZZ.test.com' -u http://test.com -w /usr/share/seclists/Discove
 
 ### :open_file_folder: hashcat
 
-create new passwords
+create new password list
 
 ```
-echo "passwordstring" > /tmp/oldPass
+echo -n "passwordstring" > /tmp/oldPass
+# -n: do not output the trailing newline
 
 hashcat -r /usr/share/hashcat/rules/best64.rule --stdout /tmp/oldPass > /tmp/newPassList.txt
 ```
