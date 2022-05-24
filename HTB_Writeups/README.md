@@ -32,7 +32,7 @@
 | *Poison | LFI, FreeBSD Apache log poisoning | password base64, vncviewer |
 | Popcorn | torrent, upload bypass | user cache, motd, Linux PAM | 
 | Postman | Redis, ssh, john | [Webmin](https://github.com/KrE80r/webmin_cve-2019-12840_poc) |
-| Previse | HTTP [302](https://vk9-sec.com/bypass-30x-redirect-with-burpsuite/), PHP exec, <br> mysql, hashcat 500 ||
+| Previse | HTTP [302](https://vk9-sec.com/bypass-30x-redirect-with-burpsuite/), PHP exec, mysql, hashcat 500 ||
 
 (*):review before the exam
 
