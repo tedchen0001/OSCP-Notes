@@ -2,6 +2,8 @@
 
 https://www.hackingarticles.in/active-directory-pentesting-lab-setup/
 
+https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLgqAAAA
+
 ### :open_file_folder: Commands
 
 NetBIOS-Domain Name
