@@ -1,3 +1,9 @@
+### AD Machines
+
+Forest, Active, Monteverde, Reel, Mantis, Blackfield, Search
+
+https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLgqAAAA
+
 ### Linux Machines
 
 | Machine | Enumeration | Privilege Escalation |
@@ -32,7 +38,7 @@
 | *Poison | LFI, FreeBSD Apache log poisoning | password base64, vncviewer |
 | Popcorn | torrent, upload bypass | user cache, motd, Linux PAM | 
 | Postman | Redis, ssh, john | [Webmin](https://github.com/KrE80r/webmin_cve-2019-12840_poc) |
-| Previse | HTTP [302](https://vk9-sec.com/bypass-30x-redirect-with-burpsuite/), PHP exec, mysql, hashcat 500 ||
+| Previse | HTTP [302](https://vk9-sec.com/bypass-30x-redirect-with-burpsuite/), PHP exec, mysql, hashcat 500 | sudo list, [$PATH variable](https://www.hackingarticles.in/linux-privilege-escalation-using-path-variable/) |
 
 (*):review before the exam
 
