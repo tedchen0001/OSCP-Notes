@@ -58,7 +58,7 @@ authenticate
 curl -s http://127.0.0.1:3001/<folder>/ -u <user>:<password>
 ```
 
-Find the open port
+find the open ports
 
 ```
 netstat -punta || ss -nltpu || netstat -anv
