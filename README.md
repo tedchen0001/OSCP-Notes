@@ -284,7 +284,7 @@ Typical site folders
 [Writable file](https://www.hackingarticles.in/multiple-ways-to-get-root-through-writable-file/)
 
 ```Shell
-find / -writable -type  f 2>/dev/null | grep -v "/proc/"
+find / -writable -type f 2>/dev/null | grep -v "/proc/"
 ```
 
 find files containing specific text
@@ -308,6 +308,29 @@ find ssh key
 
 ```
 find / -type f -name id_rsa* 2>&-
+```
+
+upgrade reverse shell in Kali
+
+```shell
+# 1.switch to bash
+bash
+nc -nlvp <local port>
+# 2
+/usr/bin/script -qc /bin/bash /dev/null
+# 3
+script -c "/bin/bash -i" /dev/null
+```
+
+```shell
+# chsh - change your login shell
+chsh /bin/bash
+# full pathnames of valid login shells
+cat /etc/shells
+# 1.finding current shell
+echo $0
+# 2.finding current shell 
+/proc/self/exe --version
 ```
 
 ## 🖥️ Windows
