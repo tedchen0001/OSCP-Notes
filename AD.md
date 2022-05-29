@@ -27,24 +27,27 @@ add target domain /etc/hosts, if needed
 enumerate domain usernames
 
 ```shell
- kerbrute_linux_amd64 --dc <Domain Controller> -d <Active Directory Domain> userenum  ~/Documents/userlist.txt
+# 1
+kerbrute_linux_amd64 --dc <Domain Controller> -d <Active Directory Domain> userenum  ~/Documents/userlist.txt
+# 2 valid users
+kerbrute userenum -d <domain> --dc <domain controller> ~/Documents/userlist.txt | grep "USERNAME" | cut -f1 -d"@" | cut -f4 -d":" | tr -d "[:blank:]" > /tmp/users.txt
 ```
 
 ### :open_file_folder: PowerView
 
-```
+```powershell
 # Groups
 Get-NetGroup
 ```
 
-```
+```powershell
 # Computers
 Get-NetComputer -fulldata
 #select
 Get-NetComputer -fulldata | select operatingsystem
 ```
 
-```
+```powershell
 # Users
 Get-NetUser
 # password last set
@@ -53,9 +56,11 @@ Get-NetUser -properties name, pwdlastset, logoncount, badpwdcount
 
 ### :open_file_folder: CrackMapExec
 
-```
+```shell
 # brute forcing
 crackmapexec <protocol> <target ip> -u <users.txt> -p <passwords.txt>
 # check password policy
 crackmapexec <protocol> <target ip> --pass-pol
+# using existing credentials and users to find more credentials 
+crackmapexec <protocol> <target ip> -u /tmp/users.txt -p <password> --continue-on-success
 ```
