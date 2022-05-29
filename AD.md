@@ -54,7 +54,7 @@ Get-NetUser
 Get-NetUser -properties name, pwdlastset, logoncount, badpwdcount
 ```
 
-### :open_file_folder: CrackMapExec
+### :open_file_folder: [CrackMapExec](https://mpgn.gitbook.io/crackmapexec/)
 
 ```shell
 # brute forcing
