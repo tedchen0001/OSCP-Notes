@@ -8,21 +8,26 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 
 NetBIOS-Domain Name
 
-```
-enum4linux <target ip> 
+[enum4linux-ng](https://github.com/cddmp/enum4linux-ng)
+
+```shell
+enum4linux-ng -P <target ip>
+# -P Get password policy information via RPC 
 ```
 
 Enumerating Users
 
-add target domain /etc/hosts
+add target domain /etc/hosts, if needed
 
-```
+```shell
 127.0.0.1 localhost
 <target domain ip> <Active Directory Domain>
 ```
 
-```
- kerbrute_linux_amd64 --dc <Active Directory Domain> -d <Active Directory Domain> userenum  ~/Documents/userlist.txt
+enumerate domain usernames
+
+```shell
+ kerbrute_linux_amd64 --dc <Domain Controller> -d <Active Directory Domain> userenum  ~/Documents/userlist.txt
 ```
 
 ### :open_file_folder: PowerView
