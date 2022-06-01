@@ -30,3 +30,4 @@
 - If the target server does not install mysql client tool try using mysqldump.
 - Note that the root folder is accessible through a vulnerability and can be placed SSH public key.
 - [Bypass](https://vk9-sec.com/bypass-30x-redirect-with-burpsuite/) HTTP 30X. 
+- If you already have root privileges, note whether you can escape environment, e.g., docker.

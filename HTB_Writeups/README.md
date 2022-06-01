@@ -39,7 +39,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | Popcorn | torrent, upload bypass | user cache, motd, Linux PAM | 
 | Postman | Redis, ssh, john | [Webmin](https://github.com/KrE80r/webmin_cve-2019-12840_poc) |
 | Previse | HTTP [302](https://vk9-sec.com/bypass-30x-redirect-with-burpsuite/), PHP exec, mysql, hashcat 500 | sudo list, [$PATH variable](https://www.hackingarticles.in/linux-privilege-escalation-using-path-variable/) |
-| Ready | [gitlab](https://github.com/dotPY-hax/gitlab_RCE) ||
+| Ready | [gitlab](https://github.com/dotPY-hax/gitlab_RCE) | *[Escaping Docker](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/docker-breakout/docker-breakout-privilege-escalation#mounting-disk-poc2) (mounting-disk-poc2), SSH |
 
 (*):review before the exam
 
