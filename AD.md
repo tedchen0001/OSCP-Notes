@@ -58,9 +58,13 @@ Get-NetUser -properties name, pwdlastset, logoncount, badpwdcount
 
 ```shell
 # brute forcing
-crackmapexec <protocol> <target ip> -u <users.txt> -p <passwords.txt>
+sudo crackmapexec <protocol> <target ip> -u <user_list.txt> -p <password_list.txt>
 # check password policy
-crackmapexec <protocol> <target ip> --pass-pol
+sudo crackmapexec <protocol> <target ip> --pass-pol
 # using existing credentials and users to find more credentials 
-crackmapexec <protocol> <target ip> -u /tmp/users.txt -p <password> --continue-on-success
+sudo crackmapexec <protocol> <target ip> -u /tmp/users.txt -p <password> --continue-on-success
+# using low privilege user to enumerate more users
+sudo crackmapexec <protocol> <target ip> -u <username> -p <password> --users
+# using low privilege user to enumerate more groups
+sudo crackmapexec <protocol> <target ip> -u <username> -p <password> --groups
 ```
