@@ -6,7 +6,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 
 ### :open_file_folder: Personal Flow (WIP)
 
-![image]
+![AD drawio](https://user-images.githubusercontent.com/8998412/171990757-4b3b5a67-de7c-4f44-91fc-1ae6f25df981.png)
 
 ### :open_file_folder: Commands
 
