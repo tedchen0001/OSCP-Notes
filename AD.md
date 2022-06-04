@@ -91,6 +91,7 @@ sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --rid-br
 
 ```powershell
 # http://www.selfadsi.org/ads-attributes/user-userAccountControl.htm
+# userAccountControl:<LDAP_MATCHING_RULE OID>:=<flags (sum) value>
 # inactive accounts (ACCOUNTDISABLE=2)
 dsquery * -filter "(userAccountControl:1.2.840.113556.1.4.803:=2)"
 ```
