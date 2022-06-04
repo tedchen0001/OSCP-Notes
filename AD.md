@@ -83,9 +83,7 @@ sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> -M spide
 sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --rid-brute
 ```
 
-![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-
-### :open_file_folder: [dsquery](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11))
+### :open_file_folder: [![Windows](https://badgen.net/badge/icon/windows?icon=windows&label)](https://microsoft.com/windows/) [dsquery](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11))
 
 [userAccountControl](https://docs.microsoft.com/en-us/troubleshoot/windows-server/identity/useraccountcontrol-manipulate-account-properties)
 
