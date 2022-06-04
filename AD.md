@@ -82,3 +82,15 @@ sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> -M spide
 # bruteforcing the RID
 sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --rid-brute
 ```
+
+### :open_file_folder: [dsquery](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11))
+
+[userAccountControl](https://docs.microsoft.com/en-us/troubleshoot/windows-server/identity/useraccountcontrol-manipulate-account-properties)
+
+[OID](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-adts/4e638665-f466-4597-93c4-12f2ebfabab5?redirectedfrom=MSDN): LDAP Matching Rules
+
+```
+# http://www.selfadsi.org/ads-attributes/user-userAccountControl.htm
+# inactive accounts (ACCOUNTDISABLE=2)
+dsquery * -filter "(userAccountControl:1.2.840.113556.1.4.803:=2)"
+```
