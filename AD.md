@@ -4,6 +4,10 @@ https://www.hackingarticles.in/active-directory-pentesting-lab-setup/
 
 https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLgqAAAA
 
+### :open_file_folder: Personal Flow (WIP)
+
+![image]
+
 ### :open_file_folder: Commands
 
 NetBIOS-Domain Name
@@ -56,6 +60,8 @@ Get-NetUser -properties name, pwdlastset, logoncount, badpwdcount
 
 ### :open_file_folder: [CrackMapExec](https://mpgn.gitbook.io/crackmapexec/)
 
+[Pwn3d!](https://mpgn.gitbook.io/crackmapexec/news-2022/major-release-for-crackmapexec#ldap-getting-the-pwn3d-flag-lets-go-deeper-with-ldap):domain admin flag
+
 ```shell
 # brute forcing
 sudo crackmapexec <protocol> <target ip> -u <user_list.txt> -p <password_list.txt>
@@ -67,4 +73,12 @@ sudo crackmapexec <protocol> <target ip> -u /tmp/users.txt -p <password> --conti
 sudo crackmapexec <protocol> <target ip> -u <username> -p <password> --users
 # using low privilege user to enumerate more groups
 sudo crackmapexec <protocol> <target ip> -u <username> -p <password> --groups
+# enumerate logged users on multiple servers
+sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --loggedon-users
+# enumerate shares on multiple servers
+sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --shares
+# list readable share files
+sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> -M spider_plus
+# bruteforcing the RID
+sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --rid-brute
 ```
