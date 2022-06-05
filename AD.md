@@ -47,7 +47,7 @@ Get-NetGroup
 ```powershell
 # Computers
 Get-NetComputer -fulldata
-#select
+# select
 Get-NetComputer -fulldata | select operatingsystem
 ```
 
