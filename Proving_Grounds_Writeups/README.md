@@ -31,3 +31,5 @@
 - Note that the root folder is accessible through a vulnerability and can be placed SSH public key.
 - [Bypass](https://vk9-sec.com/bypass-30x-redirect-with-burpsuite/) HTTP 30X. 
 - If you already have root privileges, note whether you can escape environment, e.g., docker.
+- Note the ```opt``` folder.
+- Symbolic links(Symlinks) can be abused to cause elevation of privilege.
