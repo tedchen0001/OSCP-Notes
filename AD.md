@@ -4,6 +4,24 @@ https://www.hackingarticles.in/active-directory-pentesting-lab-setup/
 
 https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLgqAAAA
 
+AD mindmap 
+https://github.com/Orange-Cyberdefense/arsenal/blob/master/mindmap/pentest_ad_dark.svg
+
+### :open_file_folder: [Allowed Tools](https://help.offensive-security.com/hc/en-us/articles/4412170923924#h_01FP8CCWDT0GX03RCE6RGYRZT4)
+
+Be sure to check the restrictions on the use of tools before taking the exam.
+
+- BloodHound
+- SharpHound
+- PowerShell Empire
+- Covenant 
+- Powerview
+- Rubeus
+- evil-winrm
+- Responder (Poisoning and Spoofing is not allowed in the labs or on the exam)
+- Crackmapexec
+- Mimikatz
+
 ### :open_file_folder: Personal Flow (WIP)
 
 ![AD drawio](https://user-images.githubusercontent.com/8998412/171990757-4b3b5a67-de7c-4f44-91fc-1ae6f25df981.png)
