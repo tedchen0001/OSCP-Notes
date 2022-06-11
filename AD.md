@@ -117,3 +117,105 @@ sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --rid-br
 # inactive accounts (ACCOUNTDISABLE=2)
 dsquery * -filter "(userAccountControl:1.2.840.113556.1.4.803:=2)"
 ```
+
+### :open_file_folder: Test Environment
+
+First we have to set up AD server, we can use the evaluation edition of windows sever. I chose to download the VHD version.
+
+```
+https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022#Get-started
+```
+
+Use the previously downloaded VHD file to create a virtual machine.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step1.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step2.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step3.png)
+
+After creating the virtual machine, switch the network to bridged.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step4.png)
+
+
+Install the AD service.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step5.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step6.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step7.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step8.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step9.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step10.png)
+
+
+Create domain control.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step11.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step12.png)
+
+Add a new forest.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step13.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step14.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step15.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step16.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step17.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step18.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step19.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step20.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step21.png)
+
+Create a user account.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step22.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step23.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step24.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step25.png)
+
+The AD server and user account are ready. Next we create a clinet pc environment. We download the evaluation virtual machine.
+
+```
+https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/
+```
+
+Remembering to switch client virtual machine's network to bridged too. You can also test whether the connection between client to AD server is work.
+
+Setting up DNS server in our client pc. The DNS server is the same as the AD server.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/client_step1.png)
+
+Next we can join the domain. (If you get an error when you join, try disabling IPv6.)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/client_step2.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/client_step3.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/client_step4.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/client_step5.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/client_step6.png)
+
+Disabling IPv6.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/client_step7.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/client_step8.png)
