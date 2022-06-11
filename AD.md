@@ -202,7 +202,7 @@ Setting up DNS server in our client pc. The DNS server is the same as the AD ser
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/client_step1.png)
 
-Next we can join the domain. (If you get an error when you join, try disabling IPv6.)
+Now we can join the domain. (If you get an error when you join, try disabling IPv6.)
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/client_step2.png)
 
