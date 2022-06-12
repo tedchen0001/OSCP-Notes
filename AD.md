@@ -4,10 +4,13 @@ https://www.hackingarticles.in/active-directory-pentesting-lab-setup/
 
 https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLgqAAAA
 
-AD mindmap 
+AD mindmap <br>
 https://github.com/Orange-Cyberdefense/arsenal/blob/master/mindmap/pentest_ad_dark.svg
 
 https://tryhackme.com/room/breachingad
+
+Security identifier (SID) and Relative identifier (RID) <br>
+https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/security-identifiers
 
 ### :open_file_folder: [Allowed Tools](https://help.offensive-security.com/hc/en-us/articles/4412170923924#h_01FP8CCWDT0GX03RCE6RGYRZT4)
 
@@ -117,6 +120,58 @@ sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --rid-br
 # inactive accounts (ACCOUNTDISABLE=2)
 dsquery * -filter "(userAccountControl:1.2.840.113556.1.4.803:=2)"
 ```
+
+### :open_file_folder: rpcclient
+
+If null session is enabled on the network. Server may have null session vulnerability but unable to enumerate because of permission settings.
+
+```shell
+# null session
+ rpcclient -U "" -N <target ip>
+# -U username
+# -N no password
+
+# If you cannot enumerate, you must provide a valid credentail 
+rpcclient -U <username> --password <password> <target ip> 
+
+rpcclient $> querydominfo
+# Domain info
+rpcclient $> lookupdomain <domain_name>
+# Domain info (include SID)
+rpcclient $> querydispinfo
+# Query display info (include RID)
+rpcclient $> queryuser <RID> or <username> 
+# Query user info
+rpcclient $> enumdomusers
+# Enumerate domain users (include RID)
+rpcclient $> enumdomgroups
+# Enumerate domain groups
+rpcclient $> enumalsgroups <builtin> or <domain> 
+# Enumerate alias groups
+rpcclient $> enumdomains
+# Enumerate domains
+rpcclient $> enumprivs
+# Enumerate privileges
+rpcclient $> getdompwinfo
+# Get domain password info
+rpcclient $> getusrdompwinfo <RID> 
+# Get user domain password info
+rpcclient $> lsaenumsid
+# Enumerate the LSA SIDs
+rpcclient $> netshareenum
+# Enumerate shares
+rpcclient $> netshareenumall
+# Enumerate all shares
+rpcclient $> netsharegetinfo <sharename>
+# details of share
+rpcclient $> samlookupnames domain <username>
+# lookup username to RID
+rpcclient $> samlookuprids domain <RID>
+# lookup RID to username
+rpcclient $> lsaquery
+# Query LSA policy
+```
+
 
 ### :open_file_folder: Test Environment
 
