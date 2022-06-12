@@ -252,10 +252,10 @@ Create a user account.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/step25.png)
 
-The AD server and user account are ready. Next we create a clinet pc environment. We download the evaluation virtual machine.
+The AD server and user account are ready. Next we create a clinet pc environment. We can download the ISO file and use it to create virtual machine.
 
 ```
-https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/
+https://www.microsoft.com/en-us/software-download/windows11
 ```
 
 Remembering to switch client virtual machine's network to bridged too. You can also test whether the connection between client to AD server is work.
