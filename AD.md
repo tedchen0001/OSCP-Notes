@@ -172,6 +172,13 @@ rpcclient $> lsaquery
 # Query LSA policy
 ```
 
+### :open_file_folder: [Psexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/psexec.py)
+
+get interactive shell on the Windows host
+
+```
+psexec.py <domain>/<username>:'<password>'@<target ip>
+```
 
 ### :open_file_folder: Test Environment
 
