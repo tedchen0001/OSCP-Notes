@@ -176,7 +176,7 @@ rpcclient $> lsaquery
 
 [Microsoft PsExec Tool](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec)
 
-get interactive shell on the Windows host (ADMIN$ or C$ must be writeable)
+get interactive shell on the Windows host (ADMIN\$ or C\$ must be writeable)
 
 ```shell
 psexec.py <domain>/<username>:'<password>'@<target ip>
