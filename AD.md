@@ -174,7 +174,7 @@ rpcclient $> lsaquery
 
 ### :open_file_folder: [Psexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/psexec.py)
 
-[Microsoft PsExec Tool](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec)
+[Microsoft PsExec Tool](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec) (```ADMIN$```)
 
 get interactive shell on the Windows host (```ADMIN$``` or ```C$``` must be writeable)
 
