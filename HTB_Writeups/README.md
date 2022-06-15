@@ -12,7 +12,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | Armageddon | Drupal (2018-7600) | binary snap |
 | Backdoor | wordpress LFI proc gdbserver | screen |
 | Blocky | dirb javadecompilers wordpress | sudo list |
-| Blunder | feroxbuster Extensions [txt] bludit | sudo versions before 1.8.28 |
+| Blunder | feroxbuster extensions ```txt``` bludit | sudo versions before 1.8.28 |
 | Brainfuck | wordpress plugin smtp pop3 | Cryptography |
 | Cronos | subdomain wfuzz| crontab |
 | Doctor | [ssti-payloads](https://github.com/payloadbox/ssti-payloads) | Splunk |
@@ -42,6 +42,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | Ready | [gitlab](https://github.com/dotPY-hax/gitlab_RCE) | *[Escaping Docker](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/docker-breakout/docker-breakout-privilege-escalation#mounting-disk-poc2) (mounting-disk-poc2), SSH |
 | ScriptKiddie | *[APK](https://www.exploit-db.com/exploits/49491)(No need for msfvenom but be careful choosing payload), <br>shell script, command injection (cut) | sudo list |
 | Seal | manager, *403 Fuzz, 401, credential in commit history, <br> opt, symbolic link, ssh | sudo list |
+| Sense | feroxbuster extensions ```txt``` medium.txt, pfsense RCE | no need |
 
 (*):review before the exam
 
