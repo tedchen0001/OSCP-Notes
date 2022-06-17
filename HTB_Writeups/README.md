@@ -43,6 +43,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | ScriptKiddie | *[APK](https://www.exploit-db.com/exploits/49491)(No need for msfvenom but be careful choosing payload), <br>shell script, command injection (cut) | sudo list |
 | Seal | manager, *403 Fuzz, 401, credential in commit history, <br> opt, symbolic link, ssh | sudo list |
 | Sense | feroxbuster extensions ```txt``` medium.txt, pfsense RCE | no need |
+| Shibboleth | wfuzz, udp, IPMI, hashcat 7300, <br> zabbix RCE, password reuse ||
 
 (*):review before the exam
 
