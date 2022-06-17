@@ -100,8 +100,12 @@ optimizing performance
 ```shell
 nmap -p- --min-rate 1000 <target ip>
 # --min-rate <number>: Send packets no slower than <number> per second
+
 # and then specific port
 nmap -p <target port> -sC -sV <target ip>
+
+# UDP
+nmap -p- --min-rate 1000 -sU <target ip>
 ```
 
 ### :open_file_folder: reverse shell
