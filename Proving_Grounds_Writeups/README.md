@@ -14,6 +14,7 @@
 - [XAMPP 7.4.3 - Local Privilege Escalation](https://www.exploit-db.com/exploits/50337)
 - [PHP 8.1.0 RCE](https://github.com/flast101/php-8.1.0-dev-backdoor-rce/blob/main/backdoor_php_8.1.0-dev.py)
 - [Apache HTTP Server 2.4.49 & 2.4.50 RCE](https://www.exploit-db.com/exploits/50383)
+- [MariaDB 10.2 < 10.2.37, 10.3 < 10.3.28, 10.4 < 10.4.18, and 10.5 < 10.5.9, CVE-2021-27928](https://www.exploit-db.com/exploits/49765)
 
 #### Notes
 
