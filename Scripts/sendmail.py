@@ -25,7 +25,7 @@ def main():
     msg.set_content(message)
 
     #server = smtplib.SMTP_SSL(smtp_server, smtp_port)
-    server = smtplib.SMTP(smtp_server,smtp_port)
+    server = smtplib.SMTP(smtp_server, smtp_port)
 
     # doesn't need authentication
     #server.login(username, passowrd)
