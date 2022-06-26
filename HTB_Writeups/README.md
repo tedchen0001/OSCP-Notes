@@ -46,7 +46,8 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | Shibboleth | wfuzz, udp, IPMI, hashcat 7300, <br> zabbix RCE, password reuse | [MariaDB](https://www.exploit-db.com/exploits/49765) |
 | Shocker | [ShellShock](https://nvd.nist.gov/vuln/detail/cve-2014-6271), ```403``` permission directory, extensions ```sh``` ```pl``` | sudo list |
 | SneakyMailer | subdomain(wfuzz), *credential phishing(email, nc), ftp, <br> *PyPI malicious package | sudo list |
-| SolidState | Apache James 2.3.2, *reset user password, POP3, <br> trigger by ssh login | task, file permission |  
+| SolidState | Apache James 2.3.2, *reset user password, POP3, <br> trigger by ssh login | task, file permission |
+| Sunday | finger enum [users](https://github.com/danielmiessler/SecLists/blob/master/Usernames/Names/names.txt), backup folder, hashcat 7400 | sudo list (wget) |
 
 (*):review before the exam
 
