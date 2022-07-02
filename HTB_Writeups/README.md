@@ -50,6 +50,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | Sunday | finger enum [users](https://github.com/danielmiessler/SecLists/blob/master/Usernames/Names/names.txt), SSH, backup folder, hashcat 7400 | sudo list (wget) |
 | SwagShop | Magento CVE-2015-1397 | sudo list (vi) |
 | Tabby | LFI, tomcat-users.xml, page source, remote deploy, <br> file password | [lxd](https://hacktricks.boitatech.com.br/linux-unix/privilege-escalation/interesting-groups-linux-pe/lxd-privilege-escalation) |
+| TartarSauce | web dir enum, wordpress plugins, CVE-2015-8351 (plugin real version), <br> sudo list (tar) | *backuperer.service (System timers) |
 
 (*):review before the exam
 
@@ -199,4 +200,11 @@ curl http://<target ip>:<port>/test/
 # crack zip file password
 zip2john <file> > hash
 john --wordlist=<password_list> hash       
+```
+
+Used in ```TartarSauce```
+
+```shell
+wpscan --url http://<target ip>/ -e ap --plugins-detection aggressive --api-token <api_key> -t 20 --verbose
+# --api-token:display vulnerability data (not always necessary), register a uesr and get the api key from wpscan offical website
 ```

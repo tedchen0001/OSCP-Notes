@@ -228,7 +228,8 @@ wpscan --url http://192.168.0.1/ -e ap
 ```
 
 ```shell
-wpscan --url http://192.168.0.1/ -e ap --plugins-detection aggressive --api-token <api_key> -t 20
+wpscan --url http://192.168.0.1/ -e ap --plugins-detection aggressive --api-token <api_key> -t 20 --verbose
+# --api-token:display vulnerability data (not always necessary), register a uesr and get the api key from wpscan offical website
 ```
 
 ```shell
