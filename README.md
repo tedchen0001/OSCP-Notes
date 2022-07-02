@@ -228,6 +228,10 @@ wpscan --url http://192.168.0.1/ -e ap
 ```
 
 ```shell
+wpscan --url http://192.168.0.1/ -e ap --plugins-detection aggressive --api-token <api_key> -t 20
+```
+
+```shell
 curl -k -s http://192.168.0.1/wp-content/plugins/ | html2text
 ```
 
