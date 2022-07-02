@@ -34,3 +34,4 @@
 - If you already have root privileges, note whether you can escape environment, e.g., docker.
 - Note the ```opt``` folder.
 - Symbolic links(Symlinks) can be abused to cause elevation of privilege.
+- Note that task with ```System timers```.
