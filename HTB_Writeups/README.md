@@ -51,7 +51,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | SwagShop | Magento CVE-2015-1397 | sudo list (vi) |
 | Tabby | LFI, tomcat-users.xml, page source, remote deploy, <br> file password | [lxd](https://hacktricks.boitatech.com.br/linux-unix/privilege-escalation/interesting-groups-linux-pe/lxd-privilege-escalation) |
 | TartarSauce | web dir enum, wordpress plugins, <br> CVE-2015-8351 (plugin real version), sudo list (tar) | *backuperer.service (System timers) |
-| Time | Jackson (CVE-2019-12384), Java-Deserialization | *timer_backup.service (System timers) |
+| Time | Jackson (CVE-2019-12384), Java-Deserialization | timer_backup.service (System timers) |
 
 (*):review before the exam
 
