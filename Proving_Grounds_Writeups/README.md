@@ -34,4 +34,4 @@
 - If you already have root privileges, note whether you can escape environment, e.g., docker.
 - Note the ```opt``` folder.
 - Symbolic links(Symlinks) can be abused to cause elevation of privilege.
-- Note the ```tasks``` scheduled using ```system timers```.
+- Note the ```tasks``` scheduled using ```system timers``` (command:systemctl list-timers, services location:/etc/systemd/system/).
