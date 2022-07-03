@@ -53,6 +53,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | TartarSauce | web dir enum, wordpress plugins, <br> CVE-2015-8351 (plugin real version), sudo list (tar) | *backuperer.service (System timers) |
 | Time | *Jackson (CVE-2019-12384), Java-Deserialization | timer_backup.service (System timers) |
 | Traverxec | Nostromo, [HOMEDIRS](https://www.gsp.com/cgi-bin/man.cgi?section=8&topic=nhttpd#HOMEDIRS) (www_public), hidden folder in user's folder, <br> cracking passphrase (e.g., OpenAdmin box)  | ```/etc/sudoers```, journalctl without PIPE, <br> resize (e.g., less, vi) |
+| Valentine | web dir enum, Heartbleed(https://github.com/sensepost/heartbleed-poc), decrypt RSA private key | tmux |
 
 (*):review before the exam
 
@@ -220,3 +221,24 @@ echo 'cp /bin/sh /tmp/sh;chmod u+s /tmp/sh' > <task script file>
 /tmp/sh -p
 # -p priviliged
 ```
+
+Used in ```Valentine```
+
+```shell
+# check heartbleed vulnerability with Nmap NSE script
+nmap --script=ssl-heartbleed -p <target port> <target ip>
+```
+
+```ssh-rsa``` turned off by default
+
+```shell
+# sign_and_send_pubkey: no mutual signature supported
+ssh -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa <user>@<target ip> -i <private_key>
+```
+
+```shell
+# hijacking tmux sessions for Privilege Escalation 
+/usr/bin/tmux -S /.devs/dev_sess
+```
+
+
