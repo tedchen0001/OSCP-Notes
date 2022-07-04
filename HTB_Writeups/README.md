@@ -53,7 +53,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | TartarSauce | web dir enum, wordpress plugins, <br> CVE-2015-8351 (plugin real version), sudo list (tar) | *backuperer.service (System timers) |
 | Time | *Jackson (CVE-2019-12384), Java-Deserialization | timer_backup.service (System timers) |
 | Traverxec | Nostromo, [HOMEDIRS](https://www.gsp.com/cgi-bin/man.cgi?section=8&topic=nhttpd#HOMEDIRS) (www_public), hidden folder in user's folder, <br> cracking passphrase (e.g., OpenAdmin box)  | ```/etc/sudoers```, journalctl without PIPE, <br> resize (e.g., less, vi) |
-| Valentine | web dir enum, Heartbleed(https://github.com/sensepost/heartbleed-poc), decrypt RSA private key | tmux |
+| Valentine | web dir enum, Heartbleed [poc](https://github.com/sensepost/heartbleed-poc), decrypt RSA private key | tmux |
 
 (*):review before the exam
 
@@ -241,4 +241,12 @@ ssh -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa <user>@<tar
 /usr/bin/tmux -S /.devs/dev_sess
 ```
 
+Used in ```APT```
+
+port 135 RPC [rpcdump.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/rpcdump.py)
+
+```shell
+# mappings of RPC
+python3 rpcdump.py <target ip> -p 135
+```
 
