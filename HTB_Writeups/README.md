@@ -243,10 +243,22 @@ ssh -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa <user>@<tar
 
 Used in ```APT```
 
-port 135 RPC [rpcdump.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/rpcdump.py)
+port 135 MSRPC
+
+[rpcdump.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/rpcdump.py)
+
+[Windows DCOM version 5.6](https://airbus-cyber-security.com/the-oxid-resolver-part-1-remote-enumeration-of-network-interfaces-without-any-authentication/)
 
 ```shell
 # mappings of RPC
 python3 rpcdump.py <target ip> -p 135
+# enumerating network interface, Windows DCOM version 5.6
+python3 IOXIDResolver.py <target ip>
+# Nmap IPv6 scan
+nmap -6 -p- --min-rate 1000 <target IPv6 address>
+# enumerating information from Samba systems
+python3 enum4linux-ng.py -A -C <target IPv6 address>
+# list all files from all readable shares
+crackmapexec smb <target IPv6 address> -u '' -p '' -M spider_plus
 ```
 
