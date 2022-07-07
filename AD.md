@@ -27,7 +27,7 @@ Be sure to check the restrictions on the use of tools before taking the exam.
 - Crackmapexec
 - Mimikatz
 
-### :open_file_folder: Personal Flow (WIP)
+### :open_file_folder: Flow (WIP)
 
 ![AD drawio](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/AD.drawio.png)
 
