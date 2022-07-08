@@ -12,6 +12,10 @@ https://tryhackme.com/room/breachingad
 Security identifier (SID) and Relative identifier (RID) <br>
 https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/security-identifiers
 
+AD test environment
+
+https://github.com/Orange-Cyberdefense/GOAD
+
 ### :open_file_folder: [Allowed Tools](https://help.offensive-security.com/hc/en-us/articles/4412170923924#h_01FP8CCWDT0GX03RCE6RGYRZT4)
 
 Be sure to check the restrictions on the use of tools before taking the exam.
