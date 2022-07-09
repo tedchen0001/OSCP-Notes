@@ -90,7 +90,7 @@ Get-NetUser -properties name, pwdlastset, logoncount, badpwdcount
 [Pwn3d!](https://mpgn.gitbook.io/crackmapexec/news-2022/major-release-for-crackmapexec#ldap-getting-the-pwn3d-flag-lets-go-deeper-with-ldap):domain admin flag
 
 ```shell
-# brute forcing
+# brute forcing, server may block brute-force attack
 sudo crackmapexec <protocol> <target ip> -u <user_list.txt> -p <password_list.txt>
 # check password policy
 sudo crackmapexec <protocol> <target ip> --pass-pol
