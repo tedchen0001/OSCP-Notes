@@ -4,4 +4,4 @@
 
 #### AD
 
-- execGetTGT.sh: excuting GetTGT.py script with multiple NTLM hashes to get the valid password hashes
+- execGetTGT.sh: excuting getTGT.py script with multiple NTLM hashes to get the valid password hashes
