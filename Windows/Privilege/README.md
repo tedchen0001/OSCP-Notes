@@ -16,3 +16,8 @@ type C:\Users\<User Account>\AppData\Roaming\Microsoft\Windows\PowerShell\PSRead
 [LAN Manager authentication level](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level)
 
 - [NTLMv1 attack](https://github.com/SpiderLabs/Responder)
+
+Exploits
+
+- CVE-2021-1732
+- MS10-059
