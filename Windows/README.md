@@ -1,4 +1,4 @@
-- OS Architecture 
+OS Architecture 
 
 ```powershell
 # https://docs.microsoft.com/en-us/dotnet/api/system.environment.is64bitoperatingsystem?view=net-6.0
@@ -11,7 +11,7 @@
 (wmic os get osarchitecture)
 ```
 
-- AppData's Temp folder (%TEMP%)
+AppData's Temp folder (%TEMP%)
 
 ```
 C:\Users\<User Account>\AppData\Local\Temp
