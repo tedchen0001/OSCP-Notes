@@ -82,6 +82,8 @@ cewl -d 4 https://192.168.0.1 -w /tmp/wordlists.txt
 
 [Timing Templates](https://nmap.org/book/performance-timing-templates.html)
 
+[Host Discovery](https://nmap.org/book/man-host-discovery.html)
+
 scan a subnet
 
 ```shell
