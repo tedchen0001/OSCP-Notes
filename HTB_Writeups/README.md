@@ -61,6 +61,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 
 | Machine | Enumeration | Privilege Escalation | AD |
 | ------------- | ------------- | ------------- | :-----------: |
+| Active ||| :white_check_mark: |
 | *APT | MS-RPC port 135, [IOXID resolver](https://github.com/mubix/IOXIDResolver), IPv6, share file, AD database file, <br> [dump hashes](https://github.com/SecureAuthCorp/impacket/blob/master/examples/secretsdump.py), valid usernames, [modify registry](https://github.com/SecureAuthCorp/impacket/blob/master/examples/reg.py) | [responder](https://github.com/SpiderLabs/Responder), NTLMv1 Hash | :white_check_mark: |
 | Arctic | Adobe ColdFusion 8 | MS10-059 ||
 | Bankrobber | XSS |||
