@@ -31,7 +31,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | Networked | File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass), <br> php command injection | *sudo list |
 | Nibbles | page source, directory | sudo list |
 | *NineVeh | brute force attack http & https, phpLiteAdmin | crontab, chkrootkit |
-| OpenAdmin | OpenNetAdmin, pwd in conf file & <br> [frp](https://github.com/fatedier/frp), cracking passphrase | sudo list, GTFO |
+| OpenAdmin | OpenNetAdmin, pwd in conf file & <br> reverse proxy, cracking passphrase | sudo list, GTFO |
 | *Ophiuchi | [Java-Deserialization](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet), SnakeYAML | sudo list, analysis of GO code |
 | Passage | CutePHP & password storage location & <br> base64 & cracking | *SUID dbus |
 | *Pit | SNMP enum, hide web folder, SeedDMS | NET-SNMP-EXTEND-MIB, monitoring |
@@ -64,7 +64,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | Active ||| :white_check_mark: |
 | *APT | MS-RPC port 135, [IOXID resolver](https://github.com/mubix/IOXIDResolver), IPv6, share file, AD database file, <br> [dump hashes](https://github.com/SecureAuthCorp/impacket/blob/master/examples/secretsdump.py), valid usernames, [modify registry](https://github.com/SecureAuthCorp/impacket/blob/master/examples/reg.py) | [responder](https://github.com/SpiderLabs/Responder), NTLMv1 Hash | :white_check_mark: |
 | Arctic | Adobe ColdFusion 8 | MS10-059 ||
-| Bankrobber | XSS |||
+| *Bankrobber | XSS, SQLi, Arbitrary File Read | service forward, BOF ||
 
 (*):review before the exam
 
@@ -272,4 +272,17 @@ python3 enum4linux-ng.py -A -C <target IPv6 address>
 # list all files from all readable shares
 crackmapexec smb <target IPv6 address> -u '' -p '' -M spider_plus
 ```
+
+Used in ```Bankrobber```
+
+```sql
+/* load file */
+x' UNION SELECT 1, LOAD_FILE('C:\Windows\System32\drivers\etc\hosts'),3-- - 
+```
+
+[TCP/UDP tunnel over HTTP](https://github.com/jpillora/chisel)
+
+
+
+
 

@@ -4,6 +4,12 @@ Commands
 whoami /priv
 ```
 
+```cmd
+netstat -ano | findstr LISTEN
+```
+
+[TCP/UDP tunnel over HTTP](https://github.com/jpillora/chisel)
+
 PowerShell history file
 
 ```cmd

