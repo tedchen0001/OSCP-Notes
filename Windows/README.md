@@ -1,4 +1,4 @@
-OS Architecture 
+OS architecture 
 
 ```powershell
 # https://docs.microsoft.com/en-us/dotnet/api/system.environment.is64bitoperatingsystem?view=net-6.0
@@ -11,8 +11,21 @@ OS Architecture
 (wmic os get osarchitecture)
 ```
 
-AppData's Temp folder (%TEMP%)
+appData's Temp folder (%TEMP%)
+
+```cmd
+C:\Users\<User Account>\AppData\Local\Temp
+```
+
+privileges information
+
+```cmd
+whoami /priv
+whoami /all
+```
+
+check network connections 
 
 ```
-C:\Users\<User Account>\AppData\Local\Temp
+netstat -ano | findstr LISTEN
 ```
