@@ -26,6 +26,6 @@ whoami /all
 
 check network connections 
 
-```
+```cmd
 netstat -ano | findstr LISTEN
 ```
