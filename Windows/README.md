@@ -11,7 +11,7 @@ OS architecture
 (wmic os get osarchitecture)
 ```
 
-appData's Temp folder (%TEMP%)
+AppData's Temp folder (%TEMP%)
 
 ```cmd
 C:\Users\<User Account>\AppData\Local\Temp
