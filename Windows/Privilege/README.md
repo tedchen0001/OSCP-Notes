@@ -15,6 +15,13 @@ type C:\Users\<User Account>\AppData\Roaming\Microsoft\Windows\PowerShell\PSRead
 
 - [NTLMv1 attack](https://github.com/SpiderLabs/Responder)
 
+Check unusual programs
+
+```
+C:\Program Files
+C:\Program Files (x86)
+```
+
 Exploits
 
 - CVE-2021-1732
