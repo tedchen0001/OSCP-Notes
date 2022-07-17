@@ -67,6 +67,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | *Bankrobber | XSS, SQLi, Arbitrary File Read | [forwarding service](https://github.com/jpillora/chisel), BOF ||
 | Bastard | Drupal 7 CVE-2018-7600 | MS10-059, MS15-051 ||
 | Bastion | mount vhd, SYSTEM SAM user hash | mRemoteNG || 
+| Blue | MS17-010 | no need ||
 
 (*):review before the exam
 
