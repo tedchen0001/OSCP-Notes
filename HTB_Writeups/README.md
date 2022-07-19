@@ -68,6 +68,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | Bastard | Drupal 7 CVE-2018-7600 | MS10-059, MS15-051 ||
 | Bastion | mount vhd, SYSTEM SAM user hash | mRemoteNG || 
 | Blue | MS17-010 | no need ||
+| Bounty | File upload bypass, [web.config](https://github.com/tedchen0001/OSCP-Notes/blob/master/Windows/File_Upload_Bypass.md) | [SeImpersonatePrivilege](https://github.com/ohpe/juicy-potato) ||
 
 (*):review before the exam
 
