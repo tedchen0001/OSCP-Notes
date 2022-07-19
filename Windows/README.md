@@ -18,6 +18,12 @@ C:\Users\<User Account>\AppData\Local\Temp
 C:\Windows\Temp
 ```
 
+[displays file ownership information](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/dir)
+
+```cmd
+dir /q /a
+```
+
 privileges information
 
 ```cmd
