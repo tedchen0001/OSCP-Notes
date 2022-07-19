@@ -34,7 +34,7 @@ File owner access permission
 REM check owner
 dir /q /a
 REM grant full access
-icacls <file> /grant <user>:(F)
+icacls <file> /grant <user>:F
 ```
 
 Exploits
