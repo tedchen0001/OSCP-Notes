@@ -13,3 +13,9 @@ snmpwalk -v1 -c public <target ip> .
 # -c community string, like a password
 # . [OID]
 ```
+
+SNMP enumerator
+
+```
+snmp-check <target ip> -c <community string>
+```
