@@ -46,6 +46,10 @@ REM grant full access
 icacls <file> /grant <user>:F
 ```
 
+Tools
+
+[Chisel](https://github.com/jpillora/chisel):Pivoting 
+
 Exploits
 
 - CVE-2021-1732
