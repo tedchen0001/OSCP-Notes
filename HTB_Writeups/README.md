@@ -71,7 +71,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | Bounty | File upload bypass, [web.config](https://github.com/tedchen0001/OSCP-Notes/blob/master/Windows/File_Upload_Bypass.md) | [SeImpersonatePrivilege](https://github.com/ohpe/juicy-potato) ||
 | Buff ||||
 | Chatterbox | Achat | AutoLogon credentials, reuse password, powershell reverse (with credential) ||
-| Conceal | SNMP, *IPsec VPN, FTP (IIS folder), Classic ASP |||
+| Conceal | SNMP, *IPsec VPN, FTP (IIS folder), Classic ASP | SeImpersonatePrivilege ||
 
 (*):review before the exam
 
@@ -318,3 +318,5 @@ Used in ```Conceal```
 ```
 sudo ipsec restart
 ```
+
+[SeImpersonatePrivilege](https://github.com/tedchen0001/OSCP-Notes/blob/master/Windows/Privilege/SeImpersonatePrivilege.md)
