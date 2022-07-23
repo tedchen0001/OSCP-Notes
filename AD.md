@@ -206,7 +206,7 @@ secretsdump.py -ntds /tmp/ntds.dit -system /tmp/SYSTEM local -outputfile /tmp/AD
 [getTGT.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/getTGT.py): get a Kerberos ticket and use it to access other services
 
 ```shell
-getTGT.py -hashes 'LM:NT' <domain>/<user>
+getTGT.py -hashes '<LMHASH:NTHASH>' <domain>/<user>
 # Kerberos credentials cache
 export KRB5CCNAME=<username>@<domain>.ccache
 # showing Kerberos credentials cache
