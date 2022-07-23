@@ -163,35 +163,38 @@ rpcclient $> lookupdomain <domain_name>
 rpcclient $> querydispinfo
 # Query display info (include RID)
 rpcclient $> queryuser <RID> or <username> 
-# Query user info
-rpcclient $> enumdomusers
 # Enumerate domain users (include RID)
-rpcclient $> enumdomgroups
+rpcclient $> enumdomusers
 # Enumerate domain groups
-rpcclient $> enumalsgroups <builtin> or <domain> 
+rpcclient $> enumdomgroups
 # Enumerate alias groups
-rpcclient $> enumdomains
+rpcclient $> enumalsgroups <builtin> or <domain> 
 # Enumerate domains
-rpcclient $> enumprivs
+rpcclient $> enumdomains
 # Enumerate privileges
-rpcclient $> getdompwinfo
+rpcclient $> enumprivs
 # Get domain password info
-rpcclient $> getusrdompwinfo <RID> 
+rpcclient $> getdompwinfo
 # Get user domain password info
-rpcclient $> lsaenumsid
+rpcclient $> getusrdompwinfo <RID> 
 # Enumerate the LSA SIDs
-rpcclient $> netshareenum
+rpcclient $> lsaenumsid
 # Enumerate shares
-rpcclient $> netshareenumall
+rpcclient $> netshareenum
 # Enumerate all shares
+rpcclient $> netshareenumall
+# Details of share
 rpcclient $> netsharegetinfo <sharename>
-# details of share
+# Lookup username to RID
 rpcclient $> samlookupnames domain <username>
-# lookup username to RID
+# Lookup RID to username
 rpcclient $> samlookuprids domain <RID>
-# lookup RID to username
-rpcclient $> lsaquery
 # Query LSA policy
+rpcclient $> lsaquery
+# Create new user
+rpcclient $> createdomuser <username>
+# change user password <level>:USER_INFORMATION_CLASS number e.g., 24 (https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/6b0dff90-5ac0-429a-93aa-150334adabf6?redirectedfrom=MSDN)
+rpcclient $> setuserinfo2 <username> <level> <password>
 ```
 
 ### :open_file_folder: [Psexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/psexec.py)
