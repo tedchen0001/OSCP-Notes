@@ -74,8 +74,9 @@ hydra -l admin -P ~/Documents/rockyou.txt test.com https-post-form "/login:{\"us
 get a list for password crackers
 
 ```shell
-cewl -d 4 https://192.168.0.1 -w /tmp/wordlists.txt
-# -d depth 
+cewl -d 4 https://192.168.0.1 -w /tmp/wordlists.txt --with-numbers
+# -d depth
+# --with-numbers
 ```
 
 ### :open_file_folder: nmap
