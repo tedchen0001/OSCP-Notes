@@ -64,6 +64,12 @@ kerbrute_linux_amd64 --dc <Domain Controller> -d <Active Directory Domain> usere
 kerbrute userenum -d <domain> --dc <domain controller> ~/Documents/userlist.txt | grep "USERNAME" | cut -f1 -d"@" | cut -f4 -d":" | tr -d "[:blank:]" > /tmp/users.txt
 ```
 
+[GetNPUsers](https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetNPUsers.py)
+
+```
+
+```
+
 ### :open_file_folder: PowerView
 
 ```powershell
