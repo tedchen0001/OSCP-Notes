@@ -216,7 +216,7 @@ klist
 [reg.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/reg.py): remote registry manipulation tool through the ```MS-RRP``` [(Windows Remote Registry Protocol)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/0fa3191d-bb79-490a-81bd-54c2601b7a78)
 
 ```shell
-reg.py <domain>/<valid username with domain> -hashes 'LM:NT' query -keyName <Registry Root Keys>
+reg.py <domain>/<valid username with domain> -hashes '<LMHASH:NTHASH>' query -keyName <Registry Root Keys>
 # Registry Root Keys: HKCR, HKCU, HKLM, HKU, HKCC
 ```
 
