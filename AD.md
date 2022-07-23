@@ -179,6 +179,10 @@ rpcclient $> getdompwinfo
 rpcclient $> getusrdompwinfo <RID> 
 # Enumerate the LSA SIDs
 rpcclient $> lsaenumsid
+# Lookup SID
+rpcclient $> lookupsids <SID>
+# Enumerate SIDs privileges
+rpcclient $> lsaenumacctrights <SID>
 # Enumerate shares
 rpcclient $> netshareenum
 # Enumerate all shares
@@ -191,9 +195,9 @@ rpcclient $> samlookupnames domain <username>
 rpcclient $> samlookuprids domain <RID>
 # Query LSA policy
 rpcclient $> lsaquery
-# Create new user
+# Create a new user
 rpcclient $> createdomuser <username>
-# change user password <level>:USER_INFORMATION_CLASS number e.g., 24 (https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/6b0dff90-5ac0-429a-93aa-150334adabf6?redirectedfrom=MSDN)
+# Set new user's password <level>:USER_INFORMATION_CLASS number e.g., 24 (https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/6b0dff90-5ac0-429a-93aa-150334adabf6?redirectedfrom=MSDN)
 rpcclient $> setuserinfo2 <username> <level> <password>
 ```
 
