@@ -76,7 +76,7 @@ get a list for password crackers
 ```shell
 cewl -d 4 https://192.168.0.1 -w /tmp/wordlists.txt --with-numbers
 # -d depth
-# --with-numbers
+# --with-numbers: Accept words with numbers in as well as just letters
 ```
 
 ### :open_file_folder: nmap
