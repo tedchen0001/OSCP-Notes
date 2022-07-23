@@ -28,3 +28,8 @@ get permissions
 smbmap -H <target ip>
 ```
 
+change password (STATUS_PASSWORD_MUST_CHANGE)
+
+```
+smbpasswd -U <user_name> -r <target ip>
+```
