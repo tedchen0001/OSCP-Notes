@@ -199,6 +199,8 @@ rpcclient $> lsaquery
 rpcclient $> createdomuser <username>
 # Set new user's password <level>:USER_INFORMATION_CLASS number e.g., 24 (https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/6b0dff90-5ac0-429a-93aa-150334adabf6?redirectedfrom=MSDN)
 rpcclient $> setuserinfo2 <username> <level> <password>
+# installed and share printers
+rpcclient $> enumprinters
 ```
 
 ### :open_file_folder: [Psexec.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/psexec.py)
