@@ -6,7 +6,7 @@ https://www.tarlogic.com/blog/abusing-seloaddriverprivilege-for-privilege-escala
 
 - version < Windows 10 20H2 (Build 19042)
 - Windows Defender non-active
-- in ```Print Operators``` group ```(whoami /groups)```
+- user in ```Print Operators``` group ```(whoami /groups)```
 - SeLoadDriverPrivilege ```(whoami/priv)```
 
 checking if Windows Defender is active
