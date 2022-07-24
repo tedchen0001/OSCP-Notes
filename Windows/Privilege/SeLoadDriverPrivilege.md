@@ -1,6 +1,14 @@
+#### References 
+
+https://www.tarlogic.com/blog/abusing-seloaddriverprivilege-for-privilege-escalation/
+
 #### Conditions
 
-version < Windows 10 20H2 (Build 19042)
+- version < Windows 10 20H2 (Build 19042)
+- Windows Defender non-active
+- in ```Print Operators``` group ```(whoami /groups)```
+- SeLoadDriverPrivilege ```(whoami/priv)```
+
 checking if Windows Defender is active
 
 ```powershell
