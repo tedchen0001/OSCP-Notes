@@ -73,8 +73,8 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | Chatterbox | Achat | AutoLogon credentials, reuse password, powershell reverse (with credential) ||
 | Conceal | SNMP, *IPsec VPN, FTP (IIS folder), Classic ASP | [SeImpersonatePrivilege](https://github.com/tedchen0001/OSCP-Notes/blob/master/Windows/Privilege/SeImpersonatePrivilege.md) ||
 | Fuse | username(from website), create password(cewl --with-numbers), smbpasswd, enumprinters(rpcclient) | [SeLoadDriverPrivilege](https://github.com/tedchen0001/OSCP-Notes/blob/master/Windows/Privilege/SeLoadDriverPrivilege.md), zerologon | :white_check_mark: |
-| Grandpa | IIS WebDAV CVE-2017-7269 | WMI Service Isolation Privilege Escalation (churrasco) ||
-| Granny | IIS WebDAV CVE-2017-7269 | WMI Service Isolation Privilege Escalation (churrasco) ||
+| Grandpa | Windows Server 2003, IIS WebDAV CVE-2017-7269 | WMI Service Isolation Privilege Escalation (churrasco) ||
+| Granny | Windows Server 2003, IIS WebDAV CVE-2017-7269 | WMI Service Isolation Privilege Escalation (churrasco) ||
 
 (*):review before the exam
 
