@@ -38,3 +38,4 @@
 - The ```/etc/sudoers``` file controls who can run what commands as what users on what machines and can also control special things such as whether you need a password for particular commands (https://help.ubuntu.com/community/Sudoers).
 - Note that sending test command  between different OS when we using poc exploit.
 - Note that when we use the exploit test command between different operating systems such as ```id``` and ```whoami```. (You may have found the right exploit but used the wrong test command.)
+- Note the creator information in any files we download from the target, e.g., ```pdf```, ```doc```.
