@@ -75,6 +75,7 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 | Fuse | username(from website), create password(cewl --with-numbers), smbpasswd, enumprinters(rpcclient) | [SeLoadDriverPrivilege](https://github.com/tedchen0001/OSCP-Notes/blob/master/Windows/Privilege/SeLoadDriverPrivilege.md), zerologon | :white_check_mark: |
 | Grandpa | Windows Server 2003, IIS WebDAV CVE-2017-7269 | WMI Service Isolation Privilege Escalation (churrasco) ||
 | Granny | Windows Server 2003, IIS WebDAV CVE-2017-7269 | WMI Service Isolation Privilege Escalation (churrasco) ||
+| *Intelligence | username(pdf creator), add AD Integrated DNS records  | group ReadGMSAPassword | :white_check_mark: |
 
 (*):review before the exam
 
