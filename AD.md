@@ -277,6 +277,8 @@ impacket-secretsdump <username>:<password>@<domain or IP> -dc-ip <DOMAINCONTROL 
 [getTGT.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/getTGT.py): get a Kerberos ticket and use it to access other services
 
 ```shell
+# If in VirtualBox, disabling time synchronization between the virtual machine and the host.
+sudo service virtualbox-guest-utils stop
 # synchronize with server time
 sudo ntpdate <target ip>
 #
