@@ -4,6 +4,8 @@ Forest, Active, Monteverde, Reel, Mantis, Blackfield, Search, APT
 
 https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLgqAAAA
 
+https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
+
 ### Linux Machines
 
 | Machine | Enumeration | Privilege Escalation |
