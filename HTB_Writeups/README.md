@@ -79,6 +79,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Granny | Windows Server 2003, IIS WebDAV CVE-2017-7269 | WMI Service Isolation Privilege Escalation (churrasco) ||
 | *Intelligence | username(pdf creator), add AD Integrated DNS records  | group ReadGMSAPassword | :white_check_mark: |
 | Jerry | Tomcat default credential, deploy | no need ||
+| Love | SSRF Gopher MySQL | AlwaysInstallElevated ||
 
 (*):review before the exam
 
