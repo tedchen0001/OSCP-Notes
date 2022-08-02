@@ -80,7 +80,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | *Intelligence | username(pdf creator), add AD Integrated DNS records  | group ReadGMSAPassword | :white_check_mark: |
 | Jerry | Tomcat default credential, deploy | no need ||
 | Love | SSRF Gopher MySQL | AlwaysInstallElevated ||
-| Omni | IOT exploit |
+| Omni | IoT exploit |
 
 (*):review before the exam
 
