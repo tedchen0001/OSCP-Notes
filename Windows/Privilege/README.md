@@ -1,3 +1,9 @@
+Recon
+
+```
+https://github.com/AonCyberLabs/Windows-Exploit-Suggester
+```
+
 Forwarding service
 
 [TCP/UDP tunnel over HTTP](https://github.com/jpillora/chisel)
