@@ -81,6 +81,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Jerry | Tomcat default credential, deploy | no need ||
 | Love | SSRF Gopher MySQL | AlwaysInstallElevated ||
 | Omni | IoT exploit | *SAM SYSTEM hash, Export-Clixml, GetNetworkCredential ||
+| Optimum | HttpFileServer 2.3 | MS16-098 || 
 
 (*):review before the exam
 
