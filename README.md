@@ -266,14 +266,6 @@ file in Windows
 C:\Windows\System32\drivers\etc\hosts
 ```
 
-### :open_file_folder: find 
-
-avoid permission denied messages
-
-```Shell
-find / -name *kali* 2>&-
-```
-
 ### :open_file_folder: AutoRecon
 
 ```shell
@@ -313,15 +305,21 @@ Typical site folders
 /var/www/html/
 ```
 
+avoid permission denied messages
+
+```shell
+find / -name *kali* 2>&-
+```
+
 [Writable file](https://www.hackingarticles.in/multiple-ways-to-get-root-through-writable-file/)
 
-```Shell
+```shell
 find / -writable -type f 2>/dev/null | grep -v "/proc/"
 ```
 
 find files containing specific text
 
-```Shell
+```shell
 find / -type f \( -iname \*.php -o -iname \*.config -o -iname \*.conf -o -iname \*.ini -o -iname \*.txt \) -exec grep -i 'password\|passwd' {} \; -print 2>&-
 ```
 
