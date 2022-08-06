@@ -29,7 +29,7 @@
 
 ## :warning: Exam Change
 
-[2022/1/11](https://www.offensive-security.com/offsec/oscp-exam-structure/)
+[2022/1/11](https://www.offensive-security.com/offsec/oscp-exam-structure/)<br>
 [2022/8/6 OSCP Bonus Points Update](https://www.offensive-security.com/offsec/sunsetting-pen-200-legacy-topic-exercises/)
 
 ## :hammer_and_wrench: Commands
