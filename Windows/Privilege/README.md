@@ -82,7 +82,7 @@ hashcat -m 1000 ./hash ~/Documents/rockyou.txt
 
 Chisel (port forwarding)
 
-```
+```shell
 # client
 chmod +x chisel
 ./chisel server --reverse --port <attacker port>
