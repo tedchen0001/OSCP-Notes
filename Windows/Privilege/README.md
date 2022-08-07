@@ -80,7 +80,7 @@ python3 secretsdump.py -system /tmp/SYSTEM -sam /tmp/SAM LOCAL
 hashcat -m 1000 ./hash ~/Documents/rockyou.txt
 ```
 
-Chisel (port forwarding)
+[Chisel](https://github.com/jpillora/chisel) (port forwarding)
 
 ```shell
 # client
