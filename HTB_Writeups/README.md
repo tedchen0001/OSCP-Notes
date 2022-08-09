@@ -84,7 +84,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Optimum | HttpFileServer 2.3 | MS16-098 ||
 | Remote | NFS Service(default port 2049), mount, sdf, Umbraco CMS | SeImpersonatePrivilege, TeamViewer |
 | SecNotes | CSRF reset password link, smb, IIS php | WinPEAS Linux shells/distributions ||
-| Silo | Oracle, CVE-2012-1675, ODAT, brute-force | Oracle, SYSTEM Privilege ||
+| Silo | Oracle (default port 1521), CVE-2012-1675, ODAT, brute-force | Oracle, SYSTEM Privilege ||
 
 (*):review before the exam
 
