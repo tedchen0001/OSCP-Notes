@@ -80,3 +80,9 @@ gdr -PSProvider 'FileSystem'
 REM cmd
 wmic logicaldisk get deviceid, volumename, description
 ```
+
+SMB
+
+```shell
+nmap -p 445 --script vuln <target ip>
+```
