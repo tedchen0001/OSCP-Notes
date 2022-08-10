@@ -85,6 +85,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Remote | NFS Service(default port 2049), mount, sdf, Umbraco CMS | SeImpersonatePrivilege, TeamViewer |
 | SecNotes | CSRF reset password link, smb, IIS php | WinPEAS Linux shells/distributions ||
 | Silo | Oracle (default port 1521), CVE-2012-1675, ODAT, brute-force | Oracle, SYSTEM Privilege ||
+| Worker | SVN, revision, Azure DevOps,  new branch,  additional driver, <br>evil-winrm | Azure DevOps, PowerShell task ||  
 
 (*):review before the exam
 
