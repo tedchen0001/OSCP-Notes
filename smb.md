@@ -1,3 +1,10 @@
+### Nmap 
+
+```
+nmap -p 445 --script vuln <target ip>
+nmap -p 139,445 --script-args=unsafe=1 --script /usr/share/nmap/scripts/smb-os-discovery <target ip>
+```
+
 ### Smbclient
 
 ```
