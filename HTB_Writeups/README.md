@@ -88,7 +88,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Optimum | HttpFileServer 2.3 | MS16-098 ||
 | Remote | NFS Service(default port 2049), mount, sdf, Umbraco CMS | SeImpersonatePrivilege, TeamViewer |
 | SecNotes | CSRF reset password link, smb, IIS php | WinPEAS Linux shells/distributions ||
-| Servmon | FTP, NVMS LFI, SSH | NSClient, SSH tunnel (localhost services) ||
+| Servmon | FTP, NVMS LFI, SSH | NSClient, *SSH tunnel (localhost services) ||
 | Silo | Oracle (default port 1521), CVE-2012-1675, ODAT, brute-force | Oracle, SYSTEM Privilege ||
 | Worker | SVN(default port 3690), revision, Azure DevOps,  new branch,  <br>additional drives, evil-winrm | Azure DevOps, PowerShell task ||
 
