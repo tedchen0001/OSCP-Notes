@@ -89,7 +89,8 @@ nmap -p 445 --script vuln <target ip>
 
 Kali provides [Windows executables](https://www.kali.org/tools/windows-binaries/)
 
-```
+```shell
+# /usr/share/windows-resources/binaries
 find / -name whoami.exe 2>/dev/null
 windows-binaries -h
 ```
