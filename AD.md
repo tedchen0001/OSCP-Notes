@@ -37,7 +37,7 @@ Be sure to check the restrictions on the use of tools before taking the exam.
 
 ### :open_file_folder: Commands
 
-service scan, domain information, check for null sessions, shares 
+service scan, domain information, check for ```null sessions```, shares 
 
 [enum4linux-ng](https://github.com/cddmp/enum4linux-ng)
 
