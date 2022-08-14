@@ -2,6 +2,7 @@
 
 ```shell
 nmap -p 445 --script vuln <target ip>
+nmap --script smb-vuln* <target ip>
 nmap -p 139,445 --script-args=unsafe=1 --script /usr/share/nmap/scripts/smb-os-discovery <target ip>
 ```
 
@@ -12,11 +13,11 @@ smbclient -L //192.168.135.39/ -U brett --option='client min protocol=NT1'
 ```
 
 ```shell
-smbclient --no-pass -L //192.168.185.125 -p 12445
+smbclient --no-pass -L //192.168.185.125 -p 445
 ```
 
 ```shell
-smbclient --no-pass -N \\\\192.168.185.125\\<folder> -p 12445
+smbclient --no-pass -N \\\\192.168.185.125\\<folder> -p 445
 ```
 
 ```shell
