@@ -37,13 +37,13 @@ Be sure to check the restrictions on the use of tools before taking the exam.
 
 ### :open_file_folder: Commands
 
-NetBIOS-Domain Name
+service scan, domain information, check for null sessions, shares 
 
 [enum4linux-ng](https://github.com/cddmp/enum4linux-ng)
 
 ```shell
-enum4linux-ng -P <target ip>
-# -P Get password policy information via RPC 
+enum4linux-ng -A <target ip> 
+# all simple enumeration
 ```
 
 Enumerating Users
@@ -183,7 +183,7 @@ dsquery * -filter "(userAccountControl:1.2.840.113556.1.4.803:=2)"
 
 ### :open_file_folder: rpcclient
 
-If null session is enabled on the network. Server may have null session vulnerability but unable to enumerate because of permission settings.
+If ```null session``` is enabled on the network. Server may have null session vulnerability but unable to enumerate because of permission settings.
 
 ```shell
 # null session
