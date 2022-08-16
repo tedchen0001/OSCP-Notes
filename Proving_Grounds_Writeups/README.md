@@ -40,3 +40,4 @@
 - Note that when we use the exploit test command between different operating systems such as ```id``` and ```whoami```. (You may have found the right exploit but used the wrong test command.)
 - Note the creator information in any files we download from the target, e.g., ```pdf```, ```doc```.
 - If it is a windows machine, check the ```Program Files``` and ```Program Files (x86)``` folder to see if additional software is installed.
+- ```ILSpy``` .NET assembly browser and decompiler. (Visual Studio Community version also supports)
