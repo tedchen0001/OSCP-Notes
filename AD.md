@@ -70,6 +70,8 @@ Dumping LDAP
 ldapsearch -LLL -x -H ldap://<target ip> -b '' -s base '(objectclass=*)'
 # with credential, e.g., domain = test.local
 ldapsearch -H ldap://<target ip> -x -W -D "<user>@test.local" -b "dc=<test>,dc=<local>"
+# ldapdomaindump
+ldapdomaindump -u '<domain>\<username>' -p '<password>' <HOSTNAME or target ip>
 ```
 
 search smb vulnerability
