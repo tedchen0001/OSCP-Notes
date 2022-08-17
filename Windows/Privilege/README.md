@@ -4,6 +4,10 @@ Recon
 https://github.com/AonCyberLabs/Windows-Exploit-Suggester
 ```
 
+```
+https://github.com/itm4n/PrivescCheck
+```
+
 Forwarding service
 
 [TCP/UDP tunnel over HTTP](https://github.com/jpillora/chisel)
