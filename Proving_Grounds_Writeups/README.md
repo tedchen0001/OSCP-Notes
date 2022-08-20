@@ -41,3 +41,4 @@
 - Note the creator information in any files we download from the target, e.g., ```pdf```, ```doc```.
 - If it is a windows machine, check the ```Program Files``` and ```Program Files (x86)``` folder to see if additional software is installed.
 - Note the interesting executable file. ```ILSpy``` .NET assembly browser and decompiler. (Visual Studio Community version also supports)
+- Check the information dumped from the AD environment. For example, using the ldapdomaindump to get the ```domain_users.json``` file and check all the values.
