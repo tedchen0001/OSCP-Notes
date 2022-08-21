@@ -86,7 +86,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Object ||||
 | Omni | IoT exploit | *SAM SYSTEM hash, Export-Clixml, GetNetworkCredential ||
 | Optimum | HttpFileServer 2.3 | MS16-098 ||
-| Outdated | CVE-2022-30190 (pdf), AddKeyCredentialLink(bloodhound, Evil-WinRM) | [WSUS](https://github.com/nettitude/SharpWSUS) | :white_check_mark: |
+| Outdated | [CVE-2022-30190](https://github.com/JohnHammond/msdt-follina) (pdf), AddKeyCredentialLink <br>(bloodhound, Evil-WinRM) | [WSUS](https://github.com/nettitude/SharpWSUS) | :white_check_mark: |
 | Remote | NFS Service(default port 2049), mount, sdf, Umbraco CMS | SeImpersonatePrivilege, TeamViewer |
 | SecNotes | CSRF reset password link, smb, IIS php | WinPEAS Linux shells/distributions ||
 | Servmon | FTP, NVMS LFI, SSH | NSClient, *SSH tunnel (localhost services) ||
