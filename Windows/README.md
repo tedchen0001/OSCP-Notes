@@ -94,3 +94,10 @@ Kali provides [Windows executables](https://www.kali.org/tools/windows-binaries/
 find / -name whoami.exe 2>/dev/null
 windows-binaries -h
 ```
+
+UNZIP
+
+```cmd
+REM Windows 10 build 17063 or later
+tar -xf <zip file>
+```
