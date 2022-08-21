@@ -119,6 +119,20 @@ mount Windows shares
 mount -t cifs //<target ip>/<folder> <attacker folder> -o username=<user>
 ```
 
+### :open_file_folder: BloodHound
+
+collecting data in Windows
+
+```cmd
+.\SharpHound.exe -c all --zipfilename ad_data
+```
+
+collecting data in Linux
+
+```shell
+python3 bloodhound.py -ns <nameserver ip> -d <domain> -c all -u <username> -p <password>
+```
+
 ### :open_file_folder: PowerView
 
 ```powershell
