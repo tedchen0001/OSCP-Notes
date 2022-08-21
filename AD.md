@@ -169,6 +169,9 @@ sudo crackmapexec smb <target ip(s)> -u <username> -H 'LM:NT'
 # sudo crackmapexec smb test.local -u Administrator -H 'aad3b435b51404eeaad3b435b51404ee:a8a3b1fee7718533175de682804c417a'
 sudo crackmapexec smb <target ip(s)> -u <username> -H 'NTHASH'
 # sudo crackmapexec smb test.local -u Administrator -H 'a8a3b1fee7718533175de682804c417a'
+
+# anonymous access
+sudo crackmapexec smb <target ip> -u 'anonymous' -p '' --shares   
 ```
 
 ### :open_file_folder: [dsquery](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11))
