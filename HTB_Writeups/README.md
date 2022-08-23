@@ -41,6 +41,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Popcorn | torrent, upload bypass | user cache, motd, Linux PAM | 
 | Postman | Redis, ssh, john | [Webmin](https://github.com/KrE80r/webmin_cve-2019-12840_poc) |
 | Previse | HTTP [302](https://vk9-sec.com/bypass-30x-redirect-with-burpsuite/), PHP exec, mysql, hashcat 500 | sudo list, [$PATH variable](https://www.hackingarticles.in/linux-privilege-escalation-using-path-variable/) |
+| RedPanda | [SSTI payload](https://github.com/VikasVarshney/ssti-payload)($=>*), msfvenom (wget) | jar (pspy process), XXE XML, SSH |
 | Ready | [gitlab](https://github.com/dotPY-hax/gitlab_RCE) | *[Escaping Docker](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/docker-breakout/docker-breakout-privilege-escalation#mounting-disk-poc2) (mounting-disk-poc2), SSH |
 | ScriptKiddie | *[APK](https://www.exploit-db.com/exploits/49491)(No need for msfvenom but be careful choosing payload), <br>shell script, command injection (cut) | sudo list |
 | Seal | manager, *403 Fuzz, 401, credential in commit history, <br> opt, symbolic link, ssh | sudo list |
