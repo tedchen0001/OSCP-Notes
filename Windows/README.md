@@ -101,3 +101,12 @@ UNZIP
 REM Windows 10 build 17063 or later
 tar -xf <zip file>
 ```
+
+Bypass AMSI Powershell (PEN-300)
+
+https://github.com/S3cur3Th1sSh1t/Amsi-Bypass-Powershell
+
+```
+1. one Liners to multiple lines
+2. hex encoding
+```
