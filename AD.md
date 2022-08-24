@@ -154,6 +154,11 @@ Get-NetUser
 Get-NetUser -properties name, pwdlastset, logoncount, badpwdcount
 ```
 
+```powershell
+# find some special messages in description
+Get-DomainUser -LDAPFilter "Description=*built*" | Select name,Description
+```
+
 ### :open_file_folder: [CrackMapExec](https://mpgn.gitbook.io/crackmapexec/)
 
 [Pwn3d!](https://mpgn.gitbook.io/crackmapexec/news-2022/major-release-for-crackmapexec#ldap-getting-the-pwn3d-flag-lets-go-deeper-with-ldap):domain admin flag
