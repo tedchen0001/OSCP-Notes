@@ -16,6 +16,8 @@ AD test environment
 
 https://github.com/Orange-Cyberdefense/GOAD
 
+https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ
+
 ### :open_file_folder: [Allowed Tools](https://help.offensive-security.com/hc/en-us/articles/4412170923924#h_01FP8CCWDT0GX03RCE6RGYRZT4)
 
 Be sure to check the restrictions on the use of tools before taking the exam.
