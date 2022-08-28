@@ -355,7 +355,7 @@ python3 GetUserSPNs.py <domain>/<username>:<password> -dc-ip <domain controller 
 hashcat -a 0 -m 13100 <hashfile> ~/Documents/rockyou.txt       
 ```
 
-### :open_file_folder: impacket smbclient.py
+### :open_file_folder: [impacket smbclient.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/smbclient.py)
 
 different from the smb tool smbclient
 
