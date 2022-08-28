@@ -123,6 +123,12 @@ mount Windows shares
 mount -t cifs //<target ip>/<folder> <attacker folder> -o username=<username>
 ```
 
+get [SID](https://github.com/SecureAuthCorp/impacket/blob/master/examples/getPac.py)
+
+```shell
+python3 getPac.py -targetUser <target username> <domain>/<username>[:password]
+```
+
 ### :open_file_folder: BloodHound
 
 collecting data in Windows
@@ -363,7 +369,7 @@ different from the smb tool smbclient
 
 ```shell
 python3 getTGT.py <domain>/<username>:<password> -k -dc-ip <domain controller ip>
-# -k Use Kerberos authentication.
+# -k: use Kerberos authentication.
 ```
 
 ```shell
@@ -372,6 +378,13 @@ export KRB5CCNAME=<username>.ccache
 
 ```shell
 python3 smbclient.py -no-pass -k <domain>/<username>@<targetName or ip>
+```
+
+### impacket other services
+
+```shell
+python3 mssqlclient.py [[domain/]username[:password]@]<targetName or ip> -k -no-pass
+# -k -no-pass: use the credentials in the ccache file for Kerberos authentication
 ```
 
 ### :open_file_folder: Test Environment
