@@ -4,6 +4,10 @@ https://www.hackingarticles.in/active-directory-pentesting-lab-setup/
 
 https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLgqAAAA
 
+a lot about the AD pentest explanation
+
+https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ
+
 AD mindmap <br>
 https://github.com/Orange-Cyberdefense/arsenal/blob/master/mindmap/pentest_ad_dark.svg
 
@@ -15,8 +19,6 @@ https://docs.microsoft.com/en-us/windows/security/identity-protection/access-con
 AD test environment
 
 https://github.com/Orange-Cyberdefense/GOAD
-
-https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ
 
 ### :open_file_folder: [Allowed Tools](https://help.offensive-security.com/hc/en-us/articles/4412170923924#h_01FP8CCWDT0GX03RCE6RGYRZT4)
 
