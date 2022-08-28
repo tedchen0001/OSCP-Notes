@@ -369,7 +369,7 @@ export KRB5CCNAME=<username>.ccache
 ```
 
 ```shell
-python3 smbclient.py -no-pass -k <domain>/<username>@<targetName or address>
+python3 smbclient.py -no-pass -k <domain>/<username>@<targetName or ip>
 ```
 
 ### :open_file_folder: Test Environment
