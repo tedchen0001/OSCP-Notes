@@ -364,11 +364,11 @@ python3 getTGT.py <domain>/<username>:<password> -k -dc-ip <domain controller ip
 # -k Use Kerberos authentication.
 ```
 
-```
+```shell
 export KRB5CCNAME=<username>.ccache
 ```
 
-```
+```shell
 python3 smbclient.py -no-pass -k <domain>/<username>@<targetName or address>
 ```
 
