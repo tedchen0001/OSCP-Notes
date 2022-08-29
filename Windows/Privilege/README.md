@@ -115,6 +115,7 @@ localhost 5555 => remote 3307
 Tools
 
 [Chisel](https://github.com/jpillora/chisel):Pivoting 
+[ysoserial.net](https://github.com/pwntester/ysoserial.net): Deserialization payload generator for a variety of .NET formatters
 
 Exploits
 
