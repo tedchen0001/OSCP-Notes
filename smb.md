@@ -21,7 +21,7 @@ smbclient --no-pass -N \\\\192.168.185.125\\<folder> -p 445
 ```
 
 ```shell
-smbclient -m SMB2 -U WIN10Username -L //Client/
+smbclient -m SMB2 -U <username> -L //Client/
 ```
 
 ### /etc/samba/smb.conf
@@ -43,7 +43,7 @@ smbmap -H <target ip>
 change password (STATUS_PASSWORD_MUST_CHANGE)
 
 ```shell
-smbpasswd -U <user_name> -r <target ip>
+smbpasswd -U <username> -r <target ip>
 ```
 
 recursively list dir
