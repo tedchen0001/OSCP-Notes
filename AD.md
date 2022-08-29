@@ -391,7 +391,7 @@ python3 mssqlclient.py [[domain/]username[:password]@]<targetName or ip> -k -no-
 
 have permission
 
-```MSSQL
+```mssql
 EXEC sp_configure 'show advanced options', '1'
 RECONFIGURE
 
