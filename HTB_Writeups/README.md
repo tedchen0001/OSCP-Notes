@@ -87,14 +87,14 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Object ||||
 | Omni | IoT exploit | *SAM SYSTEM hash, Export-Clixml, GetNetworkCredential ||
 | Optimum | HttpFileServer 2.3 | MS16-098 ||
-| Outdated | [CVE-2022-30190](https://github.com/JohnHammond/msdt-follina) (pdf), AddKeyCredentialLink <br>(bloodhound, Evil-WinRM) | [WSUS](https://github.com/nettitude/SharpWSUS) | :white_check_mark: |
+| Outdated | [CVE-2022-30190](https://github.com/JohnHammond/msdt-follina) (pdf), AddKeyCredentialLink, <br>(bloodhound, Evil-WinRM) | [WSUS](https://github.com/nettitude/SharpWSUS) | :white_check_mark: |
 | Remote | NFS Service(default port 2049), mount, sdf, Umbraco CMS | SeImpersonatePrivilege, TeamViewer |
-| Scrambled | website leak information (user and password), Ticket, SPN || :white_check_mark: |
+| *Scrambled | website leak information (user and password), Ticket, SPN,<br> ticketer.py (500 Administrator) | dll, .NET object deserialization | :white_check_mark: |
 | SecNotes | CSRF reset password link, smb, IIS php | WinPEAS Linux shells/distributions ||
 | Servmon | FTP, NVMS LFI, SSH | NSClient, *SSH tunnel (localhost services) ||
 | Silo | Oracle (default port 1521), CVE-2012-1675, ODAT, brute-force | Oracle, SYSTEM Privilege ||
 | Support | disassemble(.Net), LDAP, user information | DACL abuse, GenericAll | :white_check_mark: |
-| Worker | SVN(default port 3690), revision, Azure DevOps,  new branch,  <br>additional drives, evil-winrm | Azure DevOps, PowerShell task ||
+| Worker | SVN(default port 3690), revision, Azure DevOps,  new branch, <br>additional drives, evil-winrm | Azure DevOps, PowerShell task ||
 
 (*):review before the exam
 
