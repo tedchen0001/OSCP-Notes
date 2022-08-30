@@ -204,7 +204,7 @@ Offical walkthrough collects the possible usernames from ```Minecraft - The Isla
 
 #### Privilege Escalation
 
-Because this lab is difficult for me, if you want to know the concept behind privilege escalation, please refer to the office walkthrough.
+Please refer to the offical walkthrough.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Catto/Catto_2021.10.30_20h02m31s_008_.png)
 
