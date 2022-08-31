@@ -131,7 +131,7 @@ python3 getPac.py -targetUser <target username> <domain>/<username>[:password]
 
 ### :open_file_folder: BloodHound
 
-:label: [Edges](https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html): relationship between nodes, direct of attack
+:bangbang: [Edges](https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html): relationship between nodes, direct of attack
 
 ```
 AddMembers
