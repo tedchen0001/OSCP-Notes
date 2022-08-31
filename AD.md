@@ -131,6 +131,19 @@ python3 getPac.py -targetUser <target username> <domain>/<username>[:password]
 
 ### :open_file_folder: BloodHound
 
+:label: [Edges](https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html)
+
+```
+AddMembers
+Addself
+ForceChangePassword
+GenericAll
+WriteDACL
+GenericWrite
+WriteOwner
+AllExtendedRights
+```
+
 collecting data in Windows
 
 ```cmd
