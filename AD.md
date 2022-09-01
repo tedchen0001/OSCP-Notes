@@ -13,6 +13,10 @@ https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ
 AD mindmap <br>
 https://github.com/Orange-Cyberdefense/arsenal/blob/master/mindmap/pentest_ad_dark.svg
 
+DACL abuse
+
+https://github.com/ShutdownRepo/The-Hacker-Recipes/blob/master/.gitbook/assets/DACL%20abuse.png
+
 Security identifier (SID) and Relative identifier (RID) <br>
 https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/security-identifiers
 
