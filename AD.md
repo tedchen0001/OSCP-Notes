@@ -4,14 +4,14 @@ https://www.hackingarticles.in/active-directory-pentesting-lab-setup/
 
 https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLgqAAAA
 
+https://tryhackme.com/room/breachingad
+
 a lot about the AD pentest explanation
 
 https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ
 
 AD mindmap <br>
 https://github.com/Orange-Cyberdefense/arsenal/blob/master/mindmap/pentest_ad_dark.svg
-
-https://tryhackme.com/room/breachingad
 
 Security identifier (SID) and Relative identifier (RID) <br>
 https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/security-identifiers
