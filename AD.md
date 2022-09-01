@@ -136,6 +136,8 @@ python3 getPac.py -targetUser <target username> <domain>/<username>[:password]
 
 :bangbang: [Edges](https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html): relationship between nodes, direct of attack
 
+https://github.com/ShutdownRepo/The-Hacker-Recipes/tree/master/ad/movement/dacl
+
 ```
 AddMembers
 Addself
