@@ -61,7 +61,7 @@ add target domain /etc/hosts, if needed
 
 NTLM relay attack
 
-https://en.hackndo.com/ntlm-relay/
+https://en.hackndo.com/ntlm-relay/ <br>
 https://www.thehacker.recipes/ad/movement/mitm-and-coerced-authentications/ms-efsr
 
 ```shell
