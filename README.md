@@ -296,6 +296,13 @@ echo -n "passwordstring" > /tmp/oldPass
 hashcat -r /usr/share/hashcat/rules/best64.rule --stdout /tmp/oldPass > /tmp/newPassList.txt
 ```
 
+MD5
+
+```cmd
+REM Try using m=0
+ .\hashcat.exe -a 0 -m 0 .\hash .\rockyou.txt
+```
+
 ## 🖥️ Linux
 
 Typical site folders
