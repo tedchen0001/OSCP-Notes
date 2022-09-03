@@ -446,7 +446,7 @@ host machine
 Used in ```StreamIO```
 
 ```mssql
-/* testing, The order of the movie list is different */
+/* testing, the order of the movie list is different */
 ';--
 /* check version */
 ' union SELECT 1, select @@version), 3, '4', '5', '6';--
