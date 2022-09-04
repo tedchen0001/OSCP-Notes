@@ -281,8 +281,15 @@ sudo python3 autorecon.py <target IP> --dirbuster.wordlist "" # skip directory b
 find subdomains
 
 ```shell
-# hw:hide responses
 wfuzz -H 'Host: FUZZ.test.com' -u http://test.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --hw 407
+# hw:hide responses
+```
+
+need to authenticate
+
+```shell
+# php example
+wfuzz -H 'Cookie: PHPSESSID=<fill in the PHPSESSID>' -u https://<target ip>/<folder>/?FUZZ= -w <wordlist> --hw <value>
 ```
 
 ### :open_file_folder: hashcat
