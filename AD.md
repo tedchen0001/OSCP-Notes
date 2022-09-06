@@ -165,9 +165,9 @@ collecting data in Linux
 python3 bloodhound.py -ns <nameserver ip> -d <domain> -c all -u <username> -p <password>
 ```
 
-[![Windows](https://badgen.net/badge/icon/windows?icon=windows&label)](https://microsoft.com/windows/)
-
 GenericAll
+
+[![Windows](https://badgen.net/badge/icon/windows?icon=windows&label)](https://microsoft.com/windows/)
 
 ```powershell
 Import-Module .\PowerView.ps1
