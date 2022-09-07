@@ -25,7 +25,7 @@
 ## :warning: Exam Restrictions
 
 [linPEAS](https://www.offensive-security.com/offsec/understanding-pentest-tools-scripts/): Understanding the tools/scripts you use in a Pentest<br>
-[Official Exam Guide](https://help.offensive-security.com/hc/en-us/articles/360040165632-OSCP-Exam-Guide)
+[Official Exam Guide](https://help.offensive-security.com/hc/en-us/articles/360040165632-OSCP-Exam-Guide)<br>
 [2022 Official OSCP Prep Guide](https://t.co/GItBMylfz9)
 
 ## :warning: Exam Change
