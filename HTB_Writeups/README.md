@@ -56,7 +56,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | TartarSauce | web dir enum, wordpress plugins, <br> CVE-2015-8351 (plugin real version), sudo list (tar) | *backuperer.service (System timers) |
 | Time | *Jackson (CVE-2019-12384), Java-Deserialization | timer_backup.service (System timers) |
 | Traverxec | Nostromo, [HOMEDIRS](https://www.gsp.com/cgi-bin/man.cgi?section=8&topic=nhttpd#HOMEDIRS) (www_public), hidden folder in user's folder, <br> cracking passphrase (e.g., OpenAdmin box)  | ```/etc/sudoers```, journalctl without PIPE, <br> resize (e.g., less, vi) |
-| Trick | reverse DNS lookup, another subdomain, SQLi default Nginx sites-available<br> configuration file, [LFI](https://github.com/tedchen0001/OSCP-Notes/blob/master/file_inclusion.md), SSH key | [fail2ban](https://youssef-ichioui.medium.com/abusing-fail2ban-misconfiguration-to-escalate-privileges-on-linux-826ad0cdafb7) (group permission) |
+| Trick | reverse DNS lookup, another subdomain, SQLi default Nginx sites<br>-available configuration file, [LFI](https://github.com/tedchen0001/OSCP-Notes/blob/master/file_inclusion.md), SSH key | [fail2ban](https://youssef-ichioui.medium.com/abusing-fail2ban-misconfiguration-to-escalate-privileges-on-linux-826ad0cdafb7) (group permission) |
 | Valentine | web dir enum, Heartbleed [poc](https://github.com/sensepost/heartbleed-poc), decrypt RSA private key | tmux |
 
 (*):review before the exam
