@@ -56,7 +56,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | TartarSauce | web dir enum, wordpress plugins, <br> CVE-2015-8351 (plugin real version), sudo list (tar) | *backuperer.service (System timers) |
 | Time | *Jackson (CVE-2019-12384), Java-Deserialization | timer_backup.service (System timers) |
 | Traverxec | Nostromo, [HOMEDIRS](https://www.gsp.com/cgi-bin/man.cgi?section=8&topic=nhttpd#HOMEDIRS) (www_public), hidden folder in user's folder, <br> cracking passphrase (e.g., OpenAdmin box)  | ```/etc/sudoers```, journalctl without PIPE, <br> resize (e.g., less, vi) |
-| Trick | DNS, subdomain, LFI, SSH key | fail2ban |
+| Trick | DNS, subdomain, [LFI](https://github.com/tedchen0001/OSCP-Notes/blob/master/file_inclusion.md), SSH key | fail2ban |
 | Valentine | web dir enum, Heartbleed [poc](https://github.com/sensepost/heartbleed-poc), decrypt RSA private key | tmux |
 
 (*):review before the exam
