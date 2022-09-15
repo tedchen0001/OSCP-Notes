@@ -43,4 +43,4 @@
 - Note the interesting executable file. ```ILSpy``` .NET assembly browser and decompiler. (Visual Studio Community version also supports)
 - Check the information dumped from the AD environment. For example, using the ```ldapdomaindump``` to get the ```domain_users.json``` file and check all the values.
 - Proxychains / Forwarding Ports.
-- If the Git repository exists, use the ```ls -la``` command to check all (hidden) files after downloading.
+- If the ```Git repository``` exists, use the ```ls -la``` command to check all (hidden) files after downloading.
