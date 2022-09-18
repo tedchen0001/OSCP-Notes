@@ -48,6 +48,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Sense | feroxbuster extensions ```txt``` medium.txt, pfsense RCE | no need |
 | Shibboleth | wfuzz, udp, IPMI, hashcat 7300, <br> zabbix RCE, password reuse | [MariaDB](https://www.exploit-db.com/exploits/49765) |
 | Shocker | [ShellShock](https://nvd.nist.gov/vuln/detail/cve-2014-6271), ```403``` permission directory, extensions ```sh``` ```pl``` | sudo list |
+| Shoppy | NoSQL injection, subdomain(bitquark list), SSH | sudo list, cat and analysis script, docker group |
 | SneakyMailer | subdomain(wfuzz), *credential phishing(email, nc), ftp, <br> *PyPI malicious package | sudo list |
 | SolidState | Apache James 2.3.2, *reset user password, POP3, <br> trigger by ssh login | task, file permission |
 | Sunday | finger enum [users](https://github.com/danielmiessler/SecLists/blob/master/Usernames/Names/names.txt), SSH, backup folder, hashcat 7400 | sudo list (wget) |
@@ -475,4 +476,22 @@ Used in ```Trick```
 
 ```
 dig axfr @<target ip> <domain>
+```
+
+Used in ```Shoppy```
+
+NoSQL injection payload
+
+```shell
+/home/jaeger/ShoppyApp/index.js
+```
+
+```NoSQL
+admin' || '1==1
+```
+
+DNS list
+
+```
+wfuzz -H 'Host: FUZZ.shoppy.htb' -u http://shoppy.htb -w /usr/share/seclists/Discovery/DNS/bitquark-subdomains-top100000.txt --hw 11
 ```
