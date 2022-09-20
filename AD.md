@@ -151,6 +151,7 @@ WriteDACL
 GenericWrite
 WriteOwner
 AllExtendedRights
+SQLAdmin
 ```
 
 collecting data in Windows
