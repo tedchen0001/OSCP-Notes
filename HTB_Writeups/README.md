@@ -46,7 +46,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | ScriptKiddie | *[APK](https://www.exploit-db.com/exploits/49491)(No need for msfvenom but be careful choosing payload), <br>shell script, command injection (cut) | sudo list |
 | Seal | manager, *403 Fuzz, 401, credential in commit history, <br> opt, symbolic link, ssh | sudo list |
 | Sense | feroxbuster extensions ```txt``` medium.txt, pfsense RCE | no need |
-| Shared | Cookie-based SQL Injection, user table, SSH ||
+| Shared | Cookie-based SQL Injection, user table, SSH, [IPython](https://github.com/advisories/GHSA-pq7m-3gw7-gq5x) CVE-2022-21699 ||
 | Shibboleth | wfuzz, udp, IPMI, hashcat 7300, <br> zabbix RCE, password reuse | [MariaDB](https://www.exploit-db.com/exploits/49765) |
 | Shocker | [ShellShock](https://nvd.nist.gov/vuln/detail/cve-2014-6271), ```403``` permission directory, extensions ```sh``` ```pl``` | sudo list |
 | Shoppy | NoSQL injection, subdomain(bitquark list), SSH | sudo list, cat and analysis script, docker group |
