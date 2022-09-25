@@ -116,3 +116,19 @@ list firewall rules
 ```cmd
 Netsh advfirewall firewall show rule dir=in name=all
 ```
+
+Windows Updates
+
+```cmd
+wmic qfe
+```
+
+```powershell
+Get-HotFix
+```
+
+Installed Programs
+
+```cmd
+wmic product get name, version, installlocation
+```
