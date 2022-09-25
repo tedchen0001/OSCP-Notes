@@ -10,7 +10,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 
 | Machine | Enumeration | Privilege Escalation |
 | ------------- | ------------- | ------------- |
-| Admirer | web dir enum, Adminer MySQL(local) | Hijacking Python Library | 
+| Admirer | web dir enum, Adminer MySQL(local) | sudo list ```SETENV```, Hijacking Python Library ```PYTHONPATH``` | 
 | Armageddon | Drupal (2018-7600) | binary snap |
 | Backdoor | wordpress LFI proc gdbserver | screen |
 | Blocky | dirb javadecompilers wordpress | sudo list |
