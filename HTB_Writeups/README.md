@@ -10,7 +10,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 
 | Machine | Enumeration | Privilege Escalation |
 | ------------- | ------------- | ------------- |
-| Admirer | web dir enum, Adminer MySQL(local) | sudo list ```SETENV```, Hijacking Python Library ```PYTHONPATH``` | 
+| Admirer | web dir enum, [Adminer](https://podalirius.net/en/articles/writing-an-exploit-for-adminer-4.6.2-arbitrary-file-read-vulnerability/) MySQL(local) | sudo list ```SETENV```, Hijacking Python Library ```PYTHONPATH``` | 
 | Armageddon | Drupal (2018-7600) | binary snap |
 | Backdoor | wordpress LFI proc gdbserver | screen |
 | Blocky | dirb javadecompilers wordpress | sudo list |
@@ -104,6 +104,12 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 (*):review before the exam
 
 ### Additional command notes
+
+Used in ```Admirer```
+
+```
+sudo PYTHONPATH=/tmp/ <full path of a script file>
+```
 
 Used in ```Knife``` for upgrade shell
 
