@@ -33,6 +33,7 @@ privileges information
 ```cmd
 whoami /priv
 whoami /all
+whoami /groups
 ```
 
 check network connections 
