@@ -112,6 +112,22 @@ localhost 4444 => remote 3306
 localhost 5555 => remote 3307
 ```
 
+Windows Updates
+
+```cmd
+wmic qfe
+```
+
+```powershell
+Get-HotFix
+```
+
+Installed Programs
+
+```cmd
+wmic product get name, version, installlocation
+```
+
 Tools
 
 [Chisel](https://github.com/jpillora/chisel): Pivoting<br>
