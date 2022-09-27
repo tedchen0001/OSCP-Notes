@@ -296,7 +296,7 @@ wfuzz -H 'Cookie: PHPSESSID=<fill in the PHPSESSID>' -u https://<target ip>/<fol
 post requests
 
 ```shell
-wfuzz -z file,<wordlist> -d "username=admin&password=FUZZ"  --hc 302 <url>
+wfuzz -z file,<wordlist> -d "username=admin&password=FUZZ" --hc 302 <url>
 # -d postdata
 # -z file,wordlist
 # hc:hide responses code
