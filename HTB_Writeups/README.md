@@ -61,6 +61,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Trick | reverse DNS lookup, another subdomain, SQLi default Nginx<br> sites-available configuration file, [LFI](https://github.com/tedchen0001/OSCP-Notes/blob/master/file_inclusion.md), SSH key | [fail2ban](https://youssef-ichioui.medium.com/abusing-fail2ban-misconfiguration-to-escalate-privileges-on-linux-826ad0cdafb7) (group permission) |
 | UpDown | *web dir enum, .git directory, subdomain, ```.htaccess(Required-Header)```, <br>[proc_open](https://www.php.net/manual/en/function.proc-open.php) (PHP), PHP phar, python inject commands | sudo list |
 | Valentine | web dir enum, Heartbleed [poc](https://github.com/sensepost/heartbleed-poc), decrypt RSA private key | tmux |
+| Writer | web dir enum, SQL injection LOAD_FILE LFI list ||
 
 (*):review before the exam
 
