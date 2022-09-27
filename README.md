@@ -283,7 +283,7 @@ find subdomains
 
 ```shell
 wfuzz -H 'Host: FUZZ.test.com' -u http://test.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --hw 407
-# hw:hide responses
+# hw:hide responses words
 ```
 
 need to authenticate
@@ -291,6 +291,15 @@ need to authenticate
 ```shell
 # php example
 wfuzz -H 'Cookie: PHPSESSID=<fill in the PHPSESSID>' -u https://<target ip>/<folder>/?FUZZ= -w <wordlist> --hw <value>
+```
+
+post requests
+
+```shell
+wfuzz -z file,<wordlist> -d "username=admin&password=FUZZ"  --hc 302 <url>
+# -d postdata
+# -z file,wordlist
+# hc:hide responses code
 ```
 
 ### :open_file_folder: hashcat
