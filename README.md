@@ -257,7 +257,7 @@ SSL peer certificate or SSH remote key was not OK
 wpscan --url https://192.168.0.1/ --disable-tls-checks
 ```
 
-### :open_file_folder: LFI
+### :open_file_folder: [LFI](https://github.com/tedchen0001/OSCP-Notes/blob/master/file_inclusion.md)
 
 #### [LFI Suite](https://github.com/D35m0nd142/LFISuite)
 
