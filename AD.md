@@ -152,6 +152,8 @@ GenericWrite
 WriteOwner
 AllExtendedRights
 SQLAdmin
+CanRDP
+CanPSRemote
 ```
 
 collecting data in Windows
@@ -164,6 +166,13 @@ collecting data in Linux
 
 ```shell
 python3 bloodhound.py -ns <nameserver ip> -d <domain> -c all -u <username> -p <password>
+```
+
+Cypher (Neo4j's query language) Query
+
+```
+# return nodes with direct relationships
+MATCH c=(a)-[:CanPSRemote]->(b) RETURN c
 ```
 
 GenericAll
