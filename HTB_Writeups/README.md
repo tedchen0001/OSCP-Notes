@@ -33,7 +33,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Networked | File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass), <br> php command injection | *sudo list |
 | Nibbles | page source, directory | sudo list |
 | *NineVeh | brute force attack http & https, phpLiteAdmin | crontab, chkrootkit |
-| Noter | cookie (flask-unsign) ||
+| Noter | Flask cookie (flask-unsign), ftp credentials, [md-to-pdf package, CVE-2021-23639](https://redteamnation.com/mysql-user-defined-functions/) | [MySQL UDF](https://redteamnation.com/mysql-user-defined-functions/) |
 | OpenAdmin | OpenNetAdmin, pwd in conf file & <br> reverse proxy, cracking passphrase | sudo list, GTFO |
 | *Ophiuchi | [Java-Deserialization](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet), SnakeYAML | sudo list, analysis of GO code |
 | Passage | CutePHP & password storage location & <br> base64 & cracking | *SUID dbus |
