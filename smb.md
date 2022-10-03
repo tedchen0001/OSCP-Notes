@@ -64,3 +64,11 @@ download file
 smbmap -d <domain> -H <target ip> --download "<PATH>\<file>"
 # smbmap -d test.local -H 10.10.10.10 --download "shared\test.txt"
 ```
+
+### SMB Server
+
+[smbserver.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/smbserver.py)
+
+```shell
+python smbserver.py <shareName> <sharePath>
+```
