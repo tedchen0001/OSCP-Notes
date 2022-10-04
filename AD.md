@@ -466,11 +466,14 @@ lsadump::dcsync /domain:<domain> /dc:<domain controller> /user:<specific user> /
 
 ### Vulnerabilities
 
-NoPac CVE-2021-42278 & CVE-2021-42287
+[sAMAccountName spoofing/NoPac CVE-2021-42278 & CVE-2021-42287](https://github.com/ShutdownRepo/The-Hacker-Recipes/blob/master/ad/movement/kerberos/samaccountname-spoofing.md)
 
 ```
 git clone https://github.com/Ridter/noPac.git
 ```
+
+[PrintNightmare](https://github.com/nemo-wq/PrintNightmare-CVE-2021-34527)
+
 
 ### :open_file_folder: Test Environment
 
