@@ -35,7 +35,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | *NineVeh | brute force attack http & https, phpLiteAdmin | crontab, chkrootkit |
 | Noter | Flask cookie (flask-unsign), ftp credentials, [md-to-pdf package, CVE-2021-23639](https://redteamnation.com/mysql-user-defined-functions/) | [MySQL UDF](https://redteamnation.com/mysql-user-defined-functions/) |
 | OpenAdmin | OpenNetAdmin, pwd in conf file & <br> reverse proxy, cracking passphrase | sudo list, GTFO |
-| OpenSource | Flask debugger PIN ||
+| OpenSource | Flask debugger PIN, Gitea, `.git` hide information | process git commit |
 | *Ophiuchi | [Java-Deserialization](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet), SnakeYAML | sudo list, analysis of GO code |
 | Passage | CutePHP & password storage location & <br> base64 & cracking | *SUID dbus |
 | *Pit | SNMP enum, hide web folder, SeedDMS | NET-SNMP-EXTEND-MIB, monitoring |
