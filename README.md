@@ -21,6 +21,7 @@
 [Reverse Shell Generator](https://www.revshells.com/): online reverse shell generator<br>
 [hacktricks](https://book.hacktricks.xyz/)<br>
 [CyberChef](https://gchq.github.io/CyberChef/): a web app for encryption, encoding, compression and data analysis.
+[Microsoft Security Response Center](https://msrc.microsoft.com/update-guide/vulnerability)
 
 ## :warning: Exam Restrictions
 
