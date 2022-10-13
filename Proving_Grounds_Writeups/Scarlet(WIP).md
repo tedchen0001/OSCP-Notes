@@ -29,7 +29,7 @@ sudo mount -t nfs 192.168.216.222:/mnt/share /tmp/test_folder -o nolock
 
 Finding a public key but don't know where to use it. 
 
-We find an existing account `brain`.
+Next, checking the website. After trying to register many accounts, I find an existing account `brain` the username in the contacts page.
 
 
 
