@@ -33,7 +33,7 @@ Next, checking the website. After trying to register many accounts, I find an ex
 
 
 
-Registering account on the web page and check the session is JWT. We refer to this [article](https://infosecwriteups.com/attacking-json-web-tokens-jwts-d1d51a1e17cb) for testing.
+Logging in to the website using the previously registered account. I don't find the vulnerabilities on the report page and then check the session is JWT. We refer to this [article](https://infosecwriteups.com/attacking-json-web-tokens-jwts-d1d51a1e17cb) for testing.
 
 JWT SQL injection
 
