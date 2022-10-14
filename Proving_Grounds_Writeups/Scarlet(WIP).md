@@ -19,7 +19,7 @@ PORT      STATE SERVICE
 58802/udp open  unknown
 ```
 
-NFS 
+Trying to mount the share folder through NFS service.
 
 ```shell
 showmount -e 192.168.216.222
