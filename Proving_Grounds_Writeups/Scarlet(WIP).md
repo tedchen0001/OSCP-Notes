@@ -159,7 +159,7 @@ Next, we detect zip file encryption algorithm.
 7z l -slt backup.zip
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Scarlet/Scarlet_20221015_17h20m29s_017_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Scarlet/Scarlet_20221015_17h20m30s_017_.png)
 
 `Exploiting ZipCrypto`
 
