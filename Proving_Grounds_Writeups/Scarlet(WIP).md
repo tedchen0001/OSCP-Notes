@@ -51,7 +51,7 @@ Logging in to the website using the previously registered account, but don't fin
 
 We can use exist token to regenerate paylod with SQLi query.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Scarlet/Scarlet_20221015_13h42m22s_005_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Scarlet/Scarlet_20221015_13h42m53s_005_.png)
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Scarlet/Scarlet_20221015_14h13m09s_006_.png)
 
