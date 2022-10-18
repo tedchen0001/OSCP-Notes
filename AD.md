@@ -136,6 +136,14 @@ get [SID](https://github.com/SecureAuthCorp/impacket/blob/master/examples/getPac
 python3 getPac.py -targetUser <target username> <domain>/<username>[:password]
 ```
 
+[Setspn](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241(v=ws.11))
+
+Windows command-line tool for enumerating SPNs, built in after windows server 2008
+
+```cmd
+setspn
+```
+
 ### :open_file_folder: BloodHound
 
 :bangbang: [Edges](https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html): relationship between nodes, direct of attack
