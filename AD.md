@@ -140,8 +140,9 @@ python3 getPac.py -targetUser <target username> <domain>/<username>[:password]
 
 Windows command-line tool for enumerating SPNs, built in after windows server 2008
 
-```cmd
-setspn
+```powershell
+# check all the SPN services 
+setspn -Q */*
 ```
 
 ### :open_file_folder: BloodHound
