@@ -396,7 +396,7 @@ reg.py <domain>/<valid username with domain> -hashes '<LMHASH:NTHASH>' query -ke
 # Registry Root Keys: HKCR, HKCU, HKLM, HKU, HKCC
 ```
 
-### :open_file_folder: GGP
+### :open_file_folder: Group Policy Preferences File (GPP)
 
 Groups.xml
 
