@@ -47,4 +47,4 @@
 - Even if we have got the contents of the website from other services such as ftp, we can still do an enumeration of the website directory to make sure that all contents have been found. Note that the file contents may not be the same either.
 - If the generated ```cookie``` does not work, note the system time in the VM.
 
-#### GraphQL
+### :open_file_folder: GraphQL
