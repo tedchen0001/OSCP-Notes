@@ -43,7 +43,7 @@ Be sure to check the restrictions on the use of tools before taking the exam.
 
 ![AD drawio](https://github.com/tedchen0001/OSCP-Notes/blob/master/Pic/AD/AD.drawio.png)
 
-### :open_file_folder: Commands
+### :open_file_folder: Commands And Tools
 
 service scan, domain information, check for ```null sessions```, shares 
 
@@ -83,6 +83,13 @@ ldapsearch -LLL -x -H ldap://<target ip> -b '' -s base '(objectclass=*)'
 ldapsearch -H ldap://<target ip> -x -W -D "<username>@test.local" -b "dc=<test>,dc=<local>"
 # check the dump file's content, e.g., domain_users.json, the value of key "info"
 ldapdomaindump -u '<domain>\<username>' -p '<password>' <HOSTNAME or target ip>
+```
+
+other LDAP queries tool
+
+```shell
+# https://github.com/ropnop/go-windapsearch
+./windapsearch -d <domain> --dc <domain controller>
 ```
 
 search smb vulnerability
@@ -396,7 +403,7 @@ reg.py <domain>/<valid username with domain> -hashes '<LMHASH:NTHASH>' query -ke
 # Registry Root Keys: HKCR, HKCU, HKLM, HKU, HKCC
 ```
 
-### :open_file_folder: Group Policy Preferences File (GPP)
+### :open_file_folder: Group Policy Preferences File (GPP cracking)
 
 Groups.xml
 
