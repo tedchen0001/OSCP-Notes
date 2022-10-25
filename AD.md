@@ -192,7 +192,7 @@ Cypher (Neo4j's query language) Query
 # return nodes with direct relationships
 MATCH c=(a)-[:CanPSRemote]->(b) RETURN c
 # Find SPNs with keywords 
-MATCH (u:User) WHERE ANY (x IN u.serviceprincipalnames WHERE toUpper(x) CONTAINS '<search target string>') RETURN u
+MATCH (u:User) WHERE ANY (x IN u.serviceprincipalnames WHERE toUpper(x) CONTAINS '<search string>') RETURN u
 ```
 
 GenericAll
