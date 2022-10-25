@@ -186,10 +186,12 @@ python3 bloodhound.py -ns <nameserver ip> -d <domain> -c all -u <username> -p <p
 
 Cypher (Neo4j's query language) Query
 
+[bloodhound-cypher-cheatsheet](https://hausec.com/2019/09/09/bloodhound-cypher-cheatsheet/)
+
 ```
 # return nodes with direct relationships
 MATCH c=(a)-[:CanPSRemote]->(b) RETURN c
-# Find SPNs with keywords (reference:https://hausec.com/2019/09/09/bloodhound-cypher-cheatsheet/)
+# Find SPNs with keywords 
 MATCH (u:User) WHERE ANY (x IN u.serviceprincipalnames WHERE toUpper(x) CONTAINS '<search target string>') RETURN u
 ```
 
