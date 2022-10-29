@@ -517,6 +517,13 @@ sudo python3 noPac.py <domain>/<username>:<password> -dc-ip <domain controller> 
 
 - [PrintNightmare](https://github.com/nemo-wq/PrintNightmare-CVE-2021-34527)
 
+### :open_file_folder: Remote Tools
+
+[![Windows](https://badgen.net/badge/icon/windows?icon=windows&label)](https://microsoft.com/windows/) [winrs](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/winrs)
+
+```cmd
+winrs -R:<host> -u:<username> -p:<password> cmd
+```
 
 ### :open_file_folder: Test Environment
 
