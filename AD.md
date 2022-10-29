@@ -152,6 +152,14 @@ Windows command-line tool for enumerating SPNs, built in after windows server 20
 setspn -Q */*
 ```
 
+Enter-PSSession
+
+```powershell
+$password = ConvertTo-SecureString "<password>" -AsPlainText -Force
+$cred = New-Object System.Management.Automation.PSCredential ("<username>", $password )
+Enter-PSSession -ComputerName <computer_name> -Credential $cred
+```
+
 ### :open_file_folder: BloodHound
 
 :bangbang: [Edges](https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html): relationship between nodes, direct of attack
