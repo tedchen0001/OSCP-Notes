@@ -200,7 +200,10 @@ collecting data in Windows
 collecting data in Linux
 
 ```shell
+# normal
 python3 bloodhound.py -ns <nameserver ip> -d <domain> -c all -u <username> -p <password>
+# proxychains
+proxychains python3 bloodhound.py -ns <nameserver ip> -d <domain> -c all -u <username> -p <password> --dns-tcp
 ```
 
 Cypher (Neo4j's query language) Query
