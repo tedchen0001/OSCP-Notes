@@ -6,6 +6,8 @@ https://twitter.com/hackthebox_eu/status/1529122562038456320?cxt=HHwWgICzhcu3xLg
 
 https://tryhackme.com/room/breachingad
 
+https://academy.hackthebox.com/module/details/143
+
 a lot about the AD pentest explanation
 
 https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ
