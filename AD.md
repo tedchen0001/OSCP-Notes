@@ -275,6 +275,8 @@ Get-NetComputer -fulldata | select operatingsystem
 ```powershell
 # Users
 Get-NetUser
+# find AD users
+Get-ADUser -Identity <AD account> -Server <domain controller> -Properties *
 # password last set
 Get-NetUser -properties name, pwdlastset, logoncount, badpwdcount
 ```
@@ -287,7 +289,7 @@ Get-DomainUser -LDAPFilter "Description=*built*" | Select name,Description
 Kerberoasting - get user TGS ticket
 
 ```powershell
-Get-DomainUser -Identity <user> | Get-DomainSPNTicket -Format Hashcat
+Get-DomainUser -Identity <AD account> | Get-DomainSPNTicket -Format Hashcat
 ```
 
 ### :open_file_folder: [CrackMapExec](https://mpgn.gitbook.io/crackmapexec/)
