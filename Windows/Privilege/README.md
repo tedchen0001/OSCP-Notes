@@ -128,6 +128,13 @@ Installed Programs
 wmic product get name, version, installlocation
 ```
 
+passwords in Registry
+
+```cmd
+reg query HKLM /f password /t REG_SZ /s
+reg query HKCU /f password /t REG_SZ /s
+```
+
 Tools
 
 [Chisel](https://github.com/jpillora/chisel): Pivoting<br>
