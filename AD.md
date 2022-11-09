@@ -277,6 +277,7 @@ Get-NetComputer -fulldata | select operatingsystem
 Get-NetUser
 # find AD users
 Get-ADUser -Identity <AD account> -Server <domain controller> -Properties *
+Get-ADUser -Filter * -Properties * | select Name, SamAccountName, Description
 # password last set
 Get-NetUser -properties name, pwdlastset, logoncount, badpwdcount
 ```
