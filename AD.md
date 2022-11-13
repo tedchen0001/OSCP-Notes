@@ -13,7 +13,7 @@ a lot about the AD pentest explanation
 https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ
 
 AD mindmap <br>
-https://orange-cyberdefense.github.io/ocd-mindmaps/
+https://orange-cyberdefense.github.io/ocd-mindmaps/ <br>
 https://github.com/Orange-Cyberdefense/ocd-mindmaps
 
 DACL abuse
