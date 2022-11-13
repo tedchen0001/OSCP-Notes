@@ -200,9 +200,9 @@ collecting data in Linux
 
 ```shell
 # normal
-python3 bloodhound.py -ns <nameserver ip> -d <domain> -c all -u <username> -p <password>
+python3 bloodhound.py -ns <nameserver ip> -d <domain> -c all -u <username> -p <password> --zip
 # proxychains
-proxychains python3 bloodhound.py -ns <nameserver ip> -d <domain> -c all -u <username> -p <password> --dns-tcp
+proxychains python3 bloodhound.py -ns <nameserver ip> -d <domain> -c all -u <username> -p <password> --zip --dns-tcp
 ```
 
 Cypher (Neo4j's query language) Query
