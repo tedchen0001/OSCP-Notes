@@ -133,3 +133,9 @@ Installed Programs
 ```cmd
 wmic product get name, version, installlocation
 ```
+
+copy file from net share folder
+
+```powershell
+Copy-Item -path "\\<target ip or hostname>\<folder($)>" -destination .\ -Recurse
+```
