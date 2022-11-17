@@ -112,7 +112,7 @@ python3 gMSADumper.py -u <username> -p <password> -d <domain>
 enumerate domain usernames
 
 ```shell
-# 1
+# 1 enumerate users
 kerbrute_linux_amd64 -t <threads> --dc <domain controller> -d <domain> userenum  ~/Documents/userlist.txt
 # 2 valid users
 kerbrute userenum -d <domain> --dc <domain controller> ~/Documents/userlist.txt | grep "USERNAME" | cut -f1 -d"@" | cut -f4 -d":" | tr -d "[:blank:]" > /tmp/users.txt
