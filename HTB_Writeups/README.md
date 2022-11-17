@@ -80,7 +80,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Blue | MS17-010 | no need ||
 | Bounty | File upload bypass, [web.config](https://github.com/tedchen0001/OSCP-Notes/blob/master/Windows/File_Upload_Bypass.md) | [SeImpersonatePrivilege](https://github.com/tedchen0001/OSCP-Notes/blob/master/Windows/Privilege/SeImpersonatePrivilege.md) ||
 | Buff ||||
-| Cascade | ldap hidden information, smb share, VNC password, user share DB file | AD Recycle Bin |
+| Cascade | ldap hidden information, smb share, VNC password, user share DB file | AD Recycle Bin | :white_check_mark: |
 | Chatterbox | Achat | AutoLogon credentials, reuse password, powershell reverse (with credential) ||
 | Conceal | SNMP, *IPsec VPN, FTP (IIS folder), Classic ASP | [SeImpersonatePrivilege](https://github.com/tedchen0001/OSCP-Notes/blob/master/Windows/Privilege/SeImpersonatePrivilege.md) ||
 | Devel | FTP, IIS folder | [SeImpersonatePrivilege](https://github.com/tedchen0001/OSCP-Notes/blob/master/Windows/Privilege/SeImpersonatePrivilege.md) ||
