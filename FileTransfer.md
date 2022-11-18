@@ -11,7 +11,7 @@ scp <remote server username>@<remote server IP>:/<remote server folder>/<remote 
 
 HTTPutServer.py
 
-```
+```py
 import sys
 import signal
 from threading import Thread
