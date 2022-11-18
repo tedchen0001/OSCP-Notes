@@ -609,7 +609,7 @@ klist
 # login method1
 python3 psexec.py -k -no-pass <target>
 # login method2
-wmiexec.py -k -no-pass <target>
+wmiexec.py -k -no-pass <target ip or FQDN> 
 ```
 
 - [PrintNightmare](https://github.com/nemo-wq/PrintNightmare-CVE-2021-34527)
