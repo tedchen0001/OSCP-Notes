@@ -97,6 +97,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Optimum | HttpFileServer 2.3 | MS16-098 ||
 | Outdated | [CVE-2022-30190](https://github.com/JohnHammond/msdt-follina) (pdf), AddKeyCredentialLink, <br>(bloodhound, Evil-WinRM) | [WSUS](https://github.com/nettitude/SharpWSUS) | :white_check_mark: |
 | Remote | NFS Service(default port 2049), mount, sdf, Umbraco CMS | SeImpersonatePrivilege, TeamViewer |
+| Resolute | 
 | *Scrambled | website leak information (user and password), Ticket, SPN, <br>ticketer.py (500 Administrator), sql query user info, <br>xp_cmdshell, PowerShell run as different user | dll [(.NET Decompiler)](https://github.com/icsharpcode/ILSpy), [.NET object deserialization](https://github.com/pwntester/ysoserial.net) | :white_check_mark: |
 | SecNotes | CSRF reset password link, smb, IIS php | WinPEAS Linux shells/distributions ||
 | Servmon | FTP, NVMS LFI, SSH | NSClient, *SSH tunnel (localhost services) ||
@@ -565,4 +566,14 @@ Used in `Armageddon`
 ```shell
 # In web shell (non-tty-shell) we need to run a single query from the command line.
 mysql -u "<username>" -h "localhost" "<passowrd>" "<database>" -e "<sql command>"
+```
+
+Used in `BackendTwo` 
+
+for API testing 
+
+https://github.com/assetnote/kiterunner
+
+```shell
+./kr scan http://<target ip>/api/ -w ~/Documents/routes-large.kite -x 20
 ```
