@@ -576,4 +576,5 @@ https://github.com/assetnote/kiterunner
 
 ```shell
 ./kr scan http://<target ip>/api/ -w ~/Documents/routes-large.kite -x 20
+curl -X POST -v 'http://10.10.11.162/api/v1/user/signup' --header 'content-type: application/json' -d '{"email":"123@123.com","password":"1234"}' | jq .
 ```
