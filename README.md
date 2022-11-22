@@ -478,6 +478,10 @@ Accept warning
 Search "keyword.enabled" and change it to false
 ```
 
+modify header tool (or Burp Suite)
+
+https://addons.mozilla.org/en-US/firefox/addon/simple-modify-header/
+
 ### :open_file_folder: others
 
 ```
