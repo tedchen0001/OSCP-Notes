@@ -13,6 +13,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Admirer | web dir enum, [Adminer](https://podalirius.net/en/articles/writing-an-exploit-for-adminer-4.6.2-arbitrary-file-read-vulnerability/) MySQL(local) | sudo list ```SETENV```, Hijacking Python Library ```PYTHONPATH``` | 
 | Armageddon | Drupal [(CVE-2018-7600)](https://github.com/pimps/CVE-2018-7600), credential in config file, MySQL | sudo list, snap |
 | Backdoor | wordpress LFI proc gdbserver | screen |
+| *BackendTwo | API scanning, create user, analysis and modify code, auth.log | sudo list, so file ||
 | Blocky | dirb javadecompilers wordpress | sudo list |
 | Blunder | feroxbuster extensions ```txt``` bludit | sudo versions before 1.8.28 |
 | Brainfuck | wordpress plugin smtp pop3 | Cryptography |
@@ -97,7 +98,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Optimum | HttpFileServer 2.3 | MS16-098 ||
 | Outdated | [CVE-2022-30190](https://github.com/JohnHammond/msdt-follina) (pdf), AddKeyCredentialLink, <br>(bloodhound, Evil-WinRM) | [WSUS](https://github.com/nettitude/SharpWSUS) | :white_check_mark: |
 | Remote | NFS Service(default port 2049), mount, sdf, Umbraco CMS | SeImpersonatePrivilege, TeamViewer |
-| Resolute | 
+| Resolute |||| 
 | *Scrambled | website leak information (user and password), Ticket, SPN, <br>ticketer.py (500 Administrator), sql query user info, <br>xp_cmdshell, PowerShell run as different user | dll [(.NET Decompiler)](https://github.com/icsharpcode/ILSpy), [.NET object deserialization](https://github.com/pwntester/ysoserial.net) | :white_check_mark: |
 | SecNotes | CSRF reset password link, smb, IIS php | WinPEAS Linux shells/distributions ||
 | Servmon | FTP, NVMS LFI, SSH | NSClient, *SSH tunnel (localhost services) ||
