@@ -580,3 +580,7 @@ https://github.com/assetnote/kiterunner
 curl -X POST -v 'http://10.10.11.162/api/v1/user/signup' --header 'content-type: application/json' -d '{"email":"123@123.com","password":"1234"}' | jq .
 curl -X POST -v 'http://10.10.11.162/api/v1/user/login' -d 'username=123@123.com&password=1234'
 ```
+
+- SSRF
+
+https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Request%20Forgery
