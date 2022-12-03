@@ -584,3 +584,7 @@ curl -X POST -v 'http://10.10.11.162/api/v1/user/login' -d 'username=123@123.com
 - SSRF
 
 https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Request%20Forgery
+
+```
+http://0000::1:80/
+```
