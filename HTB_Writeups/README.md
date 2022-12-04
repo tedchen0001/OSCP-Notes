@@ -588,3 +588,11 @@ https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20
 ```
 http://0000::1:80/
 ```
+
+Used in `Precious` 
+
+YAML Deserialization
+
+```
+https://blog.stratumsecurity.com/2021/06/09/blind-remote-code-execution-through-yaml-deserialization/
+```
