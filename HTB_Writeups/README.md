@@ -43,6 +43,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | *Poison | LFI, FreeBSD Apache log poisoning | password base64, vncviewer |
 | Popcorn | torrent, upload bypass | user cache, motd, Linux PAM | 
 | Postman | Redis, ssh, john | [Webmin](https://github.com/KrE80r/webmin_cve-2019-12840_poc) |
+| Precious | pdfkit, plain text password | sudo list, YAML Deserialization ||  
 | Previse | HTTP [302](https://vk9-sec.com/bypass-30x-redirect-with-burpsuite/), PHP exec, mysql, hashcat 500 | sudo list, [$PATH variable](https://www.hackingarticles.in/linux-privilege-escalation-using-path-variable/) |
 | Ready | [gitlab](https://github.com/dotPY-hax/gitlab_RCE) | *[Escaping Docker](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/docker-breakout/docker-breakout-privilege-escalation#mounting-disk-poc2) (mounting-disk-poc2), SSH |
 | *RedPanda | [SSTI payload](https://github.com/VikasVarshney/ssti-payload)($→*, selection expressions), msfvenom (wget) | jar (pspy process), XML, [XXE](https://www.youtube.com/watch?v=gjm6VHZa_8s), SSH |
