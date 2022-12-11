@@ -101,7 +101,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Remote | NFS Service(default port 2049), mount, sdf, Umbraco CMS | SeImpersonatePrivilege, TeamViewer |
 | Resolute |||| 
 | *Scrambled | website leak information (user and password), Ticket, SPN, <br>ticketer.py (500 Administrator), sql query user info, <br>xp_cmdshell, PowerShell run as different user | dll [(.NET Decompiler)](https://github.com/icsharpcode/ILSpy), [.NET object deserialization](https://github.com/pwntester/ysoserial.net) | :white_check_mark: |
-| Search | enumrate username || :white_check_mark: |
+| Search | enumrate username(website image leaks info) || :white_check_mark: |
 | SecNotes | CSRF reset password link, smb, IIS php | WinPEAS Linux shells/distributions ||
 | Servmon | FTP, NVMS LFI, SSH | NSClient, *SSH tunnel (localhost services) ||
 | Silo | Oracle (default port 1521), CVE-2012-1675, ODAT, brute-force | Oracle, SYSTEM Privilege ||
