@@ -76,7 +76,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Active | Groups.xml | Kerberoasting | :white_check_mark: |
 | *APT | MS-RPC port 135, [IOXID resolver](https://github.com/mubix/IOXIDResolver), IPv6, share file, AD database file, <br> [dump hashes](https://github.com/SecureAuthCorp/impacket/blob/master/examples/secretsdump.py), valid usernames, [modify registry](https://github.com/SecureAuthCorp/impacket/blob/master/examples/reg.py) | [responder](https://github.com/SpiderLabs/Responder), NTLMv1 Hash | :white_check_mark: |
 | Arctic | Adobe ColdFusion 8 | MS10-059(wait for the exploit to take effect) ||
-| Atom | smb file |||
+| Atom | smb pdf, unzip exe file, autoUpdater, Electron-Updater |||
 | *Bankrobber | XSS, SQLi, Arbitrary File Read | [forwarding service](https://github.com/jpillora/chisel), BOF ||
 | Bastard | Drupal 7 CVE-2018-7600 | MS10-059, MS15-051 ||
 | Bastion | mount vhd, SYSTEM SAM user hash | mRemoteNG || 
