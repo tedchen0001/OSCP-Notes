@@ -46,7 +46,8 @@
 - If the ```Git repository``` exists, use the ```ls -la``` command to check all (hidden) files after downloading.
 - Even if we have got the contents of the website from other services such as ftp, we can still do an enumeration of the website directory to make sure that all contents have been found. Note that the file contents may not be the same either.
 - If the generated ```cookie``` does not work, note the system time in the VM.
-- Unzip the executable file.
+- You can unzip the executable file and check the files it contains.
+- If you want to run a file through a schedule set by another user, be careful to use a directory that the user can also access, not `tmp` folder.
 
 #### Commands
 
