@@ -115,7 +115,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 (*):review before the exam
 
 ### Additional command notes
-ㄊㄊ
+
 Used in ```Admirer```
 
 ```
