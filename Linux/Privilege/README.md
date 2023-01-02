@@ -6,7 +6,7 @@ check if user = root
 cat /etc/mysql/mariadb.conf.d/50-server.cnf | grep user
 ```
 
-NFS mount
+NFS mount privilege
 
 ```shell
 showmount -e <target ip>
