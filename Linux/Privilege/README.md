@@ -10,8 +10,8 @@ NFS mount privilege
 
 ```shell
 showmount -e <target ip>
-#Export list for <target ip>:
-#/home/tester    *
+# Export list for <target ip>:
+# /home/tester    *
 mkdir /tmp/tester
 sudo mount -t nfs <target ip>:/home/tester /tmp/tester
 find /tmp/tester -ls
