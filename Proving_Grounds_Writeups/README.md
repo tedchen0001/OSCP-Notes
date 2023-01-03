@@ -48,7 +48,7 @@
 - If the generated ```cookie``` does not work, note the system time in the VM.
 - You can unzip the executable file and check the files it contains.
 - If you want to run a file through a schedule set by another user, be careful to use a directory that the user can also access, not `tmp` folder.
-- Don't forget check the cookie if we don't find anything in the website.
+- We can also check the cookies of the website.
 
 #### Commands
 
