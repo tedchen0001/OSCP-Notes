@@ -57,6 +57,8 @@ Find all ```user``` tables in DBs
 
 ```MySQL
 SELECT group_concat(column_name) FROM information_schema.columns where table_name = 'user';
+# SELECT password FROM user
+# MD5 password, hashcat -a 0 -m 0 hash.txt rockyou.txt
 ```
 
 [Load file](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_load-file): we need FILE privilege
