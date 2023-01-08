@@ -139,3 +139,9 @@ copy file from net share folder
 ```powershell
 Copy-Item -path "\\<target ip or hostname>\<folder($)>" -destination .\ -Recurse
 ```
+
+Running services
+
+```
+Get-Service | where {$_.Status -eq "Running"}
+```
