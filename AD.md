@@ -8,7 +8,7 @@ https://tryhackme.com/room/breachingad
 
 https://academy.hackthebox.com/module/details/143
 
-a lot about the AD pentest explanation
+a lot about the AD pentest explanations
 
 https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ
 
