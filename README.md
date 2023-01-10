@@ -443,6 +443,12 @@ get file hash
 certutil -hashfile <file> MD5
 ```
 
+find files containing specific text
+
+```cmd
+findstr /si password C:\*.xml C:\*.ini C:\*.txt C:\*.config C:\*.conf
+```
+
 ### :open_file_folder: PowerShell
 
 bypass
