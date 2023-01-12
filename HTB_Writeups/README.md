@@ -101,6 +101,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | Omni | IoT exploit | *SAM SYSTEM hash, Export-Clixml, GetNetworkCredential ||
 | Optimum | HttpFileServer 2.3 | MS16-098 ||
 | Outdated | [CVE-2022-30190](https://github.com/JohnHammond/msdt-follina) (pdf), AddKeyCredentialLink, <br>(bloodhound, Evil-WinRM) | [WSUS](https://github.com/nettitude/SharpWSUS) | :white_check_mark: |
+| Reel | sendemail, RTF, HTA |||
 | Remote | NFS Service(default port 2049), mount, sdf, Umbraco CMS | SeImpersonatePrivilege, TeamViewer |
 | *Resolute | RPC enumeration, password spray, hidden folder, scripts | DNSAdmins | :white_check_mark: | 
 | *Scrambled | website leak information (user and password), Ticket, SPN, <br>ticketer.py (500 Administrator), sql query user info, <br>xp_cmdshell, PowerShell run as different user | dll [(.NET Decompiler)](https://github.com/icsharpcode/ILSpy), [.NET object deserialization](https://github.com/pwntester/ysoserial.net) | :white_check_mark: |
