@@ -1,9 +1,11 @@
-### Nmap 
+### Recon 
 
 ```shell
 nmap -p 445 --script vuln <target ip>
 nmap --script smb-vuln* <target ip>
 nmap -p 139,445 --script-args=unsafe=1 --script /usr/share/nmap/scripts/smb-os-discovery <target ip>
+crackmapexec smb <target ip>
+python enum4linux-ng.py -A <target ip>
 ```
 
 ### Smbclient
