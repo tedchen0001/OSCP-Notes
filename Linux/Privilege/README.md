@@ -27,10 +27,10 @@ ls -la /tmp/tester
 
 ```shell
 # generating password
-openssl passwd -1 -salt ignite <password>
-# openssl passwd -1 -salt test1234
-# $1$ignite$7mPCsoeG29TKXrOoHJa0J1
-# replace root's password
-# root:$1$ignite$7mPCsoeG29TKXrOoHJa0J1:0:0:root:/root:/bin/bash
-# su root
+openssl passwd -1 -salt 1234 <password>
+# openssl passwd -1 -salt 1234 test1234
+# $1$1234$LedaKjyvU08i2tNM5HGSg.
+# create new user
+# echo "test01:\$1\$1234\$LedaKjyvU08i2tNM5HGSg.:0:0:root:/root:/bin/bash" >> /etc/passwd
+# su test01
 ```
