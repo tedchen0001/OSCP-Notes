@@ -146,9 +146,16 @@ check running services
 Get-Service | where {$_.Status -eq "Running"}
 ```
 
+[registry query](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg)
+
+```cmd
+reg query HKEY_LOCAL_MACHINE\Software /f Python
+```
+
 [MS08_067](https://github.com/andyacer/ms08_067)
 
 ```shell
 # check os version
 nmap -p <target ports> --script /usr/share/nmap/scripts/smb-os-discovery <target ip>
 ```
+
