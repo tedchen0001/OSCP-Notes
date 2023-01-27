@@ -49,6 +49,7 @@
 - You can unzip the executable file and check the files it contains.
 - If you want to run a file through a schedule set by another user, be careful to use a directory that the user can also access, not `tmp` folder.
 - We can also check the cookies of the website.
+- Note that some Windows exploit exe files must be run in cmd mode, not in powershell.
 
 #### Commands
 
