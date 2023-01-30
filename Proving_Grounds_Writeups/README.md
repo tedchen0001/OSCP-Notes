@@ -50,6 +50,7 @@
 - If you want to run a file through a schedule set by another user, be careful to use a directory that the user can also access, not `tmp` folder.
 - We can also check the cookies of the website.
 - Note that some Windows exploit exe files must be run in cmd mode, not in powershell.
+- When using the python exploit script, note that the input parameters are case-sensitive.
 
 #### Commands
 
@@ -61,4 +62,13 @@ GraphQL
 {__schema{types{name,fields{name}}}}
 {listUsers}
 {getOTP(username:"peter")}
+```
+
+Used in `Wheels`
+
+XPATH Injection (XML data)
+
+```
+') or 1=1 or ('
+')] | //password%00
 ```
