@@ -19,4 +19,4 @@ We found three special pages after web directory scanning.
 feroxbuster -u http://192.168.123.202/ -t 40 -w /usr/share/wordlists/dirb/common.txt -d 2 -k -x php,txt,html
 ```
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Wheels/Wheels_20230131_233704_001.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Wheels/Wheels_20230131_234350_001.png)
