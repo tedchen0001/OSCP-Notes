@@ -20,3 +20,13 @@ feroxbuster -u http://192.168.123.202/ -t 40 -w /usr/share/wordlists/dirb/common
 ```
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Wheels/Wheels_20230131_234350_001.png)
+
+We try to use username `admin` for the SQL injection login test, but it doesn't work.
+
+Next we register an account with username `admin` and then log in to the website. 
+
+Switching to the employee portal page and it shows `Access Denied`. So it is not a valid account.
+
+After trying other testing methods (e.g., subdomain, cookie...), I find an e-mail address at bottom of the index page.
+
+Using it to register an account tester and suddenly found that we can access the portal page.
