@@ -1,4 +1,4 @@
-### [MySQL User Defined Functions](https://redteamnation.com/mysql-user-defined-functions/)
+[MySQL User Defined Functions](https://redteamnation.com/mysql-user-defined-functions/)
 
 check if user = root
 
