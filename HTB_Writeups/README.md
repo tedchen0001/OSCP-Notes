@@ -54,7 +54,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | *Shared | Cookie-based SQL Injection, user table, SSH, [IPython](https://github.com/advisories/GHSA-pq7m-3gw7-gq5x) CVE-2022-21699 | Redis |
 | Shibboleth | wfuzz, udp, IPMI, hashcat 7300, <br> zabbix RCE, password reuse | [MariaDB](https://www.exploit-db.com/exploits/49765) |
 | Shocker | [ShellShock](https://nvd.nist.gov/vuln/detail/cve-2014-6271), ```403``` permission directory, extensions ```sh``` ```pl``` | sudo list |
-| Shoppy | NoSQL injection, subdomain(bitquark list), SSH | sudo list, cat and analysis script, docker group |
+| Shoppy | NoSQL injection, subdomain(bitquark list), SSH | sudo list, cat and analysis script, [docker group](https://gtfobins.github.io/gtfobins/docker/) |
 | SneakyMailer | subdomain(wfuzz), *credential phishing(email, nc), ftp, <br> *PyPI malicious package | sudo list |
 | SolidState | Apache James 2.3.2, *reset user password, POP3, <br> trigger by ssh login | task, file permission |
 | Squashed | nfs, mount permission, change userid, web folder | MIT-magic-cookie-1, Xauthority |
