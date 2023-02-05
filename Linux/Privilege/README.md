@@ -56,3 +56,15 @@ restricted: cannot specify `/' in command names
 ```
 https://www.exploit-db.com/exploits/18411
 ```
+
+```
+exploit/linux/samba/trans2open
+```
+
+#### old machine
+
+Samba versions 2.2.0 to 2.2.8
+
+```
+trans2open
+```
