@@ -77,6 +77,10 @@ xxd /opt/get-list
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Wheels/Wheels_20230206_230445_015.png)
 
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Wheels/Wheels_20230206_231852_016.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Wheels/Wheels_20230206_231909_017.png)
+
 Recovering root password.
 
 ```shell
@@ -85,10 +89,6 @@ echo 'root:x:0:0:root:/root:/bin/bash' > passwd.txt
 unshadow passwd.txt shadow.txt > unshadowed.txt
 john --wordlist=/home/kali/Documents/rockyou.txt unshadowed.txt
 ```
-
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Wheels/Wheels_20230206_231852_016.png)
-
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Wheels/Wheels_20230206_231909_017.png)
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Wheels/Wheels_20230206_233544_018.png)
 
