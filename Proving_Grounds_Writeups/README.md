@@ -51,6 +51,7 @@
 - We can also check the cookies of the website.
 - Note that some Windows exploit exe files must be run in cmd mode, not in powershell.
 - When using the python exploit script, note that the input parameters are case-sensitive.
+- Compiling the exploit binary sometimes has to be done on the same version of the machine.
 
 #### Commands
 
