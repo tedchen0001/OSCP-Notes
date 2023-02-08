@@ -63,8 +63,10 @@ exploit/linux/samba/trans2open
 
 #### old machine
 
-Samba versions 2.2.0 to 2.2.8
+- Samba versions 2.2.0 to 2.2.8
 
 ```
 trans2open
 ```
+
+- Compiling the exploit binary sometimes has to be done on the same version of the machine.
