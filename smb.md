@@ -8,6 +8,14 @@ crackmapexec smb <target ip>
 python enum4linux-ng.py -A <target ip>
 ```
 
+### smbclient.py
+
+from impacket
+
+```
+python smbclient.py <username>:'<password>'@<target ip>
+```
+
 ### Smbclient
 
 ```shell
