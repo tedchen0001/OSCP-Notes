@@ -19,19 +19,19 @@ python smbclient.py <username>:'<password>'@<target ip>
 ### Smbclient
 
 ```shell
-smbclient -L //192.168.135.39/ -U brett --option='client min protocol=NT1'
+smbclient -L '//<target ip>/' -U brett --option='client min protocol=NT1'
 ```
 
 ```shell
-smbclient --no-pass -L //192.168.185.125 -p 445
+smbclient --no-pass -L '//<target ip>' -p 445
 ```
 
 ```shell
-smbclient --no-pass -N \\\\192.168.185.125\\<folder> 
+smbclient --no-pass -N \\\\<target ip>\\<folder> 
 ```
 
 ```shell
-smbclient -U "<username>" //<target ip>/<folder>
+smbclient -U "<username>" '//<target ip>/<folder>'
 smbclient -U "<username>" --password="<passowrd>" \\\\<target ip>\\<folder>
 ```
 
@@ -82,3 +82,4 @@ smbmap -d <domain> -H <target ip> --download "<PATH>\<file>"
 ```shell
 python smbserver.py <shareName> <sharePath>
 ```
+
