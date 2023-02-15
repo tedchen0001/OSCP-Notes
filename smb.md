@@ -18,6 +18,8 @@ python smbclient.py <username>:'<password>'@<target ip>
 
 ### Smbclient
 
+SMBv1
+
 ```shell
 smbclient -L '//<target ip>/' -U brett --option='client min protocol=NT1'
 ```
