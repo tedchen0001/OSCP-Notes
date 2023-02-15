@@ -10,7 +10,7 @@ python enum4linux-ng.py -A <target ip>
 
 ### smbclient.py
 
-from impacket
+from impacket [smbclient.py](https://github.com/fortra/impacket/blob/master/examples/smbclient.py)
 
 ```
 python smbclient.py <username>:'<password>'@<target ip>
