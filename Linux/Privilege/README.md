@@ -69,4 +69,10 @@ exploit/linux/samba/trans2open
 trans2open
 ```
 
+- Samba 3.0.24
+
+```
+CVE-2010-0926_smb_symlink_traversal
+```
+
 - Compiling the exploit binary sometimes has to be done on the same version of the machine.
