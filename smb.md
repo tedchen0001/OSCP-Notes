@@ -43,12 +43,19 @@ smbclient -m SMB2 -U <username> -L //Client/
 
 ### /etc/samba/smb.conf
 
+protocol negotiation failed
+
 ```shell
 client max protocol = NT1 
 ```
 
 ```shell
 client min protocol = NT1
+```
+
+```shell
+client min protocol = CORE
+client max protocol = SMB3
 ```
 
 get permissions
