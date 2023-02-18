@@ -159,3 +159,9 @@ reg query HKEY_LOCAL_MACHINE\Software /f Python
 nmap -p <target ports> --script /usr/share/nmap/scripts/smb-os-discovery <target ip>
 ```
 
+[CVE-2019-0708]
+
+```
+https://github.com/robertdavidgraham/rdpscan
+```
+
