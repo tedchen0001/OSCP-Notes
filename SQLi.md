@@ -5,6 +5,8 @@
 - https://medium.com/@notsoshant/a-not-so-blind-rce-with-sql-injection-13838026331e
 - https://notchxor.github.io/oscp-notes/2-web/sqli/
 - https://www.asciitable.com/
+- https://pentestlab.blog/2012/12/24/sql-injection-authentication-bypass-cheat-sheet/
+- https://www.securityidiots.com/Web-Pentest/SQL-Injection/Union-based-Oracle-Injection.html
 
 ### :open_file_folder: Blind SQL Injections
 
