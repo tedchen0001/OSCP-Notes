@@ -76,3 +76,5 @@ https://github.com/mikaelkall/HackingAllTheThings/tree/master/exploit/linux/remo
 ```
 
 - Compiling the exploit binary sometimes has to be done on the same version of the machine.
+
+- CVE-2020-1938 Ghostcat
