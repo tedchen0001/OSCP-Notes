@@ -152,7 +152,9 @@ Get-Service | where {$_.Status -eq "Running"}
 reg query HKEY_LOCAL_MACHINE\Software /f Python
 ```
 
-[MS08_067](https://github.com/andyacer/ms08_067)
+#### old exploit
+
+MS08_067 [1](https://github.com/andyacer/ms08_067) [2](https://github.com/jivoi/pentest/blob/master/exploit_win/ms08-067.py)
 
 ```shell
 # check os version
@@ -165,3 +167,10 @@ nmap -p <target ports> --script /usr/share/nmap/scripts/smb-os-discovery <target
 https://github.com/robertdavidgraham/rdpscan
 ```
 
+[CVE-2017-7269] 
+
+Microsoft Windows Server 2003 IIS 6.0
+
+```
+https://github.com/g0rx/iis6-exploit-2017-CVE-2017-7269
+```
