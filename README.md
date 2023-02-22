@@ -77,9 +77,10 @@ hydra -l admin -P ~/Documents/rockyou.txt test.com https-post-form "/login:{\"us
 get a list for password crackers
 
 ```shell
-cewl -d 4 https://192.168.0.1 -w /tmp/wordlists.txt --with-numbers
+cewl -d 4 https://192.168.0.1 -w /tmp/wordlists.txt --with-numbers --lowercase
 # -d depth
 # --with-numbers: Accept words with numbers in as well as just letters
+# --help
 ```
 
 ### :open_file_folder: nmap
