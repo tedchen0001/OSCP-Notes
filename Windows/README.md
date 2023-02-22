@@ -152,7 +152,7 @@ Get-Service | where {$_.Status -eq "Running"}
 reg query HKEY_LOCAL_MACHINE\Software /f Python
 ```
 
-#### Old exploit
+#### Old Vulnerability
 
 MS08_067 [tool 1](https://github.com/andyacer/ms08_067) [tool 2](https://github.com/jivoi/pentest/blob/master/exploit_win/ms08-067.py)
 
