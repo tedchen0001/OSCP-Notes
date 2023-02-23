@@ -174,3 +174,9 @@ Microsoft Windows Server 2003 IIS 6.0 WebDAV
 ```
 https://github.com/g0rx/iis6-exploit-2017-CVE-2017-7269
 ```
+
+CVE-2014-6271
+
+```
+https://github.com/3mrgnc3/pentest_old/blob/master/postfix-shellshock-nc.py
+```
