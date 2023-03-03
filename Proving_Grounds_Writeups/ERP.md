@@ -22,3 +22,5 @@ PORT   STATE SERVICE VERSION
 |_      httponly flag not set
 |_http-server-header: Apache/2.4.41 (Ubuntu)
 ```
+
+Trying to log in using common credentials and SQL injection, but unable to gain access.
