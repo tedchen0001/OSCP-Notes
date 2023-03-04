@@ -52,7 +52,7 @@ Once we log in, we can verify that the system version is 4.15 and identify a rel
 
 We test the vulnerability and confirm that the PoC codes works properly. Note that both the `path` and `order` parameters must be entered correctly. It took me a lot of time to test.
 
-![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_134725_008_.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_134726_008_.png)
 
 Although this PoC codes is only for blind SQL injection testing, we can modify it to retrieve the data, just like in sqlmap. I refer to other SQL injection testing codes and modify our PoC codes accordingly. The results are as follows:
 
