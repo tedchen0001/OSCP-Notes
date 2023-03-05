@@ -56,8 +56,8 @@ WHERE schema_name NOT IN ('information_schema', 'mysql', 'performance_schema'))=
 
 SQL Server 
 
-https://infosecwriteups.com/exploiting-error-based-sql-injections-bypassing-restrictions-ed099623cd94
-https://perspectiverisk.com/mssql-practical-injection-cheat-sheet/
+- https://infosecwriteups.com/exploiting-error-based-sql-injections-bypassing-restrictions-ed099623cd94
+- https://perspectiverisk.com/mssql-practical-injection-cheat-sheet/
 
 ```SQL
 /* Adding additional strings ensures that error messages are prompted. */
