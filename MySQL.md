@@ -10,3 +10,11 @@ mysql -u [username] -p [dbname] -e [query] > [filename]
 # execute Linux shell command
 mysql -u root -p -e "system id"
 ```
+
+### :open_file_folder: User-Defined Functions
+
+Linux Privilege Escalation
+
+```
+https://steflan-security.com/linux-privilege-escalation-exploiting-user-defined-functions/
+```
