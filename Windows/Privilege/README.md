@@ -144,3 +144,11 @@ Exploits
 
 - CVE-2021-1732
 - MS10-059
+
+WerTrigger
+
+```
+https://github.com/sailay1996/WerTrigger
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md#wertrigger
+https://notes.vulndev.io/wiki/redteam/privilege-escalation/windows/exploiting-privileged-read-write-delete
+```
