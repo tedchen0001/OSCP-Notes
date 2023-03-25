@@ -152,6 +152,12 @@ Get-Service | where {$_.Status -eq "Running"}
 reg query HKEY_LOCAL_MACHINE\Software /f Python
 ```
 
+[Tasklist](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tasklist)
+
+```
+tasklist /v
+```
+
 #### Old Vulnerability
 
 MS08_067 [tool 1](https://github.com/andyacer/ms08_067) [tool 2](https://github.com/jivoi/pentest/blob/master/exploit_win/ms08-067.py)
@@ -179,4 +185,10 @@ CVE-2014-6271
 
 ```
 https://github.com/3mrgnc3/pentest_old/blob/master/postfix-shellshock-nc.py
+```
+
+#### Resources
+
+```
+https://ss64.com/
 ```
