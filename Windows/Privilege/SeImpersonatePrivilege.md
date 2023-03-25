@@ -16,7 +16,7 @@ SeIncreaseWorkingSetPrivilege Increase a process working set            Disabled
 
 ### Privilege Escalation 1
 
-```Windows 10``` and ```Server 2016```/```2019```
+```Windows 10``` and ```Server 2016```/```2019```/```2022```
 
 ```LOCAL SERVICE```/```NETWORK SERVICE```/```iis apppool\defaultapppool```
 
