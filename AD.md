@@ -226,6 +226,7 @@ MATCH c=(a)-[:CanPSRemote]->(b) RETURN c
 MATCH (u:User) WHERE ANY (x IN u.serviceprincipalnames WHERE toUpper(x) CONTAINS '<search string>') RETURN u
 # retrieve computers
 MATCH (c:Computer) [WHERE c.operatingsystem CONTAINS "<search string>"] RETURN c
+# PowerShell command:Test-Connection -ComputerName <ComputerName> -Count 1 | Select-Object -ExpandProperty IPV4Address
 ```
 
 - GenericAll
