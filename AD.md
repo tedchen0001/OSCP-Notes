@@ -119,6 +119,8 @@ python3 gMSADumper.py -u <username> -p <password> -d <domain>
 
 enumerate domain usernames
 
+(Kerbrute)[https://github.com/ropnop/kerbrute/releases]
+
 ```shell
 # 1 enumerate users 
 kerbrute_linux_amd64 -t <threads> --dc <domain controller> -d <domain> userenum  ~/Documents/userlist.txt
@@ -222,6 +224,8 @@ Cypher (Neo4j's query language) Query
 MATCH c=(a)-[:CanPSRemote]->(b) RETURN c
 # Find SPNs with keywords 
 MATCH (u:User) WHERE ANY (x IN u.serviceprincipalnames WHERE toUpper(x) CONTAINS '<search string>') RETURN u
+# retrieve computers
+MATCH (c:Computer) [WHERE c.operatingsystem CONTAINS "<search string>"] RETURN c
 ```
 
 - GenericAll
