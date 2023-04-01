@@ -143,3 +143,10 @@ post.txt = request contents
 ![SQLi_2022 02 28_19h37m55s_001](https://user-images.githubusercontent.com/8998412/155977929-7e38d3bb-8d61-4afa-af6b-90ae1e13ec73.png)
 
 
+### :no_entry: MS SQL
+
+```sql
+SELECT name, database_id, create_date FROM sys.databases;
+SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE';
+SELECT TABLE_NAME FROM <databasename>.INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE';
+```
