@@ -51,6 +51,7 @@
 - We can also check the cookies of the website.
 - Note that some Windows exploit exe files must be run in cmd mode, not in powershell.
 - When using the python exploit script, note that the input parameters are case-sensitive.
+- `Bad Request - Invalid Hostname. HTTP Error 400. The request hostname is invalid.` you may need to provide a specific fully qualified domain name (FQDN).
 
 
 #### Commands
