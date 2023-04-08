@@ -27,6 +27,12 @@ Attempt to list the directory contents
 ../../../../../../../../../../../../../../../
 ```
 
+The Apache configuration file can indicate the directory location of a webpage
+
+```
+/opt/apache2/conf/httpd.conf
+```
+
 ### :open_file_folder: [Proc File System](https://www.netspi.com/blog/technical/web-application-penetration-testing/directory-traversal-file-inclusion-proc-file-system/)
 
 ```
