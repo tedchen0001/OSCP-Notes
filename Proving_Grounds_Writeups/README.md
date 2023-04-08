@@ -52,7 +52,7 @@
 - Note that some Windows exploit exe files must be run in cmd mode, not in powershell.
 - When using the python exploit script, note that the input parameters are case-sensitive.
 - `Bad Request - Invalid Hostname. HTTP Error 400. The request hostname is invalid.` you may need to provide a specific fully qualified domain name (FQDN).
-- If essential components are missing when running the exploit file, try compiling it on the target machine. e.g., 'GLIBC_2.34' not found
+- If essential components are missing when running the exploit file, try compiling it on the target machine. For example, 'GLIBC_2.34' not found.
 
 
 #### Commands
