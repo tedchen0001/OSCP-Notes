@@ -44,6 +44,10 @@
 - Check the information dumped from the AD environment. For example, using the ```ldapdomaindump``` to get the ```domain_users.json``` file and check all the values.
 - Proxychains / Forwarding Ports.
 - If the ```Git repository``` exists, use the ```ls -la``` command to check all (hidden) files after downloading.
+  ```
+  git log
+  git show <commit-id>
+  ```
 - Even if we have got the contents of the website from other services such as ftp, we can still do an enumeration of the website directory to make sure that all contents have been found. Note that the file contents may not be the same either.
 - If the generated ```cookie``` does not work, note the system time in the VM.
 - You can unzip the executable file and check the files it contains.
@@ -53,6 +57,7 @@
 - When using the python exploit script, note that the input parameters are case-sensitive.
 - `Bad Request - Invalid Hostname. HTTP Error 400. The request hostname is invalid.` you may need to provide a specific fully qualified domain name (FQDN).
 - If essential components are missing when running the exploit file, try compiling it on the target machine. For example, 'GLIBC_2.34' not found.
+- pay attention to Git
 
 
 #### Commands
