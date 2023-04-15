@@ -158,6 +158,13 @@ reg query HKEY_LOCAL_MACHINE\Software /f Python
 tasklist /v
 ```
 
+Windows Library Files
+
+```
+https://wikileaks.org/ciav7p1/cms/page_13763381.html
+https://blog.f-secure.com/abusing-windows-library-files-for-persistence/
+```
+
 #### Old Vulnerability
 
 MS08_067 [tool 1](https://github.com/andyacer/ms08_067) [tool 2](https://github.com/jivoi/pentest/blob/master/exploit_win/ms08-067.py)
