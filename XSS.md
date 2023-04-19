@@ -1,7 +1,8 @@
-Payload
+Payloads
 
-https://www.youtube.com/watch?v=KHwVjzWei1c
-https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#blind-xss
+https://www.youtube.com/watch?v=KHwVjzWei1c<br>
+https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#blind-xss<br>
+https://github.com/terjanq/Tiny-XSS-Payloads<br>
 
 ```js
 <script>alert(window.origin)</script>
