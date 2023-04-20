@@ -146,6 +146,18 @@ check running services
 Get-Service | where {$_.Status -eq "Running"}
 ```
 
+find specific files
+
+```cmd
+REM command prompt
+dir /s C:\Folder\*.txt
+```
+
+```powershell
+# powershell
+Get-ChildItem -Path "C:\Folder" -Recurse -Filter "*.txt"
+```
+
 [registry query](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg)
 
 ```cmd
