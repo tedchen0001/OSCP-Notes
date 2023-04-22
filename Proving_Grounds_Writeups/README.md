@@ -57,8 +57,9 @@
 - When using the python exploit script, note that the input parameters are case-sensitive.
 - `Bad Request - Invalid Hostname. HTTP Error 400. The request hostname is invalid.` you may need to provide a specific fully qualified domain name (FQDN).
 - If essential components are missing when running the exploit file, try compiling it on the target machine. For example, 'GLIBC_2.34' not found.
-- pay attention to Git (hidden folder)
+- Check for any hidden directories or files, such as git.
 - When collecting the user list, it is possible to include administrator as well. (AD)
+- Note the files in the recycle bin.
 
 
 #### Commands
