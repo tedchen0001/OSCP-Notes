@@ -96,4 +96,5 @@ https://github.com/mikaelkall/HackingAllTheThings/tree/master/exploit/linux/remo
 
 - [CVE-2010-3904](https://www.exploit-db.com/exploits/15285) RDS privilege escalation exploit
 
-- [sudo 1.8.31](https://github.com/mohinparamasivam/Sudo-1.8.31-Root-Exploit)，use the `make` command on the target machine to create exploit file.
+- [sudo 1.8.31](https://github.com/mohinparamasivam/Sudo-1.8.31-Root-Exploit)
+    - If possible, try to compile on the target machine.
