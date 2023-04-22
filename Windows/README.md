@@ -155,7 +155,8 @@ dir /s C:\Folder\*.txt
 
 ```powershell
 # powershell
-Get-ChildItem -Path "C:\Folder" -Recurse -Filter "*.txt"
+Get-ChildItem -Path "C:\Folder" -Recurse -Force -Filter "*.txt"
+Get-ChildItem -Path "C:\Folder" -Recurse -Force -Include "*.txt","*.zip","*.conf"
 ```
 
 [registry query](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg)
