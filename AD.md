@@ -402,7 +402,7 @@ If ```null session``` is enabled on the network. Server may have null session vu
 
 ```shell
 # null session
- rpcclient -U "" -N <target ip>
+rpcclient -U "" -N <target ip>
 # -U username
 # -N no password
 
