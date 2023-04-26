@@ -9,7 +9,7 @@ smtp-user-enum -M RCPT -U /usr/share/wordlists/seclists/Usernames/Names/names.tx
 
 ### Sending mail tool
 
-options other than using nc or telnet
+Alternative options to using nc or telnet.
 
 ```shell
 sudo apt install sendemail
