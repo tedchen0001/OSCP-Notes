@@ -77,8 +77,15 @@ proxychains nmap -p- -Pn -sT <target ip>
 
 using [spose](https://github.com/aancw/spose) to scan open port
 
-```
+```shell
 python spose.py --proxy http://<Squid host ip>:<port> --target <target ip>
+```
+
+Check if authentication is required. If authentication is required, setting up the proxy directly in Firefox will cause the browser to hang during browsing.
+
+```shell
+curl -s --proxy <Squid host ip>:<port> http://<target ip> > /tmp/test.html
+firefox /tmp/test.html
 ```
 
 #### Chrome
