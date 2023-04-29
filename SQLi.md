@@ -150,3 +150,23 @@ SELECT name, database_id, create_date FROM sys.databases;
 SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE';
 SELECT TABLE_NAME FROM <databasename>.INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE';
 ```
+
+### :open_file_folder: PostgreSQL
+
+connect to the database
+
+```sql
+psql -U postgres -h localhost
+```
+
+show databases and tables
+
+```sql
+# show databases
+postgres=# \l
+postgres=# SELECT datname FROM pg_database;
+# use database
+postgres=# \c testDB
+# show tables
+postgres=# \dt
+```
