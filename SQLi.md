@@ -161,7 +161,7 @@ psql -U postgres -h localhost
 
 show databases and tables
 
-```sql
+```shell
 # show databases
 postgres=# \l
 postgres=# SELECT datname FROM pg_database;
@@ -169,4 +169,7 @@ postgres=# SELECT datname FROM pg_database;
 postgres=# \c testDB
 # show tables
 postgres=# \dt
+postgres=# SELECT * FROM pg_catalog.pg_tables WHERE schemaname != 'pg_catalog' AND schemaname != 'information_schema';
+# exit command line
+postgres=# \q
 ```
