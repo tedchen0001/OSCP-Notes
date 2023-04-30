@@ -172,4 +172,6 @@ postgres=# \dt
 postgres=# SELECT * FROM pg_catalog.pg_tables WHERE schemaname != 'pg_catalog' AND schemaname != 'information_schema';
 # exit command line
 postgres=# \q
+# check version
+postgres=# SELECT version();
 ```
