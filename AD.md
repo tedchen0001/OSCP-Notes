@@ -8,6 +8,8 @@ https://tryhackme.com/room/breachingad
 
 https://academy.hackthebox.com/module/details/143
 
+https://github.com/Integration-IT/Active-Directory-Exploitation-Cheat-Sheet
+
 a lot about the AD pentest explanations
 
 https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ
