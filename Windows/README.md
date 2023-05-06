@@ -211,4 +211,5 @@ https://github.com/3mrgnc3/pentest_old/blob/master/postfix-shellshock-nc.py
 
 ```
 https://ss64.com/
+https://lolbas-project.github.io/#
 ```
