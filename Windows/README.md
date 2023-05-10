@@ -177,7 +177,7 @@ Task Scheduler(taskschd.msc)
 schtasks /query /fo LIST /v
 ```
 
-Powershell [Get-ScheduledTask Script]
+Powershell [Get-ScheduledTask Script](https://github.com/tedchen0001/OSCP-Notes/blob/master/Write_Scripts/ScheduledTask.ps1)
 
 convert to command line, replace `\r\n` to `empty string` and `"` to `\"`
 
