@@ -1,3 +1,4 @@
+# -and $_.TaskName -notlike "*TEST*" filter out any tasks that have TEST in the name. This is useful if you have a test task that you don't want to include in the report.
 $ScheduledTasks = Get-ScheduledTask | Where-Object {$_.TaskPath -notlike "\Microsoft*" -and $_.TaskName -notlike "*TEST*"}
 
 foreach ($item in $ScheduledTasks) {
