@@ -1,6 +1,6 @@
-### :open_file_folder: Check file
+### :open_file_folder: Directory Traversal
 
-lists
+Check lists
 
 https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/file_inclusion_windows.txt
 
@@ -45,6 +45,8 @@ wfuzz -u http://<target ip>/download.php?downloadurl=/proc/FUZZ/cmdline -z range
 curl http://<target ip>/download.php?downloadurl=/proc/824/cmdline --output service.txt
 ```
 
+### :open_file_folder: LFI
+
 PHP assertions
 
 ```shell
@@ -78,7 +80,7 @@ https://github.com/wupco/PHP_INCLUDE_TO_SHELL_CHAR_DICT
 
 https://ctftime.org/writeup/36071
 
-RFI
+### :open_file_folder: RFI
 
 - method1 
 
