@@ -613,7 +613,7 @@ python3 mssqlclient.py [[domain/]username[:password]@]<targetName or ip> -k -no-
 # -k -no-pass: use the credentials in the ccache file for Kerberos authentication
 ```
 
-have permission
+sysadmin or serveradmin roles
 
 ```mssql
 EXEC sp_configure 'show advanced options', '1'
