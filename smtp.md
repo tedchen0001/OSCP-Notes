@@ -17,5 +17,5 @@ sudo apt install sendemail
 
 ```shell
 sendemail -h
-sendemail -f test@testcorp.com -t dev@testcorp.com -u 'please help check my file' -m 'thanks you!' -a /tmp/2003.doc -xu user -xp user1234
+sendemail -f test@testcorp.com -t dev@testcorp.com -u 'please help check my file' -m 'thanks you!' -a /tmp/2003.doc -xu user -xp user1234 -s SERVER[:PORT]
 ```
