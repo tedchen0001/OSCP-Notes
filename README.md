@@ -13,7 +13,7 @@
 [game of hacks]<br>
 [bWAPP]<br>
 [Webgoat]<br>
-[hashcat](https://hashcat.net/wiki/doku.php?id=hashcat): password recovery tool<br>
+[hashcat](https://hashcat.net/wiki/doku.php?id=hashcat): password recovery tool [rule_based_attack](https://hashcat.net/wiki/doku.php?id=rule_based_attack)<br>
 [feroxbuster](https://github.com/epi052/feroxbuster): powerful forced browsing tool (gobuster、dirb)<br>
 [AutoRecon](https://github.com/Tib3rius/AutoRecon): multi-threaded network reconnaissance tool which performs automated enumeration of services<br>
 [explainshell](https://explainshell.com/): explain command-line<br>
