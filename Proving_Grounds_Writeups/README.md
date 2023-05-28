@@ -42,7 +42,9 @@
 - If it is a windows machine, check the ```Program Files``` and ```Program Files (x86)``` folder to see if additional software is installed.
 - Note the interesting executable file. ```ILSpy``` .NET assembly browser and decompiler. (Visual Studio Community version also supports)
 - Check the information dumped from the AD environment. For example, using the ```ldapdomaindump``` to get the ```domain_users.json``` file and check all the values.
-- Proxychains / Forwarding Ports.
+- Proxychains / Forwarding Ports. 
+  - To accelerate nmap scans, you can decrease the timeout duration, it's important to note that it may affect the accuracy of the results.
+  `/etc/proxychains4.conf => tcp_read_time_out, tcp_connect_time_out`
 - If the ```Git repository``` exists, use the ```ls -la``` command to check all (hidden) files after downloading.
   ```shell
   git log
