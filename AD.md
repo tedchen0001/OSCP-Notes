@@ -304,6 +304,7 @@ Get-Module
 ```powershell
 # Groups
 Get-NetGroup
+Get-NetGroup "IT Department" | select member
 ```
 
 ```powershell
@@ -316,6 +317,7 @@ Get-NetComputer -fulldata | select operatingsystem
 ```powershell
 # Users
 Get-NetUser
+Get-NetUser | select cn
 # find AD users
 Get-ADUser -Identity <AD account> -Server <domain controller> -Properties *
 Get-ADUser -Filter * -Properties * | select Name, SamAccountName, Description
