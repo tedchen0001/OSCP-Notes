@@ -304,7 +304,7 @@ Get-Module
 ```powershell
 # Groups
 Get-NetGroup
-Get-NetGroup "IT Department" | select member
+Get-NetGroup "Domain Admins" | select member
 ```
 
 ```powershell
