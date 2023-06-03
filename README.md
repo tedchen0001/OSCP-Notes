@@ -283,7 +283,7 @@ Brute-force attack
 wpscan --url http://192.168.0.1/ --passwords /usr/share/wordlists/rockyou.txt --max-threads 50 --usernames admin
 ```
 
-SSL peer certificate or SSH remote key was not OK
+SSL peer certificate or SSH remote key was not valid
 
 ```shell
 wpscan --url https://192.168.0.1/ --disable-tls-checks
