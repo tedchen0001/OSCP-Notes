@@ -396,13 +396,19 @@ find ssh key
 find / -type f -name id_rsa* 2>&-
 ```
 
-what the group can do
+group capabilities
 
 ```shell
 id
 uid=1000(kali) gid=1000(kali) groups=1000(kali),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),109(netdev),119(wireshark),122(bluetooth),134(scanner),143(kaboxer)
 find / -group <name> 2>/dev/null
 # find / -group wireshark 2>/dev/null
+```
+
+locate and execute the file
+
+```
+find / -name "*.log" 2>/dev/null -exec cat {} \; 
 ```
 
 upgrade reverse shell in Kali
