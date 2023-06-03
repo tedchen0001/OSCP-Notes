@@ -304,6 +304,7 @@ Get-Module
 ```powershell
 # Groups
 Get-NetGroup
+# member of the target group
 Get-NetGroup "Domain Admins" | select member
 ```
 
