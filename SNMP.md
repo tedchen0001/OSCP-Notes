@@ -21,7 +21,8 @@ snmp-check <target ip> -c <community string>
 ```
 
 SNMP ARBITARY COMMAND EXECUTION AND SHELL
-https://rioasmara.com/2021/02/05/snmp-arbitary-command-execution-and-shell/
+
+https://rioasmara.com/2021/02/05/snmp-arbitary-command-execution-and-shell/ <br>
 https://mogwailabs.de/en/blog/2019/10/abusing-linux-snmp-for-rce/
 
 ```shell
