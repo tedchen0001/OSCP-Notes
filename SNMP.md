@@ -10,7 +10,7 @@ retrieve a subtree of management values
 ```
 snmpwalk -v1 -c public <target ip> .
 # -v 1|2c|3 SNMP version
-# -c community string, like a password
+# -c community string, like a password, e.g. public, private 
 # . [OID]
 ```
 
