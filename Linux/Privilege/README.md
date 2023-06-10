@@ -1,3 +1,4 @@
+[Linux - Privilege Escalation](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)<br>
 [MySQL User Defined Functions](https://redteamnation.com/mysql-user-defined-functions/)
 
 check if user = root
@@ -87,6 +88,10 @@ Check if authentication is required. If authentication is required, setting up t
 curl -s --proxy <Squid host ip>:<port> http://<target ip> > /tmp/test.html
 firefox /tmp/test.html
 ```
+
+#### Kernel
+
+[CVE-2022-0847 (DirtyPipe) SUID binary](https://www.exploit-db.com/exploits/50808)
 
 #### Chrome
 
