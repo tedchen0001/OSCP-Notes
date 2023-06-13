@@ -23,6 +23,7 @@
 [CyberChef](https://gchq.github.io/CyberChef/): a web app for encryption, encoding, compression and data analysis.<br>
 [Microsoft Security Response Center](https://msrc.microsoft.com/update-guide/vulnerability)<br>
 [exploit-notes.hdks.org](https://exploit-notes.hdks.org/)<br>
+[cvexploits.io](https://cvexploits.io/): CVExploits Search<br>
 
 ## :warning: Exam Restrictions
 
