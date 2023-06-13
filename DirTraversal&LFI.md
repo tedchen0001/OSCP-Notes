@@ -8,6 +8,7 @@ https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/file_inclusion
 
 https://github.com/carlospolop/Auto_Wordlists/blob/main/custom_wordlists/file_inclusion_linux.txt
 
+https://github.com/danielmiessler/SecLists/tree/master/Fuzzing/LFI
 
 Enumerate files
 
