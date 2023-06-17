@@ -204,7 +204,7 @@ WriteOwner
 AllExtendedRights
 SQLAdmin
 CanRDP
-CanPSRemote
+CanPSRemote (Evil-WinRM, usually at port 5985)
 ```
 
 collecting data in Windows
