@@ -67,11 +67,10 @@
 - When collecting the user list, it is possible to include administrator as well. (AD)
 - Note the files in the recycle bin.
 - Discovery of multiple web directories using multiple wordlists.
-- Reusing Credentials.
-
 ```shell
 for file in $(ls /usr/share/seclists/Discovery/Web-Content); do gobuster dir -u http://<target ip> -w /usr/share/seclists/Discovery/Web-Content/$file -e -k -b "404,500" -t 20 ; done
 ```
+- Reusing Credentials.
 - Don't forget about Kernel Exploits.
 - Analyze the code files discovered during the enumeration process.
 
