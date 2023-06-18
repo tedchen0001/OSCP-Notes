@@ -10,6 +10,8 @@ https://academy.hackthebox.com/module/details/143
 
 https://github.com/Integration-IT/Active-Directory-Exploitation-Cheat-Sheet
 
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md
+
 a lot about the AD pentest explanations
 
 https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ
