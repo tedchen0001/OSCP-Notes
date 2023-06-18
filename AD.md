@@ -39,7 +39,7 @@ https://github.com/samratashok/nishang
 
 Be sure to check the restrictions on the use of tools before taking the exam.
 
-- BloodHound
+- BloodHound ([SharpHoundCheatSheet](https://bloodhound.readthedocs.io/en/latest/_images/SharpHoundCheatSheet.png))
 - SharpHound
 - PowerShell Empire
 - Covenant 
