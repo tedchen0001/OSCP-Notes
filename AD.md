@@ -100,8 +100,9 @@ Dumping LDAP
 ```shell
 ldapsearch -LLL -x -H ldap://<target ip> -b '' -s base '(objectclass=*)'
 # with credential, e.g., domain = test.local
-# pay attention to each user's information
+# pay attention to each user's information, for example, the samaccountname
 ldapsearch -H ldap://<target ip> -x -W -D "<username>@test.local" -b "dc=<test>,dc=<local>"
+ldapsearch -H ldap://<target ip> -x -W -b "dc=<test>,dc=<local>"
 # check the dump file's content, e.g., domain_users.json, the value of key "info"
 ldapdomaindump -u '<domain>\<username>' -p '<password>' <HOSTNAME or target ip>
 ```
