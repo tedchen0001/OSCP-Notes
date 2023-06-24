@@ -92,11 +92,11 @@ The file can't be modified.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Sona/Sona%2C%20September%2019%2C%202021_16h42m43s.png)
 
-Checking the code. It imports base64 libray and the libray file can be modified.
+The code imports the base64 library, and it is possible to modify the library file.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Sona/Sona%2C%20September%2019%2C%202021_16h47m39s.png)
 
-We modify the b64encode function in the ```https://raw.githubusercontent.com/python/cpython/3.8/Lib/base64.py``` and then uploading and copying to ```/usr/lib/python3.8/base64.py```.
+We have modified the b64encode function in the base64.py file located at `https://raw.githubusercontent.com/python/cpython/3.8/Lib/base64.py`. After making the modifications, we uploaded and replaced the original file at the path `/usr/lib/python3.8/base64.py`.
 
 ```
 def b64encode(s, altchars=None):
