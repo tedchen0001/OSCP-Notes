@@ -64,7 +64,7 @@ Website has nothing.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.07.24_13h22m39s_001_.png)
 
-Using smtp-user-neum to identify the active user ```hr``` and ```sales``` exist.
+Using smtp-user-enum to identify the active user ```hr``` and ```sales``` exist.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Postfish/Postfish_2021.07.30_01h50m55s_001_.png)
 
