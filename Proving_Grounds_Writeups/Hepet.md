@@ -132,7 +132,7 @@ sendemail -f 'jonas@localhost' \
 Finding services.
 
 ```
-wmic service get name,displayname,pathname,startmode |findstr /i "auto"
+wmic service get name,displayname,pathname,startmode | findstr /i "auto"
 ```
 
 Veyon service is installed in a folder that the user can access.
