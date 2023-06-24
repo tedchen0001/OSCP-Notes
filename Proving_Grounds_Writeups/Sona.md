@@ -84,7 +84,7 @@ We find the users.xml contains the user sona's password.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Sona/Sona%2C%20September%2019%2C%202021_16h26m43s.png)
 
-We use pspy64 to check any cronjon is running.
+We use `pspy64` to check if any process is running.
 
 ![image](https://github.com/tedchen0001/OSCP-Notes/blob/master/Proving_Grounds_Writeups/Pic/Sona/Sona%2C%20September%2019%2C%202021_16h35m34s.png)
 
