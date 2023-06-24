@@ -30,5 +30,6 @@ We can attempt to upload the .htaccess file to configure the server to execute o
 ```shell
 # The uploaded file may not be visible in the upload directory.
 echo "AddType application/x-httpd-php <custom file extension>" > .htaccess
-# echo "AddType application/x-httpd-php .abc" > .htaccess
+# example
+echo "AddType application/x-httpd-php .abc" > .htaccess
 ```
