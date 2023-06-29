@@ -878,6 +878,13 @@ find hidden information
 Get-ADObject -filter 'isDeleted -eq $true' -includeDeletedObjects -Properties *
 ```
 
+### :open_file_folder: GPO Abuse
+
+https://ppn.snovvcrash.rocks/pentest/infrastructure/ad/gpo-abuse
+https://github.com/FSecureLABS/SharpGPOAbuse
+
+Permission  : GpoEditDeleteModifySecurity
+
 ### :open_file_folder: tool debug
 
 ticket_converter.py (convert ticket to UNIX <-> Windows format)
