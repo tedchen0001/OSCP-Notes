@@ -880,7 +880,7 @@ Get-ADObject -filter 'isDeleted -eq $true' -includeDeletedObjects -Properties *
 
 ### :open_file_folder: GPO Abuse
 
-https://ppn.snovvcrash.rocks/pentest/infrastructure/ad/gpo-abuse
+https://ppn.snovvcrash.rocks/pentest/infrastructure/ad/gpo-abuse<br>
 https://github.com/FSecureLABS/SharpGPOAbuse
 
 ```
