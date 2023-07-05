@@ -372,10 +372,12 @@ sudo crackmapexec <protocol> <target ip> -u <username> -p <password> --users
 sudo crackmapexec <protocol> <target ip> -u <username> -p <password> --groups
 # enumerate logged users on multiple servers
 sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --loggedon-users
-# log on with a local non-domain account
-sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --local-auth
 # enumerate shares on multiple servers
 sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --shares
+# log on with a local non-domain account
+sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --local-auth
+# enumerate local user shares
+sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --local-auth -shares
 # list readable share files
 sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> -M spider_plus
 # bruteforcing the RID
