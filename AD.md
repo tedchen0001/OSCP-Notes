@@ -27,7 +27,7 @@ https://postimg.cc/mtz8kCdB from https://www.reddit.com/r/oscp/comments/14uoni4/
 
 DACL abuse
 
-https://github.com/ShutdownRepo/The-Hacker-Recipes/blob/master/.gitbook/assets/DACL%20abuse.png
+https://www.thehacker.recipes/ad/movement/dacl
 
 Security identifier (SID) and Relative identifier (RID) <br>
 https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/security-identifiers
