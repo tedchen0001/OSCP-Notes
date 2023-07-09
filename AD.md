@@ -20,7 +20,8 @@ https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ
 
 AD mindmap <br>
 https://orange-cyberdefense.github.io/ocd-mindmaps/ <br>
-https://github.com/Orange-Cyberdefense/ocd-mindmaps
+https://github.com/Orange-Cyberdefense/ocd-mindmaps <br>
+https://postimg.cc/mtz8kCdB <br>
 
 DACL abuse
 
@@ -378,6 +379,8 @@ sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --shares
 sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --local-auth
 # enumerate local user shares
 sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --local-auth -shares
+# enumerate active sessions
+sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --session
 # list readable share files
 sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> -M spider_plus
 # bruteforcing the RID
