@@ -14,6 +14,8 @@ https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20an
 
 https://wadcoms.github.io/
 
+https://zer1t0.gitlab.io/posts/attacking_ad/#what-is-active-directory
+
 a lot about the AD pentest explanations
 
 https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ
@@ -21,7 +23,7 @@ https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ
 AD mindmap <br>
 https://orange-cyberdefense.github.io/ocd-mindmaps/ <br>
 https://github.com/Orange-Cyberdefense/ocd-mindmaps <br>
-https://postimg.cc/mtz8kCdB <br>
+https://postimg.cc/mtz8kCdB from https://www.reddit.com/r/oscp/comments/14uoni4/i_passed_80_points_no_bonus/<br>
 
 DACL abuse
 
