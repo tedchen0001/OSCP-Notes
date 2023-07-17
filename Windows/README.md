@@ -199,6 +199,13 @@ https://wikileaks.org/ciav7p1/cms/page_13763381.html
 https://blog.f-secure.com/abusing-windows-library-files-for-persistence/
 ```
 
+Tools
+
+```
+PowerUp.ps1 => Invoke-AllChecks
+PrivescCheck.ps1 => Invoke-PrivescCheck, Invoke-PrivescCheck -Extended
+```
+
 #### Old Vulnerability
 
 MS08_067 [tool 1](https://github.com/andyacer/ms08_067) [tool 2](https://github.com/jivoi/pentest/blob/master/exploit_win/ms08-067.py)
