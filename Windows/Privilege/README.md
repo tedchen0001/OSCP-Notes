@@ -1,11 +1,9 @@
-Recon
+Tools
 
 ```
 https://github.com/AonCyberLabs/Windows-Exploit-Suggester
-```
-
-```
 https://github.com/itm4n/PrivescCheck
+https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1
 ```
 
 Forwarding service
