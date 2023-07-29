@@ -73,6 +73,7 @@ for file in $(ls /usr/share/seclists/Discovery/Web-Content); do gobuster dir -u 
 - Reusing Credentials.
 - Don't forget about Kernel Exploits.
 - Analyze the code files discovered during the enumeration process.
+- Windows Privilege Escalation is crucial.
 
 #### Commands
 
