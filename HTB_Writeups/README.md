@@ -32,6 +32,7 @@ https://github.com/tedchen0001/OSCP-Notes/blob/master/AD.md
 | *Mango |  certificate subdomains & <br> [enumerate](https://github.com/an0nlk/Nosql-MongoDB-injection-username-password-enumeration) credentials of nosql-injection <br> (*Not sure if you can use this script in the exam), reuse | jjs, write root SSH public key | 
 | Meta | subdomain, Exiftool, python3 reverse, process, mogrify(ImageMagick) | sudo list, env_keep, Neofetch |
 | Mirai | nmap, pi.hole, ssh | sudo list, mount, strings |
+| MonitorsTwo | Cacti, #InfoLeakScript, MySQL, SSH | Docker, [CVE-2021-41091](https://github.com/UncleJ4ck/CVE-2021-41091) |
 | Networked | File upload bypass [PHP getimagesize()](https://vulp3cula.gitbook.io/hackers-grimoire/exploitation/web-application/file-upload-bypass), <br> php command injection | *sudo list |
 | Nibbles | page source, directory | sudo list |
 | *NineVeh | brute force attack http & https, phpLiteAdmin | crontab, chkrootkit |
