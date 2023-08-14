@@ -25,6 +25,7 @@
 [exploit-notes.hdks.org](https://exploit-notes.hdks.org/)<br>
 [cvexploits.io](https://cvexploits.io/): CVExploits Search<br>
 [portswigger.net/web-security](https://portswigger.net/web-security): Learn various web security techniques.<br>
+[offsec.tools](https://offsec.tools/): A vast collection of security tools for bug bounty, pentest and red teaming.<br>
 
 ## :warning: Exam Restrictions
 
