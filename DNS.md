@@ -14,3 +14,15 @@ reverse
 ```
 dig -x <target ip> @<dns_ip>
 ```
+
+sublist3r
+
+```
+sublist3r -d DOMAIN
+```
+
+website
+
+```
+https://crt.sh/
+```
