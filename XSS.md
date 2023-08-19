@@ -1,3 +1,7 @@
+Cross-site scripting
+
+https://portswigger.net/web-security/cross-site-scripting
+
 Payloads
 
 https://www.youtube.com/watch?v=KHwVjzWei1c<br>
