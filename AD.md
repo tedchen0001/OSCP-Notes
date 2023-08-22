@@ -16,6 +16,8 @@ https://wadcoms.github.io/
 
 https://zer1t0.gitlab.io/posts/attacking_ad/#what-is-active-directory
 
+[top-10-active-directory-attack-methods](https://www.lepide.com/blog/top-10-active-directory-attack-methods/)
+
 a lot about the AD pentest explanations
 
 https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ
