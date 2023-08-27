@@ -632,6 +632,8 @@ Used in `Zipping`
 
 [Symlinks](https://infosecwriteups.com/zippy-challenge-writeup-cyberhack-ctf-80eb1d422249)
 
+(It's not a necessity, but we can still learn about new concepts.)
+
 ```
 ln -s ../../../../../../../etc/passwd test.pdf
 zip --symlinks test.zip test.pdf
