@@ -201,6 +201,8 @@ rubeus asreproast
 
 :bangbang: [Edges](https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html): relationship between nodes, direct of attack
 
+https://blog.spookysec.net/Enriching-BloodHound-Data/
+
 https://github.com/ShutdownRepo/The-Hacker-Recipes/tree/master/ad/movement/dacl
 
 ```
