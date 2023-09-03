@@ -26,6 +26,7 @@
 [cvexploits.io](https://cvexploits.io/): CVExploits Search<br>
 [portswigger.net/web-security](https://portswigger.net/web-security): Learn various web security techniques.<br>
 [offsec.tools](https://offsec.tools/): A vast collection of security tools for bug bounty, pentest and red teaming.<br>
+[LOLBAS](https://lolbas-project.github.io/#): Living Off The Land Binaries, Scripts and Libraries <br>
 
 ## :warning: Exam Restrictions
 
