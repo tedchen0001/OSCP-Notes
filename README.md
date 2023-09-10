@@ -27,6 +27,7 @@
 [portswigger.net/web-security](https://portswigger.net/web-security): Learn various web security techniques.<br>
 [offsec.tools](https://offsec.tools/): A vast collection of security tools for bug bounty, pentest and red teaming.<br>
 [LOLBAS](https://lolbas-project.github.io/#): Living Off The Land Binaries, Scripts and Libraries <br>
+[CAPEC](https://capec.mitre.org/index.html): Common Attack Pattern Enumerations and Classifications <br>
 
 ## :warning: Exam Restrictions
 
