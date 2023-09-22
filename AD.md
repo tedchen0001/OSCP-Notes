@@ -94,6 +94,7 @@ NTLM relay attack
 
 https://en.hackndo.com/ntlm-relay/ <br>
 https://www.thehacker.recipes/ad/movement/mitm-and-coerced-authentications/ms-efsr
+[SMB NTLM blocking now supported in Windows Insider](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-ntlm-blocking-now-supported-in-windows-insider/ba-p/3916206)
 
 ```shell
 # listening
