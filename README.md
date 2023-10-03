@@ -29,7 +29,8 @@
 [LOLBAS](https://lolbas-project.github.io/#): Living Off The Land Binaries, Scripts and Libraries <br>
 [CAPEC](https://capec.mitre.org/index.html): Common Attack Pattern Enumerations and Classifications <br>
 [Burp Suite](https://github.com/botesjuan/Burp-Suite-Certified-Practitioner-Exam-Study): Burp Suite Certified Practitioner Exam Study <br>
-[BloodyAD](https://github.com/CravateRouge/bloodyAD): An Active Directory Privilege Escalation Framework
+[BloodyAD](https://github.com/CravateRouge/bloodyAD): An Active Directory Privilege Escalation Framework <br>
+[NetExec](https://github.com/Pennyw0rth/NetExec): The Network Execution Tool (CrackMapExec) <br>
 
 ## :warning: Exam Restrictions
 
