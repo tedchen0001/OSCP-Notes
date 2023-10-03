@@ -59,7 +59,7 @@ Be sure to check the restrictions on the use of tools before taking the exam.
     ```shell
     sudo responder -I tun0 -A -v
     ```
-- Crackmapexec
+- Crackmapexec => [NetExec](https://github.com/Pennyw0rth/NetExec)
 - Mimikatz
 
 ```
