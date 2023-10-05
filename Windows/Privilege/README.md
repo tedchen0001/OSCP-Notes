@@ -143,12 +143,18 @@ reg query HKLM /f password /t REG_SZ /s
 reg query HKCU /f password /t REG_SZ /s
 ```
 
-Tools
+#### FullPowers
+
+[FullPowers](https://github.com/itm4n/FullPowers)
+
+Restoring the default privileges for a `service account`, including `SeAssignPrimaryToken` and `SeImpersonate`, allows you to utilize the 'Potato' program.
+
+#### Tools
 
 [Chisel](https://github.com/jpillora/chisel): Pivoting<br>
 [ysoserial.net](https://github.com/pwntester/ysoserial.net): Deserialization payload generator for a variety of .NET formatters
 
-Exploits
+#### Exploits
 
 - CVE-2021-1732
 - MS10-059
