@@ -147,7 +147,7 @@ reg query HKCU /f password /t REG_SZ /s
 
 [FullPowers](https://github.com/itm4n/FullPowers)
 
-Restoring the default privileges for a `service account`, including `SeAssignPrimaryToken` and `SeImpersonate`, allows you to utilize the 'Potato' program.
+Restoring the default privileges for a `service account`, including `SeAssignPrimaryToken` and `SeImpersonate`, allows you to utilize the `Potato` program.
 
 #### Tools
 
