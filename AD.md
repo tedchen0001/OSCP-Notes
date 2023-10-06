@@ -137,7 +137,7 @@ python3 gMSADumper.py -u <username> -p <password> -d <domain>
 
 enumerate domain usernames
 
-(Kerbrute)[https://github.com/ropnop/kerbrute/releases]
+[Kerbrute](https://github.com/ropnop/kerbrute/releases)
 
 ```shell
 # 1 enumerate users 
