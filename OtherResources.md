@@ -9,4 +9,7 @@
 - https://www.twitch.tv/offsecofficial
 - https://www.twitch.tv/thecybermentor
 
+### News
 
+- https://blog.badsectorlabs.com/
+- https://packetstormsecurity.com/
