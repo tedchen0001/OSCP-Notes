@@ -62,13 +62,13 @@ Be sure to check the restrictions on the use of tools before taking the exam.
 - Crackmapexec => [NetExec](https://github.com/Pennyw0rth/NetExec)
 - Mimikatz
 
-### :open_file_folder: Other Tools
-
-- [linWinPwn](https://github.com/lefayjey/linWinPwn) - Active Directory Vulnerability Scanner
-
 ```
 WinRM HTTP port 5985, WinRM HTTPS port 5986
 ```
+
+### :open_file_folder: Other Tools
+
+- [linWinPwn](https://github.com/lefayjey/linWinPwn) - Active Directory Vulnerability Scanner
 
 ### :open_file_folder: Flow (WIP)
 
