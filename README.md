@@ -31,7 +31,8 @@
 [Burp Suite](https://github.com/botesjuan/Burp-Suite-Certified-Practitioner-Exam-Study): Burp Suite Certified Practitioner Exam Study <br>
 [BloodyAD](https://github.com/CravateRouge/bloodyAD): An Active Directory Privilege Escalation Framework <br>
 [NetExec](https://github.com/Pennyw0rth/NetExec): The Network Execution Tool (CrackMapExec) <br>
-[MITRE ATT&CK](https://attack.mitre.org/): ATT&CK Matrix for Enterprise
+[MITRE ATT&CK](https://attack.mitre.org/): ATT&CK Matrix for Enterprise <br>
+[jadx](https://github.com/skylot/jadx): Dex to Java decompiler
 
 ## :warning: Exam Restrictions
 
