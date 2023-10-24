@@ -80,8 +80,15 @@ smbmap -d <domain> -H <target ip> -R <Recursively list dirs> --depth <number>
 download file
 
 ```shell
+# one file
 smbmap -d <domain> -H <target ip> --download "<PATH>\<file>"
-# smbmap -d test.local -H 10.10.10.10 --download "shared\test.txt"
+# e.g.
+smbmap -d test.local -H 10.10.10.10 --download "shared\test.txt"
+
+# all files
+smbclient '\\<target ip>\<folder>' -N -c 'prompt OFF;recurse ON; mget *' --user=[DOMAIN/]USERNAME[%PASSWORD]] [-N|--no-pass] [--password=STRING] [--pw-nt-hash]
+# e.g.
+smbclient '\\10.10.11.123\dev' -N -c 'prompt OFF;recurse ON; mget *' --user=test.com/user1 --password=12345678
 ```
 
 ### SMB Server
