@@ -34,7 +34,7 @@ https://www.thehacker.recipes/ad/movement/dacl
 Security identifier (SID) and Relative identifier (RID) <br>
 https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/security-identifiers
 
-AD test environment
+A vulnerable AD environment for penetration testing practice
 
 https://github.com/Orange-Cyberdefense/GOAD
 
