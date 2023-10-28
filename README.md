@@ -32,7 +32,9 @@
 [BloodyAD](https://github.com/CravateRouge/bloodyAD): An Active Directory Privilege Escalation Framework <br>
 [NetExec](https://github.com/Pennyw0rth/NetExec): The Network Execution Tool (CrackMapExec) <br>
 [MITRE ATT&CK](https://attack.mitre.org/): ATT&CK Matrix for Enterprise <br>
-[jadx](https://github.com/skylot/jadx): Dex to Java decompiler
+[jadx](https://github.com/skylot/jadx): Dex to Java decompiler <br>
+[nuclei](https://github.com/projectdiscovery/nuclei): Community Powered Vulnerability Scanner <br>
+[nuclei templates](https://github.com/projectdiscovery/nuclei-templates)
 
 ## :warning: Exam Restrictions
 
