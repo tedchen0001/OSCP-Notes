@@ -33,8 +33,7 @@
 [NetExec](https://github.com/Pennyw0rth/NetExec): The Network Execution Tool (CrackMapExec) <br>
 [MITRE ATT&CK](https://attack.mitre.org/): ATT&CK Matrix for Enterprise <br>
 [jadx](https://github.com/skylot/jadx): Dex to Java decompiler <br>
-[nuclei](https://github.com/projectdiscovery/nuclei): Community Powered Vulnerability Scanner <br>
-[nuclei templates](https://github.com/projectdiscovery/nuclei-templates)
+[nuclei](https://github.com/projectdiscovery/nuclei): Community Powered Vulnerability Scanner [nuclei templates](https://github.com/projectdiscovery/nuclei-templates) <br>
 
 ## :warning: Exam Restrictions
 
