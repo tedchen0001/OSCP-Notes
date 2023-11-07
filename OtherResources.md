@@ -13,3 +13,7 @@
 
 - https://blog.badsectorlabs.com/
 - https://packetstormsecurity.com/
+
+### Bug
+
+- https://www.youtube.com/watch?v=FqnSAa2KmBI&t=1254s
