@@ -1,13 +1,13 @@
 ignore permission denied message
 
 ```shell
-find / -name repo -type f -prune 2>&1 | grep -v "Permission denied"
+find / -iname repo -type f -prune 2>&1 | grep -v "Permission denied"
 ```
 
 avoid permission denied messages
 
 ```shell
-find / -name *kali* 2>&-
+find / -iname *kali* 2>&-
 ```
 
 [Writable file](https://www.hackingarticles.in/multiple-ways-to-get-root-through-writable-file/)
@@ -36,7 +36,7 @@ find / -user root -perm -4000 -exec ls -ldb {} \;
 find ssh key
 
 ```shell
-find / -type f -name id_rsa* 2>&-
+find / -type f -iname id_rsa* 2>&-
 ```
 
 what the group can do
