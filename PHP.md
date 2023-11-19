@@ -32,3 +32,9 @@ echo "AddType application/x-httpd-php <custom file extension>" > .htaccess
 # example
 echo "AddType application/x-httpd-php .abc" > .htaccess
 ```
+
+### :open_file_folder: Single-file PHP shell
+
+Combine bypass, such as phar
+
+https://github.com/flozz/p0wny-shell/tree/master
