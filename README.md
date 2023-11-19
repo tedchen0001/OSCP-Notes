@@ -34,6 +34,7 @@
 [MITRE ATT&CK](https://attack.mitre.org/): ATT&CK Matrix for Enterprise <br>
 [jadx](https://github.com/skylot/jadx): Dex to Java decompiler <br>
 [nuclei](https://github.com/projectdiscovery/nuclei): Community Powered Vulnerability Scanner, [nuclei templates](https://github.com/projectdiscovery/nuclei-templates) <br>
+[Tilix](https://gnunn1.github.io/tilix-web/): Tilix is a terminal emulator for Linux systems. It provides features such as support for split terminals, custom layouts, and a Quake-style drop-down mode. <br>
 
 ## :warning: Exam Restrictions
 
