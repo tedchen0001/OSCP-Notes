@@ -46,3 +46,9 @@ Combine bypass, such as phar
 ```
 https://github.com/flozz/p0wny-shell/tree/master
 ```
+
+### :open_file_folder: Joomla webshell plugin for RCE
+
+```
+https://github.com/p0dalirius/Joomla-webshell-plugin
+```
