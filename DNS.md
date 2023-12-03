@@ -1,3 +1,7 @@
+Tools
+
+[dnsx](https://github.com/projectdiscovery/dnsx)
+
 find subdomains
 
 ```
