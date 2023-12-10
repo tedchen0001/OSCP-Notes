@@ -81,6 +81,10 @@ https://github.com/wupco/PHP_INCLUDE_TO_SHELL_CHAR_DICT
 
 https://ctftime.org/writeup/36071
 
+### :open_file_folder: NGINX
+
+https://www.youtube.com/watch?v=0ZMpwb2fGmU
+
 ### :open_file_folder: RFI
 
 - method1 
