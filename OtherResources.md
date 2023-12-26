@@ -17,3 +17,5 @@
 ### Bug
 
 - https://www.youtube.com/watch?v=FqnSAa2KmBI&t=1254s
+- https://itnext.io/best-practices-for-writing-quality-vulnerability-reports-119882422a27
+
