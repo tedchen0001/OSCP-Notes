@@ -36,7 +36,7 @@
 [nuclei](https://github.com/projectdiscovery/nuclei): Community Powered Vulnerability Scanner, [nuclei templates](https://github.com/projectdiscovery/nuclei-templates) <br>
 [Tilix](https://gnunn1.github.io/tilix-web/): Tilix is a terminal emulator for Linux systems. It provides features such as support for split terminals, custom layouts, and a Quake-style drop-down mode. <br>
 [API Penetration Testing](https://github.com/Cyber-Guy1/API-SecurityEmpire): Mindmaps, tips & tricks, resources <br>
-[Assetnote Wordlists](https://wordlists.assetnote.io/)
+[Assetnote Wordlists](https://wordlists.assetnote.io/) <br>
 
 ## :warning: Exam Restrictions
 
