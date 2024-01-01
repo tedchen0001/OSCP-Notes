@@ -8,6 +8,7 @@
 - https://pentestlab.blog/2012/12/24/sql-injection-authentication-bypass-cheat-sheet/
 - https://www.securityidiots.com/Web-Pentest/SQL-Injection/Union-based-Oracle-Injection.html
 - https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection
+- https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection
 
 ### :open_file_folder: Blind SQL Injections
 
