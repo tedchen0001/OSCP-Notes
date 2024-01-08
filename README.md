@@ -394,6 +394,20 @@ find files containing specific text
 find / -type f \( -iname \*.php -o -iname \*.config -o -iname \*.conf -o -iname \*.ini -o -iname \*.txt \) -exec grep -i 'password\|passwd' {} \; -print 2>&-
 ```
 
+```shell
+grep -arin -o -E '(\w+\W+){0,5}password(\W+\w+){0,5}' .
+
+# -a: Treat binary files as text files.
+# -r: Recursively search subdirectories.
+# -i: Perform a case-insensitive search.
+# -n: Display line numbers along with the matched lines.
+# -o: Only display the part of the line that matches the pattern.
+# -E: Interpret the pattern as an extended regular expression.
+# '(\w+\W+){0,5}password(\W+\w+){0,5}' 
+# (\w+\W+){0,5}: This part matches zero to five occurrences of a word character followed by a non-word character (basically, any characters) before the actual word "password."
+# (\W+\w+){0,5}: This part matches zero to five occurrences of a non-word character followed by a word character after the word "password."
+```
+
 finding SUID executables
 
 ```shell
