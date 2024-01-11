@@ -245,6 +245,8 @@ Cypher (Neo4j's query language) Query
 
 [bloodhound-cypher-cheatsheet](https://hausec.com/2019/09/09/bloodhound-cypher-cheatsheet/)
 
+https://posts.specterops.io/cypher-queries-in-bloodhound-enterprise-c7221a0d4bb3
+
 ```
 # return nodes with direct relationships
 MATCH c=(a)-[:CanPSRemote]->(b) RETURN c
