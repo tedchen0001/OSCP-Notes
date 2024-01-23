@@ -37,7 +37,7 @@
 [Tilix](https://gnunn1.github.io/tilix-web/): Tilix is a terminal emulator for Linux systems. It provides features such as support for split terminals, custom layouts, and a Quake-style drop-down mode. <br>
 [API Penetration Testing](https://github.com/Cyber-Guy1/API-SecurityEmpire): Mindmaps, tips & tricks, resources <br>
 [Assetnote Wordlists](https://wordlists.assetnote.io/) <br>
-[HackingHub](https://www.hackinghub.io/):  A new platform to learn real-world hacking techniques. <br>
+[HackingHub](https://www.hackinghub.io/): A new platform is established to offer guidance on enhancing hacking skills in real-world scenarios. <br>
 
 ## :warning: Exam Restrictions
 
