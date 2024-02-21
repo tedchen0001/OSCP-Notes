@@ -13,6 +13,7 @@
 
 - https://blog.badsectorlabs.com/
 - https://packetstormsecurity.com/
+- https://dayzerosec.com/
 
 ### Bug
 
