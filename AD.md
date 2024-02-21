@@ -18,6 +18,8 @@ https://zer1t0.gitlab.io/posts/attacking_ad/#what-is-active-directory
 
 [active-directory-attack-methods](https://www.lepide.com/blog/top-10-active-directory-attack-methods/)
 
+https://www.amazon.com/Pentesting-Active-Directory-Windows-based-Infrastructure/dp/1804611360/ref=cm_cr_arp_d_product_top?link_from_packtlink=yes
+
 a lot about the AD pentest explanations
 
 https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ
@@ -41,8 +43,6 @@ https://github.com/Orange-Cyberdefense/GOAD
 Offensive PowerShell for red team
 
 https://github.com/samratashok/nishang
-
-https://www.amazon.com/Pentesting-Active-Directory-Windows-based-Infrastructure/dp/1804611360/ref=cm_cr_arp_d_product_top?link_from_packtlink=yes
 
 ### :open_file_folder: [Allowed Tools](https://help.offensive-security.com/hc/en-us/articles/4412170923924#h_01FP8CCWDT0GX03RCE6RGYRZT4)
 
