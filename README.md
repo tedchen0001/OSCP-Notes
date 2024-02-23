@@ -563,4 +563,8 @@ C:\Windows\System32
 C:\Windows\System32\drivers\etc\hosts
 ```
 
-### :open_file_folder: [IIS-ShortName-Scanner](https://github.com/irsdl/iis-shortname-scanner)
+### :open_file_folder: IIS
+
+[IIS-ShortName-Scanner](https://github.com/irsdl/iis-shortname-scanner)
+
+[Shortscan](https://github.com/bitquark/shortscan)
