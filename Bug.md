@@ -12,7 +12,8 @@
 #### Learning resources 
 
 [vulnerability-Checklist](https://github.com/Az0x7/vulnerability-Checklist/tree/main) <br>
-[InsiderPhD](https://www.youtube.com/@InsiderPhD/videos)
+[InsiderPhD](https://www.youtube.com/@InsiderPhD/videos) <br>
+[Hacking APIs](https://www.amazon.com/Hacking-APIs-Application-Programming-Interfaces/dp/1718502443)
 
 #### IIS
 
