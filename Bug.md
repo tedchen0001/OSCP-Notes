@@ -10,6 +10,7 @@
 - API
 - Third party
 - Source code
+- Business logic error
 
 #### IIS
 
