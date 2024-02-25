@@ -1,8 +1,5 @@
 ### Bug Hunting
 
-[vulnerability-Checklist](https://github.com/Az0x7/vulnerability-Checklist/tree/main) <br>
-[InsiderPhD](https://www.youtube.com/@InsiderPhD/videos)
-
 - Subdomains
 - Ports
 - Server version
@@ -12,8 +9,12 @@
 - Source code
 - Business logic error
 
+#### Learning resources 
+
+[vulnerability-Checklist](https://github.com/Az0x7/vulnerability-Checklist/tree/main) <br>
+[InsiderPhD](https://www.youtube.com/@InsiderPhD/videos)
+
 #### IIS
 
-[IIS-ShortName-Scanner](https://github.com/irsdl/iis-shortname-scanner)
-
+[IIS-ShortName-Scanner](https://github.com/irsdl/iis-shortname-scanner) <br>
 [Shortscan](https://github.com/bitquark/shortscan)
