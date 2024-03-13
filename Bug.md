@@ -19,3 +19,7 @@
 
 [IIS-ShortName-Scanner](https://github.com/irsdl/iis-shortname-scanner) <br>
 [Shortscan](https://github.com/bitquark/shortscan)
+
+#### Bypasses
+
+[403](https://github.com/iamj0ker/bypass-403)
