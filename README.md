@@ -251,19 +251,19 @@ unprivileged Linux process snooping: [pspy](https://github.com/DominicBreuker/ps
 Finding application
 
 ```shell
-wpscan --url http://192.168.0.1/
+wpscan --url http://192.168.0.1/ --random-user-agent
 ```
 
 Enumerating valid usernames
 
 ```shell
-wpscan --url http://192.168.0.1/ --enumerate u1-1000
+wpscan --url http://192.168.0.1/ --enumerate u1-1000 --random-user-agent
 ```
 
 Enumerating themes
 
 ```shell
-wpscan --url http://192.168.0.1/ -e at
+wpscan --url http://192.168.0.1/ -e at --random-user-agent
 ```
 
 ```shell
@@ -277,11 +277,11 @@ curl -s -X GET http://192.168.0.1 | grep -E 'wp-content/themes' | sed -E 's,href
 Enumerating plugins
 
 ```shell
-wpscan --url http://192.168.0.1/ -e ap
+wpscan --url http://192.168.0.1/ -e ap --random-user-agent
 ```
 
 ```shell
-wpscan --url http://192.168.0.1/ -e ap --plugins-detection aggressive --api-token <api_key> -t 20 --verbose
+wpscan --url http://192.168.0.1/ -e ap --plugins-detection aggressive --api-token <api_key> -t 20 --verbose --random-user-agent
 # --api-token:display vulnerability data (not always necessary), register a uesr and get the api key from wpscan offical website
 ```
 
@@ -296,13 +296,13 @@ curl -s -X GET http://192.168.0.1 | grep -E 'wp-content/plugins/' | sed -E 's,hr
 Brute-force attack
 
 ```shell
-wpscan --url http://192.168.0.1/ --passwords /usr/share/wordlists/rockyou.txt --max-threads 50 --usernames admin
+wpscan --url http://192.168.0.1/ --passwords /usr/share/wordlists/rockyou.txt --max-threads 50 --usernames admin --random-user-agent
 ```
 
 SSL peer certificate or SSH remote key was not valid
 
 ```shell
-wpscan --url https://192.168.0.1/ --disable-tls-checks
+wpscan --url https://192.168.0.1/ --disable-tls-checks --random-user-agent
 ```
 
 ### :open_file_folder: [LFI](https://github.com/tedchen0001/OSCP-Notes/blob/master/file_inclusion.md)
