@@ -1,6 +1,7 @@
 ### Bug Hunting
 
 - Subdomains
+    - Subfinder, [Post install configuration](https://docs.projectdiscovery.io/tools/subfinder/install#post-install-configuration)
 - Ports
 - Server version
 - Applications
