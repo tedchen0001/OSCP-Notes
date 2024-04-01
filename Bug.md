@@ -2,6 +2,11 @@
 
 - Subdomains
     - Subfinder, [Post install configuration](https://docs.projectdiscovery.io/tools/subfinder/install#post-install-configuration)
+    ```shell
+    subfinder -silent -d <target domain> | dnsx -silent > /tmp/servers.txt
+    sudo nmap -iL /tmp/servers.txt -Pn -sT 
+    ```
+
 - Ports
 - Server version
 - Applications
