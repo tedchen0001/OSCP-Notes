@@ -11,6 +11,7 @@
      ```shell
      ffuf -t 2 -c -ac -mc 200,204,301,307,401,405,400,302 -u https://FUZZ.<target domain> -H 'X-Forwarded-For: 0.0.0.0' -w <wordlist>
      ```
+     
       - tor
 
       ```shell
