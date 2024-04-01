@@ -11,6 +11,11 @@
      ```shell
      ffuf -t 2 -c -ac -mc 200,204,301,307,401,405,400,302 -u https://FUZZ.<target domain> -H 'X-Forwarded-For: 0.0.0.0' -w <wordlist>
      ```
+      - tor
+
+      ```shell
+      ffuf -t 2 -c -ac -mc 200,204,301,307,401,405,400,302 -u https://FUZZ.<target domain> -H 'X-Forwarded-For: 0.0.0.0' -w <wordlist> -x socks5://127.0.0.1:9050
+      ```
 
      The wordlist must be split into smaller parts, otherwise there may be loading issues.
 
