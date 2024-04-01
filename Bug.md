@@ -22,7 +22,7 @@
 
       The wordlist must be split into smaller parts, otherwise there may be loading issues.
 
-      https://wordlists.assetnote.io/ , httparchive_subdomains_YYYY_MM_dd.txt
+      https://wordlists.assetnote.io/ => httparchive_subdomains_YYYY_MM_dd.txt
 
 
         ```bash
