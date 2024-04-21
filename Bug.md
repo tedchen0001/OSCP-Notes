@@ -59,7 +59,7 @@
 [vulnerability-Checklist](https://github.com/Az0x7/vulnerability-Checklist/tree/main) <br>
 [InsiderPhD](https://www.youtube.com/@InsiderPhD/videos) <br>
 [Hacking APIs](https://www.amazon.com/Hacking-APIs-Application-Programming-Interfaces/dp/1718502443)
-[XSS](https://www.openbugbounty.org/): From reports, you can learn about the payloads used by other testers.
+[XSS payloads](https://www.openbugbounty.org/): From reports, we can learn about the payloads used by other testers.
 
 #### IIS
 
