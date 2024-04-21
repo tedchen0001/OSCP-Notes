@@ -40,7 +40,11 @@
 
         echo "Wordlist split completed."
         ```
+    - [BBOT](https://github.com/blacklanternsecurity/bbot)
 
+      ```shell
+      bbot -t target.com -f subdomain-enum
+      ```
 
 - Ports
 - Server version
