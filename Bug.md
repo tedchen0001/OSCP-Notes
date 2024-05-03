@@ -49,6 +49,9 @@
 - Ports
 - Server version
 - Applications
+  
+  - [Google Maps API Scanner](https://github.com/ozguralp/gmapsapiscanner)
+
 - API
 - Third party
 - Source code
