@@ -142,7 +142,7 @@ sqlmap -r "<request.txt>" -p "<parameter1>,<parameter2>" --dump -C "columns" -T 
 sqlmap -u "<target url>" -p "<parameter1>,<parameter2>" --dump -C "columns" -T "tables" -D "database" --random-agent --data "<data body>"
 ```
 
-post.txt = request contents
+request.txt = request contents
 
 ![SQLi_2022 02 28_19h37m55s_001](https://user-images.githubusercontent.com/8998412/155977929-7e38d3bb-8d61-4afa-af6b-90ae1e13ec73.png)
 
