@@ -47,6 +47,9 @@
       ```
 
 - Ports
+
+  [Outgoing port tester](http://portquiz.net/)
+
 - Server version
 - Applications
   
