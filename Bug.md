@@ -75,3 +75,7 @@
 #### Bypasses
 
 [403](https://github.com/iamj0ker/bypass-403)
+
+#### History
+
+[Wayback Machine](https://wayback-api.archive.org/)
