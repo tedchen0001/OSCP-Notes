@@ -71,6 +71,7 @@ WinRM HTTP port 5985, WinRM HTTPS port 5986
 ### :open_file_folder: Other Tools
 
 - [linWinPwn](https://github.com/lefayjey/linWinPwn) - Active Directory Vulnerability Scanner
+- [ADMiner](https://github.com/Mazars-Tech/AD_Miner)
 
 ### :open_file_folder: Flow (WIP)
 
