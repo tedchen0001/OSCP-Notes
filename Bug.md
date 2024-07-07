@@ -54,6 +54,7 @@
 - Applications
   
   - [Google Maps API Scanner](https://github.com/ozguralp/gmapsapiscanner)
+  - :star:[Nuclei](https://github.com/projectdiscovery/nuclei)
 
 - API
 - Third party
