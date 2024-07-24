@@ -57,6 +57,14 @@
   :star:[Nuclei](https://github.com/projectdiscovery/nuclei)
   - [Arjun](https://github.com/s0md3v/Arjun): HTTP Parameter Discovery Suite
   - [dirsearch](https://github.com/maurosoria/dirsearch): Web path discovery
+  - Testing Headers:
+
+  ```
+  X-Forwarded-For: <internal IP address>
+  X-Originating-IP: <internal IP address>
+  X-Remote-IP: <internal IP address>
+  X-Remote-Addr: <internal IP address>
+  ```
 
 - API
 - Third party
