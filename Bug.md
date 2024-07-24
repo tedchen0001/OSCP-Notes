@@ -56,6 +56,7 @@
   - [Google Maps API Scanner](https://github.com/ozguralp/gmapsapiscanner)
   :star:[Nuclei](https://github.com/projectdiscovery/nuclei)
   - [Arjun](https://github.com/s0md3v/Arjun): HTTP Parameter Discovery Suite
+  - [dirsearch](https://github.com/maurosoria/dirsearch): Web path discovery
 
 - API
 - Third party
