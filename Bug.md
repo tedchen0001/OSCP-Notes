@@ -65,6 +65,9 @@
   X-Remote-IP: <internal IP address>
   X-Remote-Addr: <internal IP address>
   ```
+  - Google Dorks
+    - [taksec.github.io](https://taksec.github.io/google-dorks-bug-bounty/)
+
 
 - API
 - Third party
