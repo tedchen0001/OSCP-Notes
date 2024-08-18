@@ -28,6 +28,7 @@ AD mindmap <br>
 https://orange-cyberdefense.github.io/ocd-mindmaps/ <br>
 https://github.com/Orange-Cyberdefense/ocd-mindmaps <br>
 https://postimg.cc/mtz8kCdB from https://www.reddit.com/r/oscp/comments/14uoni4/i_passed_80_points_no_bonus/<br>
+https://xmind.app/m/vQuTSG/ (credit:@y0u553f5433d)<br>
 
 DACL abuse
 
