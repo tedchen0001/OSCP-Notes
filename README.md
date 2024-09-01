@@ -60,6 +60,8 @@
  - [OSCP+](https://help.offsec.com/hc/en-us/articles/29840452210580-Changes-to-the-OSCP#h_01J6E5VRJD0VDSYK43DKSGRKRP) :scream:
  - Enhancements to the Active Directory portion of the exam
  - Removal of bonus points
+  - [What are the changes to exam format?](https://help.offsec.com/hc/en-us/articles/29865898402836-OSCP-Exam-Changes#h_01J6E89D6DKAN3AP9MGEG5DY56)
+  - [How will points be allocated / distributed?](https://help.offsec.com/hc/en-us/articles/29865898402836-OSCP-Exam-Changes#h_01J6E8D84N22Q7HPPMGNYH481S)
 
 ## :hammer_and_wrench: Commands
 
