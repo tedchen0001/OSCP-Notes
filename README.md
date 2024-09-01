@@ -54,8 +54,9 @@
 [2023/3/15 PEN-200 (PWK): Updated for 2023](https://www.offsec.com/offsec/pen-200-2023/)<br>
  - [FAQ](https://help.offensive-security.com/hc/en-us/articles/12483872278932-PEN-200-2023-FAQ)
  - The OSCP exam is not changing as part of the update, with the exception of the removal of the independent `Buffer Overflow` machine from the exam. After the new material has been available for six months, any content included in the new version of PWK will be eligible for inclusion on the exam.<br>
- :point_right: [2024/11/1 Changes to the OSCP](https://help.offsec.com/hc/en-us/articles/29840452210580-Changes-to-the-OSCP)
  
+ :point_right: [2024/11/1 Changes to the OSCP](https://help.offsec.com/hc/en-us/articles/29840452210580-Changes-to-the-OSCP)
+
  - [OSCP+](https://help.offsec.com/hc/en-us/articles/29840452210580-Changes-to-the-OSCP#h_01J6E5VRJD0VDSYK43DKSGRKRP) :scream:
  - Enhancements to the Active Directory portion of the exam
  - Removal of bonus points
