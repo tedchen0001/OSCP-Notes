@@ -70,6 +70,8 @@
   - Google Dorks
     - [taksec.github.io](https://taksec.github.io/google-dorks-bug-bounty/)
 
+  - Parameter Pollution:
+    - Defenses: Whitelist validation, Strong type validation, Reject duplicate parameters, Regular expression filtering
 
 - API
 - Third party
