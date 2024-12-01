@@ -80,7 +80,7 @@
   - XSS
   
     - [postMessage-tracker](https://github.com/fransr/postMessage-tracker): https://medium.com/@youghourtaghannei/postmessage-xss-vulnerability-on-private-program-18e773e1a1ba
-    - [swagger-ui-xss](https://github.com/VictorNS69/swagger-ui-xss): Outdated Swagger instances
+    - [swagger-ui-xss](https://github.com/VictorNS69/swagger-ui-xss): Outdated Swagger version
 
 - Business logic error
 
