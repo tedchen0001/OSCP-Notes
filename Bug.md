@@ -99,6 +99,7 @@
 #### Bypasses
 
 [403](https://github.com/iamj0ker/bypass-403)
+[403jump](https://github.com/trap-bytes/403jump)
 
 #### History
 
