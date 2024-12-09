@@ -86,26 +86,26 @@
 
 #### Learning resources 
 
-[vulnerability-Checklist](https://github.com/Az0x7/vulnerability-Checklist/tree/main) <br>
-[InsiderPhD](https://www.youtube.com/@InsiderPhD/videos) <br>
-[Hacking APIs](https://www.amazon.com/Hacking-APIs-Application-Programming-Interfaces/dp/1718502443)
-[XSS payloads](https://www.openbugbounty.org/): From reports, we can learn about the payloads used by other testers.
+- [vulnerability-Checklist](https://github.com/Az0x7/vulnerability-Checklist/tree/main)
+- [InsiderPhD](https://www.youtube.com/@InsiderPhD/videos)
+- [Hacking APIs](https://www.amazon.com/Hacking-APIs-Application-Programming-Interfaces/dp/1718502443)
+- [XSS payloads](https://www.openbugbounty.org/): From reports, we can learn about the payloads used by other testers.
 
 #### IIS
 
-[IIS-ShortName-Scanner](https://github.com/irsdl/iis-shortname-scanner) <br>
-[Shortscan](https://github.com/bitquark/shortscan)
+- [IIS-ShortName-Scanner](https://github.com/irsdl/iis-shortname-scanner)
+- [Shortscan](https://github.com/bitquark/shortscan)
 
 #### Bypasses
 
-[403](https://github.com/iamj0ker/bypass-403) <br>
-[403jump](https://github.com/trap-bytes/403jump)
+- [403](https://github.com/iamj0ker/bypass-403)
+- [403jump](https://github.com/trap-bytes/403jump)
 
 #### History
 
-[Wayback Machine](https://wayback-api.archive.org/)
+- [Wayback Machine](https://wayback-api.archive.org/)
 
 #### Wordlist
 
-[hidden database files](https://github.com/dkcyberz/Harpy/blob/main/Hidden/database.txt)
+- [hidden database files](https://github.com/dkcyberz/Harpy/blob/main/Hidden/database.txt)
 
