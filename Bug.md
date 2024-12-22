@@ -72,6 +72,8 @@
 
   - Parameter Pollution:
     - Mitigation Methods: Whitelist validation, Strong type validation, Reject duplicate parameters, Regular expression filtering
+  - WAF
+    - [Mastering Origin IP Discovery Behind WAF](https://www.youtube.com/watch?v=R3hmZpkvCmc)
 
 - API
 - Third party
