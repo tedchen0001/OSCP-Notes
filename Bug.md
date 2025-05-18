@@ -110,4 +110,4 @@
 #### Wordlist
 
 - [hidden database files](https://github.com/dkcyberz/Harpy/blob/main/Hidden/database.txt)
-
+- [Bug-Bounty-Wordlists](https://github.com/Karanxa/Bug-Bounty-Wordlists)
