@@ -14,6 +14,25 @@
         # Providing a rate setting helps avoid network issues
         ffuf -t 10 -c -ac -mc 200,204,301,307,401,405,400,302 -u https://FUZZ.<target domain> -H 'X-Forwarded-For: 0.0.0.0' -w <wordlist> -rate 20
         ```
+        Command for Stealthy Fuzzing (Browser-like Behavior)
+        
+        - [Random User-Agent Generator – useragents.io](https://useragents.io/random): Handy for simulating traffic from various devices and browsers.
+
+        ```shell
+        ffuf -t 1 -rate 10 \
+        -mc 200,204,301,307,401,405,400,302 \
+        -u https://service.xxx.com/Home/FUZZ \
+        -w words_alpha.txt \
+        -H "X-Forwared-For: 192.168.1.125" \
+        -H "X-Originating-IP: 192.168.1.125" \
+        -H "X-Remote-IP: 192.168.1.125" \
+        -H "X-Remote-Addr: 192.168.1.125" \
+        -H "User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 7_8_2; like Mac OS X) AppleWebKit/602.20 (KHTML, like Gecko) Chrome/49.0.2772.226 Mobile Safari/603.8" \
+        -H "Referer: https://service.xxx.com" \
+        -H "Accept-Encoding: gzip, deflate" \
+        -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8" \
+        -fs 247,246
+        ```
 
       tor
 
