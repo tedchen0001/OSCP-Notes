@@ -60,6 +60,7 @@ Be sure to check the restrictions on the use of tools before taking the exam.
 - Responder (Poisoning and spoofing are not allowed in the labs or on the exam.) 
     - `To run in analyze mode, use the "-A" parameter.`
     - `To display the hash every time, use the "-v" parameter.`
+    
     ```shell
     sudo responder -I tun0 -A -v
     ```
