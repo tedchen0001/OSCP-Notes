@@ -50,7 +50,7 @@ https://github.com/samratashok/nishang
 Be sure to check the restrictions on the use of tools before taking the exam.
 
 - BloodHound ([SharpHoundCheatSheet](https://bloodhound.readthedocs.io/en/latest/_images/SharpHoundCheatSheet.png))
- - [BloodHound Queries For All](https://queries.specterops.io/)
+    - [BloodHound Queries For All](https://queries.specterops.io/)
 - SharpHound
 - PowerShell Empire
 - Covenant 
